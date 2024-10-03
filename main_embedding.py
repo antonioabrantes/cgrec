@@ -4,7 +4,8 @@ from langchain.text_splitter import CharacterTextSplitter
 from langchain_openai import ChatOpenAI
 from langchain.vectorstores import FAISS
 from dotenv import load_dotenv
-from langchain.embeddings import HuggingFaceEmbeddings
+#from langchain.embeddings import HuggingFaceEmbeddings
+from langchain_huggingface import HuggingFaceEmbeddings
 from langchain.document_loaders import PyPDFLoader ,TextLoader
 from langchain.prompts.prompt import PromptTemplate
 from langchain.chains.conversation.memory import ConversationBufferMemory
