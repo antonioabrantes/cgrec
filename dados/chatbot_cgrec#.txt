@@ -5,7 +5,7 @@ Tema: Vício de procedimento.
 Pergunta: No parecer de indeferimento não houve o tratamento de todas as petições apresentadas relacionadas diretamente ao mérito da decisão impugnada, por exemplo de existe uma petição subsídio ao exame que foi desconsiderada. Existe um vício de procedimento neste caso? 
 Resposta: Sim. O examinador de recurso deve se certificar de que todas as petições pertinentes ao exame de mérito foram consideradas no parecer de indeferimento. O examinador recursal deve verificar se o quadro reivindicatório analisado é o correto e se foi desconsiderada alguma das petições apresentadas relacionadas diretamente ao mérito da decisão impugnada, por exemplo uma petição de subsídio ao exame que foi desconsiderada. Tendo em vista que existe um Vício de procedimento que impede a resolução do mérito do recurso, opina-se pela anulação da decisão proferida, com consequente retorno dos autos à primeira instância, para a continuação do exame. A análise do julgamento de indeferimento está prejudicada em razão do Vício de procedimento. Fica igualmente prejudicada a análise sobre a possibilidade de modificações no pedido. 
 Modelos: [1] 
-Despacho: Despacho 100.2. Recurso conhecido e provido para correção do Vício de procedimento. Anulado o indeferimento para retorno dos autos à Primeira Instância. 
+Despacho: Despacho 100.2. Recurso conhecido e provido. Reformada a decisão recorrida e anulada a decisão da primeira instância para retorno ao exame técnico.
 
 #==================== id: 2 
 Tema: Regra de transição. 
@@ -19,34 +19,34 @@ Tema: Vício de procedimento.
 Pergunta: O parecer de indeferimento foi baseado no quadro reivindicatório errado. Isso é um vício de procedimento? 
 Resposta: Sim, todo o indeferimento foi baseado no quadro reivindicatório errado, o que impede o exame de mérito desta decisão de indeferimento. O pedido deve retornar à primeira instância. 
 Modelos: [1] 
-Despacho: Despacho 100.2. Recurso conhecido e provido para correção do vício de procedimento. Anulado o indeferimento para retorno dos autos à Primeira Instância. 
+Despacho: Despacho 100.2. Recurso conhecido e provido. Reformada a decisão recorrida e anulada a decisão da primeira instância para retorno ao exame técnico.
 
 #==================== id: 4
 Tema: Vício de procedimento. 
 Pergunta: Os Quadros I e II indicam inconformidades no pedido de patente, mas na conclusão final do parecer de indeferimento estas inconformidades não estão todas listadas. Isso é um vício de procedimento 
 Resposta: Sim, a contradição deve ser apontada no parecer recursal e o pedido devolvido à primeira instância caso na manifestação de recurso fique claro que o requerente não pode exercer plenamente seu direito de defesa. No caso em que apesar do erro do parecer de indeferimento ele expôs a sua argumentação contra todas as objeções citadas no parecer então o exame de recurso deve prosseguir sem a necessidade de remeter este pedido novamente à primeira instância, pois o Vício de procedimento foi sanado pelo próprio requerente. O parecer de primeira instância que fundamenta um indeferimento sem citar o artigo correto, ou inconsistente com os erros apontados nos quadros do parecer, pode constituir Vício de procedimento se de fato o recorrente não exercer seu direito de defesa por conta desses problemas. 
 Modelos: [1] 
-Despacho: Despacho 100.2. Recurso conhecido e provido para correção do vício de procedimento. Anulado o indeferimento para retorno dos autos à Primeira Instância. 
+Despacho: Despacho 100.2. Recurso conhecido e provido. Reformada a decisão recorrida e anulada a decisão da primeira instância para retorno ao exame técnico.
 
 #==================== id: 5 
 Tema: Vício de procedimento. 
 Pergunta: O parecer de indeferimento é sumário em sua argumentação, e, portanto, apresenta inconsistências prejudiciais à ampla defesa e contraditório. Existe vício de procedimento? 
 Resposta: Sim, segundo Parecer n. 00016/2023/CGPI/PFE-INPI/PGF/AGU item 50 é de se destacar o princípio da pluralidade das instâncias. Para que este direito seja exercido plenamente é fundamental que o parecer de indeferimento seja fundamentado e exponha claramente as razões para sua conclusão. O parecer de indeferimento que apresenta inconsistências prejudiciais, por exemplo um parecer incoerente ou que se contradiz, ou que é pouco claro em sua argumentação lógica constitui um Vício de procedimento. Tais inconsistências no parecer impedem ou dificultam o exercício da ampla defesa e contraditório. 
 Modelos: [1] 
-Despacho: Despacho 100.2. Recurso conhecido e provido para correção do vício de procedimento. Anulado o indeferimento para retorno dos autos à Primeira Instância.
+Despacho: Despacho 100.2. Recurso conhecido e provido. Reformada a decisão recorrida e anulada a decisão da primeira instância para retorno ao exame técnico.
 
 #==================== id: 6 
 Tema: Vício de procedimento. 
 Pergunta: O parecer de indeferimento encontra-se com falta de motivação adequada e, portanto, apresenta inconsistências prejudiciais à ampla defesa e contraditório. Existe vício de procedimento? 
 Resposta: Sim, o parecer de indeferimento não encontra-se devidamente motivado. A não motivação da decisão recorrida prejudica a defesa por parte do recorrente, na medida em que este não discute de forma suficiente todas as alegações relevantes do depositante. Não se trata de avaliar o mérito aqui, mas apenas se o parecer não apresenta minimamente uma justificativa (correta ou não) para o indeferimento. A motivação da decisão emanada pela primeira instância deve permitir que a 2ª instância e o próprio requerente compreendam claramente a justificativa do indeferimento. 
 Modelos: [1] 
-Despacho: Despacho 100.2. Recurso conhecido e provido para correção do vício de procedimento. Anulado o indeferimento para retorno dos autos à Primeira Instância. 
+Despacho: Despacho 100.2. Recurso conhecido e provido. Reformada a decisão recorrida e anulada a decisão da primeira instância para retorno ao exame técnico.
 
 #==================== id: 7 
 Tema: Vício de procedimento. 
 Pergunta: O parecer de indeferimento encontra-se com falta de motivação adequada e, portanto, apresenta inconsistências prejudiciais à ampla defesa e contraditório. Existe vício de procedimento? Resposta: Sim, o parecer de indeferimento não encontra-se devidamente motivado. A não motivação da decisão recorrida prejudica a defesa por parte do recorrente, na medida em que este não discute de forma suficiente todas as alegações relevantes do depositante. Não se trata de avaliar o mérito aqui, mas apenas se o parecer não apresenta minimamente uma justificativa (correta ou não) para o indeferimento. A motivação da decisão emanada pela primeira instância deve permitir que a 2ª instância e o próprio requerente compreendam claramente a justificativa do indeferimento. 
 Modelos: [1] 
-Despacho: Despacho 100.2. Recurso conhecido e provido para correção do vício de procedimento. Anulado o indeferimento para retorno dos autos à Primeira Instância.
+Despacho: Despacho 100.2. Recurso conhecido e provido. Reformada a decisão recorrida e anulada a decisão da primeira instância para retorno ao exame técnico.
 
 #==================== id: 8 
 Tema: Vício de procedimento. 
@@ -59,28 +59,28 @@ Tema: Vício de julgamento.
 Pergunta: Um pedido que trata de segundo uso médico é indeferido por falta de atividade inventiva. O parecer de indeferimento conclui que possui suficiência descritiva. Na fase recursal, mesmo não sendo objeto de indeferimento, o examinador conclui que o pedido não tem suficiência descritiva. Este é um vício de julgamento? 
 Resposta: Sim e que impede o prosseguimento do exame, devendo o pedido, portanto, retornar à primeira instância. Nos casos de segundo uso o examinador deve verificar se a matéria reivindicada tem insuficiência descritiva e se isso não foi levantado no parecer de indeferimento. 
 Modelos: [2] 
-Despacho: Despacho 100.2. Recurso conhecido e provido por vício de julgamento. Anulado indeferimento para retorno dos autos à 1ª Instância para a continuação do exame técnico. 
+Despacho: Despacho 100.2. Recurso conhecido e provido. Reformada a decisão recorrida e anulada a decisão da primeira instância para retorno ao exame técnico.
 
 #==================== id: 10
 Tema: Vício de procedimento. 
 Pergunta: Um pedido é indeferido por falta de atividade inventiva. O parecer de indeferimento conclui que não houve violação do artigo 32 da LPI, ou seja, não houve acréscimo de matéria. Na fase recursal, mesmo não sendo objeto de indeferimento, o examinador conclui que o quadro reivindicatório viola o artigo 32 da LPI por aumento de escopo de matéria reivindicada em relação ao quadro reivindicatório válido no momento do pedido de exame. Este é um Vício de procedimento? 
 Resposta: Sim tratar-se de um erro de procedimento e que impede o prosseguimento do exame, devendo o pedido, portanto, retornar à primeira instância. O examinador na fase recursal deve verificar se o quadro reivindicatório do indeferimento foi resultado de emendas em relação ao pedido de exame e se elas não atendem ao artigo 32 da LPI e se isso não foi levantado no parecer de indeferimento. Este pedido deve retornar à primeira instância somente se não houver qualquer discussão do artigo 32 da LPI no parecer de indeferimento. Se tiver sido discutida esta questão no parecer de indeferimento, então não se trata de vício de procedimento mas de vício de julgamento. 
 Modelos: [2] Despacho: 
-Despacho 100.2. Recurso conhecido e provido para correção do vício de procedimento. Anulado o indeferimento para retorno dos autos à Primeira Instância. 
+Despacho: Despacho 100.2. Recurso conhecido e provido. Reformada a decisão recorrida e anulada a decisão da primeira instância para retorno ao exame técnico.
 
 #==================== id: 11 
 Tema: Parecer recursal. 
-Pergunta: Um pedido foi indeferido por artigo 10 da LPI, sem busca de anterioridade. O recurso conclui que não há violação de artigo 10 da LPI. neste caso o pedido deve retornar à primeira instância ? 
-Resposta: Sim, como um elemento essencial do exame, a busca de anterioridade, não foi realizado,a causa não está madura e e este pedido deve retornar para primeira instãncia para que o exame tenha sequência já superada a objeção de artigo 10 da LPI. 
+Pergunta: Um pedido foi indeferido por artigo 10 da LPI, sem busca de anterioridade. O recurso conclui que não há violação de artigo 10 da LPI. Neste caso o pedido deve retornar à primeira instância ? 
+Resposta: Sim, como um elemento essencial do exame, a busca de anterioridade, não foi realizado, a causa não está madura e este pedido deve retornar para primeira instância para que o exame tenha sequência já superada a objeção de artigo 10 da LPI. 
 Modelos: [3] 
-Despacho: Despacho 101.1. Recurso provido com retorno à primeira instãncia. 
+Despacho: Despacho 100.2. Recurso conhecido e provido. Reformada a decisão recorrida e anulada a decisão da primeira instância para retorno ao exame técnico.
 
 #==================== id: 12
 Tema: Vício de procedimento. 
 Pergunta: Um pedido dividido é indeferido. Neste indeferimento em nenhum momento se questiona qualquer problema com relação ao artigo 32 da LPI relativo a acréscimos de matéria. Na fase recursal o examinador conclui que este pedido viola o artigo 32 da LPI, pois amplia matéria reivindicada em relação ao quadro reivindicatório válido do pedido principal (pedido o qual originou o pedido dividido), no momento de seu pedido de exame. Isso se trata de vício de procedimento? 
 Resposta: Sim, nos casos de pedido dividido o examinador recursal deve certificar-se de que o quadro reivindicatório dividido atende ao artigo 32 da LPI. Se não atender e isso foi ignorado no parecer de indeferimento, deve ser apontado no parecer de recurso, mas somente se não houve qualquer discussão do artigo 32 da LPI no parecer de indeferimento. Se tiver sido discutido então não se trata de vício de procedimento, mas vício de julgamento. 
 Modelos: [1] 
-Despacho: Despacho 100.2. Recurso conhecido e provido para correção do vício de procedimento. Anulado o indeferimento para retorno dos autos à Primeira Instância.
+Despacho: Despacho 100.2. Recurso conhecido e provido. Reformada a decisão recorrida e anulada a decisão da primeira instância para retorno ao exame técnico.
 
 #==================== id: 13 
 Tema: Vício de procedimento. 
@@ -101,7 +101,7 @@ Tema: Vício de procedimento.
 Pergunta: O indeferimento conclui que o pedido está de acordo com o artigo 32 da LPI, mas marca um X no quadro II indicando que há violação do artigo 32 da LPI. Temos um exemplo de vício de julgamento? 
 Resposta: Não, mas um vício de procedimento. Houve um erro de preenchimento do Quadro II, porque há uma contradição entre o que está no quadro e o que está no texto do parecer de indeferimento. Se o indeferimento diz que o pedido atende ao artigo 32 da LPI mas marca um X no quadro dizendo que tem um problemas mas sem nenhuma desenvolvimento no texto do parecer, então não tem como o examinador da fase recursal alegar que houve um vício de julgamento se não há um julgamento expresso, pis apesar de apontar problemas no Quadro II o parecer de indeferimento nada discute sobre isso, que não aparece no fundamento do indeferimento. Caso o examinador recursal verifique que há um problema do artigo 32 da LPI então trata-se de um vício de procedimento: o artigo 32 da LPI não foi avaliado corretamente. Se o artigo 32 consta do fundamento do indeferimento como óbice, mas existe uma divergência do examinador de segunda instância sobre este ponto, então temos um vício de julgamento. 
 Modelos: [1] Despacho: 
-Despacho 100.2. Recurso conhecido e provido para correção do vício de procedimento. Anulado o indeferimento para retorno dos autos à Primeira Instância. 
+Despacho: Despacho 100.2. Recurso conhecido e provido. Reformada a decisão recorrida e anulada a decisão da primeira instância para retorno ao exame técnico.
 
 #==================== id: 16
 Tema: Vício de procedimento. 
@@ -115,7 +115,7 @@ Tema: Vício de procedimento.
 Pergunta: Um parecer de indeferimento aponta falta de atividade inventiva. O examinador na fase recursal entende que a matéria viola o artigo 18 da LPI, mas isso em nenhum momento foi discutido no parecer de indeferimento. Trata-se de um vício de procedimento? 
 Resposta: Sim, O examinador de segunda instância deve examinar se existe alguma objeção quanto aos artigos da LPI 10 (matéria não considerada invenção), 18 (matéria não patenteável, como por exemplos seres vivos), 22 ((falta de unidade de invenção), 32 (acréscimo de matéria) e 24 (insuficiência descritiva) que não tenham sido observadas em primeiras instância e que impedem o prosseguimento do exame de mérito. Se há questões prejudiciais de mérito, isto é, questões que impediriam alcançar a decisão do indeferimento caso sejam observadas (por exemplo o parecer de indeferimento conclui por falta de atividade inventiva, mas existe um problema de artigo 32 não observado no parecer), então parecer deve encerrar com Despacho 100.1 Recurso conhecido e provido para correção do vício de procedimento. Anulado indeferimento para retorno dos autos à Primeira Instância 
 Modelos: [1] Despacho: 
-Despacho 100.2. Recurso conhecido e provido para correção do vício de procedimento. Anulado o indeferimento para retorno dos autos à Primeira Instância. 
+Despacho: Despacho 100.2. Recurso conhecido e provido. Reformada a decisão recorrida e anulada a decisão da primeira instância para retorno ao exame técnico.
 
 #==================== id: 18
 Tema: Parecer recursal. 
@@ -157,14 +157,15 @@ Tema: Parecer recursal.
 Pergunta: Considere um parecer de indeferimento que não tenha vícios formais, mas há vício de julgamento e este provocou prejuízo ao recorrente. O examinador de recurso deve necessariamente devolver este pedido à primeira instância para que prossiga o exame ou ele mesmo pode deferir este pedido se entender que o pedido atende aos demais critérios de patenteabilidade? 
 Resposta: O examinador pode dar provimento a este recurso e aplicar o princípio da causa madura. Segundo Parecer 0016/2023 CGPI/PFE-INPI/PGF/AGU publicado na RPI 2762 de 12/12/2023 item 52. É possível vislumbrar a possibilidade de a petição ser imediatamente analisada pela segunda instância com fundamento da teoria da causa madura 
 Modelos: [3] 
-Despacho: Despacho 100.1. Recurso conhecido e provido por vício de julgamento. Reformada a decisão recorrida e deferido o pedido. 
+Despacho: Despacho 100.1 Recurso conhecido e provido. Reformada a decisão recorrida e deferido o pedido. Desta data corre o prazo de 60 (sessenta) dias para o pagamento da retribuição para expedição da Carta-Patente.
+ 
 
 #==================== id: 24 
 Tema: Parecer recursal. 
 Pergunta: O parecer recursal pode levantar novas objeções à patenteabilidade do pedido que não foram levantadas no parecer de indeferimento? 
 Resposta: Sim, mas como a causa não está madura, este pedido deve ser devolvido à primeira instância para prosseguimento do exame para que se respeite o direito de duplo grau de jurisdição. Em respeito ao princípio constitucional do duplo grau de jurisdição, os autos devem retornar à primeira instância administrativa a qual possui competência regimental interna para analisar a matéria. O Parecer 0016/2023 CGPI/PFE-INPI/PGF/AGU publicado na RPI 2762 de 12/12/2023 no item 50 observa que é de se destacar o princípio da pluralidade das instâncias 
 Modelos: [2] 
-Despacho: Despacho 100.2. Recurso conhecido e provido por vício de julgamento. Anulado indeferimento para retorno dos autos à 1ª Instância para a continuação do exame técnico. 
+Despacho: Despacho 100.2. Recurso conhecido e provido. Reformada a decisão recorrida e anulada a decisão da primeira instância para retorno ao exame técnico.
 
 #==================== id: 25 
 Tema: Parecer recursal. 
@@ -178,21 +179,22 @@ Tema: Parecer recursal.
 Pergunta: No caso de indeferimento em QR1 (quadro reivindicatório) se no recurso o requerente apresenta QR2 e QR3 mais restritos, mas o recurso conclui que houve vício de julgamento e o QR1 está ok e é inventivo o examinador recursal deve analisar QR2 e QR3? 
 Resposta: Não, pois o pedido com QR1 encontra-se em condições de patenteabilidade e pelo princípio da causa madura não há questões adicionais a serem consideradas. 
 Modelos: [3] 
-Despacho: Despacho 100.1. Recurso conhecido e provido por vício de julgamento. Reformada a decisão recorrida e deferido o pedido. 
+Despacho: Despacho 100.1 Recurso conhecido e provido. Reformada a decisão recorrida e deferido o pedido. Desta data corre o prazo de 60 (sessenta) dias para o pagamento da retribuição para expedição da Carta-Patente.
+ 
 
 #==================== id: 27 
 Tema: Parecer recursal 
 Pergunta: No caso de indeferimento em QR1 (quadro reivindicatório) se no recurso o requerente apresenta QR2 e QR3 mais restritos, mas o recurso conclui que houve vício de julgamento e o QR1 está ok e é inventivo o examinador recursal deve analisar QR2 e QR3? 
 Resposta: Não, pois o pedido com QR1 encontra-se em condições de patenteabilidade e pelo princípio da causa madura não há questões adicionais a serem consideradas. 
 Modelos: [3] 
-Despacho: Despacho 100.1. Recurso conhecido e provido por vício de julgamento. Reformada a decisão recorrida e deferido o pedido. 
+Despacho: Despacho 100.1 Recurso conhecido e provido. Reformada a decisão recorrida e deferido o pedido. Desta data corre o prazo de 60 (sessenta) dias para o pagamento da retribuição para expedição da Carta-Patente.
 
 #==================== id: 28 
 Tema: Parecer recursal 
 Pergunta: O examinador no recurso deve reanalisar todos os critérios de patenteabilidade e fazer novas buscas, se necessário, ou se limitar aos argumentos de indeferimento e a defesa apresentada pelo recorrente em seu recurso? 
 Resposta: O examinador recursal deve se orientar pelas razões apontadas no parecer de indeferimento e a manifestação do requerente. O recurso não se trata de um novo exame. Se indeferimento foi indeferido por falta de atividade inventiva usando D1 não cabe ao examinador da segunda instância (fase recursal) fazer novas buscas. Ele deve se concentrar no exame dos artigos 8 e 13. Não cabe, por exemplo, analisar artigo 25 para mostrar que o pedido tem clareza tendo em vista que isso não foi questionado no indeferimento. O examinador recursal, caso concorde com a falta de atividade inventiva ele deve sustentar a manutenção deste indeferimento unicamente com este argumento, sem trazer qualquer argumento novo. 
 Modelos: [3] 
-Despacho: Despacho 100.1. Recurso conhecido e provido por vício de julgamento. Reformada a decisão recorrida e deferido o pedido. 
+Despacho: Despacho 100.1 Recurso conhecido e provido. Reformada a decisão recorrida e deferido o pedido. Desta data corre o prazo de 60 (sessenta) dias para o pagamento da retribuição para expedição da Carta-Patente. 
 
 #==================== id: 29 
 Tema: Parecer recursal 
@@ -234,14 +236,14 @@ Tema: Parecer recursal
 Pergunta: Indeferimento por D1. O examinador recursal discorda. Existe um D2 citado no parecer de 6.21 e no relatório da EPO relevante que em combinação com D1 indefere por atividade inventiva. O recurso deve mencionar essa combinação D1 e D2? 
 Resposta: Sim, O recurso deve mencionar esse D2 e sugerir falta de atividade inventiva na combinação D1 e D2 quando enviar pedido de volta para primeira instância. COREP não deve fazer nova busca. Neste caso D2 estava citado na busca do 6.21. 
 Modelos: [2] 
-Despacho: Despacho 100.2. Recurso conhecido e provido por vício de julgamento. Anulado indeferimento para retorno dos autos à 1ª Instância para a continuação do exame técnico. 
+Despacho: Despacho 100.2. Recurso conhecido e provido. Reformada a decisão recorrida e anulada a decisão da primeira instância para retorno ao exame técnico.
 
 #==================== id: 35
 Tema: Parecer recursal 
 Pergunta: Composição inoculante substituta de adubos químicos feito de biomassa de cana de açúcar, composição caracterizada por ser reforçada por rocha mineral perlita como suporte para o microrganismo, funciona como biofertilizante. Os resultados mostram aumento de biomassa de pepino e aumento de vagens de soja por planta. O indeferimento alega que a presença de perlita não é relevante e ignora essa característica em suas buscas, e cita falta de atividade inventiva em relação a D1. Na fase recursal o examinador pode mencionar outro documento D2 que menciona perlita? 
 Resposta: Sim, O recurso deve mencionar esse D2 e sugerir falta de atividade inventiva na combinação D1 e D2 quando enviar pedido de volta para primeira instância. COREP não deve fazer nova busca. Neste caso D2 estava citado na busca do 6.21 e ademais o examinador de recurso entendeu que houve um vício de julgamento quando se deixou de fazer busca sobre perlita por a considerar irrelevante. 
 Modelos: [2] 
-Despacho: Despacho 100.2. Recurso conhecido e provido por vício de julgamento. Anulado indeferimento para retorno dos autos à 1ª Instância para a continuação do exame técnico. 
+Despacho: Despacho 100.2. Recurso conhecido e provido. Reformada a decisão recorrida e anulada a decisão da primeira instância para retorno ao exame técnico.
 
 #==================== id: 36 
 Tema: Parecer recursal 
@@ -255,7 +257,7 @@ Tema: Parecer recursal
 Pergunta: O Documento citado na primeira instância para atividade inventiva do pedido indeferido têm data posterior ao depósito do pedido. Existe vício de procedimento? 
 Resposta: Sim. Pedido deve voltar para primeira instância. 
 Modelos: [2] 
-Despacho: Despacho 100.2. Recurso conhecido e provido por vício de julgamento. Anulado indeferimento para retorno dos autos à 1ª Instância para a continuação do exame técnico. 
+Despacho: Despacho 100.2. Recurso conhecido e provido. Reformada a decisão recorrida e anulada a decisão da primeira instância para retorno ao exame técnico.
 
 #==================== id: 38 
 Tema: Parecer recursal 
@@ -269,21 +271,21 @@ Tema: Parecer recursal
 Pergunta: Parecer de primeira instância baseado em norma revogada. É um vício de procedimento? 
 Resposta: Sim, o pedido deve voltar para primeira instância. 
 Modelos: [2]
-Despacho: Despacho 100.2. Recurso conhecido e provido por vício de julgamento. Anulado indeferimento para retorno dos autos à 1ª Instância para a continuação do exame técnico. 
+Despacho: Despacho 100.2. Recurso conhecido e provido. Reformada a decisão recorrida e anulada a decisão da primeira instância para retorno ao exame técnico.
 
 #==================== id: 40 
 Tema: Parecer recursal 
 Pergunta: No recurso recorrente traz 3 QRs, se um deles resolver o óbice levantado no indeferimento, pode dar provimento ao recurso? 
 Resposta: Sim, mas apenas se na fase transitória. 
 Modelos: [2] 
-Despacho: Despacho 100.2. Recurso conhecido e provido por vício de julgamento. Anulado indeferimento para retorno dos autos à 1ª Instância para a continuação do exame técnico. 
+Despacho: Despacho 100.2. Recurso conhecido e provido. Reformada a decisão recorrida e anulada a decisão da primeira instância para retorno ao exame técnico.
 
 #==================== id: 41 
 Tema: Parecer recursal 
 Pergunta: Nos casos de razões do recurso insuficientes ou incompletas (o requerente não discutiu todas as razões de indeferimento), cabe exigência na fase recursal para ele complementar razões? 
 Resposta: Sim, mas apenas se na fase transitória. A exigência deve ser formulada apenas se quando há uma tendência de manter indeferimento. Mas se parecer recursal for para prover recurso então ok, decidir logo, desde que causa esteja madura. 
 Modelos: [2] 
-Despacho: Despacho 100.2. Recurso conhecido e provido por vício de julgamento. Anulado indeferimento para retorno dos autos à 1ª Instância para a continuação do exame técnico. 
+Despacho: Despacho 100.2. Recurso conhecido e provido. Reformada a decisão recorrida e anulada a decisão da primeira instância para retorno ao exame técnico.
 
 #==================== id: 42 
 Tema: Parecer recursal
@@ -311,7 +313,7 @@ Tema: Vício de procedimento
 Pergunta: Primeira instância indeferiu um pedido dividido, por dupla proteção sendo que o pedido principal não tem patente concedida. Há vício de procedimento? 
 Resposta: Sim, o pedido deve ser devolvido para primeira instância. Pode sugerir que a primeira instância aproveite o QR apresentado no recurso, se houver. 
 Modelos: [1] 
-Despacho: Despacho 100.2. Recurso conhecido e provido para correção do vício de procedimento. Anulado o indeferimento para retorno dos autos à Primeira Instância. 
+Despacho: Despacho 100.2. Recurso conhecido e provido. Reformada a decisão recorrida e anulada a decisão da primeira instância para retorno ao exame técnico.
 
 #==================== id: 45 
 Tema: Vício de procedimento 
@@ -325,28 +327,28 @@ Tema: Vício de julgamento
 Pergunta: Pedido trata da reivindicação de composição e uso do ativo para tratamento de doenças. Indeferimento na primeira instância analisa como não novo e não inventivo e cita D1 e D2 que tratam somente do uso da composição. Houve erro de julgamento?
 Resposta: Sim. O Vício de procedimento diz respeito a algo que impede de prosseguir exame de recurso, o que não é o caso. Existe vício de julgamento na avaliação de atividade inventiva, pois a composição não esta em D1 e D2. Causa não madura, retorna à primeira instância. Parecer recursal pode indicar D3 encontrado em nova busca como subsídio para primeira instância considerar. 
 Modelos: [2] 
-Despacho: Despacho 100.2. Recurso conhecido e provido por vício de julgamento. Anulado indeferimento para retorno dos autos à 1ª Instância para a continuação do exame técnico. 
+Despacho: Despacho 100.2. Recurso conhecido e provido. Reformada a decisão recorrida e anulada a decisão da primeira instância para retorno ao exame técnico.
 
 #==================== id: 47 
 Tema: Vício de julgamento 
 Pergunta: Indeferimento por dupla proteção, no recurso requerente apresenta novo QR com disclaimer. O examinador no recurso constata que o novo QR viola o artigo 32 da LPI. Esse pedido deve voltar para primeira instância? 
 Resposta: Sim. Existe um vício de procedimento que impede o prosseguimento do exame, logo pedido deve retornar à primeira instância. 
 Modelos: [1] 
-Despacho: Despacho 100.2. Recurso conhecido e provido para correção do vício de procedimento. Anulado o indeferimento para retorno dos autos à Primeira Instância. 
+Despacho: Despacho 100.2. Recurso conhecido e provido. Reformada a decisão recorrida e anulada a decisão da primeira instância para retorno ao exame técnico.
 
 #==================== id: 48 
 Tema: Parecer recursal 
 Pergunta: O recurso conclui por vício de julgamento, mas a causa não está madura e o pedido deve retornar à primeira instância. O requerente apresentou novas vias de QR no recurso. O examinador recursal deve apontar qual quadro reivindicatório (QR) a primeira instância deve analisar? 
 Resposta: Sim. Sempre que possível o examinador recursal deve apontar qual dos QRs apresentados devem ser considerados neste retorno à primeira instância. 
 Modelos: [1]
-Despacho: Despacho 100.2. Recurso conhecido e provido para correção do vício de procedimento. Anulado o indeferimento para retorno dos autos à Primeira Instância. 
+Despacho: Despacho 100.2. Recurso conhecido e provido. Reformada a decisão recorrida e anulada a decisão da primeira instância para retorno ao exame técnico.
 
 #==================== id: 49 
 Tema: Parecer recursal 
 Pergunta: Pedido com 6.21 seguido de 9.2 indeferido em primeiro exame. Existe vício de procedimento? 
 Resposta: Sim. Pedido deve retornar ao primeiro exame. Se for pedido dividido considerar o caso de que a discussão do indeferimento já ter sido apresentada no parecer do pedido principal, antes da divisão, neste caso não há vício de procedimento e é aceito o indeferimento em primeiro exame, porque houve a oportunidade ao contraditório quanto às razões de indeferimento. 
 Modelos: [1] 
-Despacho: Despacho 100.2. Recurso conhecido e provido para correção do vício de procedimento. Anulado o indeferimento para retorno dos autos à Primeira Instância. 
+Despacho: Despacho 100.2. Recurso conhecido e provido. Reformada a decisão recorrida e anulada a decisão da primeira instância para retorno ao exame técnico.
 
 #==================== id: 50 
 Tema: Parecer recursal 
@@ -367,7 +369,7 @@ Tema: Vício de julgamento
 Pergunta: Pedido indeferido por violação de artigo 10. Indeferimento não faz exame de atividade inventiva. No recurso o examinador de segunda instância conclui que o pedido atende ao artigo 10. Este pedido retorna a primeira instância? 
 Resposta: Sim, pois não houve exame de atividade inventiva no indeferimento. A causa não está madura. 
 Modelos: [2] 
-Despacho: Despacho 100.2. Recurso conhecido e provido por vício de julgamento. Anulado indeferimento para retorno dos autos à 1ª Instância para a continuação do exame técnico. 
+Despacho: Despacho 100.2. Recurso conhecido e provido. Reformada a decisão recorrida e anulada a decisão da primeira instância para retorno ao exame técnico.
 
 #==================== id: 53 
 Tema: Parecer recursal 
@@ -388,21 +390,21 @@ Tema: Parecer recursal
 Pergunta: Constatado vício de procedimento o examinador recursal deve prosseguir o exame e fazer o exame de julgamento das razões de indeferimento? 
 Resposta: Não, constatado um vício de procedimento que impede prosseguimento de exame, por exemplo, que o QR do indeferimento foi baseado na petição errada, o exame de recurso deve suspender e o pedido retornar à primeira instância. 
 Modelos: [1] 
-Despacho: Despacho 100.2. Recurso conhecido e provido para correção do vício de procedimento. Anulado o indeferimento para retorno dos autos à Primeira Instância. 
+Despacho: Despacho 100.2. Recurso conhecido e provido. Reformada a decisão recorrida e anulada a decisão da primeira instância para retorno ao exame técnico.
 
 #==================== id: 56 
 Tema: Parecer recursal 
 Pergunta: Pedido foi indeferido por falta de atividade inventiva. No recurso recorrente apresentou novo quadro reivindicatório em que restringe escopo de proteção. Na avaliação do recurso ao indeferimento, o examinador da segunda instância entendeu que houve vício de julgamento e que o quadro reivindicatório usado no indeferimento tem atividade inventiva. Neste caso o recurso deve ser provido com o quadro do indeferimento?
 Resposta: Sim. Se o examinador concluir que o quadro reivindicatório do indeferimento está em condições de deferimento, então é este quadro reivindicatório que deve ser escolhido, independente do novo quadro reivindicatório apresentado no recurso também estar em condições de concessão. O quadro reivindicatório apresentado no recurso seria escolhido apenas se este corrigisse um problema já apontado na primeira instância. Neste caso descrito na pergunta, o recorrente restringiu o quadro reivindicatório desnecessariamente porque a objeção do indeferimento foi indevida. 
 Modelos: [3] 
-Despacho: Despacho 100.1. Recurso conhecido e provido por vício de julgamento. Reformada a decisão recorrida e deferido o pedido. 
+Despacho: Despacho 100.1 Recurso conhecido e provido. Reformada a decisão recorrida e deferido o pedido. Desta data corre o prazo de 60 (sessenta) dias para o pagamento da retribuição para expedição da Carta-Patente.
 
 #==================== id: 57 
 Tema: Parecer recursal 
 Pergunta: Um pedido foi indeferido por falta de atividade inventiva. No recurso o examinador conclui que a reivindicação de método trata de método financeiro (artigo 10 da LPI). Tal questão não foi tratada no parecer de indeferimento. O pedido volta para primeira instância? 
 Resposta: Sim. Se o examinador entender que este quadro reivindicatório pudesse superar as questões de artigo 10 com uma nova redação, caberia o examinador de segunda instância apontar vício de procedimento e explicar estas questões no seu parecer, mas de qualquer forma o pedido deve retornar à primeira instância porque não houve propriamente um julgamento destas questões na primeira instância. Desta forma, fica garantido o duplo grau de jurisdição, ou seja, a possibilidade do recorrente recorrer novamente desta decisão. Como o parecer de indeferimento em nenhum momento fez qualquer objeção baseado no artigo 10 da LPI, então temos um vício de procedimento. Vício de julgamento seria se o parecer de indeferimento tivesse feito uma objeção do artigo 10 da LPI. Neste caso, a mudança de entendimento do examinador de segunda instância é vista como tendo detectado um vício de julgamento da primeira instância. Se por outro lado, o examinador consegue manter o indeferimento por outras razões, então não cabe retornar este pedido à primeira instância, mas manter o indeferimento com base nestas razões já contempladas no indeferimento. Toda a vez que o examinador de segunda instância entra objeções, já discutidas na primeira instância, e que podem manter o indeferimento, ele deve prosseguir o exame e manter o indeferimento sem a necessidade do pedido voltar à primeira instância. Se o examinador encontrar algum documento citado nas buscas de outros escritórios e que entenda ser relevante para o exame de atividade inventiva, tal documento deve ser apontado em seu parecer para subsidiar o examinador de primeira instância quando do retorno deste pedido à primeira instância. Caso o examinador entendesse que o quadro reivindicatório poderia ser emendado de forma a ser concedido, então caberia ao examinador de segunda instância formular uma exigência sugerindo as correções devidas. Caso essas correções não sejam cumpridas, então somente agora o examinador de segunda instância poderia emitir novo parecer enviando o pedido para primeira instância com base na já apontada violação do artigo 10 da LPI e as demais objeções encontradas no pedido. 
 Modelos: [1] 
-Despacho: Despacho 100.2. Recurso conhecido e provido para correção do Vício de procedimento. Anulado o indeferimento para retorno dos autos à Primeira Instância. 
+Despacho: Despacho 100.2. Recurso conhecido e provido. Reformada a decisão recorrida e anulada a decisão da primeira instância para retorno ao exame técnico.
 
 #==================== id: 58 
 Tema: Parecer recursal 
@@ -416,14 +418,14 @@ Tema: Parecer recursal
 Pergunta: Um pedido foi indeferido por falta de atividade inventiva, mas não cita nenhum documento do estado da técnica. Há vício de procedimento neste caso? 
 Resposta: Sim. Nesse sentido, a rejeição por falta de atividade inventiva apresenta-se sem fundamentação, porque não aponta qual o documento do estado da técnica antecipa tais características pleiteadas. Desta forma, o direito ao contraditório por parte do recorrente ficou prejudicado, pois seria necessário não somente apontar qual/quais o/os documentos que destituem o presente pedido de atividade inventiva mas também apontar a respectiva comparação e análise técnica dos documentos para motivar tal decisão 
 Modelos: [1] 
-Despacho: Despacho 100.2. Recurso conhecido e provido para correção do Vício de procedimento. Anulado o indeferimento para retorno dos autos à Primeira Instância. 
+Despacho: Despacho 100.2. Recurso conhecido e provido. Reformada a decisão recorrida e anulada a decisão da primeira instância para retorno ao exame técnico.
 
 #==================== id: 60 
 Tema: Parecer recursal 
 Pergunta: Se o examinador de segunda instância aponta um vício de procedimento no indeferimento, este pedido necessariamente deve retornar à primeira instância? 
 Resposta: Sim, o recurso deve ser dado como recurso provido e retornar à primeira instância. Se o examinador entender que essa questão não impede o segundo exame, ele não deve apontar qualquer vício de procedimento e prosseguir o exame avaliando se há vício de julgamento no parecer de indeferimento. 
 Modelos: [1] 
-Despacho: Despacho 100.2. Recurso conhecido e provido para correção do Vício de procedimento. Anulado o indeferimento para retorno dos autos à Primeira Instância. 
+Despacho: Despacho 100.2. Recurso conhecido e provido. Reformada a decisão recorrida e anulada a decisão da primeira instância para retorno ao exame técnico.
 
 #==================== id: 61 
 Tema: Parecer recursal 
@@ -431,5 +433,12 @@ Pergunta: Se o pedido não tem vício de procedimento nem vício de julgamento n
 Resposta: Sim, é possível a formulação de exigências técnicas na fase recursal sem a necessidade deste pedido retornar para a primeira instância. 
 Modelos: [1] 
 Despacho: Despacho 121. Exigência técnica. 
+
+#==================== id: 62
+Tema: Parecer recursal 
+Pergunta: Quando um recurso pode anular uma decisão da primeira instância ? 
+Resposta: Um recurso pode anular uma decisão da primeira instância quando o examinadorda segunda instância identifica um vício de porcedimento ou um erro que compromete a validade da decisão anterior. Nesses casos, o recurso deve ser considerado porvido, e o pedido deve retornar à primeira instância para que a questão seja corrigida. Por exemplo, se o indeferimento foi baseado em um erro porcessual que impede a continuidade do exame, o despacho correspondente seria Despacho 100.2 Recurso conhecido e provido. Reformada a decisão recorrida e anulada a decisão da primeira instância para retorno ao exame técnico. Entretanto, se o examinador de segunda instância constatar que o vício pode ser contornado por meio de exigências técnicas simples, ele pode optar por não retornar o pedido à primeira instância e, em vez disso, fazer as exigências necessárias para que o exame prossiga. Esta deve, sempre que possível, ser a solução proferida, tendo em vista a celeridade da solução do processo. Portanto, anulação da decisão da primeira instância ocorre principalmente em situações onde há vícios que não podem ser sanados sem garantir o duplo grau de jurisdição. 
+Modelos: [] 
+Despacho: - 
 
 #====================
