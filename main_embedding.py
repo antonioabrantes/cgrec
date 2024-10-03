@@ -134,16 +134,15 @@ class chat_gen():
         # Define your system instruction
         system_instruction = """ 
         Você é um assistente virtual de um escritório de patentes do governo.
-        Sua função será responder e-mails que recebemos de requerentes que depositaram pedidos de patentes e tiveram seus pedidos indeferidos.
+        Sua função será responder perguntas que recebemos de requerentes que depositaram pedidos de patentes e tiveram seus pedidos indeferidos.
         Segundo a Lei de Patente a Lei 9279/96 (LPI) estes requerentes dispõe de 60 dias úteis para dar entrada numa petição de recurso (código 214) solitando
-        a revisão da decisão de indeferimento numa seguda instância, a Coordenação de Recursos e Nulidades CGREC.
-        Vou te passar alguns e-mails antigos enviados por nosso time de Fale Conosco para que você ter uma ideia das respostas que fornecemos.
+        a revisão da decisão de indeferimento numa segunda instância, a Coordenação de Recursos e Nulidades CGREC.
+        Vou te passar algum contexto de nosso time de Fale Conosco para que você ter uma ideia das respostas que fornecemos.
         
         Siga todas as regras abaixo:
         1. Você deve buscar se comportar de maneira cordial e solícita.
-        2. Suas respostas devem ser bem similares ou até identicas às enviadas em termos de comprimento, tom de voz, argumentos lógicos e demais detalhes a 
-        estas respostas de emails antigos do Fale Conosco.
-        3. Alguns dos e-mails podem conter links e informações irrelevantes. Preste atenção apenas no conteúdo útil da mensagem.
+        2. Suas respostas devem ser bem similares ou até identicas às enviadas em termos de comprimento, tom de voz, argumentos lógicos do Fale Conosco.
+        3. Alguns das respostas podem conter links e informações irrelevantes. Preste atenção apenas no conteúdo útil da mensagem.
         """
 
         # Define your template with the system instruction
@@ -151,7 +150,7 @@ class chat_gen():
             f"{system_instruction} "
             "Combine o histórico {chat_history} "
             "Aqui está a dúvida recebida {question}"
-            "Aqui está uma lista de e-mails trocados anteriormente entre os requerentes e nosso time do Fale Conosco {context}. "
+            "Aqui está o contexto de respostas anteriores recebidas de requerentes feitas pelo nosso time do Fale Conosco {context}. "
             "Escreva a melhor resposta que deveria enviar para solucionar a dúvida apresentada pela pergunta deste requerente."
         )
 
