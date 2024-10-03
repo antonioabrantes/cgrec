@@ -62,9 +62,9 @@ class chat_gen():
         self.chat_history=[]
 
     def load_doc(self):
-        name1 = "chatbot_cgrec.pdf"
+        name1 = "chatbot_cgrec#.txt"
         arquivo = f"dados/{name1}"  # Especifique o caminho do PDF
-        text1 = ler_pdf(arquivo)
+        text1 = ler_txt(arquivo)
         
         name2 = "parecer_03#.txt"
         arquivo = f"dados/{name2}"  # Especifique o caminho do PDF
@@ -74,7 +74,7 @@ class chat_gen():
         arquivo = f"dados/{name3}"  # Especifique o caminho do PDF
         text3 = ler_txt(arquivo)
         
-        name4 = "parecer_19.txt"
+        name4 = "parecer_19#.txt"
         arquivo = f"dados/{name4}"  # Especifique o caminho do PDF
         text4 = ler_txt(arquivo)
         
@@ -151,7 +151,7 @@ class chat_gen():
             "Combine o histórico {chat_history} "
             "Aqui está a dúvida recebida {question}"
             "Aqui está o contexto de respostas anteriores recebidas de requerentes feitas pelo nosso time do Fale Conosco {context}. "
-            "Escreva a melhor resposta que deveria enviar para solucionar a dúvida apresentada pela pergunta deste requerente."
+            "Escreva a melhor resposta para solucionar a dúvida apresentada pelo requerente."
         )
 
         prompt = PromptTemplate(input_variables=['context','question','chat_history'],template=template)
