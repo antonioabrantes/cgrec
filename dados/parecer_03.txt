@@ -1,0 +1,303 @@
+PARECER n. 00003/2024/CGPI/PFE-INPI/PGF/AGU
+NUP: 52402.010705/2023-19
+INTERESSADOS: INSTITUTO NACIONAL DA PROPRIEDADE INDUSTRIAL - INPI
+ASSUNTOS: ATOS ADMINISTRATIVOS
+
+1. Nova consulta sobre o efeito devolutivo em sede recursal. Esclarecimentos a respeito do
+PARECER n. 00019/2023/CGPI/PFE-INPI/PGF/AGU.
+
+2. A competência para avaliar se há ou não inovação ou "novo pedido" em sede recursal é do
+órgão recursal. Exame técnico.
+
+3. Exigências que não foram cumpridas satisfatoriamente em primeira instância (total ou
+parcialmente) não poderão ser realizadas em grau recursal, por força da preclusão administrativa.
+
+4. Excepcionalmente, comprovada a justa causa, nos termos do art. 221 da LPI, é possível aceitar
+a juntada de tais documentos em grau de recurso, decidindo a segunda instância ou (i) pelo
+encaminhamento à primeira instância, ou (ii) pela apreciação direta com suporte na teoria da causa
+madura.
+
+I. Relatório
+
+1. A Coordenação-Geral de Recursos e Processos Administrativos de Nulidade (CGREC), por meio NOTA
+TÉCNICA/SEI Nº 2/2024/ INPI /COREP /CGREC /PR (0950983), submete à Procuradoria consulta quanto ao PARECER
+n. 00019/2023/CGPI/PFE-INPI/PGF/AGU (0915615), aprovado por meio do DESPACHO DE APROVAÇÃO n.
+00083/2023/PROCGAB/PFE-INPI/PGF/AGU (091516).
+
+2. Na citada nota técnica, a CGREC relata:
+"Considerando o despacho decisório do Senhor Presidente do INPI publicado na RPI nº 2.764, de
+26 de dezembro de 2023, que versou acerca do caráter normativo conferido aos Pareceres
+nº 00016/2023/CGPI/PFE-INPI/PGF/AGU, n.º00017/2023/CGPI/PFE-INPI/PGF/AGU, nº
+0018/2023/CGPI/PFE-INPI/PGF/AGU e n.º 00019/2023/CGPI/PFE-INPI/PGF/AGU, e
+estabeleceu novo prazo para sua plena aplicabilidade a iniciar-se a partir de 02 de abril de 2024.
+Tal data foi definida como marco temporal limite para a apresentação de aditamento aos recursos
+interpostos e noticiou a possibilidade de reanálise de pontos específicos das citadas manifestações
+jurídicas. Por essa razão, retorna-se os autos à Procuradoria Federal Especializada do INPI com o
+intuito de esclarecer dúvida surgida acerca do entendimento firmado nos itens 34 e 36 do Parecer
+nº 00019/2023/CGPI/PFE-INPI/PGF/AGU.
+
+3. A respeito do item 34 da manifestação jurídica, área técnica sustenta que:
+"No que concerne ao item 34, do parecer n.º 19/2023/CGPI/PFE-INPI/PGF/AGU: Redação: "34.
+Entende-se que não é cabível inovação no âmbito de recurso da LPI, sobre tudo para incluir novo
+pleito, mesmo que para reduzir o escopo do quadro de reivindicação do pedido de patente, por
+força da preclusão administrativa.”
+Por tratar-se de conceito com extremo grau de tecnicidade, entendemos que o razoável é que ao
+examinador, pesquisador com expertise na área do conhecimento exigido, seja reservada a tarefa
+de avaliar se o recurso implica em alteração do escopo inicialmente requerido no pedido ou se está
+diante apenas de uma redução que permita a reforma da decisão para o deferimento do pedido".
+
+4. Quanto ao item 36 do PARECER n. 00019/2023/CGPI/PFE-INPI/PGF/AGU, a Coordenação assevera
+que:
+"No que se refere ao item 36 do parecer n.º 19/2023/CGPI/PFE-INPI/PGF/AGU: Redação: "36.
+Entende-se que os fatos relatados incidem em hipótese de preclusão administrativa, não cabendo
+mais direito à parte de produzir o ato fora do prazo, nem cabendo o conhecimento do novo pleito
+em sede de recurso."
+Contudo, essa Coordenação não pode deixar de manifestar sua discordância ao entendimento da
+Diretoria no que se refere à afirmação de que “...o efeito devolutivo não possibilita, por exemplo, a
+apresentação de documentos não realizada no prazo, durante o trâmite na primeira instância...”
+No entender da COREP/CGREC, as diretrizes de exame de pedidos de patente instituídas pela
+Resolução 124/2013, item 3.89, e pela Resolução 169/2016, item 5.16 permitem que sejam
+apresentadas provas para o convencimento do(a) examinador(a) durante o exame."
+
+5. Na sequencia, a CGREC apresentou as seguintes quesitos à Procuradoria:
+1 - A restrição do escopo do quadro reivindicatório pode ser admitida em sede recursal, se limitada
+a matéria inicialmente reivindicada e não resultar em acréscimo de matéria, já que, nessa hipótese,
+não se trataria de novo pleito?
+2 - Na apreciação de recurso contra um indeferimento de pedido de patente, provocado pelo não
+cumprimento adequado de exigência formulada pela 1ª instância e pela incapacidade do
+depositante convencer a 1ª instância a respeito das objeções apontadas no exame técnico, pode a
+segunda instância administrativa aceitar e apreciar razões que visem esclarecer e comprovar o
+efeito técnico da invenção requerida, já que são inerentes à matéria inicialmente revelada?
+
+6. É o relatório.
+
+II. Análise
+
+7. O primeiro questionamento da Coordenação relaciona-se com a possibilidade de pedido de redução do
+escopo do quadro reivindicatório ser aceito em sede de recurso, sob o argumento de que não se tratava de novo pleito. Eis
+a argumentação da CGREC:
+"Durante o exame dos pedidos de patentes pela primeira instância, são formuladas exigências que
+fazem parte de uma etapa administrativa, sendo, portanto, de livre escolha do requerente da
+patente acatar ou não essas exigências técnicas. É facultado ao requerente o cumprimento ou não
+da exigência formulada. No caso de seu não cumprimento, a consequência será a decisão de
+indeferimento. Dessa forma fica garantido por lei ao requerente a possibilidade de interpor recurso
+contra o indeferimento à segunda instância.
+A Requerente recorre à segunda instância administrativa para solicitar uma nova análise técnica da
+invenção reivindicada, podendo apresentar novo quadro reivindicatório (QR) mais restrito ou o
+mesmo quadro reivindicatório negado em primeira instância com as devidas razões recursais.
+Logo, estamos a tratar da mesma invenção reivindicada, indeferida em sede de primeira instância.
+Não há que se falar em novo pleito no âmbito do recurso. No entendimento da COREP/CGREC,
+não ocorre a preclusão, por se tratar apenas de uma nova etapa administrativa com objetivo de
+reverter o indeferimento do pedido.
+Isso porque, com a abertura do prazo para interposição de recurso, nos termos do artigo 212, da
+LPI, é possível que a matéria seja rediscutida pela autoridade hierárquica superior, no caso, o
+Senhor Presidente do INPI, e uma nova decisão de mérito seja exarada a fim de substituir a
+decisão antes proferida. Essa é a própria essência do instrumento recursal.
+A redução do escopo do quadro reivindicatório integra o que foi inicialmente reivindicado,
+portanto, não se considera como “novo pleito” a modificação para restringir a invenção
+reivindicada, bem como não existe a preclusão lógica, temporal, tampouco consumativa já que se
+trata apenas de nova etapa administrativa no processamento do pedido.
+As diretrizes instituídas pela Resolução 93/2013, no item 2.5, possibilitam modificação do quadro
+reivindicatório. Os itens 3.88 e 3.89 da Resolução 124/2013 permite que a Requerente possa tentar
+convencer o(a) examinador(a). Ademais, na tentativa de convencimento é facultado a Recorrente
+trazer resultados/testes/ensaios ou similares, que podem ser apresentados durante o exame técnico
+e até mesmo após o pedido de exame, conforme prevê o item 5.16 das diretrizes instituídas pela
+Resolução 169/2016.
+Conforme consta no Parecer 0005-2013-AGU/PGF/PFE/INPI/COOPI-LBC-1.0, mencionado no
+Parecer n.º 19/2023/CGPI/PFE-INPI/PGF/AGU, temos que a redução do escopo reivindicado
+atende ao interesse público primário, bem como prestigia o inventor, o qual tem como direito
+fundamental o privilégio temporário para a utilização de inventos industriais, nos termos
+assegurados pela lei – artigo 5º, inciso XXIX, da CRFB/88.
+Ressaltamos que a COREP/CGREC não discorda do fato de que “novo pleito” é vedado, mas sim
+do conceito de “novo pleito” firmado no Parecer n.º 00019/2023/CGPI/PFEINPI/
+PGF/AGU, uma vez que “reduzir o escopo do quadro de reivindicação do pedido de
+patente” não caracteriza “novo pleito”, ou seja, não tem o condão de alterar o objeto inicialmente
+reivindicado. Trata-se apenas de uma tentativa de tornar mais precisa e clara à invenção".
+
+8. Depreende-se, da argumentação apresentada, que a CGREC discorda fundamentalmente da qualificação
+como "novo pleito" um pedido de redução do escopo do quadro reivindicatório formulado em sede recursal, haja vista
+que a redução de escopo "não tem o condão de alterar o objeto inicialmente reivindicado. Trata-se apenas de uma
+tentativa de tornar mais precisa e clara a invenção".
+
+9. A argumentação trazida pela CGREC ingressa em questões de ordem eminentemente técnicas porque
+envolvem a análise e julgamento do que se considera a invenção propriamente dita e o alcance possível das reivindicações
+pleiteadas. Tal julgamento, frise-se, é de competência exclusiva das áreas técnicas do INPI, seja em primeira instância,
+seja em grau de recurso, nos termos da Lei nº 9.279/1996 e do Decreto 11.207/2022, escapando, portanto, da competência
+dessa unidade jurídico consultiva.
+
+10. Nesse sentido, reconhece-se que compete à instância recursal avaliar o pedido de redução de escopo
+e fazer o consequente julgamento se o caso é ou não de inovação recursal. Decidindo pela ausência de inovação do
+pedido de redução de escopo, deve o órgão recursal promover a análise e julgamento do recurso.
+
+11. De outro extremo, se a CGREC entender que houve inovação ou "novo pleito" em sede de recurso, é de
+rigor a aplicação da conclusão do PARECER n. 00016/2023/CGPI/PFE-INPI/PGF/AGU, o qual impede o conhecimento
+de novos pleitos em sede recursal por força da preclusão administrativa.
+
+12. O entendimento acima decorre do seguinte raciocínio. No PARECER n. 00019/2023/CGPI/PFEINPI/
+PGF/AGU, viu-se que no INPI há um entendimento consolidado a respeito das diferenças entre as alterações que
+promovem o aumento do quadro reivindicatório, as quais somente podem ser realizadas até o requerimento do exame
+técnico, nos termos do art. 32 da Lei, e as que reduzem o escopo reivindicado, as quais podem ultrapassar esse limite
+temporal.
+"Das manifestações mencionadas, é possível verificar que há entendimento já estabelecido no
+âmbito do INPI de que a data em que for requerido o exame técnico do pedido de patente é o
+termo temporal final para que se possa, voluntariamente, requerer alterações no quadro
+reivindicatório, desde que as alterações se destinem a esclarecer ou melhor definir o pedido e se
+limitem à matéria inicialmente revelada. 20. Constata-se, também, entendimento consolidado no âmbito do INPI segundo o qual é admitida
+após a data em que for requerido o exame técnico do pedido de patente a alteração do quadro
+reivindicatório de redução de escopo porque "atende ao interesse público, uma vez que a parte
+retirada daquilo que inicialmente foi reivindicado se integrará ao domínio público, à livre
+concorrência". 21. Eis, portanto, os limites já consolidados no âmbito do INPI para a alteração do quadro
+reivindicatório dos pedidos de patentes".
+
+13. Mais adiante, no mesmo parecer, sustentou-se que a preclusão administrativa se configuraria como
+obstáculo impeditivo de alterações de pleitos no âmbito recursal, mesmo que fossem para reduzir o escopo das
+reivindicações, nos seguintes termos, "não é cabível inovação no âmbito de recurso da LPI, sobretudo para incluir novo
+pleito, mesmo que para reduzir o escopo do quadro de reivindicação do pedido de patente, por força da preclusão
+administrativa".
+
+14. É exatamente nesse ponto que reside a controvérsia entre o posicionamento da instância recursal e desta
+unidade consultiva jurídica. Ali, no citado parecer, sustentou-se que o pedido de redução de escopo implicaria a inovação
+no pedido, porém a instância recursal entende distintamente. Argumenta, a CGREC, que a questão é eminentemente
+técnica e envolve o julgamento da invenção propriamente dita e o alcance possível das reivindicações pleiteadas, para
+determinar se há ou não inovação em sede de pedido de redução de escopo.
+
+15. Em sua argumentação, sustenta a CGREC que a análise do caso concreto vai exigir extremo grau de
+tecnicidade, somente cabendo ao examinador, pesquisador com expertise na área do conhecimento exigido, a tarefa de
+avaliar se o recurso implica em alteração do escopo inicialmente requerido no pedido ou se está diante apenas de uma
+redução que permita a reforma da decisão para o deferimento do pedido.
+
+16. À vista desse argumentação, reconhece-se que o conteúdo da citada avaliação é eminentemente técnico e
+de competência exclusiva dos órgãos do INPI, nos termos da Lei nº 9.279/1996 e do Decreto 11.207/2022. Assim, quem
+irremediavelmente deve avaliar e julgar se há ou não inovação ou "novo pleito" no pedido de redução de escopo em fase
+de recurso é a instância recursal.
+
+17. Consequentemente, por se tratar de esfera de competência, a controvérsia deve ser dirimida justamente
+por quem tem a competência de definir se o pedido de redução de escopo se configura ou não em inovação ou "novo
+pleito". E, indubitavelmente, como já se demonstrou, tal competência é do órgão recursal quando o pedido de redução de
+escopo é formulado no âmbito de um recurso em face de decisão de primeira instância.
+
+18. Por fim, sugere-se à CGREC avaliar a pertinência de que o tema seja disciplinado por meio ato
+administrativo normativo, de modo a facilitar a comunicação, a segurança jurídica e a previsibilidade a todos os atores e
+usuários do sistema de proteção aos direitos propriedade intelectual.
+
+19. O segundo questionamento da CGREC refere-se a casos de recursos contra um indeferimento de pedido
+de patente, provocado pelo não cumprimento adequado de exigência formulada pela 1ª instância e pela incapacidade do
+depositante convencer a 1ª instância a respeito das objeções apontadas no exame técnico.
+
+20. Argumenta a CGREC, em síntese, que:
+"As diretrizes instituídas pela Resolução 93/2013, em seu item 2.5, determinam que no exame do
+quadro reivindicatório (QR) apresentado pelo requerente não pode ocorrer acréscimo de matéria,
+por contrariedade ao artigo 32 da LPI. Desse modo, o QR deve ser rejeitado em sua totalidade.
+No caso da rejeição do QR existe a possibilidade de utilizar o QR anterior na continuação do
+exame, sendo as conclusões do exame de mérito baseadas no QR anterior. Ademais, nos casos de
+recusa do QR com base no artigo 32 da LPI o examinador também pode indicar qual a matéria que
+está apta ao deferimento para que o requerente apresente modificações, por economia processual
+(art. 220 da LPI), motivo pelo qual é formulada exigência.
+Importante ressaltar que, essas diretrizes, em seu item 2.5, estabelecem, ainda, que a 2ª instância
+administrativa deve seguir os mesmos procedimentos da 1ª instância na análise do quadro
+reivindicatório, para determinar se ocorreu ou não acréscimo de matéria, de acordo com o artigo
+32 da LPI. As diretrizes de exame de pedidos de patente instituídas pela Resolução 124/2013
+proíbem experimentação indevida (item 2.15) e estabelecem que a matéria pleiteada seja precisa o
+suficiente para evitar esforço indevido de experimentação, item 3.39, sendo exigida a restrição da
+reivindicação genérica às formas de execução mencionadas no relatório descritivo.
+Tal resolução possibilita, no exame, objeção a matéria reivindicada quando o(a) examinador(a)
+entender que a informação é insuficiente para que a mesma seja implementada. Nesse caso o(a)
+examinador(a) deve possibilitar que o depositante apresente argumentos no sentido de que a
+invenção pode de fato ser prontamente aplicada com base nas informações dadas no relatório
+descritivo ou, na falta destas, restringir a reivindicação nesse sentido"
+
+21. A Coordenação defende, portanto, ser possível, de acordo com as normativas vigentes (Resolução
+124/2013 e Resolução 169/2016) "que resultados/testes/ensaios ou similares podem ser apresentados durante o exame
+técnico, mesmo após o pedido de exame, com o objetivo de comprovar o efeito técnico da invenção".
+
+22. Em suma, questiona a CGREC se a segunda instância administrativa aceitar e apreciar razões que visem
+esclarecer e comprovar o efeito técnico da invenção requerida, já que são inerentes à matéria inicialmente revelada?
+
+23. Em resposta direta, entende-se que sim. A CGREC pode aceitar e apreciar razões que visem esclarecer e
+comprovar o efeito técnico da invenção requerida, em linha com todas as diretrizes de análise e com o amplo efeito
+devolutivo do recurso no âmbito da LPI, conforme foi cuidadosamente delimitado no PARECER n.
+00016/2023/CGPI/PFE-INPI/PGF/AGU.
+
+24. Contudo, entende-se que não é cabível, ao argumento de aceitar e apreciar razões que visem esclarecer e
+comprovar o efeito técnico da invenção, permitir a produção de atos, como a apresentação de documentos, após o
+momento processual adequado, por força da preclusão administrativa. Em outras palavras, o depositário deve atender e
+cumprir as exigências nos prazos assinalados, sob pena da perda de oportunidade. E não cabe a abertura da oportunidade
+em sede de recurso, por força da preclusão administrativa.
+
+25. É oportuno reiterar que encerrada a fase do exame técnico em sede de primeira instância, ocorre a
+preclusão administrativa, de acordo com o art. 63, § 2 º, da Lei nº 9.784/99, como explicado no PARECER n.
+00019/2023/CGPI/PFE-INPI/PGF/AGU: "28. Como foi detidamente abordado no PARECER n.00016/2023/CGPI/PFE-INPI/PGF/AGU, o
+processo é o encadeamento de atos voltados a um fim e é imprescindível a realização dos atos nas
+oportunidades legais próprias, de modo que o processo caminhe para um desfecho, sem incorrer
+em infinitas intercorrências e renovações de pleitos. 29. Não é ocioso reiterar o que já disse ali, por
+força da preclusão, se um pleito deveria ter sido apresentado em determinada oportunidade
+processual e não foi, tal pleito não pode ser mais apresentado. E mais, tal pleito, ainda que tenha
+sido apresentado em recurso, não pode ser conhecido na instância recursal, por força da preclusão.
+[...] 31. Desse modo, e em resposta direta à questão formulada, entende-se que os fatos relatados
+incidem em hipótese de preclusão administrativa, não cabendo mais direito à parte de produzir o
+ato fora do prazo, nem cabendo o conhecimento do pleito em sede de recurso. Ora, se as
+exigências não foram cumpridas no prazo assinalado, precluiu a oportunidade para o depositante
+cumpri-las. E, frise-se, não é cabível a inovação em sede recursal, logo, não há espaço em recurso
+para apresentação de novo pleito".
+
+26. Portanto, reitera-se a compreensão exposta no PARECER n. 00016/2023/CGPI/PFE-INPI/PGF/AGU, de
+que exigências que não foram cumpridas satisfatoriamente em primeira instância (total ou parcialmente) não possam sêlas
+em grau recursal, em razão da preclusão administrativa.
+
+27. Para ser ainda mais concreto, o exemplo levantado pela CGREC para discordar da posição da Dirpa, “...o
+efeito devolutivo não possibilita, por exemplo, a apresentação de documentos não realizada no prazo, durante o trâmite
+na primeira instância...” se enquadra justamente na situação anteriormente descrita, qual seja, segundo conclusão
+do PARECER n. 00016/2023/CGPI/PFE-INPI/PGF/AGU, a preclusão administrativa obsta a juntada ou produção de atos
+que deveriam terem sido realizados no momento processual oportuno.
+
+28. Excepcionalmente, comprovando o recorrente (depositante) que não conseguiu produzir os
+documentos por motivo de justa causa, nos termos do art. 221 da LPI, é possível aceitar a juntada de tais documentos em
+grau de recurso, decidindo a segunda instância ou (i) pelo encaminhamento à primeira instância, ou (ii) pela apreciação
+direta com suporte na teoria da causa madura, de acordo com a orientação estabelecida no PARECER n.
+00016/2023/CGPI/PFE-INPI/PGF/AGU.
+
+III. Conclusão
+
+29. Diante do exposto, em juízo de estrita legalidade, e em atenção à consulta formulada, esta Procuradoria
+apresenta as seguintes respostas:
+
+30. Em relação à primeira questão:
+A restrição do escopo do quadro reivindicatório pode ser admitida em sede recursal, se limitada a
+matéria inicialmente reivindicada e não resultar em acréscimo de matéria, já que, nessa hipótese,
+não se trataria de novo pleito?
+
+31. Entende-se que compete à instância recursal avaliar o pedido de redução de escopo e fazer o
+consequente julgamento se o caso é ou não de inovação recursal. Decidindo pela ausência de inovação do pedido
+de redução de escopo, deve o órgão recursal promover a análise e julgamento do recurso. Em se julgando pela inovação
+ou "novo pleito", deve-se aplicar a conclusão do PARECER n. 00016/2023/CGPI/PFE-INPI/PGF/AGU, a qual impede o
+conhecimento de novos pleitos em sede recursal por força da preclusão administrativa.
+
+32. Por oportuno, sugere-se à CGREC avaliar a pertinência de que o tema seja disciplinado por meio ato
+administrativo normativo, de modo a facilitar a comunicação, a segurança jurídica e a previsibilidade a todos os atores e
+usuários do sistema de proteção aos direitos propriedade intelectual.
+
+33. Quanto à segunda questão:
+Na apreciação de recurso contra um indeferimento de pedido de patente, provocado pelo não
+cumprimento adequado de exigência formulada pela 1ª instância e pela incapacidade do
+depositante convencer a 1ª instância a respeito das objeções apontadas no exame técnico, pode a
+segunda instância administrativa aceitar e apreciar razões que visem esclarecer e comprovar o
+efeito técnico da invenção requerida, já que são inerentes à matéria inicialmente revelada?
+
+34. Entende-se que sim. A CGREC pode aceitar e apreciar razões que visem esclarecer e comprovar o efeito
+técnico da invenção requerida, em linha com todas as diretrizes de análise e com o amplo efeito devolutivo do recurso no
+âmbito da LPI, conforme foi cuidadosamente delimitado no PARECER n. 00016/2023/CGPI/PFE-INPI/PGF/AGU.
+
+35. Contudo, entende-se que não é cabível, ao argumento de aceitar e apreciar razões que visem esclarecer e
+comprovar o efeito técnico da invenção, permitir a produção de atos, como a apresentação de documentos, após o
+momento processual adequado, por força da preclusão administrativa. Em outras palavras, o depositário deve atender e
+cumprir as exigências nos prazos assinalados, sob pena da perda de oportunidade. E não cabe a abertura da oportunidade
+em sede de recurso, por força da preclusão administrativa, conforme exposto no PARECER n. 00016/2023/CGPI/PFEINPI/
+
+36. Excepcionalmente, comprovando o recorrente (depositante) que não conseguiu produzir os
+documentos por motivo de justa causa, nos termos do art. 221 da LPI, é possível aceitar a juntada de tais documentos em
+grau de recurso, decidindo a segunda instância ou (i) pelo encaminhamento à primeira instância, ou (ii) pela apreciação
+direta com suporte na teoria da causa madura, de acordo com a orientação estabelecida no PARECER n.00016/2023/CGPI/PFE-INPI/PGF/AGU.
+
+À consideração superior.
+ADALBERTO DO REGO MACIEL NETO
+Procurador Federal

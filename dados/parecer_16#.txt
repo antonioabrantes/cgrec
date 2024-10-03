@@ -1,0 +1,496 @@
+ADVOCACIA-GERAL DA UNIÃO
+PROCURADORIA-GERAL FEDERAL
+PROCURADORIA FEDERAL ESPECIALIZADA JUNTO AO INSTITUTO NACIONAL DA PROPRIEDADE
+INDUSTRIAL
+COORDENAÇÃO-GERAL JURÍDICA DE PROPRIEDADE INDUSTRIAL
+RUA MAYRINK VEIGA, 9 - CENTRO - RJ - CEP: 20090-910
+PARECER n. 00016/2023/CGPI/PFE-INPI/PGF/AGU
+NUP: 52402.010705/2023-19
+INTERESSADOS: INSTITUTO NACIONAL DA PROPRIEDADE INDUSTRIAL - INPI
+ASSUNTOS: ATOS ADMINISTRATIVOS
+
+1. Consulta sobre os limites e o alcance do efeito devolutivo pleno, insculpido no artigo 212, § 1º, da Lei n° 9.279/1996.
+2. Parecer que versa sobre aspectos processuais comuns aos recursos em procedimentos de exame de direitos de propriedade industrial.
+3. Preclusão administrativa. Estabilidade e segurança das decisões administrativas. Inteligência do art. 62, § 2º, da Lei nº 9.784/99.
+4. Arquivamento definitivo do pedido com suporte no artigo 216, § 2º, da Lei n° 9.279/1996.
+5. Processo em grau de recurso com petição com fato novo relevante não analisado pela primeira
+instância. Ausência de preclusão. Remeter à primeira instância por respeito à pluralidade de instâncias e
+competência primária. Excepcionalmente, possibilidade de ser analisada em grau recursal. Aplicação
+da teoria da "causa madura". Princípio Constitucional da razoável duração do processo administrativo.
+#
+I. Relatório
+
+1. A Coordenação-Geral de Recursos e Processos Administrativos de Nulidade submete à Procuradoria, por
+meio da NOTA TÉCNICA/SEI N° 182/2023/ INPI /CGREC /PR (0891724), consulta sobre os limites e o alcance do
+efeito devolutivo pleno, insculpido no artigo 212, § 1º, da Lei nº 9.279/1996-Lei da Propriedade Industrial.
+
+2. Na manifestação técnica, a área sustentou que a consulta tem por objetivo "compreender o escopo de
+amplitude do exame recursal, segundo as previsões da LPI, particularmente da expressão 'aplicando-se todos os
+dispositivos pertinentes ao exame de primeira instância, no que couber', prevista no parágrafo 1º, do artigo
+212 daquele diploma legal".
+
+3. A Coordenação relatou que, em muitas situações, no decorrer da instrução técnica dos recursos, observa a
+necessidade de se proceder ao saneamento processual por falta de exaurimento do exame na primeira instância
+administrativa ou por não restarem claros os limites da preclusão administrativa no âmbito dos processos
+administrativos no INPI.
+
+4. Por esse motivo, indicou situações processuais, em sede recursal, as quais são frequentemente enfrentadas
+pela área, a respeito do efeito devolutivo pleno, previsto no artigo 212, § 1º, da Lei nº 9.279/1996, e indagou a esta
+Procuradoria sobre a legalidade dos procedimentos atualmente adotados.
+
+5. A consulta versa sobre questões formais dos processos de recursos em geral e também a respeito de
+pontos específicos dos procedimentos de recursos em patentes, em marcas e em desenhos industriais. Assim, com o
+intuito de facilitar a instrução processual, bem como a compreensão dos temas abordados, os questionamentos serão
+respondidos em pareceres separados, conforme a matéria tratada.
+
+6. Este primeiro parecer abordará as questões formais pertinentes aos recursos administrativos, em geral, em
+matéria de procedimentos de exame de direitos de propriedade industrial.
+#
+7. Em relação às questões formais/administrativas, a CGREC apresentou as seguintes indagações:
+"No que tange ao processamento de recursos administrativos (que versam sobre aspectos
+exclusivamente formais do procedimento), as situações mais comumente observadas são:
+1. Situação em que o usuário se equivoca e troca as petições,
+protocolando-a em processo diverso. Em alguns casos, dependendo da etapa processual,
+ao invés de ser realizado um ato sancador pela primeira instância, como o
+desentranhamento para inclusão da petição no processo correto, ela não recebe o devido
+tratamento e o processo é retirado, sendo considerado inexistente. O usuário, por vezes,
+nota o equivoco e tenta corrigi-lo, sem sucesso (exemplo: BR 112019025865). A CGREC
+inquire se deve atuar de oficio para proceder ao saneamento, conhecendo o recurso,
+provendo-o (se for o caso) e determinando que se faça o desentranhamento ou se tal
+recurso não deve ser conhecido.
+2. Situação que envolve a aplicação do art. 216 da LPI. Constata-se vício
+de representação por ausência de procuração para a prática do ato. A não-apresentação
+em primeira instância implica em arquivamento da petição, sem realização de exigência
+saneadora anterior. A segunda instância atualmente aceita que a apresentação da
+procuração se dê em sede recursal. A CGREC inquire se deve conhecer o recurso,
+examiná-lo e aceitar a apresentação da procuração ou se deve ser determinado
+institucionalmente que a exigência para a apresentação de procuração seja feita em
+primeira instância.
+3.Com relativa frequência, nota-se por vezes petições no sistema sem
+tratamento específico por parte da primeira instância. Esta ausência de tratamento, em
+muitas situações, pode prejudicar todo o deslinde processual. A CGREC inquire, quando
+constado que a petição que não foi tratada traz fato novo relevante, se deve proceder ao
+tratamento e exame desta petição ou devolver o processo à primeira instância
+administrativa para que o faça".
+#
+8.Nota-se, à primeira leitura, que o tema central que permeia as questões acima transcritas é a preclusão
+administrativa, tema este que já foi objeto de diversas manifestações desta Procuradoria, dentre as quais podem ser
+citadas as seguintes:
+1. PARECER/I NPI/PROC/CICONS/N° 10/07 que analisou as razões do recurso que arquivou
+requerimento de divisão de pedido de patente.
+2. Parecer nº 00010-2014-AGU/PGF/PFE/INPI/COOPI-LBC-1.0, aprovado pelo Despacho nº 0896/2014-
+AGU/PGF/PFE/INPI/COOPI-MSM-3.2.3, a respeito da minuta de portaria sobre a lotação ideal na
+CGREC e da minuta de portaria sobre os processos no âmbito da CGREC;
+3. Nota N° 0035-2017-AGU/PGF/PFE/INPI/CGPI-DJT-2.1, aprovada pelo Despacho nº 0248/2017-
+AGU/PGF/PFE/INPI/COOPI-LBC-3.2.3, sobre a análise da procuração e aplicação do art. 216, § 2º, da
+Lei nº 9.279/1996;
+4. Parecer nº 0007-2017-AGU/PGF/PFE/INPI/COOPI-LBC-1.0 a respeito de arquivamento definitivo do
+pedido de registro marcário quando a procuração foi apresentada tardiamente;
+5. Nota N° 0276-2017-AGU/PGF/PFE/INPI/COOPI- DJT-2.1, aprovada pelo Despacho nº 0614/2017-
+AGU/PGF/PFE/INPI/COOPI-LBC, sobre inconsistência o pagamento da retribuição no pagamento de
+pedido de registro de marca.
+
+9. É o relatório
+#
+II. Análise
+
+10. Conforme relatado, a primeira questão é a seguinte:
+1. Situação em que o usuário se equivoca e troca as petições, protocolando-a em processo diverso.
+Em alguns casos, dependendo da etapa processual, ao invés de ser realizado um ato saneador pela
+primeira instância, como o desentranhamento para inclusão da petição no processo correto, ela não
+recebe o devido tratamento e o processo é retirado, sendo considerado inexistente. O usuário, por
+vezes, nota o equívoco e tenta corrigi-do, sem sucesso (exemplo: BR 112019025865). A CGREC
+inquire se deve atuar de oficio para proceder ao saneamento, conhecendo o recurso, provendo-o
+(se for o caso) e determinando que se faça o desentranhamento ou se tal recurso não deve ser
+conhecido.
+
+11. Depreende-se, da questão posta, dois temas que merecem análise mais cuidadosa, quais sejam, a
+preclusão administrativa e os limites do conhecimento dos recursos no âmbito dos processos regidos pela LPI.
+
+12. Começando pelos limites do conhecimento dos recursos, observa-se que na Lei nº 9.279/1996 foram
+previstos amplos mecanismos para a revisão das decisões administrativas. Os recursos, como pedidos de revisão do ato
+administrativo impugnado, possuem efeito suspensivo e devolutivo.
+Lei nº 9.279/1996
+Art. 212. Salvo expressa disposição em contrário, das decisões de que trata esta Lei cabe recurso,
+que será interposto no prazo de 60 (sessenta) dias.
+§ 1º Os recursos serão recebidos nos efeitos suspensivo e devolutivo pleno, aplicando-se
+todos os dispositivos pertinentes ao exame de primeira instância, no que couber.
+(destaques acrescidos)
+#
+13. No PARECER/I NPI/PROC/CICONS/N° 10/07, analisou-se os efeitos suspensivo e devolutivo dos
+recursos. Confira-se o seguinte trecho:
+"Como se pode verificar, tal ato precede à publicação, contudo seus efeitos serão produzidos por
+ocasião de sua efetivação, conferindo-se, assim, à parte interessada a faculdade de ver reformada a
+decisão de la instância, caso esta não lhe seja favorável, interpondo o pertinente recurso, com
+fulcro no artigo 212, da LPI, in verbis:
+"Art. 212 Salvo expressa disposição em contrário, das decisões de que trata esta Lei cabe
+recurso, que será interposto no prazo de 60 (sessenta) dias".
+Todavia, impende esclarecer, a propósito do contido no parágrafo 1º do sobredito artigo os
+recursos serão recebidos nos efeitos suspensivo e devolutivo pleno que todas as questões
+objeto do apelo serão devolvidas para reexame do juízo ad quem, porém, não o prazo para
+apresentar qualquer outro pleito, face, exatamente, ao esgotamento da etapa de instrução do
+feito, vez que produzida a preclusão, o encerramento ou o impedimento de que alguma coisa se
+faça (in Vocabulário Juridico, De Plácido e Silva)
+Como é sabido, os recursos, em geral, podem ter efeitos devolutivo e suspensivo. Efeito
+devolutivo significa que a matéria decidida em primeiro grau é devolvida ao conhecimento e
+decisão da autoridade hierarquicamente superior. Essa devolução pode ser integral, abrangendo
+tanto a matéria de fato quanto à de direito, ou apenas parcial, restrita à matéria de direito. Efeito
+suspensivo significa que a decisão recorrida tem sua eficácia suspensa, não podendo ser
+executada, até a decisão do recurso.
+[---]
+A regra geral no processo administrativo é de que o efeito devolutivo é pleno, ou seja, admite
+reexame das questões de fato e de direito do ato impugnado, não o exame de uma inovação do
+objeto inicialmente pleiteado".
+#
+14. Daí que se entende que os limites do conhecimento do recurso na LPI são determinados pelo seu efeito
+devolutivo, o qual nos termos do §1º do art. 212 é pleno, significando que "todas as questões objeto do apelo serão
+devolvidas para reexame do juizo ad quem". Em outras palavras, por expressa previsão legal, tudo o que foi questionado
+no recurso deve ser conhecido pelo órgão revisor.
+
+15. Todavia, conforme ressalvado no citado parecer, "todas as questões objeto do apelo serão devolvidas para
+reexame do juízo ad quem, porém, não o prazo para apresentar qualquer outro pleito, face, exatamente, ao esgotamento da
+etapa de instrução do feito", ou seja, a preclusão administrativa limita o alcance das matérias a serem analisadas em
+sede recursal.
+
+16. Por isso, tem-se que a preclusão administrativa é um relevante limite para efeito devolutivo do recurso
+e, portanto, um limite para o que estaria abarcado pelo conhecimento pleno, porque vai impedir inovações em fase
+recursal, isto é, restringir que o recorrente apresente novo pleito em fase recursal, sobretudo quando o prazo para
+apresentar tal pleito já foi ultrapassado.
+
+17. E o racional para a essa restrição é muito simples, é a necessidade de se realizar os atos nas oportunidades
+legais próprias e a necessidade de o processo caminhar para um desfecho, sem incorrer em infinitas intercorrências e
+renovações de pleitos.
+
+18. E é justamente por isso que a Lei nº 9.279/1996 prevê um encadeamento mínimo de atos administrativos
+a serem praticados no curso dos processos de exame de pedidos de patentes de invenção, modelos de utilidade, marcas e
+desenhos industriais.
+# 
+19. A título exemplificativo, veja-se o artigo 19 da Lei nº 9.279/1996 que prevê os documentos necessários
+que devem conter o pedido de patente. Em seguida, de acordo com o art. 20, o pedido será submetido a exame formal
+preliminar.
+
+20. Já o artigo 21 estabelece o procedimento a ser tomado quando o pedido não atender ao disposto no artigo 19:
+Art.21. O pedido que não atender formalmente ao disposto no art. 19, mas que contiver dados
+relativos ao objeto, ao depositante e ao inventor, poderá ser entregue, mediante recibo datado, ao
+INPI, que estabelecerá as exigências a serem cumpridas, no prazo de 30 (trinta) dias, sob pena
+de devolução ou arquivamento da documentação.
+Parágrafo único, Cumpridas as exigências, o depósito será considerado como efetuado na
+data do recibo.
+
+21. O disposto no artigo 21 demonstra que a norma jurídica faculta ao depositante adequar formalmente o
+pedido dentro do prazo de 30 (trinta) dias e estabelece a consequência para o seu descumprimento: devolução ou
+arquivamento da documentação.
+#
+22. Em seguida, caso o pedido cumpra todas as exigências feitas, prossegue-se ao processo do pedido de
+patente, com a manutenção do pedido em sigilo, durante 18 (dezoito) meses, e a sua publicação, ao final desse prazo, nos
+termos do artigo 30 da Lei nº 9.279/1996.
+
+23. De acordo com o parágrafo único do artigo 31 da Lei, o exame técnico será iniciado decorridos, no
+mínimo, 60 (sessenta) dias da publicação do pedido.
+
+24. O exame técnico, de acordo com o artigo 35 da Lei n°9.279/1996, inaugura momento processual
+completamente diverso do anterior, quando as condições de patenteabilidade do pedido e a adaptação do pedido à
+natureza reivindicada, por exemplo, são analisadas.
+
+25. Assim, o processo administrativo de exame e concessão de pedidos de direitos de propriedade industrial,
+aliás, como qualquer processo administrativo ou judicial, envolve a realização de determinados atos dentro de uma certa
+ordem e um certo prazo. Promove-se, dessa maneira, a segurança jurídica na concessão dos direitos de propriedade
+industrial pelo INPI.
+
+26. Se a Administração ou os usuários não observarem a ordem ou os prazos processuais previstos na Lei, haverá preclusão:
+"A Administração e os administrados devem observar os prazos processuais fixados em lei, sob
+pena de sofrerem consequências negativas, tais como a preclusão e a coisa julgada, além da
+decadência mencionada anteriormente. A preclusão é a perda de uma faculdade processual, tendo
+em vista a inércia do interessado (Poder Público ou particular) que deixa de praticar determinado
+ato dentro do prazo legal. Assim, por exemplo, se o interessado não interpõe recurso
+administrativo no prazo legal, opera-se a preclusão administrativa (art. 63, I e § 2º, da Lei nº
+9.784)
+#
+27. Esta Procuradoria, inclusive, já se manifestou, em ocasiões anteriores, sobre o instituto da preclusão. No
+Parecer nº 0007-2017-AGU/PGF/PFE/INPI/COOPI-LBC-1.0 pontuou-se que:
+"46. A situação descrita no item II (a) do parágrafo precedente atrai a aplicação do instituto da
+preclusão administrativa. Por preclusão administrativa, entende-se a perda da faculdade de
+praticar determinados atos em razão da ocorrência de fatos ou atos anteriores. A preclusão veda a
+prática de atos já praticados ou que deveriam ter sido praticados ao seu tempo. Em outros termos,
+preclusão corresponde à perda de uma oportunidade processual", nas palavras de Celso Antônio
+Bandeira de Mello, conforme trecho abaixo transcrito:
+'Preclusão é a perda de uma oportunidade processual (logo, ocorrida depois de instaurada a
+relação processual), pelo decurso do tempo previsto para seu exercicio, acarretando a superação
+daquele estágio do processo (judicial ou administrativo). Difere da prescrição em que nesta o que
+se perde é o direito de ação, pelo quê seu termo inicial é sempre anterior ao processo, ao passo que
+a preclusão opera no interior do processo. Difere da decadência em que nesta, conforme visto, o
+que se perde é o direito material, ao passo que na preclusão o que se extingue é o direito adjetivo".
+[...].
+49. Este órgão consultivo já reconheceu o instituto da preclusão como de observância
+obrigatória no processo administrativo em curso no INPI, posto que a sua aplicação
+assegura estabilidade às decisões. O Parecer nº 0024-2015-AGU/PGF/PFE/INPI/COOPI-LBC-
+1.0 analisou o instituto da preclusão do seguinte modo:
+'17. A preclusão administrativa é prevista na lei de processo administrativo. O art. 62, § 2º, da Lei
+n° 9.784/99, prevê a possibilidade da Administração Pública rever os atos ilegais de oficio,
+ressalvada a hipótese de preclusão administrativa "(grifo nosso)
+#
+28. Desse modo, por força da preclusão, se um pleito deveria ter sido apresentado em determinada
+oportunidade processual e não foi, tal pleito não pode ser mais apresentado. E mais, tal pleito, ainda que tenha sido
+apresentado em recurso, não pode ser conhecido na instância recursal, por força da preclusão.
+
+29. Feitas essas considerações, volta-se à primeira indagação. Se o usuário não corrigir o erro do protocolo da
+petição, na primeira oportunidade processual que possuir, sendo, no exemplo do artigo 21 da Lei nº 9.279/96, o prazo de
+30 (trinta) dias da formulação da exigências, terá preclusa a sua faculdade de sanear o ato.
+
+30. Ademais, é preciso atentar para o momento de produção do ato, se foi respeitado o prazo legal ou o prazo
+administrativamente estipulado. Deve-se, assim, avaliar, se o interessado, mesmo que tenha protocolizado em processo
+equivocado, atendeu ao prazo assinalado para a produção do mesmo.
+
+31. Por conseguinte, o procedimento da primeira instância em não desentranhar a petição dos autos e
+considerar, por tal motivo, o pedido inexistente é legal, uma vez que é a consequência jurídica imediata do citado artigo 21.
+#
+32. Quanto ao questionamento a respeito do conhecimento ou não do recurso, não se pode emitir uma opinião
+genérico, cabendo irremediavelmente a avaliação no caso concreto.
+
+33. Por outro lado, é possível sim afirmar, em tese, que o pedido veiculado em petição considerada
+inexistente ultrapassa os limites do conhecimento do recurso, por força da ocorrência da preclusão administrativa
+prevista no art. 62, § 2º, da Lei nº 9.784/99.
+
+34. Assim, com suporte nas considerações apresentadas, pode-se responder a questão com uma regra geral:
+em ocorrendo a preclusão, não é cabível o conhecimento da questão em grau de recurso.
+#
+35.Segue-se, agora, para a segunda questão da consulta:
+2. Situação que envolve a aplicação do art. 216 da LPI. Constata-se vício
+de representação por ausência de procuração para a prática do ato. A não-apresentação
+em primeira instância implica em arquivamento da petição, sem realização de exigência
+saneadora anterior. A segunda instância atualmente aceita que a apresentação da
+procuração se dê em sede recursal. A CGREC inquire se deve conhecer o recurso,
+examiná-lo e aceitar a apresentação da procuração ou se deve ser determinado
+institucionalmente que a exigência para a apresentação de procuração seja feita em
+primeira instância.
+
+36. Como se nota, o segundo questionamento da consulta versa sobre a não apresentação em primeira
+instância da devida procuração do representante da partes e o consequente arquivamento do pedido, nos termos do artigo
+216, § 2º da Lei nº 9.279/1996. A CGREC indaga se deve examinar o recurso e aceitar a procuração apresentada em sede
+recursal.
+#
+37. A Lei nº 9.279/1996 dispõe no art. 216:
+Art. 216. Os atos previstos nesta Lei serão praticados pelas partes ou por seus procuradores,
+devidamente qualificados.
+§ 2º A procuração deverá ser apresentada em até 60 (sessenta) dias contados da prática do primeiro
+ato da parte no processo, independente de notificação ou exigência, sob pena de arquivamento,
+sendo definitivo o arquivamento do pedido de patente, do pedido de registro de desenho industrial
+e de registro de marca.
+
+38. Do texto legal acima transcrito, extrai-se o comando normativo de arquivamento do processo ante a falta
+de apresentação da procuração dos representantes das partes em até sessenta dias contados da prática do primeiro ato
+processual. Em outras palavras, há comando legal expresso de arquivamento do processo ante a falta de procuração dos
+representantes das partes.
+#
+39. O tema especifico da ausência de procuração já foi inclusive objeto de manifestação
+dessa Procuradoria, Nota nº 0035-2017-AGU/PGF/PFE/INPI/CGPI-DJT-2.1. Confira-se o seguinte trecho:
+*7.Exsurge do quadro legal, outrossim, que é franqueada à parte de se fazer representar por um
+procurador, sendo certo que, nesta hipótese, deverá ser apresentado o instrumento de procuração
+no prazo de 60 dias contados do primeiro ato praticado no processo, de cuja observância decorre o
+arquivamento do pedido de registro de marca.
+8. Neste passo, curial reparar que a norma legal prevista no art. 216, § 2º da LPI não confere
+qualquer espaço de conveniência para o INPI, ao revés, estabelece de forma cogente a sanção pelo
+não atendimento do prazo de juntada da procuração, qual seja, o arquivamento do pedido de
+registro.
+9. Trata-se, com efeito, de exigência ex lege, a qual deve ser cumprida independente de notificação
+do INPI, sendo, pois, ato obrigatório, condição sine qua non para parte representada atuar no
+processo.
+10. Logo, havendo prescrição legal que determina o arquivamento do pedido de registro de marca
+caso detectada a intempestividade da juntada da procuração, não se identifica fundamento para
+interpretação diversa daquela que ecoa do disposto no art. 216, § 2º da LPI".
+
+40. Em face da análise exaustiva acima, pode-se afirmar que a resposta à questão apresentada já se encontra
+contemplada na manifestação citada, razão pela qual toma-se licença para remeter o consulente à leitura de sua integra,
+constante nos autos do Processo 52400.210571/2016-17.
+
+41. Por conseguinte, pode-se afirmar que, em resposta à consulta, a ausência de apresentação da
+procuração no momento processual adequado, em até 60 (sessenta) dias do depósito do pedido,
+implica arquivamento do pedido.
+
+42. E mais, na mesma linha da primeira questão, não é possível a produção do ato (juntada da
+procuração) por força da preclusão e o recurso não deve conhecer esse tema pela mesma razão.
+#
+43. A terceira e última questão a ser analisada neste parecer é a seguinte:
+3. Com relativa frequência, nota-se por vezes petições no sistema sem
+tratamento específico por parte da primeira instância. Esta ausência de tratamento, em
+muitas situações, pode prejudicar todo o deslinde processual. A CGREC inquire,
+quando constado que a petição que não foi tratada traz fato novo relevante, se deve
+proceder ao tratamento e exame desta petição ou devolver o processo à primeira instância
+administrativa para que o faça.
+
+44. Nota-se aqui uma dúvida jurídica acerca do procedimento mais adequado a ser adotado ante casos em
+sede recursal nos quais se identificaram petições carreadas aos autos com fato novo relevante e que não foram analisadas
+pela primeira instância. Esclarece-se que fato novo relevante é elemento que pode afetar o julgamento do pedido assim
+reputado pelo próprio órgão judicante, seja a primeira, seja a segunda instância.
+#
+45. De pronto, remetem-se às considerações sobre a preclusão administrativa apresentadas na resposta da
+primeira questão. Assim, reconhecendo-se a preclusão, a consequência é o não conhecimento da petição do depositário e
+o seu respectivo desentranhamento dos autos, devendo o recurso ser julgado sem considerar a referida petição.
+
+46. Em não ocorrendo a preclusão, o erro in procedendo (erro formal/processual cometido pelo órgão
+julgador) deve ser reconhecido, devendo a petição ser objeto de análise e consideração.
+
+47. Nesse sentido, a regra geral seria remeter os autos à primeira instância, para que esta analise a situação e
+possa eventualmente reconhecer o erro in procedendo.
+ 
+48. Remeter os autos à primeira instância não apenas respeita a competência de julgamento das Diretorias de
+Marcas ou Patentes, mas também assegura o duplo grau de revisão, ao permitir ainda às partes o recurso para a segunda
+instância.
+
+49. Não se pode olvidar da larga especialização da primeira instância, que conta com grande número de
+analistas com as mais diversas formações amplamente treinados para lidar com a diversidade de temas que os pedidos de
+proteção de propriedade intelectual exigem. Assim, nada mais apropriado e eficiente que a primeira análise desse fato
+novo relevante seja realizada por essas unidades especializadas, para depois, se for o caso, seja reavaliada a análise em
+segunda instância.
+#
+50. É de se destacar, ainda, que o princípio da pluralidade de instâncias, que foi objeto de do Parecer n°
+00010-2014-AGU/PGF/PFE/INPI/COOPI-LBC-1.0, tem origem no dever de autotutela da Administração, o dever de se
+preservar a legalidade dos atos administrativos. Confira-se o seguinte trecho:
+"14.Entre os princípios do processo administrativo, consta o da pluralidade de instâncias,
+decorrente do poder de autotutela. O principio da pluralidade de instâncias permite a revisão dos
+próprios atos pela Administração, quando ilegais, inconvenientes ou inoportunos.
+15. Di Pietro esclarece a finalidade da pluralidade de instâncias, a saber, preservação da legalidade
+administrativa. Por isso, diz-se que o recurso administrativo é uma forma de controle da
+Administração.
+16. O princípio da pluralidade de instância possui tamanha relevância que o Superior Tribunal de
+Justiça já o denominou como corolário da ampla defesa e contraditório 4.
+17. A 1ª Turma Suplementar do Tribunal Regional Federal da 1ª Região reconheceu a
+aplicabilidade do principio administrativo da pluralidade de instâncias em processo no qual o
+recurso não teve o processamento adequado pelo superior hierárquico. No mandado de segurança
+em tela, a autoridade administrativa reteve na sua esfera decisória o recurso administrativo, o que
+motivou a concessão de uma liminar satisfativa, com respaldo no princípio da pluralidade de
+instâncias.
+CONSTITUCIONAL- ADMINISTRATIVO MANDADO DE SEGURANÇA MILITAR- NÃO
+PROCESSAMENTO ADEQUADO DO RECURSO ADMINISTRATIVO LIMINAR
+SATISFATIVA 1. Conquanto comporte natureza satisfativa a liminar, não só por este motivo deve
+a sentença ser mantida, tendo em vista que restou demonstrado que a autoridade coatora, ao
+impedir o curso normal do processamento do recurso, usurpou a autoridade de seu superior
+hierárquico e desrespeitou o princípio da pluralidade de instâncias. 3. Remessa oficial não
+provida 21
+18. O princípio da pluralidade de instâncias não se traduz na existência de recurso em face de
+decisão administrativa, mas no efetivo exame recursal por uma autoridade diversa daquela que
+proferiu o ato decisório impugnado".
+#
+51. Dessa forma, com a remessa do processo à primeira instância, será possibilitado às partes, em caso de
+improcedência dos pleitos, recorrer à segunda instância, garantindo-se, assim, a revisão do pleito por uma autoridade
+diversa daquela que proferiu o ato decisório impugnado.
+
+52. De outro extremo, todavia, é possível se vislumbrar a possibilidade de a petição ser imediatamente
+analisada pela segunda instância administrativa, com fundamento na teoria da "causa madura", expressamente
+prevista no direito processual civil brasileiro, e no princípio constitucional da razoável duração do processo
+administrativo e os meios que garantam a celeridade de sua tramitação, previsto no inciso LXXVIII, do artigo 5º, da
+Constituição Federal.
+
+53. Segundo Marcus Furtado a Teoria da causa madura refere-se justamente aquela "causa madura" que tem
+condições para julgamento imediato, pois a instrução probatória já foi exaurida. Trata-se de um instituto processual
+excepcional, que possibilita que o juizo em grau de recurso - o órgão ad quem - realize o julgamento do mérito de uma
+ação que, em decorrência de vício, foi inicialmente julgada extinta. Originalmente, em outras palavras, invoca-se essa
+teoria em sede recursal, nos processos que foram julgados extintos por sentença terminativa, requerendo provimento ao
+recurso e o pronto exame do mérito da ação sem que os autos retornem ao juízo de origem
+#
+54. A Teoria da Causa Madura encontra-se expressamente disciplinada no âmbito do processo civil, mais
+especificamente no art. 1.013 do Novo Código de Processo Civil:
+Lei nº 13.105, de 16 de março de 2015 (Código de Processo Civil).
+Art. 1.013. A apelação devolverá ao tribunal o conhecimento da matéria impugnada.
+§ 1º Serão, porém, objeto de apreciação e julgamento pelo tribunal todas as questões suscitadas e
+discutidas no processo, ainda que não tenham sido solucionadas, desde que relativas ao capitulo
+impugnado.
+§ 2º Quando o pedido ou a defesa tiver mais de um fundamento e o juiz acolher apenas um deles,
+a apelação devolverá ao tribunal o conhecimento dos demais.
+§ 3º Se o processo estiver em condições de imediato julgamento, o tribunal deve decidir
+desde logo o mérito quando:
+I-reformar sentença fundada no art. 485 :
+II - decretar a nulidade da sentença por não ser ela congruente com os limites do pedido ou da
+causa de pedir;
+III - constatar a omissão no exame de um dos pedidos, hipótese em que poderá julgá-lo;
+IV-decretar a nulidade de sentença por falta de fundamentação.
+§ 4º Quando reformar sentença que reconheça a decadência ou a prescrição, o tribunal, se
+possível, julgará o mérito, examinando as demais questões, sem determinar o retorno do processo
+ao juízo de primeiro grau.
+§ 5º O capítulo da sentença que confirma, concede ou revoga a tutela provisória é impugnável na
+apelação.
+(grifos acrescidos)
+#
+55. Acrescenta Marcus Furtado que a teoria da "causa madura" teve a sua aplicação estendida para outras
+hipóteses no atual Código de Processo Civil.
+[...]Em razão do compromisso do atual sistema processual com a mais justa e célere resolução de
+processos, a teoria da causa madura teve a sua aplicação expandida para outras hipóteses. De
+acordo com o § 1º do artigo 332 do CPC/2015, nas causas que dispensem a fase instrutória, o juiz,
+independentemente da citação do réu, julgará liminarmente improcedente o pedido se verificar,
+desde logo, a ocorrência de decadência ou de prescrição. Essa hipótese é uma inovação lida como
+a aplicação da teoria da causa madura no âmbito do primeiro grau de jurisdição.
+[...] Em conformidade com o entendimento do STJ, o §3º do artigo 1.013 do CPC/2015, subtrai o
+trecho que falava em "questão de direito" e subsiste como requisito apenas a condição de imediato
+julgamento, devendo o tribunal decidir desde logo o mérito quando: 1) reformar sentença sem
+julgamento de mérito fundada nas hipóteses do art. 485; II) decretar a nulidade da sentença por
+não ser ela congruente com os limites do pedido ou da causa de pedir; III) constatar a omissão no
+exame de um dos pedidos, hipótese em que poderá julgá-lo; e IV) decretar a nulidade de sentença
+por falta de fundamentação"
+
+56. Com o atual disciplinamento do CPC, a teoria da causa madura hoje pode ser entendida como um
+mecanismo que busca combater a morosidade processual, permitindo o julgamento do processo no estado em que se
+encontra, desde que o processo esteja "maduro", isto é, esteja em condições de imediato julgamento, porque a instrução
+probatória encontra-se exaurida. Assim, permitindo-se o julgamento já pela instância recursal, evita-se o longo caminho
+do retorno à primeira instância e eventual retorno à segunda instância.
+#
+57. Todavia, e de outro extremo, acaso seja necessária a instrução complementar, por exemplo a ouvida de
+uma das partes, a causa não se encontra madura, devendo o processo ser remetido à primeira instância.
+
+58. Marcelo Negri Soares, Maurício Ávila Prazak, Hudson Massayoshi Amano sintetizam o entendimento
+sobre sobre a teoria da causa madura no novo CPC, tomando como principio a busca em diminuir a morosidade
+processual, aperfeiçoou mecanismos com o intuito de, em observância do principio constitucional da razoável duração
+do processo introduzido na Constituição Federal pela Emenda Constitucional n.º 45/2004, contribuir processualmente
+para a celeridade do sistema juridico. Neste contexto é que se enquadra a teoria da causa madura
+
+59. E a extensão ou aplicação da teoria da causa madura para a esfera administrativa decorre não somente da
+natural influência dos regramentos do processo civil para os demais sistemas processuais, em especial o processo
+administrativo, mas também e sobretudo porque o princípio constitucional fundamento da citada teoria, o princípio da
+razoável duração do processo, é expressamente aplicável aos processos administrativos, nos termos do inciso LXXVIII do
+artigo 5º da Constituição Federal
+
+60. Em conclusão, tem-se que, na hipótese de não preclusão, entende-se que a regra seria o encaminhamento
+para a primeira instância, e, eventualmente, considerando a exaustão da instrução probatória (não há mais nenhum ato a
+ser produzido ou necessidade de ouvir nenhuma parte), é possível o julgamento diretamente pela segunda instância com
+suporte na teoria da causa madura.
+#
+CONCLUSÃO
+
+61. Diante do exposto, em juízo de estrita legalidade, em resposta à consulta formulada, esta Procuradoria
+tece as seguintes considerações:
+
+1. Em relação à primeira indagação:
+A CGREC inquire se deve atuar de oficio para proceder ao saneamento, conhecendo o recurso,
+provendo-o (se for o caso) e determinando que se faça o desentranhamento ou se tal recurso não deve ser conhecido.
+Este órgão consultivo responde que se o usuário não corrigir o erro do protocolo da petição,
+na primeira oportunidade processual que possuir, terá preclusa a sua faculdade de sanear o ato. Por conseguinte, o
+procedimento da primeira instância em não desentranhar a petição dos autos e considerar, por tal motivo,
+o pedido inexistente é legal. Registre-se que não há que se falar tampouco em recurso administrativo da decisão da
+primeira instância que considerou o pedido inexistente. Tal recurso não será conhecido pela segunda instância
+administrativa, em razão do disposto no art. 62, § 2º, da Lei nº 9.784/99.
+#
+2. Quanto ao segundo questionamento:
+A CGREC inquire se deve conhecer o recurso, examiná-lo e aceitar a apresentação da procuração ou se
+deve ser determinado institucionalmente que a exigência para a apresentação de procuração seja feita em primeira
+instância.
+Esta Procuradoria responde que a ausência de apresentação da procuração no momento processual
+adequado, em até 60 (sessenta) dias do depósito do pedido, acarreta arquivamento do pedido, não sendo recorrível
+o arquivamento. Assim, o recurso não deve ser conhecido pela segunda instância administrativa.
+#
+3. A respeito da terceira pergunta:
+A CGREC inquire, quando constado que a petição que não foi tratada traz fato novo relevante, se deve
+proceder ao tratamento e exame desta petição ou devolver o processo à primeira instância administrativa para que o
+faça.
+A Procuradoria responde que os autos devem retornar para a primeira instância, de acordo com a
+competência relacionada à matéria, Diretoria de Marcas, Patentes ou Coordenação de Contratos de Transferência
+de Tecnologia, se o assunto tratado na petição puder interferir diretamente na decisão administrativa.
+Todavia, se a petição puder ser imediatamente analisada pela segunda instância administrativa, a
+CGREC poderá prosseguir com o exame do recurso, com base na teoria da "causa madura", já prevista no direito
+processual civil brasileiro, assegurando, assim, a razoável duração do processo administrativo, princípio este
+previsto no inciso LXXVIII do artigo 5º da Constituição Federal,
+
+À consideração superior.
+ADALBERTO DO REGO MACIEL NETO
+Procurador Federal
+
+
+

@@ -1,0 +1,482 @@
+MINISTÉRIO DO DESENVOLVIMENTO, INDÚSTRIA, COMÉRCIO E SERVIÇOS
+INSTITUTO NACIONAL DA PROPRIEDADE INDUSTRIAL
+PORTARIA /INPI / Nº 07, DE 04 DE MARÇO DE 2024
+Aprova as Diretrizes de instrução de
+Recursos e Processos Administrativos de
+Nulidade.
+O PRESIDENTE DO INSTITUTO NACIONAL DA PROPRIEDADE INDUSTRIAL, no uso das
+atribuições que lhe foram conferidas pelo art. 152 do Anexo I da Portaria nº 11, de 27 de janeiro de 2017,
+tendo em vista o constante do Processo nº 52402.010705/2023-19
+R E S O L V E :
+Art. 1º Aprovar as diretrizes de instrução de Recursos e Processos Administrativos de
+Nulidade, nos termos do Anexo I a esta Portaria.
+Art. 2º Esta Portaria entra em vigor na data da sua publicação.
+Júlio Cesar Castelo Branco Reis Moreira
+Presidente
+
+Sumário
+1. Princípios e Teorias Aplicáveis a Instrução Processual em Recursos e Processos Administrativos de Nulidade ....... 4
+2. Do Recurso ....................................................................................................... 7
+2.1 Do exame prévio de admissibilidade dorRecurso ........................................... 7
+2.2 Da distribuição dos recursos para exame ....................................................... 8
+2.3 Dos efeitos do recurso e dos seus limites ....................................................... 8
+2.3.1 Da preclusão administrativa .......................................................................... 9
+3. Do Processo Administrativo de Nulidade ...................................................... 9
+4. Dos Procedimentos em Marcas .................................................................... 10
+4.1 Dos recursos administrativos ........................................................................ 10
+4.1.1 Recurso contra o indeferimento do pedido de registro de marca ................ 10
+4.1.2 Recurso contra o deferimento parcial do pedido de registro de marca .. 10
+4.1.3 Recurso em sistema multiclasse............................................................ 11
+4.1.4 Recurso contra o deferimento ou indeferimento do pedido de caducidade
+4.1.5 Recurso contra anotação de transferência de titularidade e/ou
+arquivamento/cancelamento de ofício (art. 135, da LPI) ...................................... 11
+4.1.6 Recurso contra denegação de requerimentos diversos ......................... 12
+4.2. Do processo administrativo de nulidade de registros de marcas ................... 12
+4.2.1 Desistência do processo administrativo de nulidade .............................. 13
+4.2.2 Dos processos administrativos de nulidade com base no art. 129, §1º, da LPI. 14
+5. Dos Procedimentos em Desenhos Industriais ............................................. 14
+5.1 Do recurso contra o indeferimento do pedido de registro .............................. 14
+5.2 Do recurso contra decisão de perda de prioridade unionista ........................ 15
+5.3 Dos recursos com origem em exigências não cumpridas adequadamente ........ 16
+5.4 Dos processos administrativos de nulidade ................................................. 17
+5.4.1 Da análise das razões do requerente da nulidade ................................. 18
+5.4.2 Da análise das razões do titular do registro ........................................... 18
+6. Dos Procedimentos em Patentes .................................................................. 19
+6.1 Do recurso contra o indeferimento do pedido de patente .............................. 19
+6.2 Recurso contra o arquivamento de pedido de patente .................................. 19
+6.3 Recurso contra atos administrativos em requerimentos diversos .................. 20
+6.4 Das razões do recurso ................................................................................. 20
+6.5 Dos recursos com origem em exigências não cumpridas adequadamente ... 22
+6.6 Do processo administrativo de nulidade de patentes .................................... 22
+6.6.1 Do exame prévio de admissibilidade do requerimento da nulidade administrativa ............................ 23
+6.6.2 Da instrução processual do requerimento da nulidade administrativa .... 23
+7. Da Vigência e das Disposições Transitórias e Finais .................................. 24
+
+#
+MINISTÉRIO DO DESENVOLVIMENTO, INDÚSTRIA, COMÉRCIO E SERVIÇOS
+INSTITUTO NACIONAL DA PROPRIEDADE INDUSTRIAL
+DIRETRIZES DE INSTRUÇÃO
+DOS RECURSOS E DOS PROCESSOS ADMINISTRATIVOS DE
+NULIDADES
+
+Este documento visa estabelecer orientações quanto às diretrizes
+adotadas pelo INPI na instrução técnica dos recursos e dos processos
+administrativos de nulidade previstos na Lei da Propriedade Industrial n.º 9279
+de 14 de maio de 1996.
+A decisão dos recursos e dos processos administrativos de nulidade em
+matéria de propriedade industrial são de competência exclusiva do Presidente
+do INPI e sua decisão encerra a instância administrativa, conforme dispõem os
+artigos 54, 116, 171 e 212, §3º da LPI:
+Art. 54. Decorrido o prazo fixado no artigo anterior, mesmo que não
+apresentadas as manifestações, o processo será decidido pelo
+Presidente do INPI, encerrando-se a instância administrativa
+Art. 116. Decorrido o prazo fixado no artigo anterior, mesmo que não
+apresentadas as manifestações, o processo será decidido pelo
+Presidente do INPI, encerrando-se a instância administrativa.
+Art. 171 - Decorrido o prazo fixado no artigo anterior, mesmo que não
+apresentada a manifestação, o processo será decidido pelo Presidente
+do INPI, encerrando-se a instância administrativa.
+Art. 212 (...)
+§ 3º - Os recursos serão decididos pelo Presidente do INPI,
+encerrando-se a instância administrativa.
+A Coordenação-Geral de Recursos e Processos Administrativos de
+Nulidade – CGREC, órgão específico singular, subordinado diretamente à
+Presidência do INPI, atuando em segunda instância administrativa, é a unidade
+responsável por examinar e fornecer subsídios técnicos para decisão do
+Presidente do INPI nos recursos e processos administrativos de nulidade,
+interpostos na forma da legislação vigente de propriedade industrial, e emitir
+parecer sobre a matéria técnica suscitada.
+#
+1. Princípios e Teorias Aplicáveis a Instrução Processual em Recursos e Processos Administrativos de Nulidade
+
+O exame técnico de recursos e processos administrativos de nulidade
+deve ser pautado nos princípios que regem o processo administrativo na
+Administração Pública Federal, obedecendo, dentre outros, aos princípios da
+legalidade, finalidade, motivação, razoabilidade, proporcionalidade, moralidade,
+ampla defesa, contraditório, segurança jurídica, autotutela, supremacia do
+interesse público e eficiência.
+Dos pareceres técnicos que pautam as decisões proferidas pelo
+Presidente do INPI, espera-se previsibilidade, acerto técnico e legal e motivação
+enunciada, em linguagem clara e o mais simples possível, de maneira a ser
+entendida por qualquer usuário do INPI, seja o próprio usuário ou seu
+representante legal.
+#
+Devem ser também atendidos a Teoria da Substanciação, o Princípio da
+Fungibilidade, o Princípio da Pluralidade de Instâncias e a Teoria da Causa
+Madura:
+A aplicação da Teoria da Substanciação está apoiada no Parecer
+Consultivo INPI/PROC/DIRAD nº 16/2008:
+(...) Consequentemente, cabe ao Administrador, quando investido na
+função decisória, dar o enquadramento jurídico apropriado à situação
+fática apresentada pelo requerente”. (...) “Assim, frise-se, deve ser
+acolhido o pedido daquele, mesmo que sustente seu direito em norma
+jurídica diversa daquela que seria mais apropriada.
+O Princípio da Fungibilidade pode ser encontrado no Parecer Consultivo
+INPI/PROC/DIRAD nº 02/2008, no qual ficou consignada a possibilidade de
+aproveitamento do ato da parte, quando de forma equivocada, protocola
+requerimento diverso, do previsto em Lei, para o ato impugnado, todavia,
+estando presentes os requisitos da dúvida objetiva, da tempestividade e da
+inocorrência de erro grosseiro por parte do requerente, no ato praticado:
+Com relação ao Princípio da Fungibilidade, o qual integra o
+ordenamento jurídico pátrio, verificamos que é o princípio pelo qual o
+julgador proporciona adequada solução para situações em que não
+seria possível a continuidade do litígio caso fosse mantido o apego
+extremo à forma. Sem este princípio, estaria o julgador, em alguns
+casos, deixando de conhecer o conflito na sua plenitude e negando a
+garantia constitucional do acesso à justiça.
+#
+O Princípio de Pluralidade de Instâncias é aquele que garante que a
+decisão decorrente de ato administrativo proferido em primeira instância seja
+passível de ser revista por instância superior.[Leia-se julgado do STJ: “II – O duplo grau de jurisdição administrativa ou pluralidade de instâncias,
+corolário da ampla defesa e contraditório é direito do administrado. (STJ, RMS, 19.452/MG, Rel. Ministro
+GILSO DIPP, QUINTA TURMA, julgado em 20/06/2006, DJ 01/08/2006, p. 463)”] Visa garantir a possibilidade de
+revisão do pleito por parte de uma autoridade diversa daquela que proferiu o ato
+impugnado e evitar a supressão de instância administrativa. Sua origem remete
+ao dever de autotutela da Administração e de preservar a legalidade dos atos
+administrativos. Como estabelece o Parecer nº 00010-2014-AGU/PGF/INPI/COOPI-LBC-
+1.0, em seu item 14:
+Entre os princípios do processo administrativo, consta o da pluralidade
+de instâncias, decorrente do poder de autotutela. O princípio da
+pluralidade de instâncias permite a revisão dos próprios atos pela
+administração quando ilegais, inconvenientes ou inoportunos.
+Conclui-se, a partir da aplicação do princípio da pluralidade de instâncias
+que o exame em primeiro grau deve se dar de forma ampla e exaustiva, o que
+significa que deve tratar de todas as questões de fato e de direito levantadas
+pelo interessado e decidir de forma fundamentada sobre cada uma delas. Tal
+entendimento se aplica a todas as petições protocoladas no curso do processo
+administrativo. Nessa seara tanto a 1ª e a 2ª instâncias administrativas devem
+dar o devido tratamento às petições protocoladas em suas respectivas fases
+processuais.
+#
+Constatado pela segunda instância, durante a instrução recursal o nãoexaurimento
+da matéria trazida a conhecimento do INPI pela 1ª instância, o
+exame só poderá prosseguir se a unidade revisional compreender que a causa
+se encontra suficientemente madura para decisão pelo Presidente do INPI.
+A Teoria da Causa Madura, corolário do princípio constitucional da
+razoável duração do processo (inciso LXXVIII, do art. 5º da Constituição Federal)
+se encontra expressamente prevista no art. 1.013 da Lei nº 13.105, de 16 de
+março de 2015 (Código de Processo Civil):
+Art. 1.013. A apelação devolverá ao tribunal o conhecimento da matéria
+impugnada.
+§ 1º Serão, porém, objeto de apreciação e julgamento pelo tribunal
+todas as questões suscitadas e discutidas no processo, ainda que não
+tenham sido solucionadas, desde que relativas ao capítulo impugnado.
+§ 2º Quando o pedido ou a defesa tiver mais de um fundamento e o
+juiz acolher apenas um deles, a apelação devolverá ao tribunal o
+conhecimento dos demais.
+§ 3º Se o processo estiver em condições de imediato julgamento,
+o tribunal deve decidir desde logo o mérito quando:
+I - reformar sentença fundada no art. 485 ;
+II - decretar a nulidade da sentença por não ser ela congruente com os
+limites do pedido ou da causa de pedir;
+III - constatar a omissão no exame de um dos pedidos, hipótese
+em que poderá julgá-lo;
+IV - decretar a nulidade de sentença por falta de fundamentação.
+§ 4º Quando reformar sentença que reconheça a decadência ou a
+prescrição, o tribunal, se possível, julgará o mérito, examinando as
+demais questões, sem determinar o retorno do processo ao juízo de
+primeiro grau.
+§ 5º O capítulo da sentença que confirma, concede ou revoga a tutela
+provisória é impugnável na apelação.
+(grifos acrescidos)
+#
+Quando a segunda instância administrativa constatar que não houve
+exaurimento na análise técnica empreendida pela primeira instância e que,
+portanto, não se encontra madura a causa para finalização de toda a instrução
+processual, o processo retornará para a primeira instância, para prosseguimento
+do exame.
+A prerrogativa de retornar processos à primeira instância administrativa
+para exaurimento da instrução processual decorre da competência regimental
+decisória do Presidente do INPI e de sua autoridade hierárquica, cabendo às
+Diretorias, Coordenações-Gerais e Divisões Técnicas do INPI dar
+prosseguimento ao feito, conforme lhes for determinado.
+Tem-se, ainda, por princípio fundamental e ordenador do processo
+administrativo de segunda instância no INPI o Princípio da Preclusão. A
+preclusão deverá ser observada no momento em que expira o prazo previsto
+para a prática de determinado ato processual em razão da extinção do prazo
+previsto em lei. Assim, se a parte não pratica o ato no prazo estabelecido, não
+poderá mais praticá-lo. A Procuradoria Federal Especializada do INPI, no item
+16 do recente PARECER n. 00016/2023/CGPI/PFE-INPI/PGF/AGU, com Efeito
+Normativo conferido pelo Presidente do INPI, assim se manifestou:
+“......tem-se que a preclusão administrativa é um relevante limite para
+efeito devolutivo do recurso e, portanto, um limite para o que estaria
+abarcado pelo conhecimento pleno, porque vai impedir inovações em
+fase recursal, isto é, restringir que o recorrente apresente novo pleito
+em fase recursal, sobretudo quando o prazo para apresentar tal pleito
+já foi ultrapassado.”
+#
+2. Do Recurso
+
+Estabelece a LPI:
+Art. 212. Salvo expressa disposição em contrário, das decisões de que
+trata esta Lei cabe recurso, que será interposto no prazo de 60
+(sessenta) dias.
+§ 1º Os recursos serão recebidos nos efeitos suspensivo e
+devolutivo pleno, aplicando-se todos os dispositivos pertinentes ao
+exame de primeira instância, no que couber.
+§ 2º Não cabe recurso da decisão que determinar o arquivamento
+definitivo de pedido de patente ou de registro e da que deferir pedido
+de patente, de certificado de adição ou de registro de marca.
+§ 3º Os recursos serão decididos pelo Presidente do INPI,
+encerrando-se a instância administrativa.
+Art. 213. Os interessados serão intimados para, no prazo de 60
+(sessenta) dias, oferecerem contrarrazões ao recurso.
+Art. 214. Para fins de complementação das razões oferecidas a
+título de recurso, o INPI poderá formular exigências, que deverão ser
+cumpridas no prazo de 60 (sessenta) dias.
+Parágrafo único. Decorrido o prazo do caput, será decidido o
+recurso.
+Art. 215. A decisão do recurso é final e irrecorrível na esfera
+administrativa.
+A LPI, dispõe em seu artigo 212, § 2º, os casos em que não se admite a
+interposição de recursos: o arquivamento definitivo de pedido de patente ou de
+registro, o deferimento do pedido de patente, o de certificado de adição ou de
+registro de marca.
+Da leitura do dispositivo, infere-se que é passível de recurso todos os demais
+atos decisórios, os quais a LPI não prevê, de forma expressa, o encerramento
+da instância administrativa.
+#
+2.1 Do exame prévio de admissibilidade dorRecurso
+Nos termos do art. 219 da LPI, os recursos devem atender aos seguintes critérios
+para sua admissibilidade:
+a) Existência de decisão a ser recorrida e para a qual cabe recurso;
+b) Tempestividade;
+c) Apresentação das razões recursais;
+d) Pagamento da retribuição correspondente; e
+e) Procuração dando poderes para o ato, se couber.
+Estando em conformidade o peticionamento do recurso, será providenciada sua
+notificação na Revista da Propriedade Industrial - RPI. Da data de sua publicação
+inicia-se o prazo de 60 dias para que terceiros interessados apresentem suas
+contrarrazões ao recurso nos termos do Art. 213 da LPI.
+Não se conhecerá da petição de recurso que não preencha os requisitos
+necessários para sua instrução e será arquivada aquela que conter como
+signatário procurador sem a devida procuração.
+#
+2.2 Da distribuição dos recursos para exame
+Decorrido o prazo de 60 dias imposto pelo art. 213 da LPI, terá início a etapa de
+exame de mérito.
+A fila de exame dos recursos, salvo as exceções impostas pelas normativas de
+trâmite prioritário, obedecerá a seguinte ordem:
+Marcas: ordem cronológica da protocolização da petição do recurso;
+Desenho Industrial: ordem cronológica da notificação da interposição do recurso;
+Patentes: ordem cronológica da notificação da interposição do recurso para
+cada área técnica de origem do processo,
+A fila de exame está disponível à sociedade e é atualizada mensalmente por
+meio do sítio eletrônico do INPI.
+#
+2.3 Dos efeitos do recurso e dos seus limites
+Do efeito suspensivo do recurso implica que a decisão recorrida tem sua eficácia
+suspensa – ou seja, não pode ser executada - até decisão que encerre a
+instância administrativa.
+Do efeito devolutivo decorre que toda matéria decidida em primeira instância é
+devolvida ao conhecimento e decisão de uma autoridade hierarquicamente
+superior.
+#
+2.3.1 Da preclusão administrativa
+Os limites do conhecimento do recurso previsto no art. 212 da LPI são
+determinados pelo seu efeito devolutivo. Esclarece, não obstante, o
+PARECER/INPI/PROC/CJCONS/Nº 10/07 que todas as questões que foram
+objeto do recurso serão devolvidas para a instância superior, porém não serão
+devolvidos prazos para apresentação de novo pleito, face ao esgotamento da
+etapa de instrução administrativa. No mesmo sentido, vejam-se os itens 15 a 17
+do PARECER n. 00016/2023/CGPI/PFE-INPI/PGF/AGU.
+15. Todavia, conforme ressalvado no citado parecer, “todas as
+questões objeto do apelo serão devolvidas para reexame do juízo ad
+quem, porém, não o prazo para apresentar qualquer outro pleito, face,
+exatamente, ao esgotamento da etapa de instrução do feito”, ou seja,
+a preclusão administrativa limita o alcance das matérias a serem
+analisadas em sede recursal.
+16. Por isso, tem-se que a preclusão administrativa é um relevante
+limite para efeito devolutivo do recurso e, portanto, um limite para o
+que estaria abarcado pelo conhecimento pleno, porque vai impedir
+inovações em fase recursal, isto é, restringir que o recorrente
+apresente novo pleito em fase recursal, sobretudo quando o prazo para
+apresentar tal pleito já foi ultrapassado.
+17. E o racional para esta restrição é muito simples, é a necessidade
+de se realizar os atos nas oportunidades legais próprias e a
+necessidade de o processo caminhar para um desfecho, sem incorrer
+em infinitas intercorrências e renovações de pleitos.
+Significa dizer que a preclusão administrativa é limite para o efeito devolutivo
+pleno. A racionalidade para essa restrição, conforme o item 17 do PARECER n.
+00016/2023/CGPI/PFE-INPI/PGF/AGU, se encontra na necessidade de
+[...] realizar os atos nas oportunidades legais próprias e a necessidade
+de o processo caminhar para um desfecho, sem incorrer em infinitas
+intercorrências e renovações de pleitos.
+#
+3. Do Processo Administrativo de Nulidade
+A possibilidade de a Administração Pública declarar nulos seus atos é uma
+decorrência do princípio da autotutela e encontra amparo na Súmula 346 do STF
+e no art. 53 da Lei 9.784/99.
+Em todas as hipóteses previstas na LPI (artigos 54, 116 e 171), a decisão do
+processo administrativo de nulidade é de competência exclusiva do Presidente
+do INPI, encerrando-se a instância administrativa.
+O processo administrativo de nulidade prosseguirá ainda que extinta a patente,
+o registro de marca ou o registro de desenho industrial.
+#
+6. Dos Procedimentos em Patentes
+
+6.1 Do recurso contra o indeferimento do pedido de patente
+O indeferimento é a decisão de natureza terminativa pela qual é denegado o
+pedido de patente por não atendimento aos requisitos e/ou às condições de
+patenteabilidade, nos termos do art. 37 da LPI. O depositante poderá recorrer da
+decisão proferida, observando os termos do art. 212 da LPI, no prazo de 60
+(sessenta) dias de sua publicação na RPI.
+#
+6.2 Recurso contra o arquivamento de pedido de patente
+A LPI prevê o arquivamento de pedidos de patente por falta de atendimento de
+requisitos previstos na LPI e/ou normativas internas, o que torna suspenso o
+curso do exame após a decisão de 1ª instância administrativa. Dessa forma, o
+depositante pode recorrer da decisão proferida, observando os termos do art.
+212 da LPI, no prazo de 60 (sessenta) dias de sua publicação na RPI.
+Dentre os recursos possíveis encontram-se:
+- Recurso contra arquivamento de pedido de divisão de pedido de patente,
+(artigo 26, parágrafo único, da LPI);
+- Recurso contra arquivamento do pedido de Certificado de Adição de
+pedido de patente, (artigo 77, da LPI);
+- Recurso contra arquivamento de pedido de patente por não cumprimento
+de exigência formulada nos termos artigo 34 da LPI.
+#
+6.3 Recurso contra atos administrativos em requerimentos diversos
+Nesta categoria inserem-se as decisões da Diretoria de Patentes que deferem
+requerimentos ou negam por falta de atendimento aos requisitos estipulados na
+LPI e/ou normativas internas do INPI.
+A parte interessada poderá recorrer da decisão proferida, observando os termos
+do art. 212 da LPI, interpondo petição recursal no prazo de 60 (sessenta) dias
+da publicação do ato administrativo.
+A título exemplificativo citam-se as seguintes decisões administrativas passíveis
+de recurso:
+- Pedido Retirado;
+- Restabelecimento de Direito Negado;
+- Petições não conhecidas;
+- Perda de Prioridade;
+- Devolução de Prazo Negada;
+- Deferimento/indeferimento de Caducidade;
+- Transferência deferida/indeferida.
+#
+6.4 Das razões do recurso
+É indispensável que, na peça recursal, seja demonstrado o inconformismo em
+relação ao ato decisório, cujas razões expostas pelo recorrente apresentem
+fundamentos de fato e de direito que sejam capazes de convencer o órgão
+julgador do desacerto da decisão recorrida. Não se admite, por via de
+consequência, o recurso genérico, como um mero protesto por novo julgamento.
+Será necessário que o recorrente exponha de forma objetiva seu pedido recursal,
+pleiteando a reforma total ou parcial do ato impugnado, sendo possibilitado ao
+recorrente, ainda, que, assumindo a ausência de erro na decisão impugnada,
+apresente emendas ao quadro reivindicatório objeto do indeferimento, desde que
+não sejam objeto de preclusão, de forma a contornar as objeções apontadas no
+exame de 1ª instância (PARECER n. 00019/2023/CGPI/PFE-INPI/PGF/AGU e
+PARECER n. 00003/2024/CGPI/PFE-INPI/PGF/AGU). Tais emendas devem
+obedecer às seguintes condições:
+Emendas permitidas no quadro reivindicatório em fase recursal:
+a) As alterações no quadro reivindicatório em 2ª instância devem apresentar
+nexo causal entre o óbice apontado pela primeira instância e a razão pela
+qual tal alteração contornaria essa objeção. A ausência de tal explicação
+ensejará exigência nos termos do art. 214 da LPI, caso a 2ª instância
+julgue necessário;
+b) As emendas do quadro reivindicatório devem guardar relação de
+convergência no que se refere ao quadro reivindicatório discutido na
+decisão de indeferimento, ou seja, só poderão ser apresentadas
+modificações que sejam, derivações restritivas lógicas daquele quadro
+objeto do indeferimento. Isso significa que o quadro emendado deve ser
+uma restrição do quadro objeto do indeferimento, sendo vedado que
+sejam trazidas matérias que foram abandonadas no decorrer do exame
+de 1ª instância e/ou que configurem acréscimo de matéria nos termos
+dispostos na Resolução/INPI nº 093 de 10.06.2013 (PARECER n.
+00019/2023/CGPI/PFE-INPI/PGF/AGU e PARECER n.
+00003/2024/CGPI/PFE-INPI/PGF/AGU);
+c) Nesse sentido, serão admitidas apenas restrições que estejam
+expressamente previstas em reivindicações dependentes, ou oriundas da
+combinação de reivindicações independentes/interligadas. (PARECER n.
+00019/2023/CGPI/PFE-INPI/PGF/AGU e PARECER n.
+00003/2024/CGPI/PFE-INPI/PGF/AGU). As restrições oriundas do
+relatório descritivo e que não estejam expressas no quadro reivindicatório
+impugnado, importarão na inadmissão do quadro emendado proposto;
+todavia, tal inadmissão será precedida de exigência nos termos do art.
+214 da LPI para que a recorrente exerça ampla defesa e contraditório,
+sem possibilidade, contudo, de novas emendas ao quadro;
+d) Não serão admitidas solicitações de mudança de natureza em sede de 2ª
+instância, salvo se a referida mudança já tenha sido objeto demandado
+pelo depositante na primeira instância e tenha sido indevidamente negada
+(PARECER n. 00019/2023/CGPI/PFE-INPI/PGF/AGU e PARECER n.
+00003/2024/CGPI/PFE-INPI/PGF/AGU).
+#
+6.5 Dos recursos com origem em exigências não cumpridas adequadamente
+Nos casos de exigência não cumprida adequadamente, entende-se, a princípio,
+que há preclusão, ou seja, o depositante perdeu a oportunidade processual
+concedida pelo INPI para cumpri-la, não sendo aceitável, em sede de recurso,
+que o faça (PARECER n. 00016/2023/CGPI/PFE-INPI/PGF/AGU, PARECER n.
+00019/2023/CGPI/PFE-INPI/PGF/AGU e PARECER n. 00003/2024/CGPI/PFEINPI/
+PGF/AGU).
+O recorrente deve esclarecer o motivo do não cumprimento adequado da
+exigência em 1ª instância, tais como:
+e) exigência despicienda (desnecessária) – erro de julgamento;
+f) restrição indevida - erro de julgamento;
+g) falta de esclarecimento impedindo a compreensão da necessidade de
+restrição solicitada (motivação insuficiente) – erro formal;
+h) falta de clareza na exigência – erro formal, entre outros.
+#
+6.6 Do processo administrativo de nulidade de patentes
+É nula a patente concedida contrariando as disposições da Lei da Propriedade
+Industrial.
+A nulidade da patente será declarada administrativamente quando não atender
+aos requisitos de patenteabilidade: – novidade (art. 8º c/c 11 da LPI), atividade
+inventiva (art. 8º c/c 13 da LPI) e aplicação industrial (art. 8º c/c 15 da LPI); não
+atender às condições de patenteabilidade dispostas nos arts. 24 (suficiência
+descritiva) e 25 (clareza e fundamentação) da LPI; proteger matéria não
+patenteável (art. 18 da LPI) ou que não seja considerada invenção (art. 10 da
+LPI); e proteger matéria não inicialmente revelada e/ou reivindicada nos termos
+do art. 32 da LPI.
+O processo de nulidade poderá ser instaurado de ofício ou mediante
+requerimento de qualquer pessoa com legítimo interesse, no prazo de 6 (seis)
+meses contados da concessão da patente.
+O requerente do Processo Administrativo de Nulidade deverá trazer todos os
+argumentos e elementos de convicção até o prazo determinado no art. 51 da
+LPI, sob o risco de preclusão dessa faculdade, devido à limitação temporal.
+Tal limitação temporal se estende ao próprio INPI que não poderá adicionar
+elementos extra petita ao iniciar o exame do requerimento.
+Alternativamente à nulidade total é possível que a nulidade atinja parcialmente a
+concessão – nulidade parcial. Na nulidade parcial, as restrições devem ser
+originadas do próprio quadro reivindicatório da concessão, não sendo admitidas
+restrições oriundas do relatório descritivo.
+#
+6.6.1 Do exame prévio de admissibilidade do requerimento da nulidade
+administrativa
+Etapa de exame formal em que são avaliados os seguintes tópicos:
+a. Existência de concessão;
+b. Tempestividade;
+c. Apresentação das razões para requerimento da nulidade;
+d. Pagamento da taxa; e
+e. Verificação da procuração dando poderes para o ato, se couber.
+Uma vez não verificado qualquer impedimento à admissão do requerimento da
+Nulidade Administrativa, e após esgotamento do prazo previsto no art. 51 da LPI,
+será notificado o requerimento de nulidade administrativa, iniciando-se o prazo
+de 60 dias para que o Titular da patente apresente argumentos e elementos de
+convicção que entenda suficientes para ensejar a manutenção da patente.
+#
+6.6.2 Da instrução processual do requerimento da nulidade administrativa
+Havendo ou não manifestação, decorrido o prazo fixado no artigo 52 da LPI, o
+INPI emitirá parecer, intimando o titular e o requerente para se manifestarem no
+prazo comum de 60 (sessenta) dias. A manifestação deverá se ater ao conteúdo
+do parecer, sendo vedado ao requerente, a apresentação de fatos novos.
+Decorrido esse prazo, mesmo que não apresentadas as manifestações, o
+processo será novamente instruído pela segunda instância administrativa
+fornecendo os subsídios necessários para a decisão do Presidente do INPI,
+encerrando-se a instância administrativa.
+#
+7. Da Vigência e das Disposições Transitórias e Finais
+Em conformidade com o que determina o Despacho Decisório do Presidente do
+INPI publicado na RPI 2764, de 26 de dezembro de 2023, as diretrizes aqui
+instituídas passam a vigorar a partir de 02 de abril de 2024.
+O recurso que tiver sido interposto até 01/04/2024 e não se adequarem aos
+balizamentos previstos nas manifestações jurídicas constantes dos Pareceres
+Normativos: PARECER n. 00016/2023/CGPI/PFE-INPI/PGF/AGU, PARECER
+n. 00017/2023/CGPI/PFE-INPI/PGF/AGU, PARECER n.
+00018/2023/CGPI/PFE-INPI/PGF/AGU, PARECER n. 00019/2023/CGPI/PFEINPI/
+PGF/AGU e PARECER n. 00003/2024/CGPI/PFE-INPI/PGF/AGU e, ainda,
+nos Despachos Decisórios do Presidente do INPI publicados nas RPIs 2762 de
+12/12/2023; 2764 de 26/12/2023 e 2773, de 27/02/2024, sofrerá exigência, a
+qual poderá ser respondida dentro do prazo legalmente estabelecido pela Lei nº
+9.279, de 14 de maio de 1996.
+Aplicam-se ao exame dos recursos interpostos em requerimentos de Indicações
+Geográficas e de Registros de Contratos de Tecnologia, no que couber, os
+entendimentos consolidados nas presentes Diretrizes.
