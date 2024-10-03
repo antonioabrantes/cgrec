@@ -8,7 +8,9 @@ def initialize():
 
 st.session_state.chat=initialize()
 
-st.title("Doc chat Bot")
+st.title("Fale Conosco da CGREC")
+st.markdown("<small>Pesquisa nas Portarias 10 e Pareceres 03, 10 e 19, bem como um cojunto de 60 perguntas&respostas</small>", unsafe_allow_html=True)
+
 
 # Initialize chat history
 if "messages" not in st.session_state:
@@ -20,7 +22,7 @@ for message in st.session_state.messages:
         st.markdown(message["content"])
 
 # React to user input
-if prompt := st.text_area("Ola como vai ?"):
+if prompt := st.text_area("Entre com sua pergunta."):
     # Display user message in chat message container
     st.chat_message("user").markdown(prompt)
     # Add user message to chat history
