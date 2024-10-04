@@ -83,6 +83,14 @@ class chat_gen():
         arquivo = f"dados/{name5}"  # Especifique o caminho do PDF
         text5 = ler_txt(arquivo)
     
+        name6 = "parecer4.pdf"
+        arquivo = f"dados/{name6}"  # Especifique o caminho do PDF
+        text6 = ler_pdf(arquivo)
+
+        name7 = "parecer04#.txt"
+        arquivo = f"dados/{name7}"  # Especifique o caminho do PDF
+        text7 = ler_pdf(arquivo)
+
         text_splitter = RecursiveCharacterTextSplitter( # divide o PDF em blocos/chunks de 512 tokens
             chunk_size = 512,
             chunk_overlap  = 24,
@@ -95,6 +103,8 @@ class chat_gen():
         chunks3 = []
         chunks4 = []
         chunks5 = []
+        chunks6 = []
+        chunks7 = []
         
         # chunks = text_splitter.create_documents([text])
         metadata = {"source": name1,"row": 0}
@@ -113,7 +123,13 @@ class chat_gen():
         metadata = {"source": name5,"row": 0}
         chunks5 = text_splitter.create_documents([text5], metadatas=[metadata])
         
-        combined_chunks = chunks1 + chunks2 + chunks3 + chunks4 + chunks5
+        metadata = {"source": name6,"row": 0}
+        chunks6 = text_splitter.create_documents([text6], metadatas=[metadata])
+
+        metadata = {"source": name7,"row": 0}
+        chunks7 = text_splitter.create_documents([text7], metadatas=[metadata])
+
+        combined_chunks = chunks1 + chunks2 + chunks3 + chunks4 + chunks5 + chunks6 + chunks7
         
         embeddings = HuggingFaceEmbeddings(model_name='sentence-transformers/all-MiniLM-L6-v2')
         vectorstore = FAISS.from_documents(combined_chunks, embeddings)
@@ -144,6 +160,10 @@ class chat_gen():
         1. Você deve buscar se comportar de maneira cordial e solícita.
         2. Suas respostas devem ser bem similares ou até identicas às enviadas em termos de comprimento, tom de voz, argumentos lógicos do Fale Conosco.
         3. Alguns das respostas podem conter links e informações irrelevantes. Preste atenção apenas no conteúdo útil da mensagem.
+        
+        Encerre com o cabeçalho:
+        Atenciosamente,
+        INPI / CGREC / Equipe Fale Conosco
         """
 
         # Define your template with the system instruction

@@ -1,0 +1,249 @@
+MINISTÉRIO DO DESENVOLVIMENTO, INDÚSTRIA, COMÉRCIO E SERVIÇOS
+ INSTITUTO NACIONAL DA PROPRIEDADE INDUSTRIAL
+ PORTARIA /INPI/PR/CGREC/ Nº 4, DE 20 DE AGOSTO DE 2024
+ Publica o Procedimento de Exame Técnico de Pedido
+ Padronização de Documentos.
+ 
+ O COORDENADOR-GERAL DE RECURSOS E PROCESSOS ADMINISTRATIVOS DE NULIDADE, no uso das atribuições que lhes foram
+ conferidas pelo Regimento Interno, aprovado por meio da Portaria do Ministério da Indústria, Comércio Exterior e Serviços (MDIC) nº 11, de 27
+ de janeiro de 2017, e
+ CONSIDERANDO o constante dos autos do processo nº 52402.008799/2024-39,
+ RESOLVE:
+ Art. 1º Publicar, na forma dos documentos anexados a esta Portaria, o Procedimento de Exame Técnico de Pedidos de Patente em
+ Grau de Recurso, em conformidade com o Sistema de Padronização de Documentos, para alinhamento ao Manual do Sistema de Padronização
+ de Documentos do INPI (GEQU-GDS-MN-0001).
+ Art. 2º Esta portaria entra em vigor na data de sua publicação no Bolem de Pessoal do INPI.
+ 
+ GERSON DA COSTA CORRÊA
+  Coordenador Geral de Recursos e Processos Administra vos de Nulidade
+ 
+ 
+SISTEMA DE PADRONIZAÇÃO DO INPI 
+PROCEDIMENTO 
+Código CPAT–ARE–PP–0001 
+Revisão 0.0 
+Aprovação 16/08/2024 
+EXAME TÉCNICO DE PEDIDOS DE PATENTE 
+EM GRAU DE RECURSO Processo Análise de Recurso (Nivel 2) 
+ 
+Uso Interno Não é indicada a impressão deste documento. Certifique-se da versão vigente no INPI Drive do SGQ. 
+ 
+Página 1 de 7 
+ 
+  
+Sumário 
+1. Responsável ............................................... 1 
+2. Objetivo .................................................. 1 
+3. Abrangência ............................................... 1 
+4. Documentos complementares ................................. 1 
+5. Glossário ................................................. 2 
+6. Descrição dos processos ou atividades ..................... 2 
+7. Entradas do processo ........................... .......... 5 
+8. Saídas do processo ........................................ 5 
+9. Fluxo do processo ......................................... 5 
+10. Indicadores do processo .................................. 7 
+11. Dono do documento ........................................ 7 
+12. Outro(s) elaborador(es) do documento ..................... 7 
+13. Aprovador(es) do documento ............................... 7 
+14. Bibliografia .................................. .......... 7 
+15. Histórico das alterações .........................  ...... 7 
+16. Anexos ................................................... 7 
+ 
+#
+1. Responsável  
+Servidores da COREP e servidores das divisões técnicas da DIRPA que atuam no exame dos recursos 
+de pedidos de patente de invenção, patente de modelo de utilidade e certificado de adição. 
+
+2. Objetivo 
+Fornecer orientações para assegurar a correta elaboração do parecer técnico em grau de recurso para 
+pedidos de patente de invenção, patente de modelo de utilidade e certificado de adição indeferidos em 
+primeira instância.  
+
+3. Abrangência 
+Aplica-se aos examinadores de patentes responsáveis pelo exame em segunda instância dos pedidos 
+de patente de invenção, patente de modelo de utilidade e certificado de adição depositados no INPI, 
+sendo relativo ao macroprocesso de concessão de patente.
+ 
+4. Documentos complementares 
+Lei N° 9.279, de 14 de maio de 1996 – Lei da Propriedade Industrial. 
+Portaria /INPI/ Nº 10, de 08 de março de 2024 – Diretrizes de Instrução dos Recursos e dos Processos Administrativos de Nulidades. 
+Resolução INPI/PR Nº 93, de 10 de junho de 2013 – Diretrizes sobre a aplicabilidade do disposto no art. 32 da Lei 9.279/96 nos pedidos de patente. 
+PARECER Nº 00016/2023/CGPI/PFE-INPI/PGF/AGU, com efeito normativo conferido pelo Presidente do INPI. 
+PARECER Nº 00019/2023/CGPI/PFE-INPI/PGF/AGU, com efeito normativo conferido pelo Presidente do INPI. 
+PARECER Nº 00003/2024/CGPI/PFE-INPI/PGF/AGU, com efeito normativo conferido pelo Presidente do INPI. 
+#
+
+5. Glossário 
+COREP: Coordenação de Recursos e Nulidades Administrativas em Patentes 
+DIRPA: Diretoria de Patentes, Programas de Computador e Topografia de Circuitos Integrados 
+INPI: Instituto Nacional da Propriedade Industrial 
+LPI: Lei da Propriedade Industrial (Lei N° 9.279, de 14 de maio de 1996) 
+SISCAP: Sistema de Cadastramento da Produção 
+#
+
+6. Descrição dos processos ou atividades 
+6.1 Aspectos Gerais 
+6.1.1 As argumentações apresentadas por meio da petição recurso contra o indeferimento devem ser 
+analisadas, bem como possíveis petições de aditamento ao recurso juntadas ao processo. 
+6.1.2 Todas as petições presentes no processo devem ser analisadas como forma de verificar se todas 
+foram levadas em consideração durante o exame técnico em primeira instância.  
+6.1.3 O parecer de indeferimento, bem como o quadro reivindicatório indeferido, são o foco da revisão 
+efetuada pela instância recursal e, se necessário, os demais pareceres técnicos do processo. 
+6.1.4 Na 1ª etapa da análise recursal deve-se verificar se ocorreram vícios formais que provocaram 
+prejuízo à análise do recurso, sendo que: 
+• a anulação do indeferimento e retorno dos autos à primeira instância para continuação do 
+exame somente ocorrerá em casos de inobservância de regra processual que tenha 
+alterado o desfecho final da decisão recorrida (despacho 100.2) – usar Modelo 1 ou Modelo 
+9 (Nota Técnica CPAPD 01 de 2023); e 
+• no caso de não ter havido vícios formais, ou, caso tenha havido, tais vícios não tenham 
+interferido no desfecho final da decisão, deve-se prosseguir para a etapa seguinte da 
+análise do recurso. 
+#
+
+6.1.5 Na 2ª etapa da análise do recurso deve-se avaliar se os óbices apontados no parecer de 
+indeferimento são mantidos a partir das alegações da recorrente, levando em consideração o quadro 
+reivindicatório objeto do indeferimento, sendo que: 
+• a anulação do indeferimento e retorno dos autos à primeira instância para continuação do 
+exame somente ocorrerá caso subsistam questões/matéria sem a devida análise pela 
+primeira instância e que prejudiquem a análise recursal (despacho 100.2) – usar Modelo 2; 
+• caso haja vícios de julgamento mas a segunda instância entenda que a decisão pode ser 
+reformada sem a necessidade de novas diligências, é possível evocar o princípio da causa 
+madura e recomendar o provimento do Recurso e a concessão da patente (despacho 100.1) – usar Modelo 3 ou, antes do provimento, caso necessário, emitir uma exigência (despacho 
+121) – usar Modelo 11 –  com o intuito de adequar o quadro reivindicatório indeferido ao 
+provimento, sendo que no caso de apresentação de novo quadro reivindicatório no recurso, 
+deve-se observar se o mesmo já resolve os óbices ao provimento e, se sim, após a devida 
+análise do item 6.4 das Diretrizes de Instrução dos Recursos e dos Processos 
+Administrativos de Nulidades (Portaria/INPI/Nº 10, de 08/03/2024), recomendar o 
+provimento do Recurso e a concessão da patente (despacho 100.1); 
+• caso não tenha sido verificado qualquer vício na decisão de indeferimento, ou, caso haja 
+eventuais vícios, mas estes não interfiram na análise do recurso, deve-se prosseguir para 
+a etapa seguinte. 
+
+#
+6.1.6 Na 3ª etapa da análise do recurso deve-se avaliar se existe solução para todos os óbices 
+apontados no parecer de indeferimento, levando-se em consideração a possibilidade de se efetuar 
+alterações no quadro reivindicatório (indeferido e/ou no apresentado em grau recursal). 
+6.1.6.1 Na ausência de solução para todos os óbices, ou seja, caso ainda reste alguma 
+impossibilidade ao patenteamento que não possa ser resolvida por meio de exigências técnicas ou 
+que já não esteja resolvida em quadro reivindicatório novo apresentado junto à petição do recurso, o 
+recurso deve ter seu provimento negado e o indeferimento do pedido deve ser mantido. Todavia, de 
+acordo com as disposições transitórias constantes no item 7 das novas Diretrizes de Instrução de 
+Recursos e Processos Administrativos de Nulidade (Portaria/INPI/Nº 10, de 08/03/2024), durante o 
+período de transição deve ser oportunizada a possibilidade de a recorrente apresentar as razões pelas 
+quais entende que a decisão recorrida foi incorreta e que o quadro reivindicatório objeto do 
+indeferimento é dotado dos requisitos e condições de patenteabilidade (despacho 121) – usar Modelos 7 ou 8; 
+6.1.6.2 Caso haja solução para os óbices apontados no parecer de indeferimento, deve-se 
+observar se houve a apresentação de novo quadro reivindicatório junto à petição do recurso. 
+6.1.6.3 Se não houve a apresentação de novo quaro reivindicatório, deve-se analisar, no quadro 
+indeferido, quais as emendas necessárias para o provimento do recurso, devendo ser emitida uma 
+exigência técnica (despacho 121) – usar Modelo 6 ou Modelo 11; 
+
+#
+6.1.6.4 Se houve a apresentação de novo quadro reivindicatório deve-se: 
+• analisar se as emendas que foram feitas pela própria recorrente no novo quadro 
+reivindicatório estão conforme as emendas permitidas no item 6.4 das novas Diretrizes de 
+Instrução de Recursos e Processos Administrativos de Nulidade (Portaria/INPI/Nº 10, de 
+08/03/2024). Em caso negativo, deve ser feita uma exigência para correção, e, de forma a 
+atender ao princípio da eficiência, também devem ser incorporadas, caso necessário, outras 
+exigências que tenham por objetivo emendar o quadro reivindicatório apresentado em sede 
+de recurso (despacho 121) – usar Modelo 6 ou Modelo 11; 
+• analisar se o novo quadro reivindicatório, mesmo atendendo ao item 6.4 das novas 
+Diretrizes de Instrução de Recursos e Processos Administrativos de Nulidade 
+(Portaria/INPI/Nº 10, de 08/03/2024), ainda necessita de emendas para o provimento do 
+Recurso e, nesse caso, deve-se emitir uma exigência técnica (despacho 121) – usar Modelo 
+6 ou Modelo 11; 
+• caso as emendas trazidas pela recorrente contornem a objeção especificamente apontada 
+no parecer de indeferimento, mas observa-se que o exame técnico na primeira instância 
+não avaliou outras questões essenciais deve-se retornar os autos à primeira instância para 
+a continuação do exame (despacho 100.2) – usar Modelo 5; e 
+• caso a segunda instância entenda que a decisão deve ser reformada sem a necessidade 
+de novas diligências, pode-se evocar o princípio da causa madura e recomendar o 
+provimento do Recurso e a concessão da patente (despacho 100.1) – usar Modelo 4. 
+#
+ 
+6.1.7 Nos casos de exigência não cumprida satisfatoriamente na primeira instância, entende-se, a 
+princípio, que ocorreu a preclusão, não sendo aceitável em sede de recurso o seu cumprimento, 
+conforme 00019/2023/CGPI/PFE-INPI/PGF/AGU e PARECER Nº 00003/2024/CGPI/PFE-INPI/PGF/AGU. 
+Todavia, caso a recorrente entenda que houve alguma inadequação em relação às exigências 
+anteriormente formuladas, conforme disposto no item 6.5 da referida normativa, está sendo 
+oportunizada, mediante a emissão de uma exigência técnica para tal fim (despacho 121) – usar Modelo 
+10, a possibilidade de a recorrente apresentar suas razões, de modo a fundamentar seu entendimento. 
+Além disso, durante o período de transição, é facultado à Recorrente esclarecer a impossibilidade 
+técnica que levou ao não cumprimento apropriado das exigências, conforme disposto no terceiro 
+parágrafo do item 7 da referida normativa.
+#
+ 
+6.2 Elaboração de Relatório de Subsídios Técnicos em grau de Recurso 
+6.2.1 Os modelos do parecer técnico são padronizados e estão disponíveis no SISCAP, por meio da 
+aba “Produção”, na opção “Gerar modelo de parecer”. 
+6.2.2 Utilizar os modelos de parecer disponíveis no SISCAP, selecionando o modelo adequado: 
+Recurso DIRPA ou Recurso DIREP, dependendo da lotação do examinador que fará o exame do 
+recurso.  
+6.2.3 Informar o número e a data da petição de recurso e a base legal motivadora do indeferimento. 
+6.2.4 Informar se foram apresentadas contrarrazões, de acordo com o art. 213 da LPI. 
+6.2.5 Analisar e comentar todas as alegações apresentadas pela recorrente, informando o motivo das 
+razões não julgadas, quando for o caso (por exemplo, razões que não são baseadas em conteúdo 
+técnico). Analisar e comentar as contrarrazões apresentadas, quando houver. Analisar e comentar 
+também as alegações técnicas trazidas em petições subsequentes de aditamento. 
+
+#
+6.3 Conclusões 
+6.3.1 – Despacho 100.1: Recurso conhecido e provido. Reformada a decisão recorrida e deferido o 
+pedido. 
+6.3.1.1 O parecer será de provimento quando as alegações da recorrente forem aceitas e a matéria 
+objeto da proteção atender aos requisitos e condições de patenteabilidade e encontrar-se de acordo 
+com a legislação e normativas vigentes. 
+6.3.1.2 Avaliar se as exigências formuladas em grau de recurso foram cumpridas 
+satisfatoriamente, se as novas páginas do pedido apresentadas, relatório descritivo, reivindicações, 
+figuras e listagem de sequências, quando houver (para concessão da patente, a listagem de 
+sequências deve ser classificada como B1, para publicação) estão de acordo com a legislação e 
+normativas vigentes e se o pedido está em condições de receber a proteção requerida, cabendo, nesse 
+caso, o provimento. 
+6.3.1.3 Citar os documentos do estado da técnica encontrados no exame de primeira instância, 
+avaliados como impeditivos aos requisitos de patenteabilidade, comentando e justificando as razões 
+que contribuíram para a mudança de posicionamento técnico. 
+
+#
+6.3.2 – Despacho 100.2: Recurso conhecido e provido. Anulado indeferimento para retorno dos autos 
+à primeira instância para continuação de exame. 
+6.3.2.1 O recurso será conhecido, provido e devolvido à primeira instância para continuação do 
+exame quando tiver ocorrido vício formal, ou seja, a inobservância de determinada regra processual 
+que tenha alterado o desfecho final da decisão recorrida ou quando tiver ocorrido vício no julgamento 
+que tenha propiciado a permanência de questões/matéria sem a análise pela primeira instância ou, 
+ainda que na ausência de vício formal ou de julgamento, quando for observado que, apesar de as 
+emendas trazidas pela recorrente contornarem as objeções apontadas no indeferimento, o exame 
+técnico na primeira instância não avaliou outras questões essenciais. 
+6.3.2.2 Avaliar as motivações do indeferimento, comentando e justificando as razões que 
+contribuíram para a mudança de posicionamento técnico. 
+6.3.2.3 Especificar o motivo pelo qual a continuação de exame que se faz necessária, destacando
+se as matérias e questões que devem ser analisadas pela primeira instância. 
+
+#
+6.3.3 – Despacho 111: Recurso conhecido e negado provimento. Mantido o indeferimento do pedido. 
+6.3.3.1 Avaliar se as exigências formuladas em grau de recurso não foram cumpridas 
+satisfatoriamente e se o pedido não está em condições de receber a proteção requerida, cabendo o 
+não provimento. 
+6.3.3.2 Comentar e justificar as alegações da recorrente que não foram consideradas 
+satisfatórias para a mudança de posicionamento técnico (após o período de transição). 
+6.3.3.3 Comentar e justificar o todo ou a parte das irregularidades apontadas no exame de 
+primeira instância que não foram sanadas pela recorrente (após o período de transição). 
+6.3.3.4 Concluir o parecer com os artigos da LPI que motivaram a manutenção do indeferimento 
+do pedido de patente (após o período de transição). 
+
+#
+6.3.4 – Despacho 121: Exigência em grau de recurso. 
+6.3.4.1 O parecer será de exigência quando for identificada matéria que atenda aos requisitos e 
+condições de patenteabilidade, mas forem necessárias alterações para que o pedido esteja de acordo 
+com a legislação e normativas vigentes. 
+6.3.4.2 Comentar e justificar, de forma resumida, as alegações da recorrente que propiciaram a 
+mudança de posicionamento técnico.  
+6.3.4.3 Apresentar ao depositante as exigências a serem cumpridas de forma clara, precisa e 
+sem ambiguidades, principalmente no que se refere a limitações do escopo das reivindicações ou à 
+eliminação de reivindicações, lembrando que todas as exigências técnicas devem ser embasadas em 
+artigos da LPI. 
+6.3.4.4 No período de transição, de acordo com as disposições transitórias constantes no item 7 
+das novas Diretrizes de Instrução de Recursos e Processos Administrativos de Nulidade 
+(Portaria/INPI/Nº 10, de 08/03/2024), está sendo oportunizada, por meio da formulação de exigência 
+(despacho 121) a possibilidade de a Recorrente apresentar as razões pelas quais entende que a 
+decisão recorrida foi incorreta e que o quadro reivindicatório objeto do indeferimento é dotado dos 
+requisitos e condições de patenteabilidade. 

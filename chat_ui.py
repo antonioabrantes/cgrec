@@ -9,7 +9,7 @@ def initialize():
 st.session_state.chat=initialize()
 
 st.title("Fale Conosco da CGREC")
-st.markdown("<small>Pesquisa nas Portarias 10 e Pareceres 03, 10 e 19, bem como um conjunto de 60 perguntas&respostas</small>", unsafe_allow_html=True)
+st.markdown("<small>Pesquisa nas Portarias 10/2024, 04/2024 e Pareceres 03/2024, 16/2023, 19/2024, bem como um conjunto de 60 perguntas&respostas</small>", unsafe_allow_html=True)
 
 
 # Initialize chat history
