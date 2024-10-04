@@ -85,7 +85,7 @@ class chat_gen():
     
         name6 = "parecer4.pdf"
         arquivo = f"dados/{name6}"  # Especifique o caminho do PDF
-        text6 = ler_pdf(arquivo)
+        #text6 = ler_pdf(arquivo)
 
         name7 = "parecer04#.txt"
         arquivo = f"dados/{name7}"  # Especifique o caminho do PDF
@@ -124,7 +124,7 @@ class chat_gen():
         chunks5 = text_splitter.create_documents([text5], metadatas=[metadata])
         
         metadata = {"source": name6,"row": 0}
-        chunks6 = text_splitter.create_documents([text6], metadatas=[metadata])
+        #chunks6 = text_splitter.create_documents([text6], metadatas=[metadata])
 
         metadata = {"source": name7,"row": 0}
         chunks7 = text_splitter.create_documents([text7], metadatas=[metadata])
