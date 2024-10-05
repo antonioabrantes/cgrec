@@ -61,7 +61,7 @@ if st.session_state.step == 0:
             st.write(similar_response)
             st.session_state.similar_response = similar_response
             st.session_state.step = 1
-            st.experimental_rerun()
+            #st.experimental_rerun()
 
 if st.session_state.step == 1:
     st.markdown(f"**Pergunta:** {st.session_state.prompt}")
