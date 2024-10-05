@@ -17,6 +17,26 @@ load_dotenv()
 #openai_api_key = os.environ['OPENAI_API_KEY']
 openai_api_key = os.getenv("OPENAI_API_KEY")
 
+arquivos_txt = {
+    1: "chatbot_cgrec#.txt",
+    2: "parecer_03#.txt",
+    3: "parecer_16#.txt",
+    4: "parecer_19#.txt"
+    5: "portaria_10#.txt"
+    6: "parecer04#.txt"
+}
+
+arquivos_pdf = {
+    1: "parecer4.pdf"
+}
+
+def busca_indice(arquivos, arquivo_procurado):
+    for chave, valor in arquivos.items():
+        if valor == arquivo_procurado:
+            indice = chave
+            return indice
+    return None
+
 def ler_pdf(pdf_path):
 # Verificar se o arquivo existe no caminho especificado
     if os.path.exists(pdf_path):
@@ -63,27 +83,33 @@ class chat_gen():
         self.chat_history=[]
 
     def load_doc(self):
-        name1 = "chatbot_cgrec#.txt"
+        #name1 = "chatbot_cgrec#.txt"
+        name1 = arquivos_txt.get(1)
         arquivo = f"dados/{name1}"  # Especifique o caminho do PDF
         text1 = ler_txt(arquivo)
         
-        name2 = "parecer_03#.txt"
+        #name2 = "parecer_03#.txt"
+        name2 = arquivos_txt.get(2)
         arquivo = f"dados/{name2}"  # Especifique o caminho do PDF
         text2 = ler_txt(arquivo)
         
-        name3 = "parecer_16#.txt"
+        #name3 = "parecer_16#.txt"
+        name3 = arquivos_txt.get(3)
         arquivo = f"dados/{name3}"  # Especifique o caminho do PDF
         text3 = ler_txt(arquivo)
         
-        name4 = "parecer_19#.txt"
+        #name4 = "parecer_19#.txt"
+        name4 = arquivos_txt.get(4)
         arquivo = f"dados/{name4}"  # Especifique o caminho do PDF
         text4 = ler_txt(arquivo)
         
-        name5 = "portaria_10#.txt"
+        #name5 = "portaria_10#.txt"
+        name5 = arquivos_txt.get(5)
         arquivo = f"dados/{name5}"  # Especifique o caminho do PDF
         text5 = ler_txt(arquivo)
     
-        name6 = "parecer4.pdf"
+        #name6 = "parecer4.pdf"
+        name6 = arquivos_pdf.get(1)
         arquivo = f"dados/{name6}"  # Especifique o caminho do PDF
         #text6 = ler_pdf(arquivo)
 
