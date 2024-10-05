@@ -27,21 +27,28 @@ for message in st.session_state.messages:
     with st.chat_message(message["role"]):
         st.markdown(message["content"])
 
-# React to user input
-if prompt := st.text_area("Entre com sua pergunta abaixo."):
-    # Display user message in chat message container
-    st.chat_message("user").markdown(prompt)
-    # Add user message to chat history
-    st.session_state.messages.append({"role": "user", "content": prompt})
+if st.session_state.step == 0:
+    if prompt := st.text_area("Entre com sua pergunta abaixo."):
+        # Display user message in chat message container
+        st.chat_message("user").markdown(prompt)
+        # Add user message to chat history
+        st.session_state.messages.append({"role": "user", "content": prompt})
+        st.session_state.prompt = prompt
 
-    response, similar_response = st.session_state.chat.ask_pdf(prompt,) 
-    #f"Echo: {prompt}"
-    # Display assistant response in chat message container
-    with st.chat_message("assistant"):
-        st.markdown(response)
-        st.session_state.response = response
-        st.session_state.step = 1
-        st.session_state.messages.append({"role": "assistant", "content": response})
-    
-    if st.button("Referências"):
-        st.write(similar_response)
+        response, similar_response = st.session_state.chat.ask_pdf(prompt,) 
+        #f"Echo: {prompt}"
+        # Display assistant response in chat message container
+        with st.chat_message("assistant"):
+            st.markdown(response)
+            st.session_state.response = response
+            st.session_state.messages.append({"role": "assistant", "content": response})
+        
+        if st.button("Referências"):
+            st.write(similar_response)
+            st.session_state.similar_response = similar_response
+            st.session_state.step = 1
+
+if st.session_state.step == 1:
+    st.markdown(f"**Pergunta:** {st.session_state.prompt}")
+    st.markdown(f"**Resposta:** {st.session_state.response}")
+    st.markdown(f"**Referências:** {st.session_state.similar_response}")
