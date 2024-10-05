@@ -258,10 +258,10 @@ class chat_gen():
                 metadata = match.group(2)
                 metadata_dict = ast.literal_eval(metadata) # converte a string metadata em um dict real
                 # Decode newlines and other escape sequences
-                ##content = bytes(content, "utf-8").decode("unicode_escape")
+                content = bytes(content, "utf-8").decode("unicode_escape")
     
                 # Replace escaped newlines with actual newlines
-                ##content = re.sub(r'\\n', '\n', content)
+                content = re.sub(r'\\n', '\n', content)
                 # Remove special tokens
                 ##content = re.sub(r'\s*<EOS>\s*<pad>\s*', ' ', content)
                 # Remove any remaining multiple spaces
