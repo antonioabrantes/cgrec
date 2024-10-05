@@ -50,20 +50,20 @@ if st.session_state.step == 0:
         st.session_state.prompt = prompt
 
         response, similar_response = st.session_state.chat.ask_pdf(prompt,) 
-        #f"Echo: {prompt}"
-        # Display assistant response in chat message container
+        st.session_state.similar_response = similar_response
+        st.session_state.response = response
+
         with st.chat_message("assistant"):
             st.markdown(response)
-            st.session_state.response = response
             st.session_state.messages.append({"role": "assistant", "content": response})
         
+        st.session_state.step = 1
         if st.button("Referências"):
-            st.write(similar_response)
-            st.session_state.similar_response = similar_response
-            st.session_state.step = 1
+            #st.write(similar_response)
             #st.experimental_rerun()
+            st.session_state.step = 2
 
-if st.session_state.step == 1:
-    st.markdown(f"**Pergunta:** {st.session_state.prompt}")
-    st.markdown(f"**Resposta:** {st.session_state.response}")
+if st.session_state.step == 2:
+    #st.markdown(f"**Pergunta:** {st.session_state.prompt}")
+    #st.markdown(f"**Resposta:** {st.session_state.response}")
     st.markdown(f"**Referências:** {st.session_state.similar_response}")
