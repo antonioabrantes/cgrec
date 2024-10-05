@@ -37,6 +37,14 @@ def busca_indice(arquivos, arquivo_procurado):
             return indice
     return None
 
+def ler_doc(arquivo):
+    all_text = None
+    if arquivo.endswith(".txt"):
+        all_text = ler_txt(arquivo)
+    if arquivo.endswith(".pdf"):
+        all_text = ler_pdf(arquivo)
+    return all_text
+        
 def ler_pdf(pdf_path):
 # Verificar se o arquivo existe no caminho especificado
     if os.path.exists(pdf_path):
@@ -86,7 +94,7 @@ class chat_gen():
         #name1 = "chatbot_cgrec#.txt"
         name1 = arquivos_txt.get(1)
         arquivo = f"dados/{name1}"  # Especifique o caminho do PDF
-        text1 = ler_txt(arquivo)
+        text1 = ler_doc(arquivo)
         
         #name2 = "parecer_03#.txt"
         name2 = arquivos_txt.get(2)
