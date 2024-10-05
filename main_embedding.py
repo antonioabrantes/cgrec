@@ -258,20 +258,20 @@ class chat_gen():
                 metadata = match.group(2)
                 metadata_dict = ast.literal_eval(metadata) # converte a string metadata em um dict real
                 # Decode newlines and other escape sequences
-                content = bytes(content, "utf-8").decode("unicode_escape")
+                ##content = bytes(content, "utf-8").decode("unicode_escape")
     
                 # Replace escaped newlines with actual newlines
-                content = re.sub(r'\\n', '\n', content)
+                ##content = re.sub(r'\\n', '\n', content)
                 # Remove special tokens
-                content = re.sub(r'\s*<EOS>\s*<pad>\s*', ' ', content)
+                ##content = re.sub(r'\s*<EOS>\s*<pad>\s*', ' ', content)
                 # Remove any remaining multiple spaces
-                content = re.sub(r'\s+', ' ', content).strip()
+                ##content = re.sub(r'\s+', ' ', content).strip()
     
                 # Decode HTML entities
-                content = html.unescape(content)
+                ##content = html.unescape(content)
     
                 # Replace incorrect unicode characters with correct ones
-                content = content.encode('latin1').decode('utf-8', 'ignore')
+                ##content = content.encode('latin1').decode('utf-8', 'ignore')
     
                 # Remove or replace special characters and mathematical symbols
                 # This step may need to be customized based on the specific symbols in your documents
@@ -287,7 +287,7 @@ class chat_gen():
     
                 # Append cleaned content to the markdown string with two newlines between documents
                 # f"[View PDF]({pdf_url})" "\n\n"
-                markdown_documents += f"<font size='6'>Retrieved content {counter}:</font><BR>\n" + content + "\n\n" + \
+                markdown_documents += f"Retrieved content {counter}:\n" + content + "\n\n" + \
                     f"Source: {os.path.basename(metadata_dict['source'])}" + " | " +\
                     f"Page number: {str(metadata_dict['row'])}" + " | " +\
                     "\n\n"
