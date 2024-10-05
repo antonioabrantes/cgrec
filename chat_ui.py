@@ -37,9 +37,9 @@ if "messages" not in st.session_state:
     st.session_state.step = 0
 
 # Display chat messages from history on app rerun
-for message in st.session_state.messages:
-    with st.chat_message(message["role"]):
-        st.markdown(message["content"])
+#for message in st.session_state.messages:
+#    with st.chat_message(message["role"]):
+#        st.markdown(message["content"])
 
 if st.session_state.step == 0:
     if prompt := st.text_area("Entre com sua pergunta abaixo."):
