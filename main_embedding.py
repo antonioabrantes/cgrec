@@ -287,7 +287,7 @@ class chat_gen():
     
                 # Append cleaned content to the markdown string with two newlines between documents
                 # f"[View PDF]({pdf_url})" "\n\n"
-                markdown_documents += f"# Retrieved content {counter}:\n" + content + "\n\n" + \
+                markdown_documents += f"##Retrieved content {counter}:\n" + content + "\n\n" + \
                     f"Source: {os.path.basename(metadata_dict['source'])}" + " | " +\
                     f"Page number: {str(metadata_dict['row'])}" + " | " +\
                     "\n\n"
