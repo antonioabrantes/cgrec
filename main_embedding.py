@@ -252,7 +252,7 @@ class chat_gen():
         counter = 1
         for doc in documents:
             regex = r"page_content='(.*?)'\s+metadata=({.*})"
-            match = re.search(regex, texto, re.DOTALL)
+            match = re.search(regex, doc, re.DOTALL)
             if match:
                 content = match.group(1)
                 metadata = match.group(2)
