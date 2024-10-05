@@ -61,7 +61,7 @@ if st.session_state.step == 0:
             st.rerun()
 
 if st.session_state.step == 1:
-    #st.markdown(f"**Pergunta:** {st.session_state.prompt}")
-    #st.markdown(f"**Resposta:** {st.session_state.response}")
+    st.markdown(f"**Pergunta:** {st.session_state.prompt}")
+    st.markdown(f"**Resposta:** {st.session_state.response}")
     st.markdown(f"**Referências:**")
     st.markdown(f"{st.session_state.similar_response}")
