@@ -12,6 +12,8 @@ from langchain.chains.conversation.memory import ConversationBufferMemory
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 import tiktoken
 import PyPDF2
+from typing import List, Tuple
+import re, ast, html
 
 load_dotenv()
 #openai_api_key = os.environ['OPENAI_API_KEY']
@@ -214,8 +216,10 @@ class chat_gen():
         #print("iniciando...")
         db = self.load_doc()
         similar_response = db.similarity_search(query,k=3)
-        self.context = [doc.page_content + doc.metadata['source'] for doc in similar_response]
-        #print(context)
+        similar_response = chat_gen.clean_references(similar_response)
+        self.context = similar_response
+        # self.context = [doc.page_content + doc.metadata['source'] for doc in similar_response]
+        #print(self.context)
 
         #result = {"answer": "vazio"}
         chain = self.load_model()
@@ -230,7 +234,69 @@ class chat_gen():
         #print(result)
         
         return result.content, similar_response
+        
 
+    def clean_references(documents: List) -> str:
+        """
+        Clean and format references from retrieved documents.
+
+        Parameters:
+            documents (List): List of retrieved documents.
+
+        Returns:
+            str: A string containing cleaned and formatted references.
+        """
+        server_url = "https://faleconosco.streamlit.app/dados/"
+        documents = [str(x)+"\n\n" for x in documents] # insere duas quebra de linha ao final de cada documento da lista
+        markdown_documents = ""
+        counter = 1
+        for doc in documents:
+            regex = r"page_content='(.*?)'\s+metadata=({.*})"
+            match = re.search(regex, texto, re.DOTALL)
+            if match:
+                content = match.group(1)
+                metadata = match.group(2)
+                metadata_dict = ast.literal_eval(metadata) # converte a string metadata em um dict real
+                # Decode newlines and other escape sequences
+                content = bytes(content, "utf-8").decode("unicode_escape")
+    
+                # Replace escaped newlines with actual newlines
+                content = re.sub(r'\\n', '\n', content)
+                # Remove special tokens
+                content = re.sub(r'\s*<EOS>\s*<pad>\s*', ' ', content)
+                # Remove any remaining multiple spaces
+                content = re.sub(r'\s+', ' ', content).strip()
+    
+                # Decode HTML entities
+                content = html.unescape(content)
+    
+                # Replace incorrect unicode characters with correct ones
+                content = content.encode('latin1').decode('utf-8', 'ignore')
+    
+                # Remove or replace special characters and mathematical symbols
+                # This step may need to be customized based on the specific symbols in your documents
+                content = re.sub(r'â', '-', content)
+                content = re.sub(r'â', '∈', content)
+                content = re.sub(r'Ã', '×', content)
+                content = re.sub(r'ï¬', 'fi', content)
+                content = re.sub(r'â', '∈', content)
+                content = re.sub(r'Â·', '·', content)
+                content = re.sub(r'ï¬', 'fl', content)
+    
+                pdf_url = f"{server_url}/{os.path.basename(metadata_dict['source'])}"
+    
+                # Append cleaned content to the markdown string with two newlines between documents
+                # f"[View PDF]({pdf_url})" "\n\n"
+                markdown_documents += f"# Retrieved content {counter}:\n" + content + "\n\n" + \
+                    f"Source: {os.path.basename(metadata_dict['source'])}" + " | " +\
+                    f"Page number: {str(metadata_dict['row'])}" + " | " +\
+                    "\n\n"
+                counter += 1
+            else:
+                print(f"No match found for doc: {doc}")
+                    
+
+        return markdown_documents
 
 if __name__ == "__main__":
     chat = chat_gen()
