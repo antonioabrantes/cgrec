@@ -39,8 +39,9 @@ if prompt := st.text_area("Entre com sua pergunta abaixo."):
     # Display assistant response in chat message container
     with st.chat_message("assistant"):
         st.markdown(response)
-    # Add assistant response to chat history
-    st.session_state.messages.append({"role": "assistant", "content": response})
+        st.session_state.response = response
+        st.session_state.step = 1
+        st.session_state.messages.append({"role": "assistant", "content": response})
     
     if st.button("Referências"):
         st.write(similar_response)
