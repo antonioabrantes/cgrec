@@ -198,7 +198,7 @@ class chat_gen():
         self.chat_history.append((query, result.content))
         #print(result)
         
-        return result.content
+        return result.content, similar_response
 
 
 if __name__ == "__main__":
