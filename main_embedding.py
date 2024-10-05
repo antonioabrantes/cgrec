@@ -21,9 +21,9 @@ arquivos = {
     1: "chatbot_cgrec#.txt",
     2: "parecer_03#.txt",
     3: "parecer_16#.txt",
-    4: "parecer_19#.txt"
-    5: "portaria_10#.txt"
-    6: "parecer4.pdf"
+    4: "parecer_19#.txt",
+    5: "portaria_10#.txt",
+    6: "parecer4.pdf",
     7: "parecer04#.txt"
 }
 
