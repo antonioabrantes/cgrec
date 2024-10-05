@@ -89,38 +89,38 @@ class chat_gen():
 
     def load_doc(self):
         #name1 = "chatbot_cgrec#.txt"
-        name1 = arquivos.get(1)
-        arquivo = f"dados/{name1}"  # Especifique o caminho do PDF
+        name = arquivos.get(1)
+        arquivo = f"dados/{name}"  # Especifique o caminho do PDF
         text1 = ler_doc(arquivo)
         
         #name2 = "parecer_03#.txt"
-        name2 = arquivos.get(2)
-        arquivo = f"dados/{name2}"  # Especifique o caminho do PDF
+        name = arquivos.get(2)
+        arquivo = f"dados/{name}"  # Especifique o caminho do PDF
         text2 = ler_doc(arquivo)
         
         #name3 = "parecer_16#.txt"
-        name3 = arquivos.get(3)
-        arquivo = f"dados/{name3}"  # Especifique o caminho do PDF
+        name = arquivos.get(3)
+        arquivo = f"dados/{name}"  # Especifique o caminho do PDF
         text3 = ler_doc(arquivo)
         
         #name4 = "parecer_19#.txt"
-        name4 = arquivos.get(4)
-        arquivo = f"dados/{name4}"  # Especifique o caminho do PDF
+        name = arquivos.get(4)
+        arquivo = f"dados/{name}"  # Especifique o caminho do PDF
         text4 = ler_doc(arquivo)
         
         #name5 = "portaria_10#.txt"
-        name5 = arquivos.get(5)
-        arquivo = f"dados/{name5}"  # Especifique o caminho do PDF
+        name = arquivos.get(5)
+        arquivo = f"dados/{name}"  # Especifique o caminho do PDF
         text5 = ler_doc(arquivo)
     
         #name6 = "parecer4.pdf"
-        name6 = arquivos.get(6)
-        arquivo = f"dados/{name6}"  # Especifique o caminho do PDF
+        name = arquivos.get(6)
+        arquivo = f"dados/{name}"  # Especifique o caminho do PDF
         #text6 = ler_pdf(arquivo)
 
         #name7 = "parecer04#.txt"
-        name7 = arquivos.get(7)
-        arquivo = f"dados/{name7}"  # Especifique o caminho do PDF
+        name = arquivos.get(7)
+        arquivo = f"dados/{name}"  # Especifique o caminho do PDF
         text7 = ler_doc(arquivo)
 
         text_splitter = RecursiveCharacterTextSplitter( # divide o PDF em blocos/chunks de 512 tokens
