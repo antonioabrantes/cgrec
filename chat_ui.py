@@ -43,9 +43,7 @@ for message in st.session_state.messages:
 
 if st.session_state.step == 0:
     if prompt := st.text_area("Entre com sua pergunta abaixo."):
-        # Display user message in chat message container
         st.chat_message("user").markdown(prompt)
-        # Add user message to chat history
         st.session_state.messages.append({"role": "user", "content": prompt})
         st.session_state.prompt = prompt
 
@@ -59,8 +57,8 @@ if st.session_state.step == 0:
         
         if st.button("Referências"):
             #st.write(similar_response)
-            #st.experimental_rerun()
             st.session_state.step = 1
+            st.rerun()
 
 if st.session_state.step == 1:
     #st.markdown(f"**Pergunta:** {st.session_state.prompt}")
