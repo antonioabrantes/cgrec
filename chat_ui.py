@@ -19,6 +19,9 @@ st.markdown("<small>Olá meu nome é Iara (Inteligência Artificial sobre Recurs
 
 # https://docs.streamlit.io/develop/concepts/architecture/session-state#initialization
 
+if 'step' not in st.session_state:
+    st.session_state['step'] = 0
+
 if 'prompt' not in st.session_state:
     st.session_state['prompt'] = ''
 
@@ -58,6 +61,7 @@ if st.session_state.step == 0:
             st.write(similar_response)
             st.session_state.similar_response = similar_response
             st.session_state.step = 1
+            st.experimental_rerun()
 
 if st.session_state.step == 1:
     st.markdown(f"**Pergunta:** {st.session_state.prompt}")
