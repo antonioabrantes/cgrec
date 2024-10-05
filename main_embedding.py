@@ -17,17 +17,14 @@ load_dotenv()
 #openai_api_key = os.environ['OPENAI_API_KEY']
 openai_api_key = os.getenv("OPENAI_API_KEY")
 
-arquivos_txt = {
+arquivos = {
     1: "chatbot_cgrec#.txt",
     2: "parecer_03#.txt",
     3: "parecer_16#.txt",
     4: "parecer_19#.txt"
     5: "portaria_10#.txt"
-    6: "parecer04#.txt"
-}
-
-arquivos_pdf = {
-    1: "parecer4.pdf"
+    6: "parecer4.pdf"
+    7: "parecer04#.txt"
 }
 
 def busca_indice(arquivos, arquivo_procurado):
@@ -92,38 +89,39 @@ class chat_gen():
 
     def load_doc(self):
         #name1 = "chatbot_cgrec#.txt"
-        name1 = arquivos_txt.get(1)
+        name1 = arquivos.get(1)
         arquivo = f"dados/{name1}"  # Especifique o caminho do PDF
         text1 = ler_doc(arquivo)
         
         #name2 = "parecer_03#.txt"
-        name2 = arquivos_txt.get(2)
+        name2 = arquivos.get(2)
         arquivo = f"dados/{name2}"  # Especifique o caminho do PDF
-        text2 = ler_txt(arquivo)
+        text2 = ler_doc(arquivo)
         
         #name3 = "parecer_16#.txt"
-        name3 = arquivos_txt.get(3)
+        name3 = arquivos.get(3)
         arquivo = f"dados/{name3}"  # Especifique o caminho do PDF
-        text3 = ler_txt(arquivo)
+        text3 = ler_doc(arquivo)
         
         #name4 = "parecer_19#.txt"
-        name4 = arquivos_txt.get(4)
+        name4 = arquivos.get(4)
         arquivo = f"dados/{name4}"  # Especifique o caminho do PDF
-        text4 = ler_txt(arquivo)
+        text4 = ler_doc(arquivo)
         
         #name5 = "portaria_10#.txt"
-        name5 = arquivos_txt.get(5)
+        name5 = arquivos.get(5)
         arquivo = f"dados/{name5}"  # Especifique o caminho do PDF
-        text5 = ler_txt(arquivo)
+        text5 = ler_doc(arquivo)
     
         #name6 = "parecer4.pdf"
-        name6 = arquivos_pdf.get(1)
+        name6 = arquivos.get(6)
         arquivo = f"dados/{name6}"  # Especifique o caminho do PDF
         #text6 = ler_pdf(arquivo)
 
-        name7 = "parecer04#.txt"
+        #name7 = "parecer04#.txt"
+        name7 = arquivos.get(7)
         arquivo = f"dados/{name7}"  # Especifique o caminho do PDF
-        text7 = ler_txt(arquivo)
+        text7 = ler_doc(arquivo)
 
         text_splitter = RecursiveCharacterTextSplitter( # divide o PDF em blocos/chunks de 512 tokens
             chunk_size = 512,
@@ -141,26 +139,25 @@ class chat_gen():
         chunks7 = []
         
         # chunks = text_splitter.create_documents([text])
-        metadata = {"source": name1,"row": 0}
+        metadata = {"source": arquivos.get(1),"row": 0}
         chunks1 = text_splitter.create_documents([text1], metadatas=[metadata])
         
-        metadata = {"source": name2,"row": 0}
+        metadata = {"source": arquivos.get(2),"row": 0}
         chunks2 = text_splitter.create_documents([text2], metadatas=[metadata])
         
-        metadata = {"source": name3,"row": 0}
+        metadata = {"source": arquivos.get(3),"row": 0}
         chunks3 = text_splitter.create_documents([text3], metadatas=[metadata])
         
-        #print(type(text4), text4)
-        metadata = {"source": name4,"row": 0}
+        metadata = {"source": arquivos.get(4),"row": 0}
         chunks4 = text_splitter.create_documents([text4], metadatas=[metadata])
         
-        metadata = {"source": name5,"row": 0}
+        metadata = {"source": arquivos.get(5),"row": 0}
         chunks5 = text_splitter.create_documents([text5], metadatas=[metadata])
         
-        metadata = {"source": name6,"row": 0}
+        metadata = {"source": arquivos.get(6),"row": 0}
         #chunks6 = text_splitter.create_documents([text6], metadatas=[metadata])
 
-        metadata = {"source": name7,"row": 0}
+        metadata = {"source": arquivos.get(7),"row": 0}
         chunks7 = text_splitter.create_documents([text7], metadatas=[metadata])
 
         combined_chunks = chunks1 + chunks2 + chunks3 + chunks4 + chunks5 + chunks6 + chunks7
