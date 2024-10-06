@@ -263,7 +263,7 @@ class chat_gen():
                 # Replace escaped newlines with actual newlines
                 content = re.sub(r'\\n', '\n', content)
                 # Remove special tokens
-                content = re.sub(r'\s*<EOS>\s*<pad>\s*', ' ', content)
+                ##content = re.sub(r'\s*<EOS>\s*<pad>\s*', ' ', content)
                 # Remove any remaining multiple spaces
                 content = re.sub(r'\s+', ' ', content).strip()
     
