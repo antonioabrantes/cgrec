@@ -290,10 +290,11 @@ class chat_gen():
                 soup = BeautifulSoup(content, 'html.parser')
                 plain_text = soup.get_text()
                 plain_text = plain_text.replace("\r\n", "").replace("\n", "")
+                plain_text = plain_text.replace("*", "")
     
                 # Append cleaned content to the markdown string with two newlines between documents
                 # f"[View PDF]({pdf_url})" "\n\n"
-                markdown_documents += f"**Conteúdo {counter}:**\n" + plain_text + "\n\n" + \
+                markdown_documents += f"**Conteúdo {counter}:**\n" + "*" + plain_text + "*" + "\n\n" + \
                     f"**Referência:** {os.path.basename(metadata_dict['source'])}" + " | " +\
                     f"**Id:** {str(metadata_dict['row'])}" + " | " +\
                     "\n\n"
