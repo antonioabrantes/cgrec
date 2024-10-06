@@ -216,10 +216,22 @@ class chat_gen():
     def ask_pdf(self,query):
         #print("iniciando...")
         db = self.load_doc()
-        similar_response = db.similarity_search(query,k=3)
-        # similar_response, score = db.similarity_search_with_score(query, k=3)
+        #similar_response = db.similarity_search(query,k=3)
+        similar_response = db.similarity_search_with_score(query, k=3)
+        
+        # Exibindo os resultados com suas pontuações
+        docs = []
+        pontuacoes = []
+        for doc, score in similar_response:
+            docs.append(doc)
+            pontuacoes.append(score)
+            #print(f"Documento: {doc}")
+            #print(f"Pontuação: {score}")
 
-        similar_response = chat_gen.clean_references(similar_response)
+      
+        similar_response = chat_gen.clean_references(docs, pontuacoes)
+
+        #similar_response = chat_gen.clean_references(similar_response)
         self.context = similar_response
         # self.context = [doc.page_content + doc.metadata['source'] for doc in similar_response]
         #print(self.context)
@@ -239,7 +251,7 @@ class chat_gen():
         return result.content, similar_response
         
 
-    def clean_references(documents: List) -> str:
+    def clean_references(documents: List, pontuacoes: List) -> str:
         """
         Clean and format references from retrieved documents.
 
@@ -299,6 +311,7 @@ class chat_gen():
                 markdown_documents += f"**Conteúdo {counter}:**\n" + "*" + plain_text + "*" + "\n\n" + \
                     f"**Referência:** {os.path.basename(metadata_dict['source'])}" + " | " +\
                     f"**Id:** {str(metadata_dict['row'])}" + " | " +\
+                    f"**Pontuação:** {pontuacoes[counter-1]}" +\
                     "\n\n"
                 counter += 1
             else:
