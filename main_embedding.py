@@ -265,7 +265,7 @@ class chat_gen():
                 # Remove special tokens
                 ##content = re.sub(r'\s*<EOS>\s*<pad>\s*', ' ', content)
                 # Remove any remaining multiple spaces
-                content = re.sub(r'\s+', ' ', content).strip()
+                ##content = re.sub(r'\s+', ' ', content).strip()
     
                 # Decode HTML entities
                 ##content = html.unescape(content)
