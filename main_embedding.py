@@ -289,6 +289,7 @@ class chat_gen():
                 
                 soup = BeautifulSoup(content, 'html.parser')
                 plain_text = soup.get_text()
+                plain_text = plain_text.replace("\r\n", "").replace("\n", "")
     
                 # Append cleaned content to the markdown string with two newlines between documents
                 # f"[View PDF]({pdf_url})" "\n\n"
