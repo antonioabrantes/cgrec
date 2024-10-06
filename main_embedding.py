@@ -216,8 +216,8 @@ class chat_gen():
     def ask_pdf(self,query):
         #print("iniciando...")
         db = self.load_doc()
-        #similar_response = db.similarity_search(query,k=3)
-        similar_response, score = db.similarity_search_with_score(query, k=3)
+        similar_response = db.similarity_search(query,k=3)
+        # similar_response, score = db.similarity_search_with_score(query, k=3)
 
         similar_response = chat_gen.clean_references(similar_response)
         self.context = similar_response
