@@ -271,7 +271,7 @@ class chat_gen():
                 ##content = html.unescape(content)
     
                 # Replace incorrect unicode characters with correct ones
-                content = content.encode('latin1').decode('utf-8', 'ignore')
+                ##content = content.encode('latin1').decode('utf-8', 'ignore')
     
                 # Remove or replace special characters and mathematical symbols
                 # This step may need to be customized based on the specific symbols in your documents
