@@ -27,7 +27,8 @@ arquivos = {
     4: "parecer_19#.txt",
     5: "portaria_10#.txt",
     6: "parecer4.pdf",
-    7: "parecer04#.txt"
+    7: "parecer04#.txt",
+    8: "fluxo.txt"
 }
 
 def busca_indice(arquivos, arquivo_procurado):
@@ -126,6 +127,11 @@ class chat_gen():
         arquivo = f"dados/{name}"  # Especifique o caminho do PDF
         text7 = ler_doc(arquivo)
 
+        #name8 = "fluxo.txt"
+        name = arquivos.get(8)
+        arquivo = f"dados/{name}"  # Especifique o caminho do PDF
+        text8 = ler_doc(arquivo)
+
         text_splitter = RecursiveCharacterTextSplitter( # divide o PDF em blocos/chunks de 512 tokens
             chunk_size = 512,
             chunk_overlap  = 24,
@@ -140,6 +146,7 @@ class chat_gen():
         chunks5 = []
         chunks6 = []
         chunks7 = []
+        chunks8 = []
         
         # chunks = text_splitter.create_documents([text])
         metadata = {"source": arquivos.get(1),"row": 0}
@@ -163,7 +170,10 @@ class chat_gen():
         metadata = {"source": arquivos.get(7),"row": 0}
         chunks7 = text_splitter.create_documents([text7], metadatas=[metadata])
 
-        combined_chunks = chunks1 + chunks2 + chunks3 + chunks4 + chunks5 + chunks6 + chunks7
+        metadata = {"source": arquivos.get(8),"row": 0}
+        chunks8 = text_splitter.create_documents([text8], metadatas=[metadata])
+
+        combined_chunks = chunks1 + chunks2 + chunks3 + chunks4 + chunks5 + chunks6 + chunks7 + chunks8
         
         embeddings = HuggingFaceEmbeddings(model_name='sentence-transformers/all-MiniLM-L6-v2')
         vectorstore = FAISS.from_documents(combined_chunks, embeddings)
