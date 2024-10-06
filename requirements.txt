@@ -11,4 +11,5 @@ python-dotenv
 faiss-cpu
 sentence-transformers
 langchain-huggingface
+beautifulsoup4
 

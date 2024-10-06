@@ -14,6 +14,7 @@ import tiktoken
 import PyPDF2
 from typing import List, Tuple
 import re, ast, html
+from bs4 import BeautifulSoup
 
 load_dotenv()
 #openai_api_key = os.environ['OPENAI_API_KEY']
@@ -285,10 +286,13 @@ class chat_gen():
                 ##content = re.sub(r'ï¬', 'fl', content)
     
                 pdf_url = f"{server_url}/{os.path.basename(metadata_dict['source'])}"
+                
+                soup = BeautifulSoup(content, 'html.parser')
+                plain_text = soup.get_text()
     
                 # Append cleaned content to the markdown string with two newlines between documents
                 # f"[View PDF]({pdf_url})" "\n\n"
-                markdown_documents += f"**Retrieved content {counter}:**\n" + content + "\n\n" + \
+                markdown_documents += f"**Retrieved content {counter}:**\n" + plain_text + "\n\n" + \
                     f"**Source:** {os.path.basename(metadata_dict['source'])}" + " | " +\
                     f"**Page number:** {str(metadata_dict['row'])}" + " | " +\
                     "\n\n"
