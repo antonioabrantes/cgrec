@@ -261,11 +261,11 @@ class chat_gen():
                 ##content = bytes(content, "utf-8").decode("unicode_escape")
     
                 # Replace escaped newlines with actual newlines
-                ##content = re.sub(r'\\n', '\n', content)
+                content = re.sub(r'\\n', '\n', content)
                 # Remove special tokens
-                ##content = re.sub(r'\s*<EOS>\s*<pad>\s*', ' ', content)
+                content = re.sub(r'\s*<EOS>\s*<pad>\s*', ' ', content)
                 # Remove any remaining multiple spaces
-                ##content = re.sub(r'\s+', ' ', content).strip()
+                content = re.sub(r'\s+', ' ', content).strip()
     
                 # Decode HTML entities
                 ##content = html.unescape(content)
