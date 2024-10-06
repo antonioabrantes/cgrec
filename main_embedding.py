@@ -292,9 +292,9 @@ class chat_gen():
     
                 # Append cleaned content to the markdown string with two newlines between documents
                 # f"[View PDF]({pdf_url})" "\n\n"
-                markdown_documents += f"**Retrieved content {counter}:**\n" + plain_text + "\n\n" + \
-                    f"**Source:** {os.path.basename(metadata_dict['source'])}" + " | " +\
-                    f"**Page number:** {str(metadata_dict['row'])}" + " | " +\
+                markdown_documents += f"**Conteúdo {counter}:**\n" + plain_text + "\n\n" + \
+                    f"**Referência:** {os.path.basename(metadata_dict['source'])}" + " | " +\
+                    f"**Id:** {str(metadata_dict['row'])}" + " | " +\
                     "\n\n"
                 counter += 1
             else:
