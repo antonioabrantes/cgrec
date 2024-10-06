@@ -268,7 +268,7 @@ class chat_gen():
                 content = re.sub(r'\s+', ' ', content).strip()
     
                 # Decode HTML entities
-                content = html.unescape(content)
+                ##content = html.unescape(content)
     
                 # Replace incorrect unicode characters with correct ones
                 content = content.encode('latin1').decode('utf-8', 'ignore')
