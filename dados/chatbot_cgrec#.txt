@@ -2,8 +2,8 @@ Perguntas mais frequentes:
 
 # id: [1] 
 Tema: Vício de procedimento. 
-Pergunta: No parecer de indeferimento não houve o tratamento de todas as petições apresentadas relacionadas diretamente ao mérito da decisão impugnada, por exemplo de existe uma petição subsídio ao exame que foi desconsiderada. Existe um vício de procedimento neste caso? 
-Resposta: Sim. O examinador de recurso deve se certificar de que todas as petições pertinentes ao exame de mérito foram consideradas no parecer de indeferimento. O examinador recursal deve verificar se o quadro reivindicatório analisado é o correto e se foi desconsiderada alguma das petições apresentadas relacionadas diretamente ao mérito da decisão impugnada, por exemplo uma petição de subsídio ao exame que foi desconsiderada. Tendo em vista que existe um Vício de procedimento que impede a resolução do mérito do recurso, opina-se pela anulação da decisão proferida, com consequente retorno dos autos à primeira instância, para a continuação do exame. A análise do julgamento de indeferimento está prejudicada em razão do Vício de procedimento. Fica igualmente prejudicada a análise sobre a possibilidade de modificações no pedido. 
+Pergunta: No parecer de indeferimento não houve o tratamento de todas as petições apresentadas relacionadas diretamente ao mérito da decisão impugnada, por exemplo existe uma petição subsídio ao exame que foi desconsiderada. Existe um vício de procedimento neste caso? 
+Resposta: Sim. O examinador de recurso deve se certificar de que todas as petições pertinentes ao exame de mérito foram consideradas no parecer de indeferimento. O examinador recursal deve verificar se o quadro reivindicatório analisado é o correto e se foi desconsiderada alguma das petições apresentadas relacionadas diretamente ao mérito da decisão impugnada, por exemplo uma petição de subsídio ao exame que foi desconsiderada. Tendo em vista que existe um vício de procedimento que impede a resolução do mérito do recurso, opina-se pela anulação da decisão proferida, com consequente retorno dos autos à primeira instância, para a continuação do exame. A análise do julgamento de indeferimento está prejudicada em razão do vício de procedimento. Fica igualmente prejudicada a análise sobre a possibilidade de modificações no pedido. 
 Modelos: 1 
 Despacho: 100.2. Recurso conhecido e provido. Reformada a decisão recorrida e anulada a decisão da primeira instância para retorno ao exame técnico.
 
@@ -70,7 +70,7 @@ Despacho: 100.2. Recurso conhecido e provido. Reformada a decisão recorrida e a
 
 #id: [11] 
 Tema: Parecer recursal. 
-Pergunta: Um pedido foi indeferido por artigo 10 da LPI, sem busca de anterioridade. O recurso conclui que não há violação de artigo 10 da LPI. Neste caso o pedido deve retornar à primeira instância ? 
+Pergunta: Um pedido foi indeferido por artigo 10 da LPI, sem busca de anterioridade. O recurso conclui que não há violação de artigo 10 da LPI. Neste caso o pedido deve retornar à primeira instância? 
 Resposta: Sim, como um elemento essencial do exame, a busca de anterioridade, não foi realizado, a causa não está madura e este pedido deve retornar para primeira instância para que o exame tenha sequência já superada a objeção de artigo 10 da LPI. 
 Modelos: 3 
 Despacho: 100.2. Recurso conhecido e provido. Reformada a decisão recorrida e anulada a decisão da primeira instância para retorno ao exame técnico.
@@ -435,49 +435,49 @@ Despacho: 121. Exigência técnica.
 
 #id: [63]
 Tema: Parecer recursal 
-Pergunta: Quando um recurso pode anular uma decisão da primeira instância ? 
+Pergunta: Quando um recurso pode anular uma decisão da primeira instância? 
 Resposta: Um recurso pode anular uma decisão da primeira instância quando o examinador da segunda instância identifica um vício de procedimento ou um erro que compromete a validade da decisão anterior. Nesses casos, o recurso deve ser considerado provido, e o pedido deve retornar à primeira instância para que a questão seja corrigida. Por exemplo, se o indeferimento foi baseado em um erro processual que impede a continuidade do exame, o despacho correspondente seria Despacho 100.2 Recurso conhecido e provido. Reformada a decisão recorrida e anulada a decisão da primeira instância para retorno ao exame técnico. Entretanto, se o examinador de segunda instância constatar que o vício pode ser contornado por meio de exigências técnicas simples, ele pode optar por não retornar o pedido à primeira instância e, em vez disso, fazer as exigências necessárias para que o exame prossiga. Esta deve, sempre que possível, ser a solução proferida, tendo em vista a celeridade da solução do processo. Portanto, anulação da decisão da primeira instância ocorre principalmente em situações onde há vícios que não podem ser sanados sem garantir o duplo grau de jurisdição. 
 Modelos: 0 
 Despacho: - 
 
 #id: [64]
 Tema: Parecer recursal
-Pergunta: No caso de indeferimento com um quadro reivindicatório Q1 se no recurso o requerente apresenta novos quadros reivindicatórios Q2 e Q3, mas o recurso conclui que houve vício de julgamento e o Q1 está ok estando em condições de deferimento, então neste caso, esses quadros reivindicatórios Q2 e Q3 devem ser examinados ?
+Pergunta: No caso de indeferimento com um quadro reivindicatório Q1 se no recurso o requerente apresenta novos quadros reivindicatórios Q2 e Q3, mas o recurso conclui que houve vício de julgamento e o Q1 está ok estando em condições de deferimento, então neste caso, esses quadros reivindicatórios Q2 e Q3 devem ser examinados?
 Resposta: Não, como houve vício de julgamento e há causa madura, deve-se concluir por recurso provido e os quadros alternativos não são analisados.
 Modelos: 2
 Despacho: 100.1 Recurso conhecido e provido. Reformada a decisão recorrida e deferido o pedido. Desta data corre o prazo de 60 (sessenta) dias para o pagamento da retribuição para expedição da Carta-Patente. 
 
 #id: [65]
 Tema: Parecer recursal
-Pergunta: No recurso o requerente apresenta quadro reivindicatório novo que trazem restrições de faixa de valores presentes somente no relatório descritivo. Este novo quadro reivindicatório pode ser aceito no recurso ?
+Pergunta: No recurso o requerente apresenta quadro reivindicatório novo que trazem restrições de faixa de valores presentes somente no relatório descritivo. Este novo quadro reivindicatório pode ser aceito no recurso?
 Resposta: Não, a regra geral é que não se pode aceitar emendas no quadro reivindicatório na fase recursal seja por conta da preclusão administrativa, seja porque tais emendas não guardem relação com a matéria objeto de exame na primeira instância. Na fase transitória de aplicação das novas normativas de fluxo processual de recurso são aceitas emendas desde que guardem relação com a matéria discutida na primeira instância e que tragam uma restrição de matéria reivindicada. Mesmo neste caso a emenda só pode trazer características presentes no quadro reivindicatório do indeferimento, cabendo neste caso uma exigência na fase recursal. Esta exigência deve deixar claro para o requerente que não se pode trazer elementos do relatório descritivo para o quadro reivindicatório emendado. 
 Modelos: 0
 Despacho: -
 
 #id: [66]
 Tema: Parecer recursal
-Pergunta: O pedido em primeira instância foi indeferido por falta de atividade inventiva em relação a D1. O recurso discorda que D1 seja relevante, e considera recurso provido remetendo o pedido a retornar para primeira instância. O recurso deve realizar nova busca ?
+Pergunta: O pedido em primeira instância foi indeferido por falta de atividade inventiva em relação a D1. O recurso discorda que D1 seja relevante, e considera recurso provido remetendo o pedido a retornar para primeira instância. O recurso deve realizar nova busca?
 Resposta: Não, a regra geral é que o recurso não deve realizar novas buscas sob risco de não se respeitar o duplo grau de jurisdição. Ainda assim, o recurso ao devolver este pedido à primeira instância pode sugerir documentos, sem contudo fazer um exame comparativo exaustivo de tais documentos. Por exemplo o recurso poderia citar, apenas a título de subsídio ao exame, um documento D2 citado no 6.21 e no relatório da EPO relevante que em combinação com D1 indefere por atividade inventiva. O recurso deve mencionar esse D2 e sugerir falta de atividade inventiva quando enviar pedido de volta para primeira instância. Não se trata de nova busca, pois, neste caso D2 estava citado na busca do 6.21.  
 Modelos: 0
 Despacho: -
 
 #id: [67]
 Tema: Parecer recursal
-Pergunta: Um pedido teve um primeiro parecer de primeira instância apontando falta de novidade. Um segundo parecer, ainda em primeira instância, conclui que há novidade, porém indefere o pedido por falta de atividade inventiva. Houve vício formal neste caso ?
+Pergunta: Um pedido teve um primeiro parecer de primeira instância apontando falta de novidade. Um segundo parecer, ainda em primeira instância, conclui que há novidade, porém indefere o pedido por falta de atividade inventiva. Houve vício formal neste caso?
 Resposta: Sim, houve um vício formal. A mudança de opinião na primeira instância de um primeiro parecer para um segundo parecer, ainda em primeira instância, é possível desde que motivado por conta da manifestação do requerente ao primeiro parecer. Se o recorrente entendeu a questão e consegue apresentar sua argumentação então é uma evidência de que a questão foi sanada na primeira instância, no entanto, no caso o indeferimento foi feito com base em nova argumentação, desta vez, por conta da falta de atividade inventiva, ao qual a requerente não pode se manifestar, logo seu direito ao contraditório foi cerceado e, desta maneira, houve um vício formal. Nesse caso, o vício formal decorrente da ausência de oportunidade para contraditório pode resultar em fundamento  para o recurso contra o indeferimento de modo que seja oportunizado ao requerente o direito de se manifestar sobre a nova fundamentação, restabelecendo assim o equilíbrio do processo decisório. Recurso conhecido e provido. Reformada a decisão recorrida e anulada a decisão da primeira instância para retorno ao exame técnico.
 Modelos: 1 
 Despacho: 100.2. Recurso conhecido e provido. Reformada a decisão recorrida e anulada a decisão da primeira instância para retorno ao exame técnico.
 
 #id: [68]
 Tema: Parecer recursal
-Pergunta: Um pedido teve um primeiro parecer de primeira instância apontando falta de novidade e atividade inventiva por D1. O recurso conclui que houve vício de julgamento e D1 não antecipa novidade nem tampouco atividade inventiva do pedido. O examinador deve no parecer recursal fazer o exame dos demais documentos mencionados da busca citados no parecer 6.21 mas não discutidos no parecer de indeferimento ?
+Pergunta: Um pedido teve um primeiro parecer de primeira instância apontando falta de novidade e atividade inventiva por D1. O recurso conclui que houve vício de julgamento e D1 não antecipa novidade nem tampouco atividade inventiva do pedido. O examinador deve no parecer recursal fazer o exame dos demais documentos mencionados da busca citados no parecer 6.21 mas não discutidos no parecer de indeferimento?
 Resposta: Não. O recurso deve ater-se à discussão do indeferimento. Ainda que um destes documentos citados no 6.21 de fato destituam o presente pedido de atividade inventiva, não cabe à segunda instância trazer esta nova objeção, pois não estaria atendendo ao princípio de duplo grau de jurisdição. Neste caso a causa não esta madura e o pedido deve ser remetido novamente à primeira instância para se dê continuidade ao exame. Se o examimnador entender que nenhum dos documentos citados no 6.21 destitui o pedido de atividade inventiva, o examinador poderá, proceder ao deferimento do pedido ou formular exigências técnicas para ajustes no pedido. Caso a recorrente questione tais exigências, e em se tratamento de novas objeções, o pedido será remetido à primeira instância. 
 Modelos: 1 
 Despacho: 100.2. Recurso conhecido e provido. Reformada a decisão recorrida e anulada a decisão da primeira instância para retorno ao exame técnico.
 
 #id: [69]
 Tema: Parecer recursal
-Pergunta: Um pedido é indeferido por falta de atividade inventiva. No recurso o examinador verifica que o quadro reivindicatório usado no indeferimento viola artigo 10 e esta falha não foi apontada na primeira instância. Este pedido deve retornar à primeira instância ?
+Pergunta: Um pedido é indeferido por falta de atividade inventiva. No recurso o examinador verifica que o quadro reivindicatório usado no indeferimento viola artigo 10 e esta falha não foi apontada na primeira instância. Este pedido deve retornar à primeira instância?
 Resposta: Sim, essa situação caracteriza um vício de procedimento. Assim, o pedido deve retornar à primeira instância para que a questão seja devidamente analisada, uma vez que a violação do artigo 10 da LPI não foi mencionada no parecer de indeferimento inicial. O examinador de segunda instância deve verificar se o quadro reivindicatório do indeferimento foi resultado de emendas que não atendem ao artigo 10 da LPI e se essa questão não foi discutida anteriormente. Portanto, se não houve qualquer menção ao artigo 10 da LPI no parecer de indeferimento, o pedido deve ser devolvido à primeira instância para que a análise seja realizada de forma adequada. 
 Modelos: 1
 Despacho: 100.2. Recurso conhecido e provido. Reformada a decisão recorrida e anulada a decisão da primeira instância para retorno ao exame técnico.
