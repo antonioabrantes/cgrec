@@ -310,6 +310,7 @@ class chat_gen():
                 ##content = re.sub(r'ï¬', 'fl', content)
     
                 pdf_url = f"{server_url}/{os.path.basename(metadata_dict['source'])}"
+                pontuacao = pontuacoes[counter-1]
                 
                 soup = BeautifulSoup(content, 'html.parser')
                 plain_text = soup.get_text()
@@ -322,7 +323,7 @@ class chat_gen():
                 markdown_documents += f"**Conteúdo {counter}:**\n" + "*" + plain_text + "*" + "\n\n" + \
                     f"**Referência:** {os.path.basename(metadata_dict['source'])}" + " | " +\
                     f"**Id:** {indice}" + " | " +\
-                    f"**Pontuação:** {pontuacoes[counter-1]}" +\
+                    f"**Pontuação:** {pontuacao:.3f}" +\
                     "\n\n"
                 counter += 1
             else:
