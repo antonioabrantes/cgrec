@@ -15,7 +15,7 @@ st.markdown(
 """, 
 unsafe_allow_html=True
 )
-st.markdown("<small>Olá meu nome é Iara (Inteligência Artificial sobre Recursos Administrativos) uma assistente virtual para auxiliar em dúvidas sobre procedimentos em pedidos de recurso administrativo de pedidos de patentes indeferidos em primeira instãncia no INPI. As respostas são baseadas nas Portarias 10/2024, 04/2024 e Pareceres 03/2024, 16/2023, 19/2024, bem como um conjunto de 69 perguntas & respostas levantados durante as oficinas da CGREC e do grupo de ZAP da CGREC</small>", unsafe_allow_html=True)
+st.markdown("<small>Olá meu nome é Iara (Inteligência Artificial sobre Recursos Administrativos) uma assistente virtual para auxiliar em dúvidas sobre procedimentos em pedidos de recurso administrativo de pedidos de patentes indeferidos em primeira instãncia no INPI. As respostas são baseadas nas Portarias 10/2024, 04/2024 e Pareceres 03/2024, 16/2023, 19/2024, bem como um conjunto de 70 perguntas & respostas levantados durante as oficinas da CGREC e do grupo de ZAP da CGREC. Última atualização: 10/10/2024 </small>", unsafe_allow_html=True)
 
 # https://docs.streamlit.io/develop/concepts/architecture/session-state#initialization
 
