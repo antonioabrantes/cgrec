@@ -321,11 +321,12 @@ class chat_gen():
                 indice = re.findall(r'\[(.*?)\]', plain_text) # str(metadata_dict['row'])
     
                 # Append cleaned content to the markdown string with two newlines between documents
-                # f"[View PDF]({pdf_url})" "\n\n"
+                
                 markdown_documents += f"**Conteúdo {counter}:**\n" + "*" + plain_text + "*" + "\n\n" + \
                     f"**Referência:** {os.path.basename(metadata_dict['source'])}" + " | " +\
                     f"**Id:** {indice}" + " | " +\
                     f"**Pontuação:** {pontuacao:.3f}" +\
+                    f"[View PDF]({pdf_url})" "\n\n"
                     "\n\n"
                 counter += 1
             else:
