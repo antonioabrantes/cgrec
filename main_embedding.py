@@ -273,7 +273,7 @@ class chat_gen():
         Returns:
             str: A string containing cleaned and formatted references.
         """
-        server_url = "https://cientistaspatentes.com.br/central/data/"
+        server_url = "https://cientistaspatentes.com.br/central/data"
         documents = [str(x)+"\n\n" for x in documents] # insere duas quebra de linha ao final de cada documento da lista
         markdown_documents = ""
         counter = 1
@@ -311,6 +311,9 @@ class chat_gen():
                 ##content = re.sub(r'Â·', '·', content)
                 ##content = re.sub(r'ï¬', 'fl', content)
     
+                nome = os.path.basename(metadata_dict['source'])
+                nome = nome.replace("#","")
+                nome = nome.replace(".pdf","")
                 pdf_url = f"{server_url}/{os.path.basename(metadata_dict['source'])}"
                 pontuacao = pontuacoes[counter-1]
                 
