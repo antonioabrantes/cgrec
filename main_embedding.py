@@ -313,7 +313,7 @@ class chat_gen():
     
                 nome = os.path.basename(metadata_dict['source'])
                 nome = nome.replace("#","")
-                nome = nome.replace(".pdf","")
+                nome = nome.replace(".txt",".pdf")
                 pdf_url = f"{server_url}/{nome}"
                 pontuacao = pontuacoes[counter-1]
                 
@@ -329,7 +329,7 @@ class chat_gen():
                     f"**Referência:** {os.path.basename(metadata_dict['source'])}" + " | " +\
                     f"**Id:** {indice}" + " | " +\
                     f"**Pontuação:** {pontuacao:.3f}" +\
-                    f"[View PDF]({pdf_url})" + "\n\n"
+                    f" [View PDF]({pdf_url})" + "\n\n"
                 counter += 1
             else:
                 print(f"No match found for doc: {doc}")
