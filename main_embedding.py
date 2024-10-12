@@ -326,8 +326,7 @@ class chat_gen():
                     f"**Referência:** {os.path.basename(metadata_dict['source'])}" + " | " +\
                     f"**Id:** {indice}" + " | " +\
                     f"**Pontuação:** {pontuacao:.3f}" +\
-                    f"[View PDF]({pdf_url})" "\n\n"
-                    "\n\n"
+                    f"[View PDF]({pdf_url})" + "\n\n"
                 counter += 1
             else:
                 print(f"No match found for doc: {doc}")
