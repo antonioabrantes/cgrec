@@ -314,7 +314,7 @@ class chat_gen():
                 nome = os.path.basename(metadata_dict['source'])
                 nome = nome.replace("#","")
                 nome = nome.replace(".pdf","")
-                pdf_url = f"{server_url}/{os.path.basename(metadata_dict['source'])}"
+                pdf_url = f"{server_url}/{nome}"
                 pontuacao = pontuacoes[counter-1]
                 
                 soup = BeautifulSoup(content, 'html.parser')
