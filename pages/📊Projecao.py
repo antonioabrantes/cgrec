@@ -98,4 +98,12 @@ if st.session_state.step == 0:
         with st.chat_message("assistant"):
             st.markdown(response.content)
             st.session_state.messages.append({"role": "assistant", "content": response})
+            
+        prompt_modificado = f"Escreva um código Python que gere um gráfico mostrando " + prompt
+        response = chain.invoke({
+            "context": context,
+            "question": prompt_modificado,
+            "chat_history": chat_history
+        })
+        st.markdown(response.content)
         
