@@ -92,7 +92,7 @@ if st.session_state.step == 0:
             "question": prompt,
             "chat_history": chat_history
         })
-        chat_history.append((query, response.content))
+        chat_history.append((prompt, response.content))
         st.session_state.response = response
 
         with st.chat_message("assistant"):
