@@ -113,9 +113,9 @@ if st.session_state.step == 0:
             "context": context,
             "question": prompt_modificado
         })
-        st.markdown(response.content)
+        #st.markdown(response.content)
         comando = response.content
         comando = comando.replace("```","")
         comando = comando.replace("python","")
-        #exec(comando)
+        exec(comando)
         
