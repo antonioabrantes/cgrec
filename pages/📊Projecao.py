@@ -120,6 +120,7 @@ if st.session_state.step == 0:
         st.markdown("Imprimindo gráfico...")
         try:
             exec(comando)
+            st.pyplot(plt.gcf())
         except Exception as e:
             st.markdown(f"Ocorreu um erro ao executar o código : {e}")
         
