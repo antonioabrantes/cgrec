@@ -208,6 +208,10 @@ class chat_gen():
         Encerre com o cabeçalho:
         Atenciosamente,
         INPI / CGREC / Equipe Fale Conosco
+        
+        Caso você receba uma mensagem pedindo pelo andamento ou status de um pedido de patente, responda tipo 1. Nos outros casos responda tipo 0.
+        Formato da resposta deve ser um JSON conforme o modelo:
+        { "tipo" : 1 }
         """
 
         # Define your template with the system instruction
