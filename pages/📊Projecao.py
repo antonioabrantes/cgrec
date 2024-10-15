@@ -68,7 +68,7 @@ template2 = (
     "Escreva a resposta sucinta."
 )
 
-prompt2 = PromptTemplate(input_variables=['context','question'],template=template)
+prompt2 = PromptTemplate(input_variables=['context','question'],template=template2)
 chain2 = prompt2 | llm
 
 if 'prompt' not in st.session_state:
