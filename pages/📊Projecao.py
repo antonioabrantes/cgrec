@@ -120,5 +120,5 @@ if st.session_state.step == 0:
         try:
             exec(comando)
         except Exception as e:
-            st.write(f"Ocorreu um erro ao executar o código : {e}")
+            st.markdown(f"Ocorreu um erro ao executar o código : {e}")
         
