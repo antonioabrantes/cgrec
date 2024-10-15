@@ -1,5 +1,12 @@
 import streamlit as st
+from langchain_openai import ChatOpenAI
+from langchain.prompts.prompt import PromptTemplate
+from dotenv import load_dotenv
 #from main_embedding import chat_gen
+
+load_dotenv()
+#openai_api_key = os.environ['OPENAI_API_KEY']
+openai_api_key = os.getenv("OPENAI_API_KEY")
 
 #@st.cache_resource
 #def initialize():
@@ -23,6 +30,34 @@ st.markdown("<small>Olá meu nome é Iara (Inteligência Artificial sobre Recurs
 #    st.session_state['step'] = 0
 
 chat_history=[]
+llm = ChatOpenAI(openai_api_key=openai_api_key,
+                    temperature=0.0,
+                    max_tokens=4000,
+                    model="gpt-4o-mini"
+                    )
+
+# Define your system instruction
+system_instruction = """ 
+Você é um assistente virtual de um escritório de patentes do governo.
+Sua função será responder as perguntas com base nos dados fornecidos.
+Você deve buscar se comportar de maneira cordial e solícita.
+
+Encerre com o cabeçalho:
+Atenciosamente,
+INPI / CGREC / Equipe Fale Conosco
+"""
+
+# Define your template with the system instruction
+template = (
+    f"{system_instruction} "
+    "Combine o histórico {chat_history} "
+    "Aqui está a dúvida recebida {question}"
+    "Aqui está o contexto de respostas anteriores recebidas de requerentes feitas pelo nosso time do Fale Conosco {context}. "
+    "Escreva a melhor resposta para solucionar a dúvida apresentada pelo requerente."
+)
+
+prompt = PromptTemplate(input_variables=['context','question','chat_history'],template=template)
+chain = prompt | llm
 
 if 'prompt' not in st.session_state:
     st.session_state['prompt'] = ''
