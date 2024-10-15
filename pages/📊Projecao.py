@@ -114,5 +114,7 @@ if st.session_state.step == 0:
             "question": prompt_modificado
         })
         #st.markdown(response.content)
-        exec(response.content)
+        comando = response.content
+        comando = comando.replace("```","")
+        exec(comando)
         
