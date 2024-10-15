@@ -1,12 +1,20 @@
 import os
-from langchain.embeddings.openai import OpenAIEmbeddings
+#from langchain.embeddings.openai import OpenAIEmbeddings
+from langchain_community.embeddings import OpenAIEmbeddings
+
 from langchain.text_splitter import CharacterTextSplitter
 from langchain_openai import ChatOpenAI
-from langchain.vectorstores import FAISS
+
+#from langchain.vectorstores import FAISS
+from langchain_community.vectorstores import FAISS
+
 from dotenv import load_dotenv
 #from langchain.embeddings import HuggingFaceEmbeddings
 from langchain_huggingface import HuggingFaceEmbeddings
-from langchain.document_loaders import PyPDFLoader ,TextLoader
+
+#from langchain.document_loaders import PyPDFLoader ,TextLoader
+from langchain_community.document_loaders import PyPDFLoader,TextLoader
+
 from langchain.prompts.prompt import PromptTemplate
 from langchain.chains.conversation.memory import ConversationBufferMemory
 from langchain.text_splitter import RecursiveCharacterTextSplitter
