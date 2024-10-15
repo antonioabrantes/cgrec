@@ -22,6 +22,8 @@ st.markdown("<small>Olá meu nome é Iara (Inteligência Artificial sobre Recurs
 #if 'step' not in st.session_state:
 #    st.session_state['step'] = 0
 
+chat_history=[]
+
 if 'prompt' not in st.session_state:
     st.session_state['prompt'] = ''
 
