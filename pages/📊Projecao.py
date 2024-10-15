@@ -96,6 +96,6 @@ if st.session_state.step == 0:
         st.session_state.response = response
 
         with st.chat_message("assistant"):
-            st.markdown(response)
+            st.markdown(response.content)
             st.session_state.messages.append({"role": "assistant", "content": response})
         
