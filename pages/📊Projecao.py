@@ -62,6 +62,15 @@ template = (
 prompt = PromptTemplate(input_variables=['context','question','chat_history'],template=template)
 chain = prompt | llm
 
+template2 = (
+    "Aqui está a dúvida recebida {question}"
+    "Aqui está o contexto de respostas anteriores recebidas de requerentes feitas pelo nosso time do Fale Conosco {context}. "
+    "Escreva a resposta sucinta."
+)
+
+prompt2 = PromptTemplate(input_variables=['context','question'],template=template)
+chain2 = prompt2 | llm
+
 if 'prompt' not in st.session_state:
     st.session_state['prompt'] = ''
 
@@ -100,10 +109,9 @@ if st.session_state.step == 0:
             st.session_state.messages.append({"role": "assistant", "content": response})
             
         prompt_modificado = f"Escreva um código Python que gere um gráfico mostrando " + prompt + ". Mostre apenas os comandos do código."
-        response = chain.invoke({
+        response = chain2.invoke({
             "context": context,
-            "question": prompt_modificado,
-            "chat_history": chat_history
+            "question": prompt_modificado
         })
         st.markdown(response.content)
         
