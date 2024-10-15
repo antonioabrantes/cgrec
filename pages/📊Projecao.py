@@ -117,5 +117,5 @@ if st.session_state.step == 0:
         comando = response.content
         comando = comando.replace("```","")
         comando = comando.replace("python","")
-        #exec(comando)
+        st.exec(comando)
         
