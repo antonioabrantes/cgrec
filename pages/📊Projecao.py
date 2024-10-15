@@ -117,5 +117,8 @@ if st.session_state.step == 0:
         comando = response.content
         comando = comando.replace("```","")
         comando = comando.replace("python","")
-        st.exec(comando)
+        try:
+            exec(comando)
+        except Exception as e:
+            st.write(f"Ocorreu um erro ao executar o código: {e}")
         
