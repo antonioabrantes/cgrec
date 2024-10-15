@@ -99,7 +99,7 @@ if st.session_state.step == 0:
             st.markdown(response.content)
             st.session_state.messages.append({"role": "assistant", "content": response})
             
-        prompt_modificado = f"Escreva um código Python que gere um gráfico mostrando " + prompt + '. Mostre apenas os comandos do código"
+        prompt_modificado = f"Escreva um código Python que gere um gráfico mostrando " + prompt + ". Mostre apenas os comandos do código."
         response = chain.invoke({
             "context": context,
             "question": prompt_modificado,
