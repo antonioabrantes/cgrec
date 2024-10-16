@@ -221,13 +221,11 @@ class chat_gen():
         # Define your template with the system instruction
         template = (
             f"{system_instruction} "
-            "Combine o histórico {chat_history} "
-            "Aqui está a dúvida recebida {question}"
-            "Aqui está o contexto de respostas anteriores recebidas de requerentes feitas pelo nosso time do Fale Conosco {context}. "
-            "Escreva a melhor resposta para solucionar a dúvida apresentada pelo requerente."
+            "Pergunta recebida {question}"
+            "Contexto: {context}. "
         )
 
-        prompt = PromptTemplate(input_variables=['context','question','chat_history'],template=template)
+        prompt = PromptTemplate(input_variables=['context','question'],template=template)
         chain = prompt | llm
         return chain
 
@@ -246,7 +244,7 @@ class chat_gen():
             #print(f"Documento: {doc}")
             #print(f"Pontuação: {score}")
 
-      
+    
         similar_response = chat_gen.clean_references(docs, pontuacoes)
 
         #similar_response = chat_gen.clean_references(similar_response)
@@ -261,7 +259,7 @@ class chat_gen():
         result = chain.invoke({
             "context": self.context,
             "question": query,
-            "chat_history": self.chat_history
+            "chat_history": ""
         })
         self.chat_history.append((query, result.content))
         #print(result)
