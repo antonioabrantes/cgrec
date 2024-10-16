@@ -503,3 +503,9 @@ Resposta: Em relação ao seu pedido, é importante esclarecer que, tendo em vis
 Modelos: 2
 Despacho: 100.2. Recurso conhecido e provido. Reformada a decisão recorrida e anulada a decisão da primeira instância para retorno ao exame técnico.
 
+#id: [73]
+Tema: Parecer recursal
+Pergunta: Um pedido foi indeferido por artigo 32 da LPI. No recurso o recorrente apresenta novo quadro reivindicatório em que volta ao quadro reivindicatório do pedido de exame. Neste caso a segunda instância deve seguir o exame de atividade inventiva e novidade ? 
+Resposta:  Não tendo em vista que não houve a discussão de atividade inventiva e demais critérios de patenteabilidade na primeira instância, logo não se configuraria o duplo grau de jurisdição. O pedido deve retornar à primeira instância apontando que o quadro reivindicatório a ser considerado é o apresentado na fase recursal. Caso o examinador de primeira instância tenha baseado o seu indeferimento no quadro reivindicatório emendado, fica configura a situação de erro de procedimento tendo em vista que o correto seria rejeitar o novo quadro reivindicatório e voltar o exame para o quadro reivindicatório anterior, e neste caso caberia apontar a objeção à este quadro reivindicatório, por exemplo, falta de atividade inventiva. 
+Modelos: 2
+Despacho: 100.2. Recurso conhecido e provido. Reformada a decisão recorrida e anulada a decisão da primeira instância para retorno ao exame técnico.
