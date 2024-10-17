@@ -37,7 +37,7 @@ st.markdown(
     unsafe_allow_html=True
 )
 st.markdown(
-    "<small>Olá meu nome é Iara (Inteligência Artificial sobre Recursos Administrativos) uma assistente virtual para auxiliar em dúvidas sobre o exame. As fontes usadas incluem o caselaw 2017-2023 e a Lei 9279/96 (LPI). Última atualização: 17/10/2024 </small>",
+    "<small>Olá meu nome é Iara (Inteligência Artificial sobre Recursos Administrativos) uma assistente virtual para auxiliar em dúvidas sobre o exame. As fontes usadas incluem o a Resolução n°124/13 e a Lei 9279/96 (LPI). Última atualização: 17/10/2024 </small>",
     unsafe_allow_html=True)
 
 # https://docs.streamlit.io/develop/concepts/architecture/session-state#initialization
