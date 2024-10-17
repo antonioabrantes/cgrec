@@ -132,7 +132,7 @@ def load_doc():
     #name1 = "caselaws.txt"
     name = arquivos.get(1)
     arquivo = f"dados/{name}"  # Especifique o caminho do PDF
-    text1 = ler_doc(arquivo)
+    #text1 = ler_doc(arquivo)
     
     #name2 = "lei9279.txt"
     name = arquivos.get(2)
@@ -158,7 +158,7 @@ def load_doc():
     
     # chunks = text_splitter.create_documents([text])
     metadata = {"source": arquivos.get(1),"row": 0}
-    chunks1 = text_splitter.create_documents([text1], metadatas=[metadata])
+    #chunks1 = text_splitter.create_documents([text1], metadatas=[metadata])
     
     # chunks = text_splitter.create_documents([text])
     metadata = {"source": arquivos.get(2),"row": 0}
@@ -202,8 +202,10 @@ def load_model():
 def ask_pdf(query):
     st.markdown("Iniciando...")
     db = load_doc()
+    st.markdown("Vectorstore iniciado...")
     #similar_response = db.similarity_search(query,k=3)
     similar_response = db.similarity_search_with_score(query, k=3)
+    st.markdown("Teste de similaridade concluído...")
     
     # Exibindo os resultados com suas pontuações
     docs = []
@@ -233,6 +235,7 @@ def ask_pdf(query):
     })
     chat_history.append((query, result.content))
     #print(result)
+    st.markdown("LLM inicializada...")
     
     return result.content, similar_response
     
