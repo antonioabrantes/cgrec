@@ -29,6 +29,7 @@ load_dotenv()
 #openai_api_key = os.environ['OPENAI_API_KEY']
 openai_api_key = os.getenv("OPENAI_API_KEY")
 
+st.session_state.chat = chat_gen()
 
 st.title("Compêndio de decisões da CGREC")
 st.markdown(
