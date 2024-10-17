@@ -37,19 +37,19 @@ def initialize():
 
 st.session_state.chat=initialize()
 
-st.title("Fale Conosco da CGREC")
+st.title("Compêndio de decisões da CGREC")
 st.markdown(
 """
 <img src="https://cientistaspatentes.com.br/imagens/IARA.png" width="140"/>
 """, 
 unsafe_allow_html=True
 )
-st.markdown("<small>Olá meu nome é Iara (Inteligência Artificial sobre Recursos Administrativos) uma assistente virtual para auxiliar em dúvidas sobre procedimentos em pedidos de recurso administrativo de pedidos de patentes indeferidos em primeira instãncia no INPI. As respostas são baseadas nas Portarias 10/2024, 04/2024 e Pareceres 03/2024, 16/2023, 19/2024, bem como um conjunto de 73 perguntas & respostas levantados durante as oficinas da CGREC e do grupo de ZAP da CGREC. Última atualização: 16/10/2024 </small>", unsafe_allow_html=True)
+st.markdown("<small>Olá meu nome é Iara (Inteligência Artificial sobre Recursos Administrativos) uma assistente virtual para auxiliar em dúvidas sobre o caselaw 2017-2023. Última atualização: 17/10/2024 </small>", unsafe_allow_html=True)
 
 # https://docs.streamlit.io/develop/concepts/architecture/session-state#initialization
+# emoji https://emojipedia.org/balance-scale
 
-#if 'step' not in st.session_state:
-#    st.session_state['step'] = 0
+st.session_state['step'] = 0
 
 if 'prompt' not in st.session_state:
     st.session_state['prompt'] = ''
@@ -71,7 +71,7 @@ if "messages" not in st.session_state:
 #        st.markdown(message["content"])
 
 if st.session_state.step == 0:
-    if prompt := st.text_area("Entre com sua pergunta abaixo."):
+    if prompt := st.text_area("Entre com sua busca abaixo, por exemplo, bilastina."):
         st.chat_message("user").markdown(prompt)
         st.session_state.messages.append({"role": "user", "content": prompt})
         st.session_state.prompt = prompt
@@ -81,20 +81,14 @@ if st.session_state.step == 0:
         st.session_state.response = response
 
         with st.chat_message("assistant"):
-            st.markdown(response)
             st.session_state.messages.append({"role": "assistant", "content": response})
-        
-        if st.button("Referências"):
-            #st.write(similar_response)
-            st.session_state.step = 1
-            st.rerun()
+            st.markdown(f"**Pergunta:** {st.session_state.prompt}")
+            st.markdown(f"**Resposta:** {st.session_state.response}")
+            st.markdown(f"**Referências:**")
+            st.markdown(f"{st.session_state.similar_response}")
+  
 
-if st.session_state.step == 1:
-    st.markdown(f"**Pergunta:** {st.session_state.prompt}")
-    st.markdown(f"**Resposta:** {st.session_state.response}")
-    st.markdown(f"**Referências:**")
-    st.markdown(f"{st.session_state.similar_response}")
-    
+   
 arquivos = {
     1: "chatbot_cgrec#.txt",
     2: "parecer_03#.txt",
@@ -279,20 +273,7 @@ class chat_gen():
      
         # Define your system instruction
         system_instruction = """ 
-        Você é um assistente virtual de um escritório de patentes do governo.
-        Sua função será responder perguntas que recebemos de requerentes que depositaram pedidos de patentes e tiveram seus pedidos indeferidos.
-        Segundo a Lei de Patente a Lei 9279/96 (LPI) estes requerentes dispõe de 60 dias úteis para dar entrada numa petição de recurso (código 214) solitando
-        a revisão da decisão de indeferimento numa segunda instância, a Coordenação de Recursos e Nulidades CGREC. Procure nas respostas sempre preservar o duplo grau de jurisdição. 
-        Vou te passar algum contexto de nosso time de Fale Conosco para que você ter uma ideia das respostas que fornecemos.
-        
-        Siga todas as regras abaixo:
-        1. Você deve buscar se comportar de maneira cordial e solícita.
-        2. Suas respostas devem ser bem similares ou até identicas às enviadas em termos de comprimento, tom de voz, argumentos lógicos do Fale Conosco.
-        3. Alguns das respostas podem conter links e informações irrelevantes. Preste atenção apenas no conteúdo útil da mensagem.
-        
-        Encerre com o cabeçalho:
-        Atenciosamente,
-        INPI / CGREC / Equipe Fale Conosco
+        Você é um assistente virtual que busca decisões recursais cadastradas. Faça um resumo das decisões encontradas em poucos parágrafos. 
         """
 
         # Define your template with the system instruction
