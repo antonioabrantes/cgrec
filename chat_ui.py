@@ -1,4 +1,6 @@
 import streamlit as st
+st.set_page_config(page_title="Fale Conosco", page_icon=":speech_balloon:") # 💬
+
 from main_embedding import chat_gen
 
 @st.cache_resource
@@ -7,7 +9,6 @@ def initialize():
     return chat
 
 st.session_state.chat=initialize()
-st.set_page_config(page_title="Fale Conosco", page_icon=":speech_balloon:") # 💬
 
 st.title("Fale Conosco da CGREC")
 st.markdown(
