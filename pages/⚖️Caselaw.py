@@ -29,7 +29,6 @@ load_dotenv()
 #openai_api_key = os.environ['OPENAI_API_KEY']
 openai_api_key = os.getenv("OPENAI_API_KEY")
 
-chat= chat_gen()
 
 st.title("Compêndio de decisões da CGREC")
 st.markdown(
@@ -153,8 +152,8 @@ def count_tokens(text: str) -> int:
         
 
 class chat_gen():
-    def __init__():
-        chat_history=[]
+    def __init__(self):
+        self.chat_history=[]
 
     def load_doc():
         #name1 = "caselaws.txt"
@@ -259,7 +258,7 @@ class chat_gen():
             "question": query,
             "chat_history": ""
         })
-        chat_history.append((query, result.content))
+        self.chat_history.append((query, result.content))
         #print(result)
         
         return result.content, similar_response
