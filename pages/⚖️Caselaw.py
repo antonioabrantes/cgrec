@@ -90,15 +90,7 @@ if st.session_state.step == 0:
 
    
 arquivos = {
-    1: "chatbot_cgrec#.txt",
-    2: "parecer_03#.txt",
-    3: "parecer_16#.txt",
-    4: "parecer_19#.txt",
-    5: "portaria_10#.txt",
-    6: "parecer4.pdf",
-    7: "parecer04#.txt",
-    8: "fluxo.txt",
-    9: "caselaws.txt"
+    1: "caselaws.txt"
 }
 
 def busca_indice(arquivos, arquivo_procurado):
@@ -167,46 +159,6 @@ class chat_gen():
         arquivo = f"dados/{name}"  # Especifique o caminho do PDF
         text1 = ler_doc(arquivo)
         
-        #name2 = "parecer_03#.txt"
-        name = arquivos.get(2)
-        arquivo = f"dados/{name}"  # Especifique o caminho do PDF
-        text2 = ler_doc(arquivo)
-        
-        #name3 = "parecer_16#.txt"
-        name = arquivos.get(3)
-        arquivo = f"dados/{name}"  # Especifique o caminho do PDF
-        text3 = ler_doc(arquivo)
-        
-        #name4 = "parecer_19#.txt"
-        name = arquivos.get(4)
-        arquivo = f"dados/{name}"  # Especifique o caminho do PDF
-        text4 = ler_doc(arquivo)
-        
-        #name5 = "portaria_10#.txt"
-        name = arquivos.get(5)
-        arquivo = f"dados/{name}"  # Especifique o caminho do PDF
-        text5 = ler_doc(arquivo)
-    
-        #name6 = "parecer4.pdf"
-        name = arquivos.get(6)
-        arquivo = f"dados/{name}"  # Especifique o caminho do PDF
-        #text6 = ler_pdf(arquivo)
-
-        #name7 = "parecer04#.txt"
-        name = arquivos.get(7)
-        arquivo = f"dados/{name}"  # Especifique o caminho do PDF
-        text7 = ler_doc(arquivo)
-
-        #name8 = "fluxo.txt"
-        name = arquivos.get(8)
-        arquivo = f"dados/{name}"  # Especifique o caminho do PDF
-        text8 = ler_doc(arquivo)
-
-        #name9 = "caselaws.txt"
-        name = arquivos.get(9)
-        arquivo = f"dados/{name}"  # Especifique o caminho do PDF
-        #text9 = ler_doc(arquivo)
-
         text_splitter = RecursiveCharacterTextSplitter( # divide o PDF em blocos/chunks de 512 tokens
             chunk_size = 512,
             chunk_overlap  = 24,
@@ -228,40 +180,16 @@ class chat_gen():
         metadata = {"source": arquivos.get(1),"row": 0}
         chunks1 = text_splitter.create_documents([text1], metadatas=[metadata])
         
-        metadata = {"source": arquivos.get(2),"row": 0}
-        chunks2 = text_splitter.create_documents([text2], metadatas=[metadata])
-        
-        metadata = {"source": arquivos.get(3),"row": 0}
-        chunks3 = text_splitter.create_documents([text3], metadatas=[metadata])
-        
-        metadata = {"source": arquivos.get(4),"row": 0}
-        chunks4 = text_splitter.create_documents([text4], metadatas=[metadata])
-        
-        metadata = {"source": arquivos.get(5),"row": 0}
-        chunks5 = text_splitter.create_documents([text5], metadatas=[metadata])
-        
-        metadata = {"source": arquivos.get(6),"row": 0}
-        #chunks6 = text_splitter.create_documents([text6], metadatas=[metadata])
-
-        metadata = {"source": arquivos.get(7),"row": 0}
-        chunks7 = text_splitter.create_documents([text7], metadatas=[metadata])
-
-        metadata = {"source": arquivos.get(8),"row": 0}
-        chunks8 = text_splitter.create_documents([text8], metadatas=[metadata])
-
-        metadata = {"source": arquivos.get(9),"row": 0}
-        #chunks9 = text_splitter.create_documents([text9], metadatas=[metadata])
-
         combined_chunks = chunks1 + chunks2 + chunks3 + chunks4 + chunks5 + chunks6 + chunks7 + chunks8 + chunks9
         
         embeddings = HuggingFaceEmbeddings(model_name='sentence-transformers/all-MiniLM-L6-v2')
         vectorstore = FAISS.from_documents(combined_chunks, embeddings)
         
         # Persist the vectors locally on disk
-        vectorstore.save_local("faiss_index_datamodel")
+        vectorstore.save_local("faiss_index_datamodel_law")
     
         # Load from local storage
-        persisted_vectorstore = FAISS.load_local("faiss_index_datamodel", embeddings, allow_dangerous_deserialization=True)
+        persisted_vectorstore = FAISS.load_local("faiss_index_datamodel_law", embeddings, allow_dangerous_deserialization=True)
         return persisted_vectorstore
 
     def load_model(self):
