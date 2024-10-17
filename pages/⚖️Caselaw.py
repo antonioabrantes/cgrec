@@ -70,7 +70,8 @@ if "messages" not in st.session_state:
 
 arquivos = {
     1: "caselaws.txt",
-    2: "lei9279.txt"
+    2: "lei9279.txt",
+    3: "resolucao124.txt"
 }
 
 
@@ -148,6 +149,11 @@ def load_doc():
     arquivo = f"dados/{name}"  # Especifique o caminho do PDF
     text2 = ler_doc(arquivo)
 
+    # name3 = "resolucao124.txt"
+    name = arquivos.get(3)
+    arquivo = f"dados/{name}"  # Especifique o caminho do PDF
+    text3 = ler_doc(arquivo)
+
     text_splitter = RecursiveCharacterTextSplitter(  # divide o PDF em blocos/chunks de 512 tokens
         chunk_size=512,
         chunk_overlap=24,
@@ -172,6 +178,10 @@ def load_doc():
     # chunks = text_splitter.create_documents([text])
     metadata = {"source": arquivos.get(2), "row": 0}
     chunks2 = text_splitter.create_documents([text2], metadatas=[metadata])
+
+    # chunks = text_splitter.create_documents([text])
+    metadata = {"source": arquivos.get(3), "row": 0}
+    chunks3 = text_splitter.create_documents([text3], metadatas=[metadata])
 
     combined_chunks = chunks1 + chunks2 + chunks3 + chunks4 + chunks5 + chunks6 + chunks7 + chunks8 + chunks9
 
