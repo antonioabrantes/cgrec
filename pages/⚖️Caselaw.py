@@ -66,31 +66,6 @@ if "messages" not in st.session_state:
 #    with st.chat_message(message["role"]):
 #        st.markdown(message["content"])
 
-if st.session_state.step == 0:
-    if prompt := st.text_area("Entre com sua busca abaixo, por exemplo, qual o prazo de sigilo dos pedidos de patente ?"):
-        st.chat_message("user").markdown(prompt)
-        st.session_state.messages.append({"role": "user", "content": prompt})
-        st.session_state.prompt = prompt
-
-        response, similar_response = ask_pdf(prompt,) 
-        st.session_state.similar_response = similar_response
-        st.session_state.response = response
-
-        with st.chat_message("assistant"):
-            st.markdown(response)
-            st.session_state.messages.append({"role": "assistant", "content": response})
-        
-        if st.button("Referências"):
-            #st.write(similar_response)
-            st.session_state.step = 1
-            st.rerun()
-
-if st.session_state.step == 1:
-    st.markdown(f"**Pergunta:** {st.session_state.prompt}")
-    st.markdown(f"**Resposta:** {st.session_state.response}")
-    st.markdown(f"**Referências:**")
-    st.markdown(f"{st.session_state.similar_response}")  
-
    
 arquivos = {
     1: "caselaws.txt",
@@ -335,4 +310,31 @@ def clean_references(documents: List, pontuacoes: List) -> str:
                 
 
     return markdown_documents
+
+# Interface gráfica:
+
+if st.session_state.step == 0:
+    if prompt := st.text_area("Entre com sua busca abaixo, por exemplo, qual o prazo de sigilo dos pedidos de patente ?"):
+        st.chat_message("user").markdown(prompt)
+        st.session_state.messages.append({"role": "user", "content": prompt})
+        st.session_state.prompt = prompt
+
+        response, similar_response = ask_pdf(prompt,) 
+        st.session_state.similar_response = similar_response
+        st.session_state.response = response
+
+        with st.chat_message("assistant"):
+            st.markdown(response)
+            st.session_state.messages.append({"role": "assistant", "content": response})
+        
+        if st.button("Referências"):
+            #st.write(similar_response)
+            st.session_state.step = 1
+            st.rerun()
+
+if st.session_state.step == 1:
+    st.markdown(f"**Pergunta:** {st.session_state.prompt}")
+    st.markdown(f"**Resposta:** {st.session_state.response}")
+    st.markdown(f"**Referências:**")
+    st.markdown(f"{st.session_state.similar_response}")  
 
