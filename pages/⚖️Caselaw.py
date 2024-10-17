@@ -29,7 +29,6 @@ load_dotenv()
 #openai_api_key = os.environ['OPENAI_API_KEY']
 openai_api_key = os.getenv("OPENAI_API_KEY")
 
-st.session_state.chat = chat_gen()
 
 st.title("Compêndio de decisões da CGREC")
 st.markdown(
@@ -43,7 +42,7 @@ st.markdown("<small>Olá meu nome é Iara (Inteligência Artificial sobre Recurs
 # https://docs.streamlit.io/develop/concepts/architecture/session-state#initialization
 # emoji https://emojipedia.org/balance-scale
 
-st.session_state.step = 0
+chat = chat_gen()
 
 if 'step' not in st.session_state:
     st.session_state['step'] = 0
