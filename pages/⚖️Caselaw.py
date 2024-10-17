@@ -157,7 +157,7 @@ class chat_gen():
     def __init__(self):
         self.chat_history=[]
 
-    def load_doc():
+    def load_doc(self):
         #name1 = "caselaws.txt"
         name = arquivos.get(1)
         arquivo = f"dados/{name}"  # Especifique o caminho do PDF
@@ -205,7 +205,7 @@ class chat_gen():
         persisted_vectorstore = FAISS.load_local("faiss_index_datamodel_law", embeddings, allow_dangerous_deserialization=True)
         return persisted_vectorstore
 
-    def load_model():
+    def load_model(self):
         llm = ChatOpenAI(openai_api_key=openai_api_key,
                             temperature=0.0,
                             max_tokens=4000,
@@ -228,7 +228,7 @@ class chat_gen():
         chain = prompt | llm
         return chain
 
-    def ask_pdf(query):
+    def ask_pdf(self,query):
         st.markdown("Iniciando...")
         db = load_doc()
         #similar_response = db.similarity_search(query,k=3)
