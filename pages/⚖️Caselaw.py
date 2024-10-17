@@ -42,10 +42,10 @@ st.markdown("<small>Olá meu nome é Iara (Inteligência Artificial sobre Recurs
 # https://docs.streamlit.io/develop/concepts/architecture/session-state#initialization
 # emoji https://emojipedia.org/balance-scale
 
-chat = chat_gen()
 
 if 'step' not in st.session_state:
     st.session_state['step'] = 0
+    chat_history=[]
 
 if 'prompt' not in st.session_state:
     st.session_state['prompt'] = ''
@@ -72,7 +72,7 @@ if st.session_state.step == 0:
         st.session_state.messages.append({"role": "user", "content": prompt})
         st.session_state.prompt = prompt
 
-        response, similar_response = self.chat.ask_pdf(prompt,) 
+        response, similar_response = ask_pdf(prompt,) 
         st.session_state.similar_response = similar_response
         st.session_state.response = response
 
@@ -153,190 +153,186 @@ def count_tokens(text: str) -> int:
     return len(tokenizer.encode(text))
         
 
-class chat_gen():
-    def __init__(self):
-        self.chat_history=[]
-
-    def load_doc(self):
-        #name1 = "caselaws.txt"
-        name = arquivos.get(1)
-        arquivo = f"dados/{name}"  # Especifique o caminho do PDF
-        text1 = ler_doc(arquivo)
-        
-        #name2 = "lei9279.txt"
-        name = arquivos.get(2)
-        arquivo = f"dados/{name}"  # Especifique o caminho do PDF
-        text2 = ler_doc(arquivo)
-
-        text_splitter = RecursiveCharacterTextSplitter( # divide o PDF em blocos/chunks de 512 tokens
-            chunk_size = 512,
-            chunk_overlap  = 24,
-            length_function = count_tokens,
-            separators=["#"] #  "\n\n",
-        )
-        
-        chunks1 = []
-        chunks2 = []
-        chunks3 = []
-        chunks4 = []
-        chunks5 = []
-        chunks6 = []
-        chunks7 = []
-        chunks8 = []
-        chunks9 = []
-        
-        # chunks = text_splitter.create_documents([text])
-        metadata = {"source": arquivos.get(1),"row": 0}
-        chunks1 = text_splitter.create_documents([text1], metadatas=[metadata])
-        
-        # chunks = text_splitter.create_documents([text])
-        metadata = {"source": arquivos.get(2),"row": 0}
-        chunks2 = text_splitter.create_documents([text2], metadatas=[metadata])
-
-        combined_chunks = chunks1 + chunks2 + chunks3 + chunks4 + chunks5 + chunks6 + chunks7 + chunks8 + chunks9
-        
-        embeddings = HuggingFaceEmbeddings(model_name='sentence-transformers/all-MiniLM-L6-v2')
-        vectorstore = FAISS.from_documents(combined_chunks, embeddings)
-        
-        # Persist the vectors locally on disk
-        vectorstore.save_local("faiss_index_datamodel_law")
+def load_doc():
+    #name1 = "caselaws.txt"
+    name = arquivos.get(1)
+    arquivo = f"dados/{name}"  # Especifique o caminho do PDF
+    text1 = ler_doc(arquivo)
     
-        # Load from local storage
-        persisted_vectorstore = FAISS.load_local("faiss_index_datamodel_law", embeddings, allow_dangerous_deserialization=True)
-        return persisted_vectorstore
+    #name2 = "lei9279.txt"
+    name = arquivos.get(2)
+    arquivo = f"dados/{name}"  # Especifique o caminho do PDF
+    text2 = ler_doc(arquivo)
 
-    def load_model(self):
-        llm = ChatOpenAI(openai_api_key=openai_api_key,
-                            temperature=0.0,
-                            max_tokens=4000,
-                            model="gpt-4o-mini"
-                            )
-     
-        # Define your system instruction
-        system_instruction = """ 
-        Você é um assistente virtual que busca decisões recursais cadastradas. Faça um resumo das decisões encontradas em poucos parágrafos. 
-        """
-
-        # Define your template with the system instruction
-        template = (
-            f"{system_instruction} "
-            "Pergunta recebida {question}"
-            "Contexto: {context}. "
-        )
-
-        prompt = PromptTemplate(input_variables=['context','question'],template=template)
-        chain = prompt | llm
-        return chain
-
-    def ask_pdf(self,query):
-        st.markdown("Iniciando...")
-        db = load_doc()
-        #similar_response = db.similarity_search(query,k=3)
-        similar_response = db.similarity_search_with_score(query, k=3)
-        
-        # Exibindo os resultados com suas pontuações
-        docs = []
-        pontuacoes = []
-        for doc, score in similar_response:
-            docs.append(doc)
-            pontuacoes.append(score)
-            #print(f"Documento: {doc}")
-            #print(f"Pontuação: {score}")
-
+    text_splitter = RecursiveCharacterTextSplitter( # divide o PDF em blocos/chunks de 512 tokens
+        chunk_size = 512,
+        chunk_overlap  = 24,
+        length_function = count_tokens,
+        separators=["#"] #  "\n\n",
+    )
     
-        similar_response = chat_gen.clean_references(docs, pontuacoes)
-
-        #similar_response = chat_gen.clean_references(similar_response)
-        context = similar_response
-        # context = [doc.page_content + doc.metadata['source'] for doc in similar_response]
-        #print(context)
-
-        #result = {"answer": "vazio"}
-        chain = load_model()
-
-        # Execute the chain and get the result
-        result = chain.invoke({
-            "context": context,
-            "question": query,
-            "chat_history": ""
-        })
-        self.chat_history.append((query, result.content))
-        #print(result)
-        
-        return result.content, similar_response
-        
-
-    def clean_references(documents: List, pontuacoes: List) -> str:
-        """
-        Clean and format references from retrieved documents.
-
-        Parameters:
-            documents (List): List of retrieved documents.
-
-        Returns:
-            str: A string containing cleaned and formatted references.
-        """
-        server_url = "https://cientistaspatentes.com.br/central/data"
-        documents = [str(x)+"\n\n" for x in documents] # insere duas quebra de linha ao final de cada documento da lista
-        markdown_documents = ""
-        counter = 1
-        for doc in documents:
-            regex = r"page_content='(.*?)'\s+metadata=({.*})"
-            match = re.search(regex, doc, re.DOTALL)
-            if match:
-                content = match.group(1)
-                metadata = match.group(2)
-                metadata_dict = ast.literal_eval(metadata) # converte a string metadata em um dict real
-                # Decode newlines and other escape sequences
-                ##content = bytes(content, "utf-8").decode("unicode_escape")
+    chunks1 = []
+    chunks2 = []
+    chunks3 = []
+    chunks4 = []
+    chunks5 = []
+    chunks6 = []
+    chunks7 = []
+    chunks8 = []
+    chunks9 = []
     
-                # Replace escaped newlines with actual newlines
-                content = re.sub(r'\\n', '\n', content)
-                # Remove special tokens
-                ##content = re.sub(r'\s*<EOS>\s*<pad>\s*', ' ', content)
-                # Remove any remaining multiple spaces
-                ##content = re.sub(r'\s+', ' ', content).strip()
-                content = re.sub(r'\s{2,}', ' ', content).strip()
+    # chunks = text_splitter.create_documents([text])
+    metadata = {"source": arquivos.get(1),"row": 0}
+    chunks1 = text_splitter.create_documents([text1], metadatas=[metadata])
     
-                # Decode HTML entities
-                ##content = html.unescape(content)
+    # chunks = text_splitter.create_documents([text])
+    metadata = {"source": arquivos.get(2),"row": 0}
+    chunks2 = text_splitter.create_documents([text2], metadatas=[metadata])
+
+    combined_chunks = chunks1 + chunks2 + chunks3 + chunks4 + chunks5 + chunks6 + chunks7 + chunks8 + chunks9
     
-                # Replace incorrect unicode characters with correct ones
-                ##content = content.encode('latin1').decode('utf-8', 'ignore')
+    embeddings = HuggingFaceEmbeddings(model_name='sentence-transformers/all-MiniLM-L6-v2')
+    vectorstore = FAISS.from_documents(combined_chunks, embeddings)
     
-                # Remove or replace special characters and mathematical symbols
-                # This step may need to be customized based on the specific symbols in your documents
-                ##content = re.sub(r'â', '-', content)
-                ##content = re.sub(r'â', '∈', content)
-                ##content = re.sub(r'Ã', '×', content)
-                ##content = re.sub(r'ï¬', 'fi', content)
-                ##content = re.sub(r'â', '∈', content)
-                ##content = re.sub(r'Â·', '·', content)
-                ##content = re.sub(r'ï¬', 'fl', content)
+    # Persist the vectors locally on disk
+    vectorstore.save_local("faiss_index_datamodel_law")
+
+    # Load from local storage
+    persisted_vectorstore = FAISS.load_local("faiss_index_datamodel_law", embeddings, allow_dangerous_deserialization=True)
+    return persisted_vectorstore
+
+def load_model():
+    llm = ChatOpenAI(openai_api_key=openai_api_key,
+                        temperature=0.0,
+                        max_tokens=4000,
+                        model="gpt-4o-mini"
+                        )
+ 
+    # Define your system instruction
+    system_instruction = """ 
+    Você é um assistente virtual que busca decisões recursais cadastradas. Faça um resumo das decisões encontradas em poucos parágrafos. 
+    """
+
+    # Define your template with the system instruction
+    template = (
+        f"{system_instruction} "
+        "Pergunta recebida {question}"
+        "Contexto: {context}. "
+    )
+
+    prompt = PromptTemplate(input_variables=['context','question'],template=template)
+    chain = prompt | llm
+    return chain
+
+def ask_pdf(query):
+    st.markdown("Iniciando...")
+    db = load_doc()
+    #similar_response = db.similarity_search(query,k=3)
+    similar_response = db.similarity_search_with_score(query, k=3)
     
-                nome = os.path.basename(metadata_dict['source'])
-                nome = nome.replace("#","")
-                nome = nome.replace(".txt",".pdf")
-                pdf_url = f"{server_url}/{nome}"
-                pontuacao = pontuacoes[counter-1]
+    # Exibindo os resultados com suas pontuações
+    docs = []
+    pontuacoes = []
+    for doc, score in similar_response:
+        docs.append(doc)
+        pontuacoes.append(score)
+        #print(f"Documento: {doc}")
+        #print(f"Pontuação: {score}")
+
+
+    similar_response = chat_gen.clean_references(docs, pontuacoes)
+
+    #similar_response = chat_gen.clean_references(similar_response)
+    context = similar_response
+    # context = [doc.page_content + doc.metadata['source'] for doc in similar_response]
+    #print(context)
+
+    #result = {"answer": "vazio"}
+    chain = load_model()
+
+    # Execute the chain and get the result
+    result = chain.invoke({
+        "context": context,
+        "question": query,
+        "chat_history": ""
+    })
+    chat_history.append((query, result.content))
+    #print(result)
+    
+    return result.content, similar_response
+    
+
+def clean_references(documents: List, pontuacoes: List) -> str:
+    """
+    Clean and format references from retrieved documents.
+
+    Parameters:
+        documents (List): List of retrieved documents.
+
+    Returns:
+        str: A string containing cleaned and formatted references.
+    """
+    server_url = "https://cientistaspatentes.com.br/central/data"
+    documents = [str(x)+"\n\n" for x in documents] # insere duas quebra de linha ao final de cada documento da lista
+    markdown_documents = ""
+    counter = 1
+    for doc in documents:
+        regex = r"page_content='(.*?)'\s+metadata=({.*})"
+        match = re.search(regex, doc, re.DOTALL)
+        if match:
+            content = match.group(1)
+            metadata = match.group(2)
+            metadata_dict = ast.literal_eval(metadata) # converte a string metadata em um dict real
+            # Decode newlines and other escape sequences
+            ##content = bytes(content, "utf-8").decode("unicode_escape")
+
+            # Replace escaped newlines with actual newlines
+            content = re.sub(r'\\n', '\n', content)
+            # Remove special tokens
+            ##content = re.sub(r'\s*<EOS>\s*<pad>\s*', ' ', content)
+            # Remove any remaining multiple spaces
+            ##content = re.sub(r'\s+', ' ', content).strip()
+            content = re.sub(r'\s{2,}', ' ', content).strip()
+
+            # Decode HTML entities
+            ##content = html.unescape(content)
+
+            # Replace incorrect unicode characters with correct ones
+            ##content = content.encode('latin1').decode('utf-8', 'ignore')
+
+            # Remove or replace special characters and mathematical symbols
+            # This step may need to be customized based on the specific symbols in your documents
+            ##content = re.sub(r'â', '-', content)
+            ##content = re.sub(r'â', '∈', content)
+            ##content = re.sub(r'Ã', '×', content)
+            ##content = re.sub(r'ï¬', 'fi', content)
+            ##content = re.sub(r'â', '∈', content)
+            ##content = re.sub(r'Â·', '·', content)
+            ##content = re.sub(r'ï¬', 'fl', content)
+
+            nome = os.path.basename(metadata_dict['source'])
+            nome = nome.replace("#","")
+            nome = nome.replace(".txt",".pdf")
+            pdf_url = f"{server_url}/{nome}"
+            pontuacao = pontuacoes[counter-1]
+            
+            soup = BeautifulSoup(content, 'html.parser')
+            plain_text = soup.get_text()
+            plain_text = plain_text.replace("\r\n", "").replace("\n", "")
+            plain_text = plain_text.replace("*", "")
+            indice = re.findall(r'\[(.*?)\]', plain_text) # str(metadata_dict['row'])
+
+            # Append cleaned content to the markdown string with two newlines between documents
+            
+            markdown_documents += f"**Conteúdo {counter}:**\n" + "*" + plain_text + "*" + "\n\n" + \
+                f"**Referência:** {os.path.basename(metadata_dict['source'])}" + " | " +\
+                f"**Id:** {indice}" + " | " +\
+                f"**Pontuação:** {pontuacao:.3f}" +\
+                f" [View PDF]({pdf_url})" + "\n\n"
+            counter += 1
+        else:
+            print(f"No match found for doc: {doc}")
                 
-                soup = BeautifulSoup(content, 'html.parser')
-                plain_text = soup.get_text()
-                plain_text = plain_text.replace("\r\n", "").replace("\n", "")
-                plain_text = plain_text.replace("*", "")
-                indice = re.findall(r'\[(.*?)\]', plain_text) # str(metadata_dict['row'])
-    
-                # Append cleaned content to the markdown string with two newlines between documents
-                
-                markdown_documents += f"**Conteúdo {counter}:**\n" + "*" + plain_text + "*" + "\n\n" + \
-                    f"**Referência:** {os.path.basename(metadata_dict['source'])}" + " | " +\
-                    f"**Id:** {indice}" + " | " +\
-                    f"**Pontuação:** {pontuacao:.3f}" +\
-                    f" [View PDF]({pdf_url})" + "\n\n"
-                counter += 1
-            else:
-                print(f"No match found for doc: {doc}")
-                    
 
-        return markdown_documents
+    return markdown_documents
 
