@@ -81,16 +81,24 @@ if st.session_state.step == 0:
         st.session_state.response = response
 
         with st.chat_message("assistant"):
+            st.markdown(response)
             st.session_state.messages.append({"role": "assistant", "content": response})
-            st.markdown(f"**Pergunta:** {st.session_state.prompt}")
-            st.markdown(f"**Resposta:** {st.session_state.response}")
-            st.markdown(f"**Referências:**")
-            st.markdown(f"{st.session_state.similar_response}")
-  
+        
+        if st.button("Referências"):
+            #st.write(similar_response)
+            st.session_state.step = 1
+            st.rerun()
+
+if st.session_state.step == 1:
+    st.markdown(f"**Pergunta:** {st.session_state.prompt}")
+    st.markdown(f"**Resposta:** {st.session_state.response}")
+    st.markdown(f"**Referências:**")
+    st.markdown(f"{st.session_state.similar_response}")  
 
    
 arquivos = {
-    1: "caselaws.txt"
+    1: "caselaws.txt",
+    2: "lei9279.txt"
 }
 
 def busca_indice(arquivos, arquivo_procurado):
@@ -154,11 +162,16 @@ class chat_gen():
         self.chat_history=[]
 
     def load_doc(self):
-        #name1 = "chatbot_cgrec#.txt"
+        #name1 = "caselaws.txt"
         name = arquivos.get(1)
         arquivo = f"dados/{name}"  # Especifique o caminho do PDF
         text1 = ler_doc(arquivo)
         
+        #name2 = "lei9279.txt"
+        name = arquivos.get(2)
+        arquivo = f"dados/{name}"  # Especifique o caminho do PDF
+        text2 = ler_doc(arquivo)
+
         text_splitter = RecursiveCharacterTextSplitter( # divide o PDF em blocos/chunks de 512 tokens
             chunk_size = 512,
             chunk_overlap  = 24,
@@ -180,6 +193,10 @@ class chat_gen():
         metadata = {"source": arquivos.get(1),"row": 0}
         chunks1 = text_splitter.create_documents([text1], metadatas=[metadata])
         
+        # chunks = text_splitter.create_documents([text])
+        metadata = {"source": arquivos.get(2),"row": 0}
+        chunks2 = text_splitter.create_documents([text2], metadatas=[metadata])
+
         combined_chunks = chunks1 + chunks2 + chunks3 + chunks4 + chunks5 + chunks6 + chunks7 + chunks8 + chunks9
         
         embeddings = HuggingFaceEmbeddings(model_name='sentence-transformers/all-MiniLM-L6-v2')
