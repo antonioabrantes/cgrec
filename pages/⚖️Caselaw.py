@@ -35,7 +35,7 @@ def initialize():
     chat= chat_gen()
     return chat
 
-st.session_state.chat=initialize()
+chat=initialize()
 
 st.title("Compêndio de decisões da CGREC")
 st.markdown(
