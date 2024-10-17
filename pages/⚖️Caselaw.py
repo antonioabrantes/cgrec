@@ -44,12 +44,12 @@ st.markdown(
 """, 
 unsafe_allow_html=True
 )
-st.markdown("<small>Olá meu nome é Iara (Inteligência Artificial sobre Recursos Administrativos) uma assistente virtual para auxiliar em dúvidas sobre o caselaw 2017-2023 e a Lei 9279/96 (LPI). Última atualização: 17/10/2024 </small>", unsafe_allow_html=True)
+st.markdown("<small>Olá meu nome é Iara (Inteligência Artificial sobre Recursos Administrativos) uma assistente virtual para auxiliar em dúvidas sobre o caselaw 2017-2023 e a Lei 9279/96 (LPI). Última atualização deste site: 17/10/2024 </small>", unsafe_allow_html=True)
 
 # https://docs.streamlit.io/develop/concepts/architecture/session-state#initialization
 # emoji https://emojipedia.org/balance-scale
 
-st.session_state['step'] = 0
+# st.session_state['step'] = 0
 
 if 'prompt' not in st.session_state:
     st.session_state['prompt'] = ''
