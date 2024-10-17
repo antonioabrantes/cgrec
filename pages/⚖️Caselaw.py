@@ -117,10 +117,11 @@ def ler_pdf(pdf_path):
 # Abrir o arquivo TXT
 def ler_txt(txt_path):
     # Verificar se o arquivo existe no caminho especificado
+    st.markdown("Lendo txt...")
     if os.path.exists(txt_path):
-        print(f"Arquivo {txt_path} carregado com sucesso!")
+        st.markdown(f"Arquivo {txt_path} carregado com sucesso!")
     else:
-        print(f"O arquivo {txt_path} não foi encontrado. Verifique o caminho e tente novamente.")
+        st.markdown(f"O arquivo {txt_path} não foi encontrado. Verifique o caminho e tente novamente.")
         return None
 
     with open(txt_path, 'r', encoding='utf-8') as file:
