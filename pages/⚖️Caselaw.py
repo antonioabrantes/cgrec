@@ -42,6 +42,8 @@ st.markdown("<small>Olá meu nome é Iara (Inteligência Artificial sobre Recurs
 # https://docs.streamlit.io/develop/concepts/architecture/session-state#initialization
 # emoji https://emojipedia.org/balance-scale
 
+st.session_state.step = 0:
+
 if 'step' not in st.session_state:
     st.session_state['step'] = 0
 
