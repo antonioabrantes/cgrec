@@ -144,7 +144,7 @@ class chat_gen():
         #name9 = "caselaws.txt"
         name = arquivos.get(9)
         arquivo = f"dados/{name}"  # Especifique o caminho do PDF
-        text9 = ler_doc(arquivo)
+        #text9 = ler_doc(arquivo)
 
         text_splitter = RecursiveCharacterTextSplitter( # divide o PDF em blocos/chunks de 512 tokens
             chunk_size = 512,
@@ -189,7 +189,7 @@ class chat_gen():
         chunks8 = text_splitter.create_documents([text8], metadatas=[metadata])
 
         metadata = {"source": arquivos.get(9),"row": 0}
-        chunks9 = text_splitter.create_documents([text9], metadatas=[metadata])
+        #chunks9 = text_splitter.create_documents([text9], metadatas=[metadata])
 
         combined_chunks = chunks1 + chunks2 + chunks3 + chunks4 + chunks5 + chunks6 + chunks7 + chunks8 + chunks9
         
