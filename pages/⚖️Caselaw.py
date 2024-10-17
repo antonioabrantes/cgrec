@@ -29,13 +29,7 @@ load_dotenv()
 #openai_api_key = os.environ['OPENAI_API_KEY']
 openai_api_key = os.getenv("OPENAI_API_KEY")
 
-
-@st.cache_resource
-def initialize():
-    chat= chat_gen()
-    return chat
-
-chat=initialize()
+chat= chat_gen()
 
 st.title("Compêndio de decisões da CGREC")
 st.markdown(
@@ -159,10 +153,10 @@ def count_tokens(text: str) -> int:
         
 
 class chat_gen():
-    def __init__(self):
-        self.chat_history=[]
+    def __init__():
+        chat_history=[]
 
-    def load_doc(self):
+    def load_doc():
         #name1 = "caselaws.txt"
         name = arquivos.get(1)
         arquivo = f"dados/{name}"  # Especifique o caminho do PDF
@@ -210,7 +204,7 @@ class chat_gen():
         persisted_vectorstore = FAISS.load_local("faiss_index_datamodel_law", embeddings, allow_dangerous_deserialization=True)
         return persisted_vectorstore
 
-    def load_model(self):
+    def load_model():
         llm = ChatOpenAI(openai_api_key=openai_api_key,
                             temperature=0.0,
                             max_tokens=4000,
@@ -233,9 +227,9 @@ class chat_gen():
         chain = prompt | llm
         return chain
 
-    def ask_pdf(self,query):
-        #print("iniciando...")
-        db = self.load_doc()
+    def ask_pdf(query):
+        st.markdown("Iniciando...")
+        db = load_doc()
         #similar_response = db.similarity_search(query,k=3)
         similar_response = db.similarity_search_with_score(query, k=3)
         
@@ -252,20 +246,20 @@ class chat_gen():
         similar_response = chat_gen.clean_references(docs, pontuacoes)
 
         #similar_response = chat_gen.clean_references(similar_response)
-        self.context = similar_response
-        # self.context = [doc.page_content + doc.metadata['source'] for doc in similar_response]
-        #print(self.context)
+        context = similar_response
+        # context = [doc.page_content + doc.metadata['source'] for doc in similar_response]
+        #print(context)
 
         #result = {"answer": "vazio"}
-        chain = self.load_model()
+        chain = load_model()
 
         # Execute the chain and get the result
         result = chain.invoke({
-            "context": self.context,
+            "context": context,
             "question": query,
             "chat_history": ""
         })
-        self.chat_history.append((query, result.content))
+        chat_history.append((query, result.content))
         #print(result)
         
         return result.content, similar_response
