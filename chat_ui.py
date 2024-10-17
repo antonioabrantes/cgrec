@@ -7,6 +7,7 @@ def initialize():
     return chat
 
 st.session_state.chat=initialize()
+st.set_page_config(page_title="Fale Conosco", page_icon=":speech_balloon:") # 💬
 
 st.title("Fale Conosco da CGREC")
 st.markdown(
