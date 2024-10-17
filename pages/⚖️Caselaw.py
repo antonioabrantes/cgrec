@@ -44,12 +44,13 @@ st.markdown(
 """, 
 unsafe_allow_html=True
 )
-st.markdown("<small>Olá meu nome é Iara (Inteligência Artificial sobre Recursos Administrativos) uma assistente virtual para auxiliar em dúvidas sobre o caselaw 2017-2023 e a Lei 9279/96 (LPI). Última atualização deste site: 17/10/2024 </small>", unsafe_allow_html=True)
+st.markdown("<small>Olá meu nome é Iara (Inteligência Artificial sobre Recursos Administrativos) uma assistente virtual para auxiliar em dúvidas sobre o exame. As fontes usadas incluem o caselaw 2017-2023 e a Lei 9279/96 (LPI). Última atualização: 17/10/2024 </small>", unsafe_allow_html=True)
 
 # https://docs.streamlit.io/develop/concepts/architecture/session-state#initialization
 # emoji https://emojipedia.org/balance-scale
 
-# st.session_state['step'] = 0
+if 'step' not in st.session_state:
+    st.session_state['step'] = 0
 
 if 'prompt' not in st.session_state:
     st.session_state['prompt'] = ''
@@ -71,12 +72,12 @@ if "messages" not in st.session_state:
 #        st.markdown(message["content"])
 
 if st.session_state.step == 0:
-    if prompt := st.text_area("Entre com sua busca abaixo, por exemplo, bilastina."):
+    if prompt := st.text_area("Entre com sua busca abaixo, por exemplo, qual o prazo de sigilo dos pedidos de patente ?"):
         st.chat_message("user").markdown(prompt)
         st.session_state.messages.append({"role": "user", "content": prompt})
         st.session_state.prompt = prompt
 
-        response, similar_response = st.session_state.chat.ask_pdf(prompt,) 
+        response, similar_response = ask_pdf(prompt,) 
         st.session_state.similar_response = similar_response
         st.session_state.response = response
 
