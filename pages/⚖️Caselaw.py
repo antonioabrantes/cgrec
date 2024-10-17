@@ -77,7 +77,7 @@ if st.session_state.step == 0:
         st.session_state.messages.append({"role": "user", "content": prompt})
         st.session_state.prompt = prompt
 
-        response, similar_response = ask_pdf(prompt,) 
+        response, similar_response = chat.ask_pdf(prompt,) 
         st.session_state.similar_response = similar_response
         st.session_state.response = response
 
