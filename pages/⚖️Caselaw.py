@@ -141,7 +141,7 @@ def load_doc():
     # name1 = "caselaws.txt"
     name = arquivos.get(1)
     arquivo = f"dados/{name}"  # Especifique o caminho do PDF
-    text1 = ler_doc(arquivo)
+    #text1 = ler_doc(arquivo)
 
     # name2 = "lei9279.txt"
     name = arquivos.get(2)
@@ -167,7 +167,7 @@ def load_doc():
 
     # chunks = text_splitter.create_documents([text])
     metadata = {"source": arquivos.get(1), "row": 0}
-    chunks1 = text_splitter.create_documents([text1], metadatas=[metadata])
+    #chunks1 = text_splitter.create_documents([text1], metadatas=[metadata])
 
     # chunks = text_splitter.create_documents([text])
     metadata = {"source": arquivos.get(2), "row": 0}
