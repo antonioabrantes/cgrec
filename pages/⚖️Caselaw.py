@@ -185,7 +185,7 @@ def load_doc():
 
     combined_chunks = chunks1 + chunks2 + chunks3 + chunks4 + chunks5 + chunks6 + chunks7 + chunks8 + chunks9
 
-    #embeddings = HuggingFaceEmbeddings(model_name='sentence-transformers/all-MiniLM-L6-v2')
+    embeddings = HuggingFaceEmbeddings(model_name='sentence-transformers/all-MiniLM-L6-v2')
     #vectorstore = FAISS.from_documents(combined_chunks, embeddings)
 
     # Persist the vectors locally on disk
