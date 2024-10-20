@@ -142,7 +142,7 @@ def load_doc():
     # name1 = "caselaws.txt"
     name = arquivos.get(1)
     arquivo = f"dados/{name}"  # Especifique o caminho do PDF
-    #text1 = ler_doc(arquivo)
+    text1 = ler_doc(arquivo)
 
     # name2 = "lei9279.txt"
     name = arquivos.get(2)
@@ -173,7 +173,7 @@ def load_doc():
 
     # chunks = text_splitter.create_documents([text])
     metadata = {"source": arquivos.get(1), "row": 0}
-    #chunks1 = text_splitter.create_documents([text1], metadatas=[metadata])
+    chunks1 = text_splitter.create_documents([text1], metadatas=[metadata])
 
     # chunks = text_splitter.create_documents([text])
     metadata = {"source": arquivos.get(2), "row": 0}
@@ -186,10 +186,10 @@ def load_doc():
     combined_chunks = chunks1 + chunks2 + chunks3 + chunks4 + chunks5 + chunks6 + chunks7 + chunks8 + chunks9
 
     embeddings = HuggingFaceEmbeddings(model_name='sentence-transformers/all-MiniLM-L6-v2')
-    #vectorstore = FAISS.from_documents(combined_chunks, embeddings)
+    vectorstore = FAISS.from_documents(combined_chunks, embeddings)
 
     # Persist the vectors locally on disk
-    #vectorstore.save_local("faiss_index_datamodel_law")
+    vectorstore.save_local("faiss_index_datamodel_law")
 
     # Load from local storage
     persisted_vectorstore = FAISS.load_local("faiss_index_datamodel_law", embeddings,
