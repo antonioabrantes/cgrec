@@ -118,12 +118,12 @@ def ler_pdf(pdf_path):
 # Abrir o arquivo TXT
 def ler_txt(txt_path):
     # Verificar se o arquivo existe no caminho especificado
-    st.markdown("Lendo txt...")
-    if os.path.exists(txt_path):
-        st.markdown(f"Arquivo {txt_path} carregado com sucesso!")
-    else:
-        st.markdown(f"O arquivo {txt_path} não foi encontrado. Verifique o caminho e tente novamente.")
-        return None
+    #st.markdown("Lendo txt...")
+    #if os.path.exists(txt_path):
+    #    st.markdown(f"Arquivo {txt_path} carregado com sucesso!")
+    #else:
+    #    st.markdown(f"O arquivo {txt_path} não foi encontrado. Verifique o caminho e tente novamente.")
+    #    return None
 
     with open(txt_path, 'r', encoding='utf-8') as file:
         all_text = file.read()
@@ -185,11 +185,11 @@ def load_doc():
 
     combined_chunks = chunks1 + chunks2 + chunks3 + chunks4 + chunks5 + chunks6 + chunks7 + chunks8 + chunks9
 
-    embeddings = HuggingFaceEmbeddings(model_name='sentence-transformers/all-MiniLM-L6-v2')
-    vectorstore = FAISS.from_documents(combined_chunks, embeddings)
+    #embeddings = HuggingFaceEmbeddings(model_name='sentence-transformers/all-MiniLM-L6-v2')
+    #vectorstore = FAISS.from_documents(combined_chunks, embeddings)
 
     # Persist the vectors locally on disk
-    vectorstore.save_local("faiss_index_datamodel_law")
+    #vectorstore.save_local("faiss_index_datamodel_law")
 
     # Load from local storage
     persisted_vectorstore = FAISS.load_local("faiss_index_datamodel_law", embeddings,
@@ -222,9 +222,9 @@ def load_model():
 
 
 def ask_pdf(query):
-    st.markdown("Iniciando...")
+    #st.markdown("Iniciando...")
     db = load_doc()
-    st.markdown("Dados carregados no Vector store...")
+    #st.markdown("Dados carregados no Vector store...")
     # similar_response = db.similarity_search(query,k=3)
     similar_response = db.similarity_search_with_score(query, k=3)
     st.markdown("Teste de similaridade concluído...")
