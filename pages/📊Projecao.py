@@ -70,16 +70,16 @@ INPI / CGREC / Equipe Fale Conosco
 template = (
     f"{system_instruction} "
     "Combine o histórico {chat_history} "
-    "Aqui está a dúvida recebida {question}"
+    "Aqui está a dúvida recebida {query}"
     "Aqui está o contexto de respostas anteriores recebidas de requerentes feitas pelo nosso time do Fale Conosco {context}. "
     "Escreva a melhor resposta para solucionar a dúvida apresentada pelo requerente."
 )
 
-prompt = PromptTemplate(input_variables=['context','question','chat_history'],template=template)
+prompt = PromptTemplate(input_variables=['context','query','chat_history'],template=template)
 chain = prompt | llm
 
 template2 = (
-    "Aqui está a dúvida recebida {question}"
+    "Aqui está a dúvida recebida {query}"
     "Aqui está o contexto de respostas anteriores recebidas de requerentes feitas pelo nosso time do Fale Conosco {context}. "
     "Escreva a resposta sucinta."
 )
@@ -93,9 +93,9 @@ classification_template = PromptTemplate.from_template(
     <Se a pergunta for sobre o andamento / porcessamento / status de um pedido de recurso classifique-a como 'Status'>
     <Se a pergunta for sobre o estoque de pedidos de recurso em uma divisão classifique-a como 'Estoque'>
     
-    <question>
-    {question}
-    </question>
+    <query>
+    {query}
+    </query>
     
     Classificação:"""
 )
@@ -128,31 +128,31 @@ def extrair_numero_pedido(texto):
         return None
         
 def prompt_router(input):
-    question = input["query"]
+    query = input["query"]
     context = input["context"]
     chat_history = input["chat_history"]
     
-    classification = classification_chain.invoke({"question": question})
+    classification = classification_chain.invoke({"query": query})
    
     if classification == "Projecao":
         st.markdown("Questão relativa a projeção de exame de um pedido de recurso")
-        numero = extrair_numero_pedido(question)
+        numero = extrair_numero_pedido(query)
         if numero:
             contexto = f"O pedido {numero} será examinado em 2024" 
         else:
             contexto = "Informações adicionais sobre o pedido não foram encontradas."
-        return PromptTemplate.from_template(projecao_template).format(query=question, context=context)
+        return PromptTemplate.from_template(projecao_template).format(query=query, context=context)
     elif classification == "Estoque":
         st.markdown("Questão relativa ao estoque de recursos de uma divisão")
-        return PromptTemplate.from_template(estoque_template).format(query=question)
+        return PromptTemplate.from_template(estoque_template).format(query=query)
     elif classification == "Status":
-        st.markdown(f"Questão relativa ao andamento de um pedido de recurso {question}")
-        numero = extrair_numero_pedido(question)
+        st.markdown(f"Questão relativa ao andamento de um pedido de recurso {query}")
+        numero = extrair_numero_pedido(query)
         if numero:
             contexto = f"O pedido {numero} teve carta patente concedida em 2024" 
         else:
             contexto = "Informações adicionais sobre o pedido não foram encontradas."
-        return PromptTemplate.from_template(patent_template).format(query=question, context=context)
+        return PromptTemplate.from_template(patent_template).format(query=query, context=context)
     else:
         st.markdown("Não classificado:", classification)
         return None
@@ -163,7 +163,7 @@ chain3 = (
     | ChatOpenAI()
 )
 
-prompt2 = PromptTemplate(input_variables=['context','question'],template=template2)
+prompt2 = PromptTemplate(input_variables=['context','query'],template=template2)
 chain2 = prompt2 | llm
 
 if 'prompt' not in st.session_state:
@@ -193,7 +193,7 @@ if st.session_state.step == 0:
 
         response = chain3.invoke({
             "context": context,
-            "question": prompt,
+            "query": prompt,
             "chat_history": chat_history
         })
         chat_history.append((prompt, response.content))
@@ -206,7 +206,7 @@ if st.session_state.step == 0:
         prompt_modificado = f"Escreva um código Python que gere um gráfico mostrando " + prompt + ". Mostre apenas os comandos do código."
         response = chain2.invoke({
             "context": context,
-            "question": prompt_modificado
+            "query": prompt_modificado
         })
         #st.markdown(response.content)
         comando = response.content
