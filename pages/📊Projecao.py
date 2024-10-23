@@ -133,7 +133,6 @@ def prompt_router(input):
     chat_history = input["chat_history"]
     
     classification = classification_chain.invoke({"query": query})
-    query = query["query"]
     
     if classification == "Projecao":
         st.markdown("Questão relativa a projeção de exame de um pedido de recurso")
@@ -160,7 +159,7 @@ def prompt_router(input):
         return None
         
 chain3 = (
-    {"query": RunnablePassthrough(),"context": RunnablePassthrough(),"chat_history": RunnablePassthrough()}
+    RunnablePassthrough()
     | RunnableLambda(prompt_router)
     | ChatOpenAI()
 )
