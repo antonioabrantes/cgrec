@@ -133,7 +133,7 @@ def prompt_router(input):
     chat_history = input["chat_history"]
     
     classification = classification_chain.invoke({"query": query})
-    query = input["query"]
+    query = query["query"]
     st.markdown(f"entrando...{query}")
     
     if classification == "Projecao":
