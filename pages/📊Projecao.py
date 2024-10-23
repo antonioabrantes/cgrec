@@ -102,17 +102,17 @@ classification_template = PromptTemplate.from_template(
 
 classification_chain = classification_template | ChatOpenAI() | StrOutputParser()
 
-projecao_template = """{system_instruction} Você é um especialista que é capaz de fazer uma projeção de quando o pedido de recurso será examinado, levando em conta o contexto {context}.\
+projecao_template = """Você é um especialista que é capaz de fazer uma projeção de quando o pedido de recurso será examinado, levando em conta o contexto {context}.\
 \
 Pergunta:\
 {query}"""
 
-estoque_template = """{system_instruction} Você é um assistente que mostra os gráficos de estoque de pedidos de recurso pendentes em uma dada divisão \
+estoque_template = """Você é um assistente que mostra os gráficos de estoque de pedidos de recurso pendentes em uma dada divisão \
 \
 Pergunta:\
 {query}"""
 
-patent_template = """{system_instruction} Você é um assistente que responde perguntas sobre pedidos de patente, levando em conta o contexto {context} \
+patent_template = """Você é um assistente que responde perguntas sobre pedidos de patente, levando em conta o contexto {context} \
 \
 Pergunta:\
 {query}"""
