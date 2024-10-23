@@ -146,13 +146,12 @@ def prompt_router(input):
         st.markdown("Questão relativa ao estoque de recursos de uma divisão.")
         return PromptTemplate.from_template(estoque_template).format(query=query, context=context)
     elif classification == "Status":
-        st.markdown(f"Questão relativa ao andamento de um pedido de recurso")
         numero = extrair_numero_pedido(query)
         st.markdown(f"Questão relativa ao andamento de um pedido de recurso {numero}")
         if numero:
-            contexto = f"O pedido {numero} teve carta patente concedida em 2024" 
+            context = f"O pedido {numero} teve carta patente concedida em 2024" 
         else:
-            contexto = "Informações adicionais sobre o pedido não foram encontradas."
+            context = "Informações adicionais sobre o pedido não foram encontradas."
         return PromptTemplate.from_template(patent_template).format(query=query, context=context)
     else:
         st.markdown("Não classificado:", classification)
