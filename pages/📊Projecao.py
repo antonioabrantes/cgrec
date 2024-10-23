@@ -181,7 +181,7 @@ if st.session_state.step == 0:
         st.session_state.messages.append({"role": "user", "content": prompt})
         st.session_state.prompt = prompt
 
-        response = chain.invoke({
+        response = chain3.invoke({
             "context": context,
             "question": prompt,
             "chat_history": chat_history
