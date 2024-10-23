@@ -128,7 +128,7 @@ def extrair_numero_pedido(texto):
         return None
         
 def prompt_router(input):
-    question = input["query"]
+    question = input["question"]
     context = input["context"]
     chat_history = input["chat_history"]
     
