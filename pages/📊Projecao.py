@@ -133,7 +133,8 @@ def prompt_router(input):
     chat_history = input["chat_history"]
     
     classification = classification_chain.invoke({"query": query})
-   
+    query = input["query"]
+    
     if classification == "Projecao":
         st.markdown("Questão relativa a projeção de exame de um pedido de recurso")
         numero = extrair_numero_pedido(query)
