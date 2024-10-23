@@ -132,7 +132,8 @@ def prompt_router(input):
     context = input["context"]
     chat_history = input["chat_history"]
     
-    classification = classification_chain.invoke({"question": question})
+    classification_response = classification_chain.invoke({"question": question})
+    classification = classification_response.get("classification")
    
     if classification == "Projecao":
         st.markdown("Questão relativa a projeção de exame de um pedido de recurso")
