@@ -134,7 +134,8 @@ def prompt_router(input):
     
     classification = classification_chain.invoke({"query": query})
     query = query["query"]
-    st.markdown(f"entrando...{query}")
+    context = query["context"]
+    chat_history = query["chat_history"]
     
     if classification == "Projecao":
         st.markdown("Questão relativa a projeção de exame de um pedido de recurso")
