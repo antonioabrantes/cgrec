@@ -108,7 +108,7 @@ Pergunta:\
 {query}"""
 
 estoque_template = """Você é um assistente que mostra os gráficos de estoque de pedidos de recurso pendentes em uma dada divisão \
-\
+\ Este é o contexto com dados do estoque e de recursos pendentes: {context}
 Pergunta:\
 {query}"""
 
@@ -143,8 +143,8 @@ def prompt_router(input):
             contexto = "Informações adicionais sobre o pedido não foram encontradas."
         return PromptTemplate.from_template(projecao_template).format(query=query, context=context)
     elif classification == "Estoque":
-        st.markdown("Questão relativa ao estoque de recursos de uma divisão")
-        return PromptTemplate.from_template(estoque_template).format(query=query)
+        st.markdown("Questão relativa ao estoque de recursos de uma divisão.")
+        return PromptTemplate.from_template(estoque_template).format(query=query, context=context)
     elif classification == "Status":
         st.markdown(f"Questão relativa ao andamento de um pedido de recurso")
         numero = extrair_numero_pedido(query)
