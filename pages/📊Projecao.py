@@ -1,4 +1,4 @@
-import os
+import os, re
 import streamlit as st
 from langchain_openai import ChatOpenAI
 from langchain.prompts.prompt import PromptTemplate
@@ -117,6 +117,16 @@ patent_template = """Você é um assistente que responde perguntas sobre pedidos
 Pergunta:\
 {query}"""
 
+def extrair_numero_pedido(texto):
+    padrao = r"(PI|MU|C1|C2|C3|C4|C5|C6|C7|C8|C9)\s*\d{7}(?:-\d)?|(?:BR\s*)?(?:\d{2}\s*)?(?:\d{4}\s*)?\d{6}(?:-\d)?"
+    match = re.search(padrao, texto)
+    if match:
+        numero_pedido = match.group()
+        numero_pedido = numero_pedido.replace(" ", "").upper().strip()
+        return numero_pedido
+    else:
+        return None
+        
 def prompt_router(input):
     question = input["query"]
     context = input["context"]
