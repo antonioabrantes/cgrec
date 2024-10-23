@@ -102,7 +102,7 @@ classification_template = PromptTemplate.from_template(
 
 classification_chain = classification_template | ChatOpenAI() | StrOutputParser()
 
-projecao_template = """{system_instruction} Você é um especialista que é capaz de fazer uma projeção de quando o pedido de recurso será examinado, levando em conta o contexto {contexto}.\
+projecao_template = """{system_instruction} Você é um especialista que é capaz de fazer uma projeção de quando o pedido de recurso será examinado, levando em conta o contexto {context}.\
 \
 Pergunta:\
 {query}"""
@@ -112,25 +112,29 @@ estoque_template = """{system_instruction} Você é um assistente que mostra os 
 Pergunta:\
 {query}"""
 
-patent_template = """{system_instruction} Você é um assistente que responde perguntas sobre pedidos de patente, levando em conta o contexto {contexto} \
+patent_template = """{system_instruction} Você é um assistente que responde perguntas sobre pedidos de patente, levando em conta o contexto {context} \
 \
 Pergunta:\
 {query}"""
 
 def prompt_router(input):
-    classification = classification_chain.invoke({"question": input["query"]})
+    question = input["query"]
+    context = input["context"]
+    chat_history = input["chat_history"]
+    
+    classification = classification_chain.invoke({"question": question})
    
     if classification == "Projecao":
         st.markdown("Questão relativa a projeção de exame de um pedido de recurso")
-        numero = extrair_numero_pedido(input["query"])
+        numero = extrair_numero_pedido(question)
         if numero:
             contexto = f"O pedido {numero} será examinado em 2024" 
         else:
             contexto = "Informações adicionais sobre o pedido não foram encontradas."
-        return PromptTemplate.from_template(projecao_template).format(query=input["query"], contexto=contexto, system_instruction=system_instruction)
+        return PromptTemplate.from_template(projecao_template).format(query=question, context=context)
     elif classification == "Estoque":
         st.markdown("Questão relativa ao estoque de recursos de uma divisão")
-        return PromptTemplate.from_template(estoque_template).format(query=input["query"], system_instruction=system_instruction)
+        return PromptTemplate.from_template(estoque_template).format(query=question)
     elif classification == "Status":
         st.markdown("Questão relativa ao andamento de um pedido de recurso")
         numero = extrair_numero_pedido(input["query"])
@@ -138,7 +142,7 @@ def prompt_router(input):
             contexto = f"O pedido {numero} teve carta patente concedida em 2024" 
         else:
             contexto = "Informações adicionais sobre o pedido não foram encontradas."
-        return PromptTemplate.from_template(patent_template).format(query=input["query"], contexto=contexto, system_instruction=system_instruction)
+        return PromptTemplate.from_template(patent_template).format(query=question, context=context)
     else:
         st.markdown("Não classificado:", classification)
         return None
@@ -147,7 +151,6 @@ chain3 = (
     {"query": RunnablePassthrough()}
     | RunnableLambda(prompt_router)
     | ChatOpenAI()
-    | StrOutputParser()
 )
 
 prompt2 = PromptTemplate(input_variables=['context','question'],template=template2)
