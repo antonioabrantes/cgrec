@@ -127,10 +127,10 @@ def prompt_router(input):
             contexto = f"O pedido {numero} será examinado em 2024" 
         else:
             contexto = "Informações adicionais sobre o pedido não foram encontradas."
-        return PromptTemplate.from_template(projecao_template).format(query=input["query"], contexto=contexto),classification
+        return PromptTemplate.from_template(projecao_template).format(query=input["query"], contexto=contexto)
     elif classification == "Estoque":
         st.markdown("Questão relativa ao estoque de recursos de uma divisão")
-        return PromptTemplate.from_template(estoque_template).format(query=input["query"]),classification
+        return PromptTemplate.from_template(estoque_template).format(query=input["query"])
     elif classification == "Status":
         st.markdown("Questão relativa ao andamento de um pedido de recurso")
         numero = extrair_numero_pedido(input["query"])
@@ -138,10 +138,10 @@ def prompt_router(input):
             contexto = f"O pedido {numero} teve carta patente concedida em 2024" 
         else:
             contexto = "Informações adicionais sobre o pedido não foram encontradas."
-        return PromptTemplate.from_template(patent_template).format(query=input["query"], contexto=contexto),classification
+        return PromptTemplate.from_template(patent_template).format(query=input["query"], contexto=contexto)
     else:
         st.markdown("Não classificado:", classification)
-        return None,classification
+        return None
         
 chain3 = (
     {"query": RunnablePassthrough()}
