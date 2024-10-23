@@ -16,6 +16,18 @@ openai_api_key = os.getenv("OPENAI_API_KEY")
 
 #st.session_state.chat=initialize()
 
+def save_and_execute_python_code(code_string, filename='script.py'):
+    # Salvar o código no arquivo especificado
+    with open(filename, 'w', encoding="utf-8") as file:
+        file.write(code_string)
+
+    print("### RODANDO ###")
+
+    # Executar o arquivo
+    os.system(f'python {filename}')
+
+    print("### RODOU ###")
+    
 st.title("Projeção de exame")
 st.markdown(
 """
