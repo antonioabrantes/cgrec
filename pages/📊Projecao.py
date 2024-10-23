@@ -2,6 +2,7 @@ import os
 import streamlit as st
 from langchain_openai import ChatOpenAI
 from langchain.prompts.prompt import PromptTemplate
+from langchain_core.output_parsers import StrOutputParser
 from dotenv import load_dotenv
 #from main_embedding import chat_gen
 
