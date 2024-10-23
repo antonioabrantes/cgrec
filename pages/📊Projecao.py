@@ -112,7 +112,7 @@ estoque_template = """Você é um assistente que mostra os gráficos de estoque 
 Pergunta:\
 {query}"""
 
-patent_template = """Você é um assistente que responde perguntas sobre pedidos de patente, levando em conta o contexto {context} \
+patent_template = """Você é um assistente que responde perguntas sobre o andamento de pedidos de patente em recurso, levando em conta o contexto {context} \
 \
 Pergunta:\
 {query}"""
@@ -152,6 +152,7 @@ def prompt_router(input):
             context = f"O pedido {numero} teve carta patente concedida em 2024" 
         else:
             context = "Informações adicionais sobre o pedido não foram encontradas."
+        st.markdown(context)
         return PromptTemplate.from_template(patent_template).format(query=query, context=context)
     else:
         st.markdown("Não classificado:", classification)
