@@ -148,7 +148,7 @@ def prompt_router(input):
         return None
         
 chain3 = (
-    {"query": RunnablePassthrough()}
+    {"query": RunnablePassthrough(),"context": RunnablePassthrough(),"chat_history": RunnablePassthrough()}
     | RunnableLambda(prompt_router)
     | ChatOpenAI()
 )
