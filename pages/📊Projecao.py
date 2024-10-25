@@ -315,12 +315,40 @@ def prompt_router(input):
         st.markdown("Questão relativa ao estoque de recursos de uma divisão.")
         return PromptTemplate.from_template(estoque_template).format(query=query, context=context)
     elif classification == "Status":
-        numero = extrair_numero_pedido(query)
         st.markdown(f"Questão relativa ao andamento de um pedido de recurso {numero}")
-        if numero:
-            context = f"O pedido {numero} teve carta patente concedida em 2024" 
-        else:
-            context = "Informações adicionais sobre o pedido não foram encontradas."
+        numero = extrair_numero_pedido(query)
+
+        query = '"' + "mysql_query" + '"' ":" + '"' + f" * FROM arquivados where numero='{numero}' and anulado=0 order by data desc" + '"'
+        url = f"http://www.cientistaspatentes.com.br/apiphp/patents/query/?q={query}"
+        data = acessar_sinergias(url,headers)
+
+        descricao = ''
+        resumo = ''
+        despacho = ''
+        formatted_date = ''
+        
+        if 'patents' in data and len(data['patents']) > 0 and 'descricao' in data['patents'][0]:
+            descricao = data['patents'][0]['descricao']
+
+        if 'patents' in data and len(data['patents']) > 0 and 'despacho' in data['patents'][0]:
+            #despachos = [patent['despacho'] for patent in data['patents']]
+            #for despacho in despachos:
+            #    print(despacho)
+                
+            despacho = data['patents'][0]['despacho'].strip()
+            formatted_date = convert_date(data['patents'][0]['data'])
+            query = '"' + "mysql_query" + '"' ":" + '"' + f" * FROM despachos WHERE despacho='{despacho}'" + '"'
+            url = f"http://www.cientistaspatentes.com.br/apiphp/patents/query/?q={query}"
+            data = acessar_sinergias(url,headers)
+            descricao = data['patents'][0]['descricao'].strip()
+            resumo = data['patents'][0]['resumo'].strip()
+
+        context = "Última publicação: " + despacho + f"(publicado em {formatted_date})" + resumo + '. ' + descricao
+
+        #if numero:
+        #    context = f"O pedido {numero} teve carta patente concedida em 2024" 
+        #else:
+        #    context = "Informações adicionais sobre o pedido não foram encontradas."
         st.markdown(context)
         return PromptTemplate.from_template(patent_template).format(query=query, context=context)
     else:
