@@ -431,21 +431,16 @@ def prompt_router(input):
         producao_2024 = df1.loc[df1['divisao'] == divisao, 'producao'].values[0].get('2024')
         producao_2024_anualizada =  int(round(producao_2024*12/9,0))
         
-        output = f"O pedido {numero} é um recurso que teve o 12.2 em {ano}. O pedido foi indeferido pela {divisao}, que por sua vez em 2024 tem um estoque de {estoque_2024} de recursos de pedidos com 12.2 em {ano} ou anteriores. Em 2024 a produção de primeiros exames de recurso de pedidos indeferidos nesta divisão é de {producao_2024} pareceres nos primeiros 9 meses do ano. O valor anualizado da produção estimada em 2024 é de {producao_2024_anualizada} primeiros exames de recurso. " 
-        if (producao_2024_anualizada>estoque_2024):
-            output = output + f" Desta forma, com esse estoque de recursos com 12.2 em {ano} da {divisao}, mantida a produção atual, o pedido {numero} terá seu primeiro exame em menos de um ano."
-        st.markdown(output)
-
         projecao_2020 = 2020 + round(estoque_2020/producao_2020, 2)
         projecao_2021 = 2021 + round(estoque_2021/producao_2021, 2)
         projecao_2022 = 2022 + round(estoque_2022/producao_2022, 2)
         projecao_2023 = 2023 + round(estoque_2023/producao_2023, 2)
         projecao_2024 = 2024 + round(estoque_2024/producao_2024_anualizada, 2)
-        #st.write(f"projeção 2020={projecao_2020}")
-        #st.write(f"projeção 2021={projecao_2021}")
-        #st.write(f"projeção 2022={projecao_2022}")
-        #st.write(f"projeção 2023={projecao_2023}")
-        #st.write(f"projeção 2024={projecao_2024}")
+
+        output = f"O pedido {numero} é um recurso que teve o 12.2 em {ano}. O pedido foi indeferido pela {divisao}, que por sua vez em 2024 tem um estoque de {estoque_2024} de recursos de pedidos com 12.2 em {ano} ou anteriores. Em 2024 a produção de primeiros exames de recurso de pedidos indeferidos nesta divisão é de {producao_2024} pareceres nos primeiros 9 meses do ano. O valor anualizado da produção estimada em 2024 é de {producao_2024_anualizada} primeiros exames de recurso. A projeção de exame é de 2020:{projecao_2020}, 2021:{projecao_2021}, 2022:{projecao_2022}, 2023:{projecao_2023} e 2024:{projecao_2024}. " 
+        if (producao_2024_anualizada>estoque_2024):
+            output = output + f" Desta forma, com esse estoque de recursos com 12.2 em {ano} da {divisao}, mantida a produção atual, o pedido {numero} terá seu primeiro exame em menos de um ano."
+        st.markdown(output)
 
         df['ano'] = [2020, 2021, 2022, 2023]
         #df['prj'] = [2033.9, 2030.5, 2031.5, 2030.5, 2029.8]
