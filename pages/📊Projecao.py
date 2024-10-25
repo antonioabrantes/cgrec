@@ -430,7 +430,7 @@ def prompt_router(input):
         producao_2024 = df1.loc[df1['divisao'] == divisao, 'producao'].values[0].get('2024')
         producao_2024_anualizada =  int(round(producao_2024*12/9,0))
         
-        output = f"O pedido {numero} é um recurso que teve o 12.2 em {ano}. O pedido foi indeferido pela {divisao}, que por sua vez em 2024 tem um estoque de {estoque_2024} de recursos de pedidos com 12.2 em {ano} ou anteriores. Em 2024 a produção de primeiros exames de recurso de pedidos indeferidos nesta divisão é de {producao_2024} pareceres nos primeiros 9 meses do ano. O valor anualizado da produção estimada em 2024 é de {producao_2024_anualizada} primeiros exames. " 
+        output = f"O pedido {numero} é um recurso que teve o 12.2 em {ano}. O pedido foi indeferido pela {divisao}, que por sua vez em 2024 tem um estoque de {estoque_2024} de recursos de pedidos com 12.2 em {ano} ou anteriores. Em 2024 a produção de primeiros exames de recurso de pedidos indeferidos nesta divisão é de {producao_2024} pareceres nos primeiros 9 meses do ano. O valor anualizado da produção estimada em 2024 é de {producao_2024_anualizada} primeiros exames de recurso. " 
         if (producao_2024_anualizada>estoque_2024):
             output = output + f" Desta forma, com esse estoque de recursos com 12.2 em {ano} da {divisao}, mantida a produção atual, o pedido {numero} terá seu primeiro exame em menos de um ano."
         st.markdown(output)
@@ -450,6 +450,43 @@ def prompt_router(input):
         #df['prj'] = [2033.9, 2030.5, 2031.5, 2030.5, 2029.8]
         df['prj'] = [projecao_2020, projecao_2021, projecao_2022, projecao_2023]
 
+        ax.plot(df['ano'], df['prj'], marker='o')
+
+        # Adicionar linhas verticais
+        anos_extendidos = np.arange(2020, 2031)
+        for label in anos_extendidos:
+            ax.axvline(x=label, color='gray', linestyle='--', linewidth=0.5)
+
+        # Adicionar linhas horizontais
+        for count in df['prj']:
+            ax.axhline(y=count, color='gray', linestyle='--', linewidth=0.5)
+ 
+        # Desenhar a reta de mínimos quadrados
+        coef = np.polyfit(df['ano'], df['prj'], 1)
+        poly1d_fn = np.poly1d(coef)
+        ax.plot(anos_extendidos, poly1d_fn(anos_extendidos), color='red', linestyle='--', label='Reta de Mínimos Quadrados')
+
+        # escreve em cada ponto o valor de y
+        for i, (ano, prj) in enumerate(zip(df['ano'], df['prj'])):
+            ax.annotate(f'{prj}', (ano, prj), textcoords="offset points", xytext=(0,5), ha='center', fontsize=8)
+
+        # Encontrar o ponto em que y = x na reta de mínimos quadrados
+        for ano in anos_extendidos:
+            y_value = poly1d_fn(ano)
+            if np.isclose(y_value, ano, atol=1):  # Checar se y é aproximadamente igual a x (ano)
+                ax.plot(ano, y_value, 'bo', label='Projeção')
+                break
+                
+        # Adicionar rótulos e título
+        ax.set_xlabel('Ano')
+        ax.set_ylabel('Projeção')
+        ax.set_title('Projeção de primeiro exame')
+        ax.set_xticks(anos_extendidos)
+        ax.set_xticklabels(anos_extendidos, rotation=90)
+        ax.legend()
+
+        # Mostrar o gráfico no Streamlit
+        st.pyplot(fig)
 
 
         return PromptTemplate.from_template(projecao_template).format(query=query, context=context)
