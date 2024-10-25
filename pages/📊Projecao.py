@@ -345,13 +345,18 @@ def prompt_router(input):
         despacho = ''
         formatted_date = ''
         
-        if 'patents' in data and isinstance(data['patents'], list) and len(data['patents']) > 0 and 'descricao' in data['patents'][0]:
-            descricao = data['patents'][0]['descricao']
-        else:
-            descricao = None  # Ou alguma mensagem de erro ou tratamento apropriado
-    
-        #if 'patents' in data and len(data['patents']) > 0 and 'descricao' in data['patents'][0]:
+        #if 'patents' in data and isinstance(data['patents'], list) and len(data['patents']) > 0 and 'descricao' in data['patents'][0]:
         #    descricao = data['patents'][0]['descricao']
+        #else:
+        #    descricao = None  # Ou alguma mensagem de erro ou tratamento apropriado
+    
+        try:
+            if 'patents' in data and len(data['patents']) > 0 and 'descricao' in data['patents'][0]:
+                descricao = data['patents'][0]['descricao']
+            else:
+                descricao = None
+        except Exception as e:
+            descricao = None
 
         if 'patents' in data and isinstance(data['patents'], list) and len(data['patents']) > 0 and 'despacho' in data['patents'][0]:
         #if 'patents' in data and len(data['patents']) > 0 and 'despacho' in data['patents'][0]:
