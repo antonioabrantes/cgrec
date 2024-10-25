@@ -356,6 +356,7 @@ def prompt_router(input):
                 url = f"http://www.cientistaspatentes.com.br/apiphp/patents/query/?q={query}"
                 data1 = acessar_sinergias(url,headers)
                 descricao = data1['patents'][0]['descricao'].strip()
+                descricao = ''
                 resumo = data1['patents'][0]['resumo'].strip()
                 str_context = str_context + '[' + despacho + ', ' + resumo + ', ' + descricao + '], '
             
