@@ -104,7 +104,7 @@ st.markdown(
 """, 
 unsafe_allow_html=True
 )
-st.markdown("<small>Olá meu nome é Iara (Inteligência Artificial sobre Recursos Administrativos) uma assistente virtual auxiliar na projeção de primeiro exame de recursos administrativos e para dados do estoque de pedidos e produção de 2020 a 2024. Por exemplo, experimente perguntar: Apresente os dados dos pedidos de recurso em estoque na dicel de 2020 a 2024. Últime atualização: 23/10/2024", unsafe_allow_html=True)
+st.markdown("<small>Olá meu nome é Iara (Inteligência Artificial sobre Recursos Administrativos) uma assistente virtual auxiliar na projeção de primeiro exame de recursos administrativos e para dados do estoque de pedidos e produção de 2020 a 2024. Por exemplo, experimente perguntar: i) Apresente os dados dos pedidos de recurso em estoque na dicel de 2020 a 2024, ii) Qual andamento do pedido 112021005834. Últime atualização: 25/10/2024", unsafe_allow_html=True)
 
 # https://docs.streamlit.io/develop/concepts/architecture/session-state#initialization
 
