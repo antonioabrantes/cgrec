@@ -408,13 +408,13 @@ def prompt_router(input):
         #df['estoque'] = pd.to_numeric(df['estoque'], errors='coerce')
         #df['ano'] = pd.to_numeric(df['ano'], errors='coerce')
         str_estoque = f"O estoque da DIRPA de pedidos de recurso com 12.2 em {ano} é de "
-        str_estoque = str_estoque + df1['estoque'][0] + ' pedidos, enquanto a produção efetiva realizada foi de '
-        str_estoque = str_estoque + df1['producao'][0] + ' primeiros exames de recurso.'
+        str_estoque = str_estoque + str(df1['estoque'][0]) + ' pedidos, enquanto a produção efetiva realizada foi de '
+        str_estoque = str_estoque + str(df1['producao'][0]) + ' primeiros exames de recurso.'
         i = obter_indice(divisao)
         idivisao = divisoes_nome.get(divisao)
         str_estoque = str_estoque + f". O estoque da {idivisao} de pedidos de recurso com 12.2 em {ano} é de "
-        str_estoque = str_estoque + df1['estoque'][i] + ' pedidos, enquanto a produção efetiva realizada foi de '
-        str_estoque = str_estoque + df1['producao'][i] + ' primeiros exames de recurso.'
+        str_estoque = str_estoque + str(df1['estoque'][i]) + ' pedidos, enquanto a produção efetiva realizada foi de '
+        str_estoque = str_estoque + str(df1['producao'][i]) + ' primeiros exames de recurso.'
         st.markdown(str_estoque)
 
         return PromptTemplate.from_template(projecao_template).format(query=query, context=context)
