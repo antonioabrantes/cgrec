@@ -356,10 +356,10 @@ def prompt_router(input):
                 url = f"http://www.cientistaspatentes.com.br/apiphp/patents/query/?q={query}"
                 data1 = acessar_sinergias(url,headers)
                 descricao = data1['patents'][0]['descricao'].strip()
-                descricao = ''
                 resumo = data1['patents'][0]['resumo'].strip()
                 str_context = str_context + '[' + despacho + ', ' + resumo + ', ' + descricao + '], '
             
+            str_context = str_context + f"Se o despacho perguntado aparece nesta lista diga simplesmente que o despacho foi encontrado sem maiores detalhamento sobre o despecho em si"
             # http://www.cientistaspatentes.com.br/apiphp/patents/query/?q={%22mysql_query%22:%22*%20FROM%20revistas4%20WHERE%20numero=%27112021005834-6%27%20and%20data=%272024-10-22%27%20and%20despacho=%27PR%20-%20Recursos%27%22} 
             # http://www.cientistaspatentes.com.br/apiphp/patents/query/?q={"mysql_query":"* FROM revistas4 WHERE numero='112021005834-6' and data='2024-10-22' and despacho='PR - Recursos'"}
             
