@@ -137,7 +137,10 @@ def extrair_numero_pedido(texto):
     else:
         return None
         
+classification = None
+
 def prompt_router(input):
+    global classification
     query = input["query"]
     context = input["context"]
     chat_history = input["chat_history"]
@@ -213,20 +216,21 @@ if st.session_state.step == 0:
         with st.chat_message("assistant"):
             st.markdown(response.content)
             st.session_state.messages.append({"role": "assistant", "content": response})
-            
-        prompt_modificado = f"Escreva um código Python que gere um gráfico mostrando " + prompt + ". Mostre apenas os comandos do código."
-        response = chain2.invoke({
-            "context": context,
-            "query": prompt_modificado
-        })
-        #st.markdown(response.content)
-        comando = response.content
-        comando = comando.replace("```","")
-        comando = comando.replace("python","")
-        st.markdown("Imprimindo gráfico...")
-        try:
-            exec(comando)
-            st.pyplot(plt.gcf())
-        except Exception as e:
-            st.markdown(f"Ocorreu um erro ao executar o código : {e}")
+        
+        if classification == "Estoque":
+            prompt_modificado = f"Escreva um código Python que gere um gráfico mostrando " + prompt + ". Mostre apenas os comandos do código."
+            response = chain2.invoke({
+                "context": context,
+                "query": prompt_modificado
+            })
+            #st.markdown(response.content)
+            comando = response.content
+            comando = comando.replace("```","")
+            comando = comando.replace("python","")
+            st.markdown("Imprimindo gráfico...")
+            try:
+                exec(comando)
+                st.pyplot(plt.gcf())
+            except Exception as e:
+                st.markdown(f"Ocorreu um erro ao executar o código : {e}")
         
