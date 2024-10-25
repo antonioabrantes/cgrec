@@ -330,6 +330,7 @@ def prompt_router(input):
         return PromptTemplate.from_template(estoque_template).format(query=query, context=context)
     elif classification == "Status":
         str_context = ''
+        context = ''
         numero = extrair_numero_pedido(query)
         digito = calcular_digito_verificador(numero)
         numerocd = f"{numero}-{digito}"
@@ -354,19 +355,19 @@ def prompt_router(input):
             if 'patents' in data and isinstance(data['patents'], list) and len(data['patents']) > 0 and 'descricao' in data['patents'][0]:
                 descricao = data['patents'][0]['descricao']
             else:
-                descricao = ''
+                descricao = 'pedido inexistente'
         except Exception as e:
-            descricao = 'nada'
+            descricao = 'pedido inexistente'
 
         try:
             if 'patents' in data and isinstance(data['patents'], list) and len(data['patents']) > 0 and 'despacho' in data['patents'][0]:
                 despachos = [patent['despacho'] for patent in data['patents']]
             else:
-                despachos = ''
+                despachos = 'despachos inexistentes'
         except Exception as e:
-            despachos = ''
+            despachos = 'despachos inexistentes'
 
-        if despachos != '':
+        if despachos != 'despachos inexistentes' and descricao != 'pedido inexistente':
         #if 'patents' in data and len(data['patents']) > 0 and 'despacho' in data['patents'][0]:
             despachos = [patent['despacho'] for patent in data['patents']]
             str_context = 'Despachos publicados para este pedido após uma consulta SQL a base de dados: '
@@ -398,9 +399,10 @@ def prompt_router(input):
                 descricao = data['patents'][0]['descricao'].strip()
                 resumo = data['patents'][0]['resumo'].strip()
 
-        context = "Última publicação: " + despacho + f" (publicado em {formatted_date}) " + resumo + '. ' + descricao
-        st.markdown(context)
-        context = context + str_context
+            context = "Última publicação: " + despacho + f" (publicado em {formatted_date}) " + resumo + '. ' + descricao
+            st.markdown(context)
+            context = context + str_context
+            
         return PromptTemplate.from_template(patent_template).format(query=query, context=context)
     else:
         st.markdown("Não classificado:", classification)
