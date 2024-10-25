@@ -354,19 +354,19 @@ def prompt_router(input):
             if 'patents' in data and isinstance(data['patents'], list) and len(data['patents']) > 0 and 'descricao' in data['patents'][0]:
                 descricao = data['patents'][0]['descricao']
             else:
-                descricao = None
+                descricao = ''
         except Exception as e:
-            descricao = None
+            descricao = ''
 
         try:
             if 'patents' in data and isinstance(data['patents'], list) and len(data['patents']) > 0 and 'despacho' in data['patents'][0]:
                 despachos = [patent['despacho'] for patent in data['patents']]
             else:
-                despachos = None
+                despachos = ''
         except Exception as e:
-            despachos = None
+            despachos = ''
 
-        if despachos is not None:
+        if despachos != '':
         #if 'patents' in data and len(data['patents']) > 0 and 'despacho' in data['patents'][0]:
             despachos = [patent['despacho'] for patent in data['patents']]
             str_context = 'Despachos publicados para este pedido após uma consulta SQL a base de dados: '
