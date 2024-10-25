@@ -318,12 +318,8 @@ def prompt_router(input):
     classification = classification_chain.invoke({"query": query})
     
     if classification == "Projecao":
-        st.markdown("Questão relativa a projeção de exame de um pedido de recurso")
         numero = extrair_numero_pedido(query)
-        if numero:
-            contexto = f"O pedido {numero} será examinado em 2024" 
-        else:
-            contexto = "Informações adicionais sobre o pedido não foram encontradas."
+        st.markdown(f"Questão relativa a projeção de exame de um pedido de recurso {numero}")
         return PromptTemplate.from_template(projecao_template).format(query=query, context=context)
     elif classification == "Estoque":
         st.markdown("Questão relativa ao estoque de recursos de uma divisão.")
