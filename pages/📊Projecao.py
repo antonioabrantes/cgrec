@@ -317,7 +317,8 @@ def prompt_router(input):
     elif classification == "Status":
         numero = extrair_numero_pedido(query)
         digito = calcular_digito_verificador(numero)
-        st.markdown(f"Questão relativa ao andamento de um pedido de recurso {numero}-{digito}")
+        numerocd = f"{numero}-{digito}"
+        st.markdown(f"Questão relativa ao andamento de um pedido de recurso {numerocd}")
 
         query = '"' + "mysql_query" + '"' ":" + '"' + f" * FROM arquivados where numero='{numero}' and anulado=0 order by data desc" + '"'
         url = f"http://www.cientistaspatentes.com.br/apiphp/patents/query/?q={query}"
