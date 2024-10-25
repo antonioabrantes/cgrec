@@ -104,7 +104,7 @@ st.markdown(
 """, 
 unsafe_allow_html=True
 )
-st.markdown("<small>Olá meu nome é Iara (Inteligência Artificial sobre Recursos Administrativos) uma assistente virtual auxiliar na projeção de primeiro exame de recursos administrativos e para dados do estoque de pedidos e produção de 2020 a 2024. Por exemplo, experimente perguntar: i) Apresente os dados dos pedidos de recurso em estoque na dicel de 2020 a 2024, ii) Qual andamento do pedido 112021005834 ?, iii) O pedido 102015001282 tem carta patente ?. Últime atualização: 25/10/2024", unsafe_allow_html=True)
+st.markdown("<small>Olá meu nome é Iara (Inteligência Artificial sobre Recursos Administrativos) uma assistente virtual auxiliar na projeção de primeiro exame de recursos administrativos e para dados do estoque de pedidos e produção de 2020 a 2024. Por exemplo, experimente perguntar: i) Apresente os dados dos pedidos de recurso em estoque na dicel de 2020 a 2024, ii) Qual andamento do pedido 112021005834 ?, iii) O pedido 102015001282 tem carta patente ?, iv) qual a projeção de exame de 112021005834? Última atualização: 25/10/2024", unsafe_allow_html=True)
 
 # https://docs.streamlit.io/develop/concepts/architecture/session-state#initialization
 
@@ -320,6 +320,15 @@ def prompt_router(input):
     if classification == "Projecao":
         numero = extrair_numero_pedido(query)
         st.markdown(f"Questão relativa a projeção de exame de um pedido de recurso {numero}")
+        # url = http://www.cientistaspatentes.com.br/apiphp/patents/query/?q={"mysql_query":"* FROM arquivados where despacho='12.2' and anulado=0 and numero='PI0923431'"}
+        url = f"http://www.cientistaspatentes.com.br/apiphp/patents/query/?q={{%22mysql_query%22:%22*%20FROM%20arquivados%20where%20despacho=%2712.2%27%20and%20anulado=0%20and%20numero=%27{numero}%27%22}}"
+        response = requests.get(url, headers=headers)
+        response.raise_for_status()  # Verificar se a requisição foi bem-sucedida
+        data1 = response.json()
+        df2 = pd.DataFrame(data1['patents'])
+        ano = df2['data'].astype(str).str[:4].astype(int).iloc[0] 
+        st.markdown(f"ano={ano}")
+
         return PromptTemplate.from_template(projecao_template).format(query=query, context=context)
     elif classification == "Estoque":
         st.markdown("Questão relativa ao estoque de recursos de uma divisão.")
