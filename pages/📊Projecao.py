@@ -329,6 +329,7 @@ def prompt_router(input):
         st.markdown("Questão relativa ao estoque de recursos de uma divisão.")
         return PromptTemplate.from_template(estoque_template).format(query=query, context=context)
     elif classification == "Status":
+        str_context = ''
         numero = extrair_numero_pedido(query)
         digito = calcular_digito_verificador(numero)
         numerocd = f"{numero}-{digito}"
@@ -377,8 +378,9 @@ def prompt_router(input):
                 descricao = data['patents'][0]['descricao'].strip()
                 resumo = data['patents'][0]['resumo'].strip()
 
+        context = "Última publicação: " + despacho + f" (publicado em {formatted_date}) " + resumo + '. ' + descricao
         st.markdown(context)
-        context = "Última publicação: " + despacho + f" (publicado em {formatted_date}) " + resumo + '. ' + descricao + str_context
+        context = context + str_context
         return PromptTemplate.from_template(patent_template).format(query=query, context=context)
     else:
         st.markdown("Não classificado:", classification)
