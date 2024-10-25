@@ -314,6 +314,62 @@ def calcular_digito_verificador(numero_pedido):
 
 classification = None
 
+
+divisoes_indices = {
+    "dirpa": 0,
+    "ditex": 1,
+    "difari": 2,
+    "difarii": 3,    
+    "dipol": 4,    
+    "dinor": 5,    
+    "dialp": 6,    
+    "dibio": 7,    
+    "dimol": 8,    
+    "dipem": 9,    
+    "dipaq": 10,    
+    "dipae": 11,    
+    "ditel": 12,    
+    "dicel": 13,    
+    "difel": 14,    
+    "dipeq": 15,    
+    "diciv": 16,    
+    "dimat": 17,    
+    "dimec": 18,    
+    "ditem": 19,    
+    "dinec": 20,
+    "dimut": 21,    
+}
+
+divisoes_nome = {
+    "dirpa": 'DIRPA',
+    "ditex": 'CGPAT I/DITEX',
+    "difari": 'CGPAT I/DIFAR I',
+    "difarii": 'CGPAT I/DIFAR II',
+    "dipol": 'CGPAT I/DIPOL',
+    "dinor": 'CGPAT I/DINOR',
+    "dialp": 'CGPAT II/DIALP',
+    "dibio": 'CGPAT II/DIBIO',
+    "dimol": 'CGPAT II/DIMOL',
+    "dipem": 'CGPAT II/DIPEM',
+    "dipaq": 'CGPAT II/DIPAQ',
+    "dipae": 'CGPAT II/DIPAE',
+    "ditel": 'CGPAT III/DITEL',
+    "dicel": 'CGPAT III/DICEL',
+    "difel": 'CGPAT III/DIFEL',
+    "dipeq": 'CGPAT III/DIPEQ',
+    "diciv": 'CGPAT III/DICIV',
+    "dimat": 'CGPAT IV/DIMAT',
+    "dimec": 'CGPAT IV/DIMEC',
+    "ditem": 'CGPAT IV/DITEM',
+    "dinec": 'CGPAT IV/DINEC',
+    "dimut": 'CGPAT IV/DIMUT',
+}
+
+
+# Função para recuperar o índice com base no nome da divisão
+def obter_indice(divisao):
+    return divisoes_indices.get(divisao, "Divisão não encontrada")
+    
 def prompt_router(input):
     global classification
     query = input["query"]
@@ -343,6 +399,23 @@ def prompt_router(input):
         divisao = df3['divisao'].iloc[0] 
         st.markdown(f"divisao={divisao}")
         
+        url = f"https://cientistaspatentes.com.br/central/data/cgrec_json_{ano}.txt"
+        response = requests.get(url, headers=headers)
+        response.raise_for_status()  # Verificar se a requisição foi bem-sucedida
+        data = response.json()
+        df1 = pd.DataFrame(data['patents'])
+        #df['producao'] = pd.to_numeric(df['producao'], errors='coerce')
+        #df['estoque'] = pd.to_numeric(df['estoque'], errors='coerce')
+        #df['ano'] = pd.to_numeric(df['ano'], errors='coerce')
+        str_estoque = f"O estoque da DIRPA de pedidos de recurso com 12.2 em {ano} é de "
+        str_estoque = str_estoque + df1['estoque'][0] + ' pedidos, enquanto a produção efetiva realizada foi de '
+        str_estoque = str_estoque + df1['producao'][0] + ' primeiros exames de recurso.'
+        i = obter_indice(divisao)
+        idivisao = divisoes_nome.get(divisao)
+        str_estoque = str_estoque + f". O estoque da {idivisao} de pedidos de recurso com 12.2 em {ano} é de "
+        str_estoque = str_estoque + df1['estoque'][i] + ' pedidos, enquanto a produção efetiva realizada foi de '
+        str_estoque = str_estoque + df1['producao'][i] + ' primeiros exames de recurso.'
+        st.markdown(str_estoque)
 
         return PromptTemplate.from_template(projecao_template).format(query=query, context=context)
     elif classification == "Estoque":
