@@ -398,7 +398,7 @@ def prompt_router(input):
         data3 = response.json()
         df3 = pd.DataFrame(data3['patents'])
         divisao = df3['divisao'].iloc[0] 
-        st.markdown(f"divisao={divisao}")
+        #st.markdown(f"divisao={divisao}")
         
         url = f"https://cientistaspatentes.com.br/central/data/cgrec_json_{ano}.txt"
         response = requests.get(url, headers=headers)
