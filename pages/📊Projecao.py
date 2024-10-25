@@ -1,4 +1,5 @@
 import os, re
+import pandas as pd
 import streamlit as st
 from langchain_openai import ChatOpenAI
 from langchain.prompts.prompt import PromptTemplate
@@ -20,6 +21,9 @@ openai_api_key = os.getenv("OPENAI_API_KEY")
 
 #st.session_state.chat=initialize()
 
+fig, ax = plt.subplots()
+df = pd.DataFrame()
+        
 month_names = {
     1: "janeiro",
     2: "fevereiro",
