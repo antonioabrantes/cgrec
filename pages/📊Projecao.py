@@ -1,5 +1,6 @@
 import os, re
 import pandas as pd
+import matplotlib.pyplot as plt
 import streamlit as st
 from langchain_openai import ChatOpenAI
 from langchain.prompts.prompt import PromptTemplate
