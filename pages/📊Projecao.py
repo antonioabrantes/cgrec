@@ -316,7 +316,8 @@ def prompt_router(input):
         return PromptTemplate.from_template(estoque_template).format(query=query, context=context)
     elif classification == "Status":
         numero = extrair_numero_pedido(query)
-        st.markdown(f"Questão relativa ao andamento de um pedido de recurso {numero}")
+        digito = calcular_digito_verificador(numero)
+        st.markdown(f"Questão relativa ao andamento de um pedido de recurso {numero}-{digito}")
 
         query = '"' + "mysql_query" + '"' ":" + '"' + f" * FROM arquivados where numero='{numero}' and anulado=0 order by data desc" + '"'
         url = f"http://www.cientistaspatentes.com.br/apiphp/patents/query/?q={query}"
@@ -334,7 +335,10 @@ def prompt_router(input):
             #despachos = [patent['despacho'] for patent in data['patents']]
             #for despacho in despachos:
             #    print(despacho)
-                
+            
+            # http://www.cientistaspatentes.com.br/apiphp/patents/query/?q={%22mysql_query%22:%22*%20FROM%20revistas4%20WHERE%20numero=%27112021005834-6%27%20and%20data=%272024-10-22%27%20and%20despacho=%27PR%20-%20Recursos%27%22} 
+            # http://www.cientistaspatentes.com.br/apiphp/patents/query/?q={"mysql_query":"* FROM revistas4 WHERE numero='112021005834-6' and data='2024-10-22' and despacho='PR - Recursos'"}
+            
             despacho = data['patents'][0]['despacho'].strip()
             formatted_date = convert_date(data['patents'][0]['data'])
             query = '"' + "mysql_query" + '"' ":" + '"' + f" * FROM despachos WHERE despacho='{despacho}'" + '"'
@@ -343,7 +347,7 @@ def prompt_router(input):
             descricao = data['patents'][0]['descricao'].strip()
             resumo = data['patents'][0]['resumo'].strip()
 
-        context = "Última publicação: " + despacho + f"(publicado em {formatted_date})" + resumo + '. ' + descricao
+        context = "Última publicação: " + despacho + f" (publicado em {formatted_date}) " + resumo + '. ' + descricao
 
         #if numero:
         #    context = f"O pedido {numero} teve carta patente concedida em 2024" 
