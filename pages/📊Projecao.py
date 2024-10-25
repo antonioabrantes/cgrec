@@ -349,7 +349,7 @@ def prompt_router(input):
 
         if 'patents' in data and len(data['patents']) > 0 and 'despacho' in data['patents'][0]:
             despachos = [patent['despacho'] for patent in data['patents']]
-            str_context = ''
+            str_context = 'Publicações deste pedido: '
             for despacho in despachos:
                 query = '"' + "mysql_query" + '"' ":" + '"' + f" * FROM despachos WHERE despacho='{despacho}'" + '"'
                 url = f"http://www.cientistaspatentes.com.br/apiphp/patents/query/?q={query}"
@@ -377,13 +377,8 @@ def prompt_router(input):
                 descricao = data['patents'][0]['descricao'].strip()
                 resumo = data['patents'][0]['resumo'].strip()
 
-        context = "Última publicação: " + despacho + f" (publicado em {formatted_date}) " + resumo + '. ' + descricao + str_context
-
-        #if numero:
-        #    context = f"O pedido {numero} teve carta patente concedida em 2024" 
-        #else:
-        #    context = "Informações adicionais sobre o pedido não foram encontradas."
         st.markdown(context)
+        context = "Última publicação: " + despacho + f" (publicado em {formatted_date}) " + resumo + '. ' + descricao + str_context
         return PromptTemplate.from_template(patent_template).format(query=query, context=context)
     else:
         st.markdown("Não classificado:", classification)
@@ -430,8 +425,12 @@ if st.session_state.step == 0:
         })
         chat_history.append((prompt, response.content))
         st.session_state.response = response
-
         
+        if classification == "Status":
+            with st.chat_message("assistant"):
+                st.markdown(response.content)
+                st.session_state.messages.append({"role": "assistant", "content": response})
+
         if classification == "Estoque":
             with st.chat_message("assistant"):
                 st.markdown(response.content)
