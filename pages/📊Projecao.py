@@ -351,7 +351,12 @@ def prompt_router(input):
             despachos = [patent['despacho'] for patent in data['patents']]
             str_context = ''
             for despacho in despachos:
-                str_context = str_context + ' ' + despacho + ', '
+                query = '"' + "mysql_query" + '"' ":" + '"' + f" * FROM despachos WHERE despacho='{despacho}'" + '"'
+                url = f"http://www.cientistaspatentes.com.br/apiphp/patents/query/?q={query}"
+                data = acessar_sinergias(url,headers)
+                descricao = data['patents'][0]['descricao'].strip()
+                resumo = data['patents'][0]['resumo'].strip()
+                str_context = str_context + '[' + despacho + ', ' + resumo + ', ' + descricao + '], '
             
             # http://www.cientistaspatentes.com.br/apiphp/patents/query/?q={%22mysql_query%22:%22*%20FROM%20revistas4%20WHERE%20numero=%27112021005834-6%27%20and%20data=%272024-10-22%27%20and%20despacho=%27PR%20-%20Recursos%27%22} 
             # http://www.cientistaspatentes.com.br/apiphp/patents/query/?q={"mysql_query":"* FROM revistas4 WHERE numero='112021005834-6' and data='2024-10-22' and despacho='PR - Recursos'"}
