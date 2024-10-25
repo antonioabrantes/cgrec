@@ -437,6 +437,28 @@ def prompt_router(input):
         projecao_2023 = 2023 + round(estoque_2023/producao_2023, 2)
         projecao_2024 = 2024 + round(estoque_2024/producao_2024_anualizada, 2)
 
+        if (ano==2020):
+            projecao_inicial = projecao_2020
+        if (ano==2021):
+            projecao_inicial = projecao_2021
+        if (ano==2022):
+            projecao_inicial = projecao_2022
+        if (ano==2023):
+            projecao_inicial = projecao_2023
+        if (ano==2024):
+            projecao_inicial = projecao_2024
+
+        if ano > 2020:
+            projecao_2020 = projecao_inicial
+        if ano > 2021:
+            projecao_2021 = projecao_inicial
+        if ano > 2022:
+            projecao_2022 = projecao_inicial
+        if ano > 2023:
+            projecao_2023 = projecao_inicial
+        if ano > 2024:
+            projecao_2024 = projecao_inicial
+
         output = f"O pedido {numero} é um recurso que teve o 12.2 em {ano}. O pedido foi indeferido pela {divisao}, que por sua vez em 2024 tem um estoque de {estoque_2024} de recursos de pedidos com 12.2 em {ano} ou anteriores. Em 2024 a produção de primeiros exames de recurso de pedidos indeferidos nesta divisão é de {producao_2024} pareceres nos primeiros 9 meses do ano. O valor anualizado da produção estimada em 2024 é de {producao_2024_anualizada} primeiros exames de recurso. A projeção de exame é de 2020:{projecao_2020}, 2021:{projecao_2021}, 2022:{projecao_2022}, 2023:{projecao_2023} e 2024:{projecao_2024}. " 
         if (producao_2024_anualizada>estoque_2024):
             output = output + f" Desta forma, com esse estoque de recursos com 12.2 em {ano} da {divisao}, mantida a produção atual, o pedido {numero} terá seu primeiro exame em menos de um ano."
