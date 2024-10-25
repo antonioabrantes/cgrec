@@ -1,6 +1,7 @@
 import os, re
 import pandas as pd
 import matplotlib.pyplot as plt
+import math
 import numpy as np
 import streamlit as st
 from langchain_openai import ChatOpenAI
@@ -458,8 +459,16 @@ def prompt_router(input):
             projecao_2023 = projecao_inicial
         if ano > 2024:
             projecao_2024 = projecao_inicial
+            
+        meses = [
+        "janeiro", "fevereiro", "março", "abril", "maio", "junho",
+        "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"
+        ]
+        parte_fracionaria, parte_inteira = math.modf(projecao_2024)
+        imes = int(12 * parte_fracionaria)
+        strmes = mes[imes]
 
-        output = f"O pedido {numero} é um recurso que teve o 12.2 em {ano}. O pedido foi indeferido pela {divisao}, que por sua vez em 2024 tem um estoque de {estoque_2024} de recursos de pedidos com 12.2 em {ano} ou anteriores. Em 2024 a produção de primeiros exames de recurso de pedidos indeferidos nesta divisão é de {producao_2024} pareceres nos primeiros 9 meses do ano. O valor anualizado da produção estimada em 2024 é de {producao_2024_anualizada} primeiros exames de recurso. A projeção de exame que este pedido tenha eu primeiro exame de recurso em {projecao_2024}. " 
+        output = f"O pedido {numero} é um recurso que teve o 12.2 em {ano}. O pedido foi indeferido pela {divisao}, que por sua vez em 2024 tem um estoque de {estoque_2024} de recursos de pedidos com 12.2 em {ano} ou anteriores. Em 2024 a produção de primeiros exames de recurso de pedidos indeferidos nesta divisão é de {producao_2024} pareceres nos primeiros 9 meses do ano. O valor anualizado da produção estimada em 2024 é de {producao_2024_anualizada} primeiros exames de recurso. A projeção de exame que este pedido tenha eu primeiro exame de recurso em {strmes} de {parte_inteira}. " 
         if (producao_2024_anualizada>estoque_2024):
             output = output + f" Desta forma, com esse estoque de recursos com 12.2 em {ano} da {divisao}, mantida a produção atual, o pedido {numero} terá seu primeiro exame em menos de um ano."
         st.markdown(output)
