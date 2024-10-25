@@ -344,7 +344,7 @@ def prompt_router(input):
             data_original = data['patents'][0]['data']
             formatted_date = convert_date(data['patents'][0]['data'])
             if despacho=='PR - Recursos':
-                query = '"' + "mysql_query" + '"' ":" + '"' + f" * FROM revistas4 WHERE numero='{numerocd}' and data='{data_original' and despacho='PR - Recursos'" + '"'
+                query = '"' + "mysql_query" + '"' ":" + '"' + f" * FROM revistas4 WHERE numero='{numerocd}' and data='{data_original}' and despacho='PR - Recursos'" + '"'
                 url = f"http://www.cientistaspatentes.com.br/apiphp/patents/query/?q={query}"
                 data = acessar_sinergias(url,headers)
                 descricao = data['patents'][0]['descricao'].strip()
