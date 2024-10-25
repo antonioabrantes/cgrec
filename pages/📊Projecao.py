@@ -104,7 +104,7 @@ st.markdown(
 """, 
 unsafe_allow_html=True
 )
-st.markdown("<small>Olá meu nome é Iara (Inteligência Artificial sobre Recursos Administrativos) uma assistente virtual auxiliar na projeção de primeiro exame de recursos administrativos e para dados do estoque de pedidos e produção de 2020 a 2024. Por exemplo, experimente perguntar: i) Apresente os dados dos pedidos de recurso em estoque na dicel de 2020 a 2024, ii) Qual andamento do pedido 112021005834. Últime atualização: 25/10/2024", unsafe_allow_html=True)
+st.markdown("<small>Olá meu nome é Iara (Inteligência Artificial sobre Recursos Administrativos) uma assistente virtual auxiliar na projeção de primeiro exame de recursos administrativos e para dados do estoque de pedidos e produção de 2020 a 2024. Por exemplo, experimente perguntar: i) Apresente os dados dos pedidos de recurso em estoque na dicel de 2020 a 2024, ii) Qual andamento do pedido 112021005834 ?, iii) O pedido 102015001282 tem carta patente ?. Últime atualização: 25/10/2024", unsafe_allow_html=True)
 
 # https://docs.streamlit.io/develop/concepts/architecture/session-state#initialization
 
@@ -320,6 +320,7 @@ def prompt_router(input):
         numerocd = f"{numero}-{digito}"
         st.markdown(f"Questão relativa ao andamento de um pedido de recurso {numerocd}")
 
+        # http://www.cientistaspatentes.com.br/apiphp/patents/query/?q={"mysql_query":"* FROM arquivados WHERE numero='112021005834' and anulado=0 order by data desc"}
         query = '"' + "mysql_query" + '"' ":" + '"' + f" * FROM arquivados where numero='{numero}' and anulado=0 order by data desc" + '"'
         url = f"http://www.cientistaspatentes.com.br/apiphp/patents/query/?q={query}"
         data = acessar_sinergias(url,headers)
@@ -333,9 +334,10 @@ def prompt_router(input):
             descricao = data['patents'][0]['descricao']
 
         if 'patents' in data and len(data['patents']) > 0 and 'despacho' in data['patents'][0]:
-            #despachos = [patent['despacho'] for patent in data['patents']]
-            #for despacho in despachos:
-            #    print(despacho)
+            despachos = [patent['despacho'] for patent in data['patents']]
+            str_context = ''
+            for despacho in despachos:
+                str_context = str_context + despacho
             
             # http://www.cientistaspatentes.com.br/apiphp/patents/query/?q={%22mysql_query%22:%22*%20FROM%20revistas4%20WHERE%20numero=%27112021005834-6%27%20and%20data=%272024-10-22%27%20and%20despacho=%27PR%20-%20Recursos%27%22} 
             # http://www.cientistaspatentes.com.br/apiphp/patents/query/?q={"mysql_query":"* FROM revistas4 WHERE numero='112021005834-6' and data='2024-10-22' and despacho='PR - Recursos'"}
@@ -356,7 +358,7 @@ def prompt_router(input):
                 descricao = data['patents'][0]['descricao'].strip()
                 resumo = data['patents'][0]['resumo'].strip()
 
-        context = "Última publicação: " + despacho + f" (publicado em {formatted_date}) " + resumo + '. ' + descricao
+        context = "Última publicação: " + despacho + f" (publicado em {formatted_date}) " + resumo + '. ' + descricao + str_context
 
         #if numero:
         #    context = f"O pedido {numero} teve carta patente concedida em 2024" 
