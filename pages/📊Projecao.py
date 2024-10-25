@@ -157,12 +157,26 @@ classification_template = PromptTemplate.from_template(
     Dada a pergunta do usuário abaixo, classifique-a como sendo sobre `Projecao`, `Status` ou `Estoque`.
 
     <Se a pergunta for sobre a projeção de exame de um recurso classifique-as como 'Projecao'>
-    <Se a pergunta for sobre o andamento / porcessamento / status de um pedido de recurso classifique-a como 'Status'>
+    <Se a pergunta for sobre o andamento / processamento / status de um pedido de recurso classifique-a como 'Status'>
     <Se a pergunta for sobre o estoque de pedidos de recurso em uma divisão classifique-a como 'Estoque'>
     
     <query>
     {query}
     </query>
+    
+    Aqui alguns exemplos de perguntas classificadas como 'Projecao':
+    > Qual a estimativa de exame de recurso para o pedido 112021005834?
+    > Quando o pedido 112021005834 deve ser examinado no recurso?
+        
+    Aqui alguns exemplos de perguntas classificadas como 'Status':
+    > Qual andamento do pedido 112021005834?
+    > Qual o status do pedido 112021005834?
+    > Quais os despachos de 112021005834?
+    > O pedido 112021005834 tem carta patente?
+    
+    Aqui alguns exemplos de perguntas classificadas como 'Estoque':
+    > Apresente os dados dos pedidos de recurso em estoque na dicel de 2020 a 2024
+    > Mostre um gráfico de recursos em estoque na dirpa entre 2022 e 2024
     
     Classificação:"""
 )
