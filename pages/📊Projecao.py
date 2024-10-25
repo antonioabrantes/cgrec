@@ -315,8 +315,8 @@ def prompt_router(input):
         st.markdown("Questão relativa ao estoque de recursos de uma divisão.")
         return PromptTemplate.from_template(estoque_template).format(query=query, context=context)
     elif classification == "Status":
-        st.markdown(f"Questão relativa ao andamento de um pedido de recurso {numero}")
         numero = extrair_numero_pedido(query)
+        st.markdown(f"Questão relativa ao andamento de um pedido de recurso {numero}")
 
         query = '"' + "mysql_query" + '"' ":" + '"' + f" * FROM arquivados where numero='{numero}' and anulado=0 order by data desc" + '"'
         url = f"http://www.cientistaspatentes.com.br/apiphp/patents/query/?q={query}"
