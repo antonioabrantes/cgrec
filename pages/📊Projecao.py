@@ -464,11 +464,12 @@ def prompt_router(input):
         "janeiro", "fevereiro", "março", "abril", "maio", "junho",
         "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"
         ]
-        parte_fracionaria, parte_inteira = math.modf(projecao_2024)
+        parte_fracionaria, parte_inteira = math.modf(projecao_2023)
         imes = int(12 * parte_fracionaria)
         strmes = meses[imes]
+        strano = int(parte_inteira)
 
-        output = f"O pedido {numero} é um recurso que teve o 12.2 em {ano}. O pedido foi indeferido pela {divisao}, que por sua vez em 2024 tem um estoque de {estoque_2024} de recursos de pedidos com 12.2 em {ano} ou anteriores. Em 2024 a produção de primeiros exames de recurso de pedidos indeferidos nesta divisão é de {producao_2024} pareceres nos primeiros 9 meses do ano. O valor anualizado da produção estimada em 2024 é de {producao_2024_anualizada} primeiros exames de recurso. A projeção de exame que este pedido tenha eu primeiro exame de recurso em {strmes} de {parte_inteira}. " 
+        output = f"O pedido {numero} é um recurso que teve o 12.2 em {ano}. O pedido foi indeferido pela {divisao}, que por sua vez em 2024 tem um estoque de {estoque_2024} de recursos de pedidos com 12.2 em {ano} ou anteriores. Em 2024 a produção de primeiros exames de recurso de pedidos indeferidos nesta divisão é de {producao_2024} pareceres nos primeiros 9 meses do ano. O valor anualizado da produção estimada em 2024 é de {producao_2024_anualizada} primeiros exames de recurso. A projeção de exame que este pedido tenha eu primeiro exame de recurso em {strmes} de {strano}. " 
         if (producao_2024_anualizada>estoque_2024):
             output = output + f" Desta forma, com esse estoque de recursos com 12.2 em {ano} da {divisao}, mantida a produção atual, o pedido {numero} terá seu primeiro exame em menos de um ano."
         st.markdown(output)
