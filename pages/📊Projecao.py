@@ -356,7 +356,7 @@ def prompt_router(input):
             else:
                 descricao = ''
         except Exception as e:
-            descricao = ''
+            descricao = 'nada'
 
         try:
             if 'patents' in data and isinstance(data['patents'], list) and len(data['patents']) > 0 and 'despacho' in data['patents'][0]:
