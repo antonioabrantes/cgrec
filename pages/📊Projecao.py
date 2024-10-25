@@ -406,7 +406,7 @@ def prompt_router(input):
 
             context = "Última publicação: " + despacho + f" (publicado em {formatted_date}) " + resumo + '. ' + descricao
             st.markdown(context)
-            context = context + str_context
+            context = context + str_context + " Seja sucinto na resposta, diga apenas se o despacho perguntado foi encontrado ou não."
             
         return PromptTemplate.from_template(patent_template).format(query=query, context=context)
     else:
