@@ -341,12 +341,20 @@ def prompt_router(input):
             # http://www.cientistaspatentes.com.br/apiphp/patents/query/?q={"mysql_query":"* FROM revistas4 WHERE numero='112021005834-6' and data='2024-10-22' and despacho='PR - Recursos'"}
             
             despacho = data['patents'][0]['despacho'].strip()
+            data_original = data['patents'][0]['data']
             formatted_date = convert_date(data['patents'][0]['data'])
-            query = '"' + "mysql_query" + '"' ":" + '"' + f" * FROM despachos WHERE despacho='{despacho}'" + '"'
-            url = f"http://www.cientistaspatentes.com.br/apiphp/patents/query/?q={query}"
-            data = acessar_sinergias(url,headers)
-            descricao = data['patents'][0]['descricao'].strip()
-            resumo = data['patents'][0]['resumo'].strip()
+            if despacho=='PR - Recursos':
+                query = '"' + "mysql_query" + '"' ":" + '"' + f" * FROM revistas4 WHERE numero='{numerocd}' and data='{data_original' and despacho='PR - Recursos'" + '"'
+                url = f"http://www.cientistaspatentes.com.br/apiphp/patents/query/?q={query}"
+                data = acessar_sinergias(url,headers)
+                descricao = data['patents'][0]['descricao'].strip()
+                resumo = ''
+            else:
+                query = '"' + "mysql_query" + '"' ":" + '"' + f" * FROM despachos WHERE despacho='{despacho}'" + '"'
+                url = f"http://www.cientistaspatentes.com.br/apiphp/patents/query/?q={query}"
+                data = acessar_sinergias(url,headers)
+                descricao = data['patents'][0]['descricao'].strip()
+                resumo = data['patents'][0]['resumo'].strip()
 
         context = "Última publicação: " + despacho + f" (publicado em {formatted_date}) " + resumo + '. ' + descricao
 
