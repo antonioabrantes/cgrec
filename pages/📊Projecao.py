@@ -336,7 +336,7 @@ def prompt_router(input):
         numerocd = f"{numero}-{digito}"
         st.markdown(f"Questão relativa ao andamento de um pedido de recurso {numerocd}")
 
-        # http://www.cientistaspatentes.com.br/apiphp/patents/query/?q={"mysql_query":"* FROM arquivados WHERE numero='112021005834' and anulado=0 order by data desc"}
+        # http://www.cientistaspatentes.com.br/apiphp/patents/query/?q={"mysql_query":"* FROM arquivados WHERE numero='102015001282' and anulado=0 order by data desc"}
         query = '"' + "mysql_query" + '"' ":" + '"' + f" * FROM arquivados where numero='{numero}' and anulado=0 order by data desc" + '"'
         url = f"http://www.cientistaspatentes.com.br/apiphp/patents/query/?q={query}"
         data = acessar_sinergias(url,headers)
@@ -346,10 +346,10 @@ def prompt_router(input):
         despacho = ''
         formatted_date = ''
         
-        if 'patents' in data and len(data['patents']) > 0 and 'descricao' in data['patents'][0]:
-            descricao = data['patents'][0]['descricao']
-        else:
-            descricao = None  # Ou alguma mensagem de erro ou tratamento apropriado
+        #if 'patents' in data and isinstance(data['patents'], list) and len(data['patents']) > 0 and 'descricao' in data['patents'][0]:
+        #    descricao = data['patents'][0]['descricao']
+        #else:
+        #    descricao = None  # Ou alguma mensagem de erro ou tratamento apropriado
     
         #try:
         #    if 'patents' in data and isinstance(data['patents'], list) and len(data['patents']) > 0 and 'descricao' in data['patents'][0]:
@@ -359,7 +359,7 @@ def prompt_router(input):
         #except Exception as e:
         #    descricao = 'pedido inexistente'
 
-        st.markdown(descricao)
+        #st.markdown(descricao)
 
         try:
             if 'patents' in data and isinstance(data['patents'], list) and len(data['patents']) > 0 and 'despacho' in data['patents'][0]:
@@ -369,7 +369,7 @@ def prompt_router(input):
         except Exception as e:
             despachos = 'despachos inexistentes'
 
-        if despachos != 'despachos inexistentes' and descricao != 'pedido inexistente':
+        if despachos != 'despachos inexistentes':
         #if 'patents' in data and len(data['patents']) > 0 and 'despacho' in data['patents'][0]:
             despachos = [patent['despacho'] for patent in data['patents']]
             str_context = 'Despachos publicados para este pedido após uma consulta SQL a base de dados: '
