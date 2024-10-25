@@ -350,7 +350,7 @@ def prompt_router(input):
 
         if 'patents' in data and len(data['patents']) > 0 and 'despacho' in data['patents'][0]:
             despachos = [patent['despacho'] for patent in data['patents']]
-            str_context = 'Publicações deste pedido: '
+            str_context = 'Despachos publicados para este pedido após uma consulta SQL a base de dados: '
             for despacho in despachos:
                 query = '"' + "mysql_query" + '"' ":" + '"' + f" * FROM despachos WHERE despacho='{despacho}'" + '"'
                 url = f"http://www.cientistaspatentes.com.br/apiphp/patents/query/?q={query}"
