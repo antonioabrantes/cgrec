@@ -117,6 +117,16 @@ patent_template = """Você é um assistente que responde perguntas sobre o andam
 Pergunta:\
 {query}"""
 
+#Patentes de Invenção: 
+#10 – para pedidos depositados por nacionais e via CUP (antigo PI); 
+#11 – para pedidos depositados via PCT (antigo PI PCT); 
+#12 – para pedidos divididos (antigo PI); 
+#13 – para certificado de adição (antigo C1, C2, etc). 
+#Patentes de Modelo de Utilidade: 
+#20 – para pedidos depositados por nacionais e via CUP (antigo MU); 
+#21 – para pedidos depositados via PCT (antigo MU PCT); 
+#22 – para pedidos divididos (antigo MU).
+
 def extrair_numero_pedido(texto):
     padrao = r"(PI|MU|C1|C2|C3|C4|C5|C6|C7|C8|C9)\s*\d{7}(?:-\d)?|(?:BR\s*)?(?:\d{2}\s*)?(?:\d{4}\s*)?\d{6}(?:-\d)?"
     match = re.search(padrao, texto)
