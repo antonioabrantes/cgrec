@@ -410,11 +410,12 @@ if st.session_state.step == 0:
         chat_history.append((prompt, response.content))
         st.session_state.response = response
 
-        with st.chat_message("assistant"):
-            st.markdown(response.content)
-            st.session_state.messages.append({"role": "assistant", "content": response})
         
         if classification == "Estoque":
+            with st.chat_message("assistant"):
+                st.markdown(response.content)
+                st.session_state.messages.append({"role": "assistant", "content": response})
+
             prompt_modificado = f"Escreva um código Python que gere um gráfico mostrando " + prompt + ". Mostre apenas os comandos do código."
             response = chain2.invoke({
                 "context": context,
