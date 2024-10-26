@@ -84,7 +84,8 @@ def main():
             doc = docs.iloc[i]
             st.markdown(f"{kindcode} = {doc}")
 
-            url = f"https://patents.google.com/patent/{doc}A1/en?oq={doc}"
+            url = f"https://patents.google.com/patent/{doc}A/en?oq={doc}"
+            # https://patents.google.com/patent/US5866903A/en?oq=US5866903
             st.markdown(url)
             html = urlopen(url)
             bs = BeautifulSoup(html.read(),'html.parser')
