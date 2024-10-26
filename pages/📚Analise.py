@@ -7,6 +7,8 @@ from langchain.prompts.prompt import PromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 from dotenv import load_dotenv
 import requests
+from urllib.request import urlopen
+from bs4 import BeautifulSoup
 from datetime import datetime
 
 load_dotenv()
@@ -52,6 +54,13 @@ def acessar_sinergias(url,headers):
         print(f"An unexpected error occurred: {err}")    
     return -1
 
+llm = ChatOpenAI(api_key=openai_api_key)
+out_parser = StrOutputParser()
+prompt = ChatPromptTemplate.from_messages(
+    [
+        ("system", "Você é um assistente virtual."),
+        ("user", "{user_input}"),
+    ])
 
 def main():
     st.title("Análise de documentos de patente")
@@ -71,8 +80,28 @@ def main():
         codigos = df['codigo'] 
         docs = df['doc']
         for i in range(len(codigos)):
-            x = codigos.iloc[i]
-            y = docs.iloc[i]
-            st.markdown(f"{x} = {y}")
+            kindcode = codigos.iloc[i]
+            doc = docs.iloc[i]
+            st.markdown(f"{kindcode} = {doc}")
+
+            url = f"https://patents.google.com/patent/{doc}A1/en?oq={doc}"
+            html = urlopen(url)
+            bs = BeautifulSoup(html.read(),'html.parser')
+
+            #print(bs.title)
+            #nameList = bs.findAll("div", {"class":"abstract"})
+            #resumo_D1 = ''
+            #for name in nameList:
+            #  resumo_D1 = name.getText()
+
+            texto = ''
+            nameList = bs.findAll("section", {"itemprop":"description"})
+            for name in nameList:
+                texto = name.getText()
+
+            chain = prompt | llm | out_parser
+            query = f"Resuma o documento em português: {texto}"
+            resposta = chain.invoke({"user_input":f"{query}"})
+            st.markdown(f"Resumo {kindcode} {doc}: {resposta}")
 
 main()
