@@ -87,7 +87,6 @@ def main():
             # https://patents.google.com/patent/US5866903A/en?oq=US5866903
 
             url = f"https://patents.google.com/patent/{doc}A/en?oq={doc}"
-            st.markdown(url)
             tentar_novamente = False
             try:
                 html = urlopen(url)
@@ -97,7 +96,6 @@ def main():
             
             if tentar_novamente:  
                 url = f"https://patents.google.com/patent/{doc}A1/en?oq={doc}"
-                st.markdown(url)
                 tentar_novamente = False
                 try:
                     html = urlopen(url)
@@ -107,7 +105,6 @@ def main():
             
             if tentar_novamente:  
                 url = f"https://patents.google.com/patent/{doc}A2/en?oq={doc}"
-                st.markdown(url)
                 tentar_novamente = False
                 try:
                     html = urlopen(url)
@@ -117,7 +114,6 @@ def main():
             
             if tentar_novamente:  
                 url = f"https://patents.google.com/patent/{doc}B1/en?oq={doc}"
-                st.markdown(url)
                 tentar_novamente = False
                 try:
                     html = urlopen(url)
@@ -125,6 +121,7 @@ def main():
                 except Exception as e:
                     tentar_novamente = True            
             
+            st.markdown(url)
             bs = BeautifulSoup(html.read(),'html.parser')
 
             #print(bs.title)
