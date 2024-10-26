@@ -57,11 +57,22 @@ def main():
     st.title("Análise de documentos de patente")
     st.header("Elaboração de resumos")
 
-    st.write("Entre com o número do pedido de patente em recurso: p.ex. 102012005032")
+    st.write("Entre com o número do pedido de patente em recurso: p.ex. 102012005032. ùltima atualização: 26/10/2024")
     numero = st.text_input("Digite aqui:")
     if numero:
         st.markdown(f"Numero: {numero}")
         
-
+        # url = http://www.cientistaspatentes.com.br/apiphp/patents/query/?q={"mysql_query":"* FROM anterioridades where numero='102012005032'"}
+        url = f"http://www.cientistaspatentes.com.br/apiphp/patents/query/?q={%22mysql_query%22:%22*%20FROM%20anterioridades%20where%20numero=%27{numero}%27%22}"
+        response = requests.get(url, headers=headers)
+        response.raise_for_status()  # Verificar se a requisição foi bem-sucedida
+        data = response.json()
+        df = pd.DataFrame(data['patents'])
+        codigos = df3['codigo'] 
+        docs = df3['doc']
+        for i in range(len(codigos)):
+            x = codigo.iloc[i]
+            y = docs.iloc[i]
+            st.markdown(f"{x} = {y}")
 
 main()
