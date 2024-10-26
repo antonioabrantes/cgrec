@@ -60,7 +60,7 @@ def main():
     st.write("Entre com o número do pedido de patente em recurso: p.ex. 102012005032")
     numero = st.text_input("Digite aqui:")
     if numero:
-        st.markdown("Numero: ",numero)
+        st.markdown(f"Numero: {numero}")
         
 
 
