@@ -63,7 +63,7 @@ def main():
         st.markdown(f"Numero: {numero}")
         
         # url = http://www.cientistaspatentes.com.br/apiphp/patents/query/?q={"mysql_query":"* FROM anterioridades where numero='102012005032'"}
-        url = f"http://www.cientistaspatentes.com.br/apiphp/patents/query/?q={%22mysql_query%22:%22*%20FROM%20anterioridades%20where%20numero=%27{numero}%27%22}"
+        url = f"http://www.cientistaspatentes.com.br/apiphp/patents/query/?q={{%22mysql_query%22:%22*%20FROM%20anterioridades%20where%20numero=%27{numero}%27%22}}"
         response = requests.get(url, headers=headers)
         response.raise_for_status()  # Verificar se a requisição foi bem-sucedida
         data = response.json()
