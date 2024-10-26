@@ -68,8 +68,8 @@ def main():
         response.raise_for_status()  # Verificar se a requisição foi bem-sucedida
         data = response.json()
         df = pd.DataFrame(data['patents'])
-        codigos = df3['codigo'] 
-        docs = df3['doc']
+        codigos = df['codigo'] 
+        docs = df['doc']
         for i in range(len(codigos)):
             x = codigo.iloc[i]
             y = docs.iloc[i]
