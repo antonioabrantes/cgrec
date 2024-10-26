@@ -84,10 +84,47 @@ def main():
             doc = docs.iloc[i]
             st.markdown(f"{kindcode} = {doc}")
 
-            url = f"https://patents.google.com/patent/{doc}A/en?oq={doc}"
             # https://patents.google.com/patent/US5866903A/en?oq=US5866903
+
+            url = f"https://patents.google.com/patent/{doc}A/en?oq={doc}"
             st.markdown(url)
-            html = urlopen(url)
+            tentar_novamente = False
+            try:
+                html = urlopen(url)
+                tentar_novamente = False
+            except Exception as e:
+                tentar_novamente = True            
+            
+            if tentar_novamente:  
+                url = f"https://patents.google.com/patent/{doc}A1/en?oq={doc}"
+                st.markdown(url)
+                tentar_novamente = False
+                try:
+                    html = urlopen(url)
+                    tentar_novamente = False
+                except Exception as e:
+                    tentar_novamente = True            
+            
+            if tentar_novamente:  
+                url = f"https://patents.google.com/patent/{doc}A2/en?oq={doc}"
+                st.markdown(url)
+                tentar_novamente = False
+                try:
+                    html = urlopen(url)
+                    tentar_novamente = False
+                except Exception as e:
+                    tentar_novamente = True            
+            
+            if tentar_novamente:  
+                url = f"https://patents.google.com/patent/{doc}B1/en?oq={doc}"
+                st.markdown(url)
+                tentar_novamente = False
+                try:
+                    html = urlopen(url)
+                    tentar_novamente = False
+                except Exception as e:
+                    tentar_novamente = True            
+            
             bs = BeautifulSoup(html.read(),'html.parser')
 
             #print(bs.title)
