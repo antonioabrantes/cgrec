@@ -6,11 +6,11 @@ import pandas as pd
 
 def main():
     st.title("Análise de documentos de patente")
-    st.write("Elaboração de resumos")
+    st.header("Elaboração de resumos")
 
-    st.header("Entre com o número do pedido de patente em recurso: p.ex. 102012005032")
+    st.write("Entre com o número do pedido de patente em recurso: p.ex. 102012005032")
     numero = st.text_input("Digite aqui:")
-    if texto:
+    if numero:
         st.write("Numero: ",numero)
 
 
