@@ -71,7 +71,7 @@ def main():
         codigos = df['codigo'] 
         docs = df['doc']
         for i in range(len(codigos)):
-            x = codigo.iloc[i]
+            x = codigos.iloc[i]
             y = docs.iloc[i]
             st.markdown(f"{x} = {y}")
 
