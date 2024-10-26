@@ -3,8 +3,8 @@ import os, re
 import time
 import pandas as pd
 from langchain_openai import ChatOpenAI
-from langchain.prompts.prompt import PromptTemplate
 from langchain_core.output_parsers import StrOutputParser
+from langchain_core.prompts import ChatPromptTemplate
 from dotenv import load_dotenv
 import requests
 from urllib.request import urlopen
