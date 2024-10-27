@@ -126,7 +126,7 @@ def acessar_sinergias(url,headers):
         print(f"An unexpected error occurred: {err}")    
     return -1
 
-llm = ChatOpenAI(api_key=openai_api_key)
+llm = ChatOpenAI(api_key=openai_api_key, model='gpt-4o-mini', temperature=0)
 out_parser = StrOutputParser()
 prompt = ChatPromptTemplate.from_messages(
     [
