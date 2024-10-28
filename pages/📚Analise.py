@@ -136,6 +136,7 @@ def conectar_siscap(url,return_json=False):
         else:
             return response.text
     else:
+        st.markdown(f"Erro: {response.status_code}")
         return(f"Erro: {response.status_code}")
         
 llm = ChatOpenAI(api_key=openai_api_key, model='gpt-4o-mini', temperature=0)
