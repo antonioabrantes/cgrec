@@ -126,6 +126,18 @@ def acessar_sinergias(url,headers):
         print(f"An unexpected error occurred: {err}")    
     return -1
 
+def conectar_siscap(url,return_json=False):
+    response = requests.get(url,headers=headers,verify=False)
+    if response.status_code == 200:
+        if return_json:
+            data = response.json()
+            json_data = json.dumps(data, indent=4)
+            return(json_data)
+        else:
+            return response.text
+    else:
+        return(f"Erro: {response.status_code}")
+        
 llm = ChatOpenAI(api_key=openai_api_key, model='gpt-4o-mini', temperature=0)
 out_parser = StrOutputParser()
 prompt = ChatPromptTemplate.from_messages(
@@ -142,6 +154,14 @@ def main():
     numero = st.text_input("Digite aqui:")
     if numero:
         st.markdown(f"Numero: {numero}")
+        
+        query = '"' + "mysql_query" + '"' ":" + '"' + f" * FROM pedido where (decisao='indeferimento' or decisao='ciencia de parecer') and numero='{numero}' order by rpi desc" + '"'
+        url = f"https://cientistaspatentes.com.br/apiphp/patents/query/?q={query}"
+        json_data = conectar_siscap(url,return_json=True)
+        data = json.loads(json_data)
+        codigo = data["patents"][0]["codigo"]
+        divisao = data["patents"][0]["divisao"]
+        st.markdown(f"Indeferimento: {codigo} {divisao}")
         
         # url = http://www.cientistaspatentes.com.br/apiphp/patents/query/?q={"mysql_query":"* FROM anterioridades where numero='102012005032'"}
         url = f"http://www.cientistaspatentes.com.br/apiphp/patents/query/?q={{%22mysql_query%22:%22*%20FROM%20anterioridades%20where%20numero=%27{numero}%27%22}}"
