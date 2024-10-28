@@ -271,7 +271,7 @@ def main():
                 for name in nameList:
                     texto = name.getText()
                 
-                if resumo == ''
+                if resumo == '':
                     query = f"Resuma o documento em português: {texto}"
                 else:
                     query = f"Resuma o documento em português: {texto} tendo em vista os seguintes argumentos: {resumo}"
