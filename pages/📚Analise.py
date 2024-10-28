@@ -194,7 +194,7 @@ def main():
             resumo = data["patents"][0]["descricao"]
             st.markdown(f"Resumo: {resumo}")
         except Exception as e:
-            st.markdown(f"Resumo não encontrado {e}")
+            st.markdown(f"Resumo não encontrado {query}")
 
         #texto_relatorio = conectar_siscap(url,headers,return_json=False)
         #try:
