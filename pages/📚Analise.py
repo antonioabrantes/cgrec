@@ -145,6 +145,7 @@ prompt = ChatPromptTemplate.from_messages(
         ("system", "Você é um assistente virtual."),
         ("user", "{user_input}"),
     ])
+chain = prompt | llm | out_parser
 
 def main():
     st.title("Análise de documentos de patente")
@@ -161,7 +162,9 @@ def main():
         data = json.loads(json_data)
         codigo = data["patents"][0]["codigo"]
         divisao = data["patents"][0]["divisao"]
-        st.markdown(f"Indeferimento: {codigo} {divisao}")
+        #st.markdown(f"Indeferimento: {codigo} {divisao}")
+        url = f"https://siscap.inpi.gov.br/adm/pareceres/{divisao}/{numero}{codigo}.txt"
+        texto_relatorio = conectar_siscap(url,return_json=False)
         
         # url = http://www.cientistaspatentes.com.br/apiphp/patents/query/?q={"mysql_query":"* FROM anterioridades where numero='102012005032'"}
         url = f"http://www.cientistaspatentes.com.br/apiphp/patents/query/?q={{%22mysql_query%22:%22*%20FROM%20anterioridades%20where%20numero=%27{numero}%27%22}}"
@@ -227,8 +230,7 @@ def main():
             nameList = bs.findAll("section", {"itemprop":"description"})
             for name in nameList:
                 texto = name.getText()
-
-            chain = prompt | llm | out_parser
+            
             query = f"Resuma o documento em português: {texto}"
             resposta = chain.invoke({"user_input":f"{query}"})
             st.markdown(f"Resumo {kindcode} {doc}: {resposta}")
