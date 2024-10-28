@@ -165,7 +165,7 @@ def main():
         st.markdown(f"Indeferimento: {codigo} {divisao}")
         url = f"https://siscap.inpi.gov.br/adm/pareceres/{divisao}/{numero}{codigo}.txt"
         st.markdown(url)
-        #texto_relatorio = conectar_siscap(url,return_json=False)
+        texto_relatorio = conectar_siscap(url,return_json=False)
         
         # url = http://www.cientistaspatentes.com.br/apiphp/patents/query/?q={"mysql_query":"* FROM anterioridades where numero='102012005032'"}
         url = f"http://www.cientistaspatentes.com.br/apiphp/patents/query/?q={{%22mysql_query%22:%22*%20FROM%20anterioridades%20where%20numero=%27{numero}%27%22}}"
