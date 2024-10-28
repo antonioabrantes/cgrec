@@ -169,6 +169,11 @@ def main():
     if numero:
         st.markdown(f"Numero: {numero}")
         
+        # todos os pedidos na tabela carga possuem 12.2
+        # SELECT * FROM `anterioridades` WHERE numero not in (select numero from arquivados where despacho='12.2' and anulado=0);
+        # SELECT * FROM `anterioridades` WHERE numero in (select numero from carga where divisao<>'direp');
+        
+        
         query = '"' + "mysql_query" + '"' ":" + '"' + f" * FROM pedido where (decisao='indeferimento' or decisao='ciencia de parecer') and numero='{numero}' order by rpi desc" + '"'
         url = f"https://cientistaspatentes.com.br/apiphp/patents/query/?q={query}"
         json_data = conectar_siscap(url,headers,return_json=True)
@@ -178,12 +183,13 @@ def main():
         #st.markdown(f"Indeferimento: {codigo} {divisao}")
         url = f"https://siscap.inpi.gov.br/adm/pareceres/{divisao}/{numero}{codigo}.txt"
         st.markdown(url)
+        
         #texto_relatorio = conectar_siscap(url,headers,return_json=False)
-        try:
-            response = requests.get(url, headers=headers)
-            texto_relatorio = response.text
-        except Exception as err:
-            st.markdown(f"An unexpected error occurred: {err}")    
+        #try:
+        #    response = requests.get(url, headers=headers)
+        #    texto_relatorio = response.text
+        #except Exception as err:
+        #    st.markdown(f"An unexpected error occurred: {err}")    
 
         # url = http://www.cientistaspatentes.com.br/apiphp/patents/query/?q={"mysql_query":"* FROM anterioridades where numero='102012005032'"}
         url = f"http://www.cientistaspatentes.com.br/apiphp/patents/query/?q={{%22mysql_query%22:%22*%20FROM%20anterioridades%20where%20numero=%27{numero}%27%22}}"
