@@ -184,7 +184,7 @@ def main():
             url = f"https://siscap.inpi.gov.br/adm/pareceres/{divisao}/{numero}{codigo}.txt"
             st.markdown(url)
         except Exception as e:
-            st.markdonw(f"Número não encontrado {e}")
+            st.markdown(f"Número não encontrado {e}")
             
         #texto_relatorio = conectar_siscap(url,headers,return_json=False)
         #try:
