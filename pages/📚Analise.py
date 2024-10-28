@@ -117,27 +117,39 @@ def acessar_sinergias(url,headers):
         return data
     
     except requests.exceptions.HTTPError as http_err:
-        print(f"HTTP error occurred: {http_err}")
+        st.markdown(f"HTTP error occurred: {http_err}")
     except requests.exceptions.RequestException as req_err:
-        print(f"Error occurred during request: {req_err}")
+        st.markdown(f"Error occurred during request: {req_err}")
     except ValueError as json_err:
-        print(f"JSON decode error: {json_err}")
+        st.markdown(f"JSON decode error: {json_err}")
     except Exception as err:
-        print(f"An unexpected error occurred: {err}")    
+        st.markdown(f"An unexpected error occurred: {err}")    
     return -1
 
 def conectar_siscap(url,return_json=False):
-    response = requests.get(url,headers=headers,verify=False,timeout=10)
-    if response.status_code == 200:
-        if return_json:
-            data = response.json()
-            json_data = json.dumps(data, indent=4)
-            return(json_data)
+    try:
+        response = requests.get(url,headers=headers,verify=False,timeout=10)
+        if response.status_code == 200:
+            if return_json:
+                data = response.json()
+                json_data = json.dumps(data, indent=4)
+                return(json_data)
+            else:
+                return response.text
         else:
-            return response.text
-    else:
-        st.markdown(f"Erro: {response.status_code}")
-        return(f"Erro: {response.status_code}")
+            st.markdown(f"Erro: {response.status_code}")
+            return(f"Erro: {response.status_code}")
+
+    except requests.exceptions.HTTPError as http_err:
+        st.markdown(f"HTTP error occurred: {http_err}")
+    except requests.exceptions.RequestException as req_err:
+        st.markdown(f"Error occurred during request: {req_err}")
+    except ValueError as json_err:
+        st.markdown(f"JSON decode error: {json_err}")
+    except Exception as err:
+        st.markdown(f"An unexpected error occurred: {err}")    
+    return -1
+
         
 llm = ChatOpenAI(api_key=openai_api_key, model='gpt-4o-mini', temperature=0)
 out_parser = StrOutputParser()
@@ -163,7 +175,7 @@ def main():
         data = json.loads(json_data)
         codigo = data["patents"][0]["codigo"]
         divisao = data["patents"][0]["divisao"]
-        st.markdown(f"Indeferimento: {codigo} {divisao}")
+        #st.markdown(f"Indeferimento: {codigo} {divisao}")
         url = f"https://siscap.inpi.gov.br/adm/pareceres/{divisao}/{numero}{codigo}.txt"
         st.markdown(url)
         texto_relatorio = conectar_siscap(url,return_json=False)
