@@ -186,7 +186,7 @@ def main():
         except Exception as e:
             st.markdown(f"Número não encontrado {e}")
             
-        query = '"' + "mysql_query" + '"' ":" + '"' + f" * FROM anterioridades where numero='{numero}'" + '"'
+        query = '"' + "mysql_query" + '"' ":" + '"' + f" * FROM anterioridades_desc where numero='{numero}'" + '"'
         url = f"https://cientistaspatentes.com.br/apiphp/patents/query/?q={query}"
         try:
             json_data = conectar_siscap(url,headers,return_json=True)
