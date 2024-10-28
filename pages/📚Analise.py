@@ -127,7 +127,7 @@ def acessar_sinergias(url,headers):
     return -1
 
 def conectar_siscap(url,return_json=False):
-    response = requests.get(url,headers=headers)
+    response = requests.get(url,headers=headers,verify=False,timeout=10)
     if response.status_code == 200:
         if return_json:
             data = response.json()
