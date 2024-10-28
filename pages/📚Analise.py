@@ -173,7 +173,6 @@ def main():
         # SELECT * FROM `anterioridades` WHERE numero not in (select numero from arquivados where despacho='12.2' and anulado=0);
         # SELECT * FROM `anterioridades` WHERE numero in (select numero from carga where divisao<>'direp');
         
-        
         query = '"' + "mysql_query" + '"' ":" + '"' + f" * FROM pedido where (decisao='indeferimento' or decisao='ciencia de parecer') and numero='{numero}' order by rpi desc" + '"'
         url = f"https://cientistaspatentes.com.br/apiphp/patents/query/?q={query}"
         json_data = conectar_siscap(url,headers,return_json=True)
@@ -189,77 +188,81 @@ def main():
         #    response = requests.get(url, headers=headers)
         #    texto_relatorio = response.text
         #except Exception as err:
-        #    st.markdown(f"An unexpected error occurred: {err}")    
+        #    st.markdown(f"An unexpected error occurred: {err}") 
 
         # url = http://www.cientistaspatentes.com.br/apiphp/patents/query/?q={"mysql_query":"* FROM anterioridades where numero='102012005032'"}
         url = f"http://www.cientistaspatentes.com.br/apiphp/patents/query/?q={{%22mysql_query%22:%22*%20FROM%20anterioridades%20where%20numero=%27{numero}%27%22}}"
-        response = requests.get(url, headers=headers)
-        response.raise_for_status()  # Verificar se a requisição foi bem-sucedida
-        data = response.json()
-        df = pd.DataFrame(data['patents'])
-        codigos = df['codigo'] 
-        docs = df['doc']
-        for i in range(len(codigos)):
-            kindcode = codigos.iloc[i]
-            doc = docs.iloc[i]
-            st.markdown(f"{kindcode} = {doc}")
+        
+        try:
+            response = requests.get(url, headers=headers)
+            response.raise_for_status()  # Verificar se a requisição foi bem-sucedida
+            data = response.json()
+            df = pd.DataFrame(data['patents'])
+            codigos = df['codigo'] 
+            docs = df['doc']
+            for i in range(len(codigos)):
+                kindcode = codigos.iloc[i]
+                doc = docs.iloc[i]
+                st.markdown(f"{kindcode} = {doc}")
 
-            # https://patents.google.com/patent/US5866903A/en?oq=US5866903
-            # primeiro registro de anterioridades: 102012001686 WO2007057692 mas como teste use US20110314263
+                # https://patents.google.com/patent/US5866903A/en?oq=US5866903
+                # primeiro registro de anterioridades: 102012001686 WO2007057692 mas como teste use US20110314263
 
-            url = f"https://patents.google.com/patent/{doc}A/en?oq={doc}"
-            tentar_novamente = False
-            try:
-                html = urlopen(url)
-                tentar_novamente = False
-            except Exception as e:
-                tentar_novamente = True            
-            
-            if tentar_novamente:  
-                url = f"https://patents.google.com/patent/{doc}A1/en?oq={doc}"
+                url = f"https://patents.google.com/patent/{doc}A/en?oq={doc}"
                 tentar_novamente = False
                 try:
                     html = urlopen(url)
                     tentar_novamente = False
                 except Exception as e:
                     tentar_novamente = True            
-            
-            if tentar_novamente:  
-                url = f"https://patents.google.com/patent/{doc}A2/en?oq={doc}"
-                tentar_novamente = False
-                try:
-                    html = urlopen(url)
+                
+                if tentar_novamente:  
+                    url = f"https://patents.google.com/patent/{doc}A1/en?oq={doc}"
                     tentar_novamente = False
-                except Exception as e:
-                    tentar_novamente = True            
-            
-            if tentar_novamente:  
-                url = f"https://patents.google.com/patent/{doc}B1/en?oq={doc}"
-                tentar_novamente = False
-                try:
-                    html = urlopen(url)
+                    try:
+                        html = urlopen(url)
+                        tentar_novamente = False
+                    except Exception as e:
+                        tentar_novamente = True            
+                
+                if tentar_novamente:  
+                    url = f"https://patents.google.com/patent/{doc}A2/en?oq={doc}"
                     tentar_novamente = False
-                except Exception as e:
-                    tentar_novamente = True            
-            
-            st.markdown(url)
-            bs = BeautifulSoup(html.read(),'html.parser')
+                    try:
+                        html = urlopen(url)
+                        tentar_novamente = False
+                    except Exception as e:
+                        tentar_novamente = True            
+                
+                if tentar_novamente:  
+                    url = f"https://patents.google.com/patent/{doc}B1/en?oq={doc}"
+                    tentar_novamente = False
+                    try:
+                        html = urlopen(url)
+                        tentar_novamente = False
+                    except Exception as e:
+                        tentar_novamente = True            
+                
+                st.markdown(url)
+                bs = BeautifulSoup(html.read(),'html.parser')
 
-            #print(bs.title)
-            #nameList = bs.findAll("div", {"class":"abstract"})
-            #resumo_D1 = ''
-            #for name in nameList:
-            #  resumo_D1 = name.getText()
+                #print(bs.title)
+                #nameList = bs.findAll("div", {"class":"abstract"})
+                #resumo_D1 = ''
+                #for name in nameList:
+                #  resumo_D1 = name.getText()
 
-            texto = ''
-            nameList = bs.findAll("section", {"itemprop":"description"})
-            for name in nameList:
-                texto = name.getText()
-            
-            query = f"Resuma o documento em português: {texto}"
-            resposta = chain.invoke({"user_input":f"{query}"})
-            st.markdown(f"Resumo {kindcode} {doc}: {resposta}")
-            
+                texto = ''
+                nameList = bs.findAll("section", {"itemprop":"description"})
+                for name in nameList:
+                    texto = name.getText()
+                
+                query = f"Resuma o documento em português: {texto}"
+                resposta = chain.invoke({"user_input":f"{query}"})
+                st.markdown(f"Resumo {kindcode} {doc}: {resposta}")
+        except Exception as e:
+            st.markdown(f"Número não encontrado: {e}")
+        
             # sistema evista https://parecer.inpi.gov.br/patentes.php
 
 main()
