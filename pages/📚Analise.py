@@ -186,6 +186,16 @@ def main():
         except Exception as e:
             st.markdown(f"Número não encontrado {e}")
             
+        query = '"' + "mysql_query" + '"' ":" + '"' + f" * FROM anterioridades where numero='{numero}'" + '"'
+        url = f"https://cientistaspatentes.com.br/apiphp/patents/query/?q={query}"
+        try:
+            json_data = conectar_siscap(url,headers,return_json=True)
+            data = json.loads(json_data)
+            resumo = data["patents"][0]["descricao"]
+            st.markdown(f"Resumo: {resumo}")
+        except Exception as e:
+            st.markdown(f"Resumo não encontrado {e}")
+
         #texto_relatorio = conectar_siscap(url,headers,return_json=False)
         #try:
         #    response = requests.get(url, headers=headers)
