@@ -127,7 +127,7 @@ def acessar_sinergias(url,headers):
     return -1
 
 def conectar_siscap(url,return_json=False):
-    response = requests.get(url,headers=headers,verify=False)
+    response = requests.get(url,headers=headers)
     if response.status_code == 200:
         if return_json:
             data = response.json()
@@ -162,7 +162,7 @@ def main():
         data = json.loads(json_data)
         codigo = data["patents"][0]["codigo"]
         divisao = data["patents"][0]["divisao"]
-        #st.markdown(f"Indeferimento: {codigo} {divisao}")
+        st.markdown(f"Indeferimento: {codigo} {divisao}")
         url = f"https://siscap.inpi.gov.br/adm/pareceres/{divisao}/{numero}{codigo}.txt"
         st.markdown(url)
         #texto_relatorio = conectar_siscap(url,return_json=False)
