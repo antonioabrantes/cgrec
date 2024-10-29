@@ -287,7 +287,7 @@ def main():
                 if resumo == '':
                     query = f"Resuma o documento em português: {texto}"
                 else:
-                    query = f"Resuma o documento em português: {texto} e faça sua análise tendo em vista os seguintes argumentos: {resumo}"
+                    query = f"Resuma o documento em português: {texto} e faça sua análise tendo em vista os seguintes argumentos usados no indeferimento: {resumo}. Procure no seu resumo do documento identificar os elementos mencionados no indeferimento"
                 
                 resposta = chain.invoke({"user_input":f"{query}"})
                 st.markdown(f"Resumo {kindcode} {doc}: {resposta}")
