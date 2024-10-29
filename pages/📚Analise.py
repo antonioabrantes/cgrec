@@ -172,6 +172,10 @@ def main():
         # todos os pedidos na tabela carga possuem 12.2
         # SELECT * FROM `anterioridades` WHERE numero not in (select numero from arquivados where despacho='12.2' and anulado=0);
         # SELECT * FROM `anterioridades` WHERE numero in (select numero from carga where divisao<>'direp');
+        # duplicados: SELECT numero, COUNT(*) FROM carga GROUP BY numero HAVING COUNT(*) > 1;
+        # carga inicial: SELECT count(*) FROM `carga` WHERE 1;
+        # duplicados: SELECT numero, COUNT(*) FROM anterioridades_desc GROUP BY numero HAVING COUNT(*) > 1;
+        # SELECT distinct(numero) FROM `anterioridades` WHERE numero not in (select numero from anterioridades_desc);
         
         query = '"' + "mysql_query" + '"' ":" + '"' + f" * FROM pedido where (decisao='indeferimento' or decisao='ciencia de parecer') and numero='{numero}' order by rpi desc" + '"'
         url = f"https://cientistaspatentes.com.br/apiphp/patents/query/?q={query}"
@@ -257,6 +261,15 @@ def main():
                     except Exception as e:
                         tentar_novamente = True            
                 
+                if tentar_novamente:  
+                    url = f"https://patents.google.com/patent/{doc}U2/en?oq={doc}"
+                    tentar_novamente = False
+                    try:
+                        html = urlopen(url)
+                        tentar_novamente = False
+                    except Exception as e:
+                        tentar_novamente = True            
+
                 st.markdown(url)
                 bs = BeautifulSoup(html.read(),'html.parser')
 
