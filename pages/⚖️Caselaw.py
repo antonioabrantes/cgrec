@@ -148,7 +148,6 @@ def load_doc():
     name = arquivos.get(2)
     arquivo = f"dados/{name}"  # Especifique o caminho do PDF
     text2 = ler_doc(arquivo)
-    st.markdown(text2)
 
     # name3 = "resolucao124.txt"
     #name = arquivos.get(3)
@@ -187,14 +186,16 @@ def load_doc():
     combined_chunks = chunks1 + chunks2 + chunks3 + chunks4 + chunks5 + chunks6 + chunks7 + chunks8 + chunks9
 
     embeddings = HuggingFaceEmbeddings(model_name='sentence-transformers/all-MiniLM-L6-v2')
-    #vectorstore = FAISS.from_documents(combined_chunks, embeddings)
 
-    # Persist the vectors locally on disk
-    #vectorstore.save_local("faiss_index_datamodel_law")
-
-    # Load from local storage
-    persisted_vectorstore = FAISS.load_local("faiss_index_datamodel_law", embeddings,
-                                             allow_dangerous_deserialization=True)
+        vectorstore = FAISS.from_documents(combined_chunks, embeddings)
+        
+        # Persist the vectors locally on disk
+        vectorstore.save_local("faiss_index_datamodel")
+    
+        # Load from local storage
+        persisted_vectorstore = FAISS.load_local("faiss_index_datamodel", embeddings, allow_dangerous_deserialization=True)
+        
+    #persisted_vectorstore = FAISS.load_local("faiss_index_datamodel_law", embeddings, allow_dangerous_deserialization=True)
     return persisted_vectorstore
 
 
