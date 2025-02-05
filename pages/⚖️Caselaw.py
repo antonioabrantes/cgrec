@@ -143,12 +143,12 @@ def load_doc():
     name = arquivos.get(1)
     arquivo = f"dados/{name}"  # Especifique o caminho do PDF
     text1 = ler_doc(arquivo)
-    st.markdown(text1)
 
     # name2 = "lei9279.txt"
     name = arquivos.get(2)
     arquivo = f"dados/{name}"  # Especifique o caminho do PDF
     text2 = ler_doc(arquivo)
+    st.markdown(text2)
 
     # name3 = "resolucao124.txt"
     #name = arquivos.get(3)
