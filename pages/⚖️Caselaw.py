@@ -150,9 +150,9 @@ def load_doc():
     text2 = ler_doc(arquivo)
 
     # name3 = "resolucao124.txt"
-    name = arquivos.get(3)
-    arquivo = f"dados/{name}"  # Especifique o caminho do PDF
-    text3 = ler_doc(arquivo)
+    #name = arquivos.get(3)
+    #arquivo = f"dados/{name}"  # Especifique o caminho do PDF
+    #text3 = ler_doc(arquivo)
 
     text_splitter = RecursiveCharacterTextSplitter(  # divide o PDF em blocos/chunks de 512 tokens
         chunk_size=512,
@@ -180,8 +180,8 @@ def load_doc():
     chunks2 = text_splitter.create_documents([text2], metadatas=[metadata])
 
     # chunks = text_splitter.create_documents([text])
-    metadata = {"source": arquivos.get(3), "row": 0}
-    chunks3 = text_splitter.create_documents([text3], metadatas=[metadata])
+    #metadata = {"source": arquivos.get(3), "row": 0}
+    #chunks3 = text_splitter.create_documents([text3], metadatas=[metadata])
 
     combined_chunks = chunks1 + chunks2 + chunks3 + chunks4 + chunks5 + chunks6 + chunks7 + chunks8 + chunks9
 
@@ -222,7 +222,7 @@ def load_model():
 
 
 def ask_pdf(query):
-    st.markdown("Iniciando...")
+    #st.markdown("Iniciando...")
     db = load_doc()
     #st.markdown("Dados carregados no Vector store...")
     # similar_response = db.similarity_search(query,k=3)
