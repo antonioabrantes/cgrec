@@ -161,7 +161,7 @@ prompt = ChatPromptTemplate.from_messages(
 chain = prompt | llm | out_parser
 
 def main():
-    st.title("Análise de documentos de patente")
+    st.title("Análise de documentos de patentes")
     st.header("Elaboração de resumos")
 
     st.write("Entre com o número do pedido de patente em recurso: p.ex. 102012005032. ùltima atualização: 26/10/2024")
