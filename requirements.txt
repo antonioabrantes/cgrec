@@ -18,4 +18,5 @@ langchain-huggingface
 beautifulsoup4
 mysql-connector-python
 faiss-cpu
+streamlit-echarts
 
