@@ -19,7 +19,8 @@ from htmlTemplates import css, bot_template, user_template
 
 import os
 #from langchain.text_splitter import CharacterTextSplitter
-from langchain.chains import RetrievalQA
+#from langchain.chains import RetrievalQA
+from langchain.chains.qa import RetrievalQA
 from langchain.prompts import PromptTemplate
 
 
