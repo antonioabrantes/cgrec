@@ -11,11 +11,15 @@ from langchain_community.embeddings import HuggingFaceInstructEmbeddings
 from langchain_community.vectorstores import FAISS
 #from langchain.chat_models import ChatOpenAI
 from langchain_openai import ChatOpenAI
-from langchain.memory import ConversationBufferMemory
+#from langchain.memory import ConversationBufferMemory
 from langchain.chains import ConversationalRetrievalChain
 from htmlTemplates import css, bot_template, user_template
 from langchain.llms import HuggingFaceHub 
 
+import os
+from langchain.text_splitter import CharacterTextSplitter
+from langchain.chains import RetrievalQA
+from langchain.prompts import PromptTemplate
 
 
 import os
@@ -49,22 +53,55 @@ def get_vectorstore(text_chunks,openai_api_key):
     vectorstore = FAISS.from_texts(texts=text_chunks, embedding=embeddings)
     return vectorstore
 
+PROMPT = PromptTemplate(
+    input_variables=["context", "question", "chat_history"],
+    template="""
+Você é um assistente que responde perguntas com base nos documentos fornecidos.
 
-def get_conversation_chain(vectorstore):
-    llm = ChatOpenAI(openai_api_key=openai_api_key,
-                     temperature=0.0,
-                     max_tokens=4000,
-                     model="gpt-4o-mini")
-    # llm = HuggingFaceHub(repo_id="google/flan-t5-xxl", model_kwargs={"temperature":0.5, "max_length":512})
+Histórico da conversa:
+{chat_history}
 
-    memory = ConversationBufferMemory(
-        memory_key='chat_history', return_messages=True)
-    conversation_chain = ConversationalRetrievalChain.from_llm(
+Contexto dos documentos:
+{context}
+
+Pergunta:
+{question}
+
+Resposta clara e objetiva:
+"""
+)
+
+def get_qa_chain(vectorstore):
+    llm = ChatOpenAI(
+        model="gpt-4o-mini",
+        temperature=0,
+        openai_api_key=openai_api_key
+    )
+
+    qa_chain = RetrievalQA.from_chain_type(
         llm=llm,
         retriever=vectorstore.as_retriever(),
-        memory=memory
+        chain_type="stuff",
+        chain_type_kwargs={"prompt": PROMPT},
+        return_source_documents=False
     )
-    return conversation_chain
+    return qa_chain
+    
+#def get_conversation_chain(vectorstore):
+#    llm = ChatOpenAI(openai_api_key=openai_api_key,
+#                     temperature=0.0,
+#                     max_tokens=4000,
+#                     model="gpt-4o-mini")
+#    # llm = HuggingFaceHub(repo_id="google/flan-t5-xxl", model_kwargs={"temperature":0.5, "max_length":512})
+#
+#    memory = ConversationBufferMemory(
+#        memory_key='chat_history', return_messages=True)
+#    conversation_chain = ConversationalRetrievalChain.from_llm(
+#        llm=llm,
+#        retriever=vectorstore.as_retriever(),
+#        memory=memory
+#    )
+#    return conversation_chain
 
 
 def handle_userinput(user_question):
@@ -113,7 +150,7 @@ def main():
                 vectorstore = get_vectorstore(text_chunks,openai_api_key)
 
                 # create conversation chain
-                st.session_state.conversation = get_conversation_chain(
+                st.session_state.conversation = get_qa_chain(
                     vectorstore)
 
 
