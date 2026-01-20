@@ -18,7 +18,8 @@ from langchain_community.document_loaders import PyPDFLoader,TextLoader
 
 #from langchain.prompts.prompt import PromptTemplate
 from langchain_core.prompts import PromptTemplate
-from langchain.chains.conversation.memory import ConversationBufferMemory
+#from langchain.chains.conversation.memory import ConversationBufferMemory
+from langchain_core.memory import ConversationBufferMemory
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 import tiktoken
 import PyPDF2
