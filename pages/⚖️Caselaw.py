@@ -17,7 +17,8 @@ from dotenv import load_dotenv
 # from langchain.document_loaders import PyPDFLoader ,TextLoader
 from langchain_community.document_loaders import PyPDFLoader, TextLoader
 
-from langchain.prompts.prompt import PromptTemplate
+#from langchain.prompts.prompt import PromptTemplate
+from langchain.prompts import PromptTemplate
 # from langchain.chains.conversation.memory import ConversationBufferMemory
 #from langchain.text_splitter import RecursiveCharacterTextSplitter
 import tiktoken
