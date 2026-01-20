@@ -2,10 +2,13 @@ streamlit
 pandas
 requests
 matplotlib
-langchain
-langchain-community
+langchain>=0.1.0
+langchain-core>=0.1.0
+langchain-community>=0.1.0
+langchain-groq
 langchain-openai
 tiktoken
+pypdf
 PyPDF2
 python-dotenv
 faiss-cpu
