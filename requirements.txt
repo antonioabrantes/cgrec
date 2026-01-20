@@ -16,4 +16,5 @@ sentence-transformers
 langchain-huggingface
 beautifulsoup4
 mysql-connector-python
+faiss-cpu
 
