@@ -2,9 +2,9 @@ streamlit
 pandas
 requests
 matplotlib
-langchain>=0.2.1
-langchain-community>=0.2.1
-langchain-text-splitters>=0.0.1
+langchain==0.2.1
+langchain-community==0.2.1
+langchain-text-splitters==0.0.1
 langchain-groq
 langchain-openai
 tiktoken
