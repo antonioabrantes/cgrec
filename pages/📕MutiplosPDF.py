@@ -21,7 +21,8 @@ import os
 #from langchain.text_splitter import CharacterTextSplitter
 #from langchain.chains import RetrievalQA
 #from langchain.chains.qa import RetrievalQA
-from langchain.chains import ConversationalRetrievalChain
+#from langchain.chains import ConversationalRetrievalChain
+from langchain.chains.conversational_retrieval.base import ConversationalRetrievalChain
 from langchain.prompts import PromptTemplate
 
 
