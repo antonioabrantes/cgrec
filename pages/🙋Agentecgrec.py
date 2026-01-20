@@ -52,17 +52,17 @@ from dotenv import load_dotenv
 import requests
 
 #pip install mysql-connector-python permite concectar com a base Mysql
-import mysql.connector
+##import mysql.connector
 from urllib.request import Request, urlopen
 import json
 from datetime import datetime
 
 conexao = None
-try:
-    conexao = mysql.connector.connect(host='localhost',user='root',password='',database='producao')
-    cursor = conexao.cursor()
-except:
-    conexao = None
+##try:
+##    conexao = mysql.connector.connect(host='localhost',user='root',password='',database='producao')
+##    cursor = conexao.cursor()
+##except:
+##    conexao = None
     
 def conectar_siscap(url,return_json=False):
     headers = {
