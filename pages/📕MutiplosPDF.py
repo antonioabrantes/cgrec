@@ -18,7 +18,7 @@ from htmlTemplates import css, bot_template, user_template
 #from langchain_community.llms import HuggingFaceHub
 
 import os
-from langchain.text_splitter import CharacterTextSplitter
+#from langchain.text_splitter import CharacterTextSplitter
 from langchain.chains import RetrievalQA
 from langchain.prompts import PromptTemplate
 
@@ -38,7 +38,7 @@ def get_pdf_text(pdf_docs):
 
 
 def get_text_chunks(text):
-    text_splitter = CharacterTextSplitter(
+    text_splitter = RecursiveCharacterTextSplitter(
         separator="\n",
         chunk_size=1000,
         chunk_overlap=200,
