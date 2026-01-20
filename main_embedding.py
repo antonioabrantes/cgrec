@@ -3,7 +3,7 @@ import os
 from langchain_community.embeddings import OpenAIEmbeddings
 
 #from langchain.text_splitter import CharacterTextSplitter
-from langchain_core.text_splitter import CharacterTextSplitter
+from langchain_text_splitters import CharacterTextSplitter
 from langchain_openai import ChatOpenAI
 
 #from langchain.vectorstores import FAISS
