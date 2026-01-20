@@ -188,7 +188,8 @@ def load_doc():
     combined_chunks = chunks1 + chunks2 + chunks3 + chunks4 + chunks5 + chunks6 + chunks7 + chunks8 + chunks9
 
     #embeddings = HuggingFaceEmbeddings(model_name='sentence-transformers/all-MiniLM-L6-v2')
-    embeddings = OpenAIEmbeddings(openai_api_key=openai_api_key)
+    #embeddings = OpenAIEmbeddings(openai_api_key=openai_api_key)
+    embeddings = OpenAIEmbeddings(model="text-embedding-3-small",openai_api_key=openai_api_key)
     vectorstore = FAISS.from_documents(combined_chunks, embeddings)
     
     # Persist the vectors locally on disk
