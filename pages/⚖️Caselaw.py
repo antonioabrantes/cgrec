@@ -3,7 +3,8 @@ import os
 # from langchain.embeddings.openai import OpenAIEmbeddings
 from langchain_community.embeddings import OpenAIEmbeddings
 
-from langchain.text_splitter import CharacterTextSplitter
+#from langchain.text_splitter import CharacterTextSplitter
+from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_openai import ChatOpenAI
 
 # from langchain.vectorstores import FAISS
@@ -11,14 +12,14 @@ from langchain_community.vectorstores import FAISS
 
 from dotenv import load_dotenv
 # from langchain.embeddings import HuggingFaceEmbeddings
-from langchain_huggingface import HuggingFaceEmbeddings
+# from langchain_huggingface import HuggingFaceEmbeddings
 
 # from langchain.document_loaders import PyPDFLoader ,TextLoader
 from langchain_community.document_loaders import PyPDFLoader, TextLoader
 
 from langchain.prompts.prompt import PromptTemplate
-from langchain.chains.conversation.memory import ConversationBufferMemory
-from langchain.text_splitter import RecursiveCharacterTextSplitter
+# from langchain.chains.conversation.memory import ConversationBufferMemory
+#from langchain.text_splitter import RecursiveCharacterTextSplitter
 import tiktoken
 import PyPDF2
 from typing import List, Tuple
@@ -185,7 +186,8 @@ def load_doc():
 
     combined_chunks = chunks1 + chunks2 + chunks3 + chunks4 + chunks5 + chunks6 + chunks7 + chunks8 + chunks9
 
-    embeddings = HuggingFaceEmbeddings(model_name='sentence-transformers/all-MiniLM-L6-v2')
+    #embeddings = HuggingFaceEmbeddings(model_name='sentence-transformers/all-MiniLM-L6-v2')
+    embeddings = OpenAIEmbeddings(openai_api_key=openai_api_key)
     vectorstore = FAISS.from_documents(combined_chunks, embeddings)
     
     # Persist the vectors locally on disk
