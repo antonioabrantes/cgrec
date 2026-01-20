@@ -18,7 +18,7 @@ from htmlTemplates import css, bot_template, user_template
 #from langchain_community.llms import HuggingFaceHub
 
 import os
-from langchain.text_splitters import CharacterTextSplitter
+from langchain.text_splitter import CharacterTextSplitter
 from langchain.chains import RetrievalQA
 from langchain.prompts import PromptTemplate
 
