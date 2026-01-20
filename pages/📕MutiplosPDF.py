@@ -9,7 +9,8 @@ from langchain_community.embeddings import HuggingFaceInstructEmbeddings
 
 #from langchain.vectorstores import FAISS
 from langchain_community.vectorstores import FAISS
-from langchain.chat_models import ChatOpenAI
+#from langchain.chat_models import ChatOpenAI
+from langchain_openai import ChatOpenAI
 from langchain.memory import ConversationBufferMemory
 from langchain.chains import ConversationalRetrievalChain
 from htmlTemplates import css, bot_template, user_template
