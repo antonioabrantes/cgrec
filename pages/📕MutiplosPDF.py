@@ -20,7 +20,8 @@ from htmlTemplates import css, bot_template, user_template
 import os
 #from langchain.text_splitter import CharacterTextSplitter
 #from langchain.chains import RetrievalQA
-from langchain.chains.qa import RetrievalQA
+#from langchain.chains.qa import RetrievalQA
+from langchain.chains import ConversationalRetrievalChain
 from langchain.prompts import PromptTemplate
 
 
@@ -80,14 +81,14 @@ def get_qa_chain(vectorstore):
         openai_api_key=openai_api_key
     )
 
-    qa_chain = RetrievalQA.from_chain_type(
+    conversation_chain  = ConversationalRetrievalChain.from_llm(
         llm=llm,
         retriever=vectorstore.as_retriever(),
         chain_type="stuff",
         chain_type_kwargs={"prompt": PROMPT},
         return_source_documents=False
     )
-    return qa_chain
+    return conversation_chain
     
 #def get_conversation_chain(vectorstore):
 #    llm = ChatOpenAI(openai_api_key=openai_api_key,
