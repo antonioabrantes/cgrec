@@ -2,6 +2,7 @@ import streamlit as st
 import os
 # from langchain.embeddings.openai import OpenAIEmbeddings
 from langchain_community.embeddings import OpenAIEmbeddings
+from langchain_huggingface import HuggingFaceEmbeddings
 
 #from langchain.text_splitter import CharacterTextSplitter
 from langchain_text_splitters import RecursiveCharacterTextSplitter
@@ -155,12 +156,20 @@ def load_doc():
     #name = arquivos.get(3)
     #arquivo = f"dados/{name}"  # Especifique o caminho do PDF
     #text3 = ler_doc(arquivo)
+    
+    if not text1:
+        st.error("Arquivo 1 vazio ou não encontrado")
+        return None
+    if not text2:
+        st.error("Arquivo 2 vazio ou não encontrado")
+        return None
 
     text_splitter = RecursiveCharacterTextSplitter(  # divide o PDF em blocos/chunks de 512 tokens
         chunk_size=512,
         chunk_overlap=24,
         length_function=count_tokens,
-        separators=["#"]  # "\n\n",
+        #separators=["#"]  # "\n\n",
+        separators=["\n\n", "\n", " ", ""]
     )
 
     chunks1 = []
@@ -188,7 +197,8 @@ def load_doc():
     combined_chunks = chunks1 + chunks2 + chunks3 + chunks4 + chunks5 + chunks6 + chunks7 + chunks8 + chunks9
 
     #embeddings = HuggingFaceEmbeddings(model_name='sentence-transformers/all-MiniLM-L6-v2')
-    embeddings = OpenAIEmbeddings(openai_api_key=openai_api_key)
+    #embeddings = OpenAIEmbeddings(openai_api_key=openai_api_key)
+    embeddings = HuggingFaceEmbeddings(model_name='sentence-transformers/all-MiniLM-L6-v2')
     vectorstore = FAISS.from_documents(combined_chunks, embeddings)
     
     # Persist the vectors locally on disk
