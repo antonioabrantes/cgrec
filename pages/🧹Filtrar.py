@@ -88,6 +88,6 @@ if uploaded_file:
     with st.expander("📜 Ver texto completo do OCR"):
         st.text_area(
             label="Texto integral",
-            value=texto_ocr,
+            value=texto_pdf,
             height=400
         )
