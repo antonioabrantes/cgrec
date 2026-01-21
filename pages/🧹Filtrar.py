@@ -6,7 +6,7 @@ import streamlit as st
 #import fitz  # PyMuPDF
 import re
 #from pdf2image import convert_from_bytes
-from langchain.document_loaders import PyPDFLoader
+#from langchain.document_loaders import PyPDFLoader
 import PyPDF2
 #from PIL import Image
 import io, os
