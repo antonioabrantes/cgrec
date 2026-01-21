@@ -48,12 +48,12 @@ def extrair_argumentacao(texto):
     texto = texto.replace("\n", " ")
 
     padrao_inicio = re.compile(
-        r"(Recurso contra o indeferimento|DOS ARGUMENTOS|III\.)",
+        r"(Recurso contra o indeferimento|DOS ARGUMENTOS)",
         re.IGNORECASE
     )
 
     padrao_fim = re.compile(
-        r"(CONSIDERAÇÕES FINAIS|V\.|IV\.)",
+        r"(CONSIDERAÇÕES FINAIS|CONCLUSÃO)",
         re.IGNORECASE
     )
 
