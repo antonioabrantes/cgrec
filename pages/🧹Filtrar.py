@@ -1,8 +1,11 @@
+# https://share.streamlit.io/
+# https://faleconosco.streamlit.app/
+
 import streamlit as st
 #import pytesseract
 #import fitz  # PyMuPDF
 import re
-from pdf2image import convert_from_bytes
+#from pdf2image import convert_from_bytes
 from langchain.document_loaders import PyPDFLoader
 import PyPDF2
 #from PIL import Image
