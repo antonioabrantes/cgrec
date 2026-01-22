@@ -37,9 +37,40 @@ url = 'https://cientistaspatentes.com.br/plos/peticao.txt'
 
 st.write(f"Lendo {url}")
 
-resposta = conectar_siscap(url)
+texto_txt = conectar_siscap(url)
 
-st.write(resposta)
+
+def extrair_argumentacao_ipas(texto: str) -> str:
+    """
+    Extrai apenas a argumentação do requerente em petições do INPI,
+    removendo dados pessoais e partes administrativas iniciais.
+    """
+
+    if not texto or not texto.strip():
+        return ""
+
+    # Normaliza espaços
+    texto = re.sub(r'\n{2,}', '\n\n', texto)
+
+    # Padrões que indicam início da argumentação
+    padrao_inicio = re.compile(
+        r"(ILMO\s+SENHOR\s+PRESIDENTE\s+DO\s+INPI|"
+        r"DOS\s+FATOS|"
+        r"DO\s+DIREITO|"
+        r"DAS\s+RAZÕES)",
+        re.IGNORECASE
+    )
+
+    match = padrao_inicio.search(texto)
+
+    if match:
+        texto_filtrado = texto[match.start():]
+        return texto_filtrado.strip()
+
+    # Se nenhum marcador for encontrado, retorna texto inteiro (fallback)
+    return texto.strip()
+
+
 
 uploaded_file = st.file_uploader("Faça upload do PDF da petição", type=["pdf"])
 
@@ -67,7 +98,7 @@ def ler_pdf_pypdf2(pdf_bytes):
 
     return texto
     
-def extrair_argumentacao(texto):
+def extrair_argumentacao_siscap(texto):
     """
     Extrai apenas a parte argumentativa típica de recursos do INPI
     """
@@ -93,6 +124,27 @@ def extrair_argumentacao(texto):
     else:
         return "⚠️ Não foi possível identificar automaticamente a seção de argumentação."
 
+
+
+st.info("🔍 Processando OCR do TXT, aguarde...")
+
+pdf_bytes = uploaded_file.read()
+
+argumentacao = extrair_argumentacao(texto_txt)
+
+st.subheader("🧠 Argumentação do Requerente (extraída automaticamente)")
+st.text_area(
+    label="Conteúdo filtrado",
+    value=argumentacao,
+    height=500
+)
+
+with st.expander("📜 Ver texto completo do OCR"):
+    st.text_area(
+        label="Texto integral",
+        value=texto_txt,
+        height=400
+    )
 
 if uploaded_file:
     st.info("🔍 Processando OCR do PDF, aguarde...")
