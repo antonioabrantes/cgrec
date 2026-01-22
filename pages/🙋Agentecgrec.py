@@ -275,7 +275,11 @@ st.link_button(
 )
 
 headers = {
-    "User-Agent": "Mozilla/5.0"
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+                  "(KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+    "Accept": "text/plain,text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+    "Accept-Language": "pt-BR,pt;q=0.9",
+    "Connection": "keep-alive",
 }
 url = f"https://siscap.inpi.gov.br/adm/pareceres/{divisao}/{numero}{codigo}.txt"
 #PASTA_DOCS = "docs"
@@ -295,7 +299,7 @@ try:
     else:
         st.error("Não foi possível baixar o arquivo (status diferente de 200).")
 except Exception as e:
-    st.error(f"Erro ao baixar o arquivo: {e}")
+    st.error(f"Erro ao baixar o arquivo {url}: {e}")
 
 
 # url = https://cientistaspatentes.com.br/apiphp/patents/query/?q={"mysql_query":" * FROM despachos_pag where numero='102012005032' and tipo_peticao=214"}
