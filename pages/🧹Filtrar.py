@@ -40,7 +40,6 @@ st.set_page_config(page_title="OCR de Petição INPI", layout="wide")
 
 st.title("📄 OCR e Extração da Argumentação do Requerente")
 
-
 url = 'https://cientistaspatentes.com.br/plos/peticao.txt'
 
 st.write(f"Lendo {url}")
@@ -148,7 +147,13 @@ with st.expander("📜 Ver texto completo do OCR"):
         value=texto_txt,
         height=400
     )
-    
+
+question f"Resuma o seguinte texto de argumentação do requenente um pedido de marca: {argumentacao}"
+messages = [{"role":"user", "content": question}}
+response = llm.invoke(messages)
+
+st.write("Resumo retornado pela LLM")
+st.write(response.content)
 
 uploaded_file = st.file_uploader("Faça upload do PDF da petição", type=["pdf"])
 
