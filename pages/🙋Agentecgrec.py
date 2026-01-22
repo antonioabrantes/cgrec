@@ -282,6 +282,7 @@ url = f"https://siscap.inpi.gov.br/adm/pareceres/{divisao}/{numero}{codigo}.txt"
 #os.makedirs(PASTA_DOCS, exist_ok=True)
 #nome_arquivo = f"00_{numero}{codigo}.pdf"
 #caminho_arquivo = os.path.join(PASTA_DOCS, nome_arquivo)
+response = None
 try:
     response = requests.get(url, headers=headers, verify=False, timeout=30)
     if response.status_code == 200:
