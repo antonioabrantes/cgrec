@@ -44,7 +44,7 @@ from langchain_core.runnables import RunnableParallel, RunnablePassthrough
 # Importa o parser de saída para converter a resposta em texto simples
 from langchain_core.output_parsers import StrOutputParser
 
-# imprta bibliotecas para colocar a chava da LLM em ambiente
+# importa bibliotecas para colocar a chava da LLM em ambiente
 import os
 from dotenv import load_dotenv
 
@@ -273,6 +273,23 @@ st.link_button(
    "📄 Parecer",
    f"https://siscap.inpi.gov.br/adm/pareceres/{divisao}/00_{numero}{codigo}.pdf"
 )
+
+url = f"https://siscap.inpi.gov.br/adm/pareceres/{divisao}/00_{numero}{codigo}.pdf"
+PASTA_DOCS = "docs"
+os.makedirs(PASTA_DOCS, exist_ok=True)
+nome_arquivo = f"00_{numero}{codigo}.pdf"
+caminho_arquivo = os.path.join(PASTA_DOCS, nome_arquivo)
+try:
+    resposta = requests.get(url, timeout=20)
+    if resposta.status_code == 200:
+        with open(caminho_arquivo, "wb") as f:
+            f.write(resposta.content)
+        st.success(f"Arquivo salvo em: {caminho_arquivo}")
+        st.link_button("📄 Abrir parecer", caminho_arquivo)
+    else:
+        st.error("Não foi possível baixar o arquivo (status diferente de 200).")
+except Exception as e:
+    st.error(f"Erro ao baixar o arquivo: {e}")
 
 # url = https://cientistaspatentes.com.br/apiphp/patents/query/?q={"mysql_query":" * FROM despachos_pag where numero='102012005032' and tipo_peticao=214"}
 query = '"' + "mysql_query" + '"' ":" + '"' + f" * FROM despachos_pag where tipo_peticao=214 and numero='{numero}'" + '"'
