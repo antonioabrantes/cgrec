@@ -286,7 +286,7 @@ try:
     response = requests.get(url, headers=headers, verify=False, timeout=30)
     if response.status_code == 200:
         texto = response.text  # 🔹 texto direto em memória sem ter feito download do arquivo
-        st.write(texto)
+        st.write(texto) 
 #        with open(caminho_arquivo, "wb") as f:
 #            f.write(response.content)
 #            st.success(f"Arquivo salvo localmente em: {caminho_arquivo}")
