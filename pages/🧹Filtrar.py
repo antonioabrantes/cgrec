@@ -150,7 +150,7 @@ st.text_area(
     height=500
 )
 
-with st.expander("📜 Ver4 texto completo do OCR"):
+with st.expander("📜 Ver5 texto completo do OCR"):
     st.text_area(
         label="Texto integral",
         value=texto_txt,
@@ -176,11 +176,13 @@ qa_prompt = ChatPromptTemplate.from_messages(
 )
 
 messages=[{"role":"user", "content":question}]
-#response = llm.invoke(question)
+response = llm.invoke(
+    f"{system_block}\n\nResuma o seguinte texto:\n\n{texto_filtrado}"
+)
 
 
 st.subheader("🧠 Resumo gerado pela LLM")
-#st.write(response.content)
+st.write(response.content)
 
 uploaded_file = st.file_uploader("Faça upload do PDF da petição", type=["pdf"])
 
