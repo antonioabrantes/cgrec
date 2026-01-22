@@ -71,9 +71,6 @@ def extrair_argumentacao_ipas(texto: str) -> str:
     return texto.strip()
 
 
-
-uploaded_file = st.file_uploader("Faça upload do PDF da petição", type=["pdf"])
-
 #def ocr_pdf(pdf_bytes):
 #    images = convert_from_bytes(pdf_bytes, dpi=300)
 #    full_text = ""
@@ -128,7 +125,7 @@ def extrair_argumentacao_siscap(texto):
 
 st.info("🔍 Processando OCR do TXT, aguarde...")
 
-argumentacao = extrair_argumentacao(texto_txt)
+argumentacao = extrair_argumentacao_ipas(texto_txt)
 
 st.subheader("🧠 Argumentação do Requerente (extraída automaticamente)")
 st.text_area(
@@ -143,6 +140,9 @@ with st.expander("📜 Ver texto completo do OCR"):
         value=texto_txt,
         height=400
     )
+    
+
+uploaded_file = st.file_uploader("Faça upload do PDF da petição", type=["pdf"])
 
 if uploaded_file:
     st.info("🔍 Processando OCR do PDF, aguarde...")
