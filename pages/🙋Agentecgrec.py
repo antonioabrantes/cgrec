@@ -291,7 +291,7 @@ st.write(resposta)
 return_json = False
 resposta = ''
 headers = {
-    "Accept": "application/json",
+    "Accept": "text/plain,application/json",
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
 }
 response = requests.get(url,headers=headers,verify=False)
