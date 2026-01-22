@@ -170,7 +170,7 @@ st.text_area(
     height=500
 )
 
-with st.expander("📜 Ver7 texto completo do OCR"):
+with st.expander("📜 Ver8 texto completo do OCR"):
     st.text_area(
         label="Texto integral",
         value=texto_txt,
@@ -185,7 +185,7 @@ if not texto_filtrado.strip():
 
 system_block = "Você é um assistente adninistrativo, sua tarefa é fazer o resumo de uma petição administrativa"
 question = f"Resuma o seguinte texto de argumentação do requerente um pedido de marca: {argumentacao}"
-result = chain.invoke({
+response = chain.invoke({
     "context": "",
     "question": question,
     "chat_history": ""
@@ -207,7 +207,7 @@ result = chain.invoke({
 #})
 
 st.subheader("🧠 Resumo gerado pela LLM")
-#st.write(response.content)
+st.write(response.content)
 
 uploaded_file = st.file_uploader("Faça upload do PDF da petição", type=["pdf"])
 
