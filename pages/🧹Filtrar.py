@@ -11,6 +11,14 @@ import PyPDF2
 #from PIL import Image
 import io, os
 import requests
+from langchain_groq import ChatGroq
+from dotenv import load_dotenv
+
+
+load_dotenv()
+groq_api_key = os.getenv("GROQ_API_KEY")
+llm = ChatGroq(model="openai/gpt-oss-20b")
+
 
 def conectar_siscap(url,return_json=False):
     headers = {
