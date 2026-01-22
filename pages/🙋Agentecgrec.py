@@ -267,8 +267,12 @@ data_indeferimento = data["patents"][0]["rpi"]
 dt = datetime.strptime(data_indeferimento, "%Y-%m-%d")
 # formata no padrão brasileiro
 data_formatada = dt.strftime("%d/%m/%Y")
-frase = f"O indeferimento do pedido {numero} foi encontrado em {data_formatada} <a href='https://siscap.inpi.gov.br/pareceres/{divisao}/00_{numero}{codigo}.pdf' target='_blank'>📄</a>"
+frase = f"O indeferimento do pedido {numero} foi encontrado em {data_formatada}"
 st.write(frase)
+st.sidebar.link_button(
+   "📄 Parecer",
+   f"https://siscap.inpi.gov.br/pareceres/{divisao}/00_{numero}{codigo}.pdf"
+)
 
 # url = https://cientistaspatentes.com.br/apiphp/patents/query/?q={"mysql_query":" * FROM despachos_pag where numero='102012005032' and tipo_peticao=214"}
 query = '"' + "mysql_query" + '"' ":" + '"' + f" * FROM despachos_pag where tipo_peticao=214 and numero='{numero}'" + '"'
