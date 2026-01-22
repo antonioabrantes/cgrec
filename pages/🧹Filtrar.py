@@ -15,6 +15,8 @@ st.set_page_config(page_title="OCR de Petição INPI", layout="wide")
 
 st.title("📄 OCR e Extração da Argumentação do Requerente")
 
+st.write('Lendo https://cientistaspatentes.com.br/plos/peticao.txt')
+
 uploaded_file = st.file_uploader("Faça upload do PDF da petição", type=["pdf"])
 
 #def ocr_pdf(pdf_bytes):
@@ -67,7 +69,6 @@ def extrair_argumentacao(texto):
     else:
         return "⚠️ Não foi possível identificar automaticamente a seção de argumentação."
 
-st.write('Lendo https://cientistaspatentes.com.br/plos/peticao.txt')
 
 if uploaded_file:
     st.info("🔍 Processando OCR do PDF, aguarde...")
