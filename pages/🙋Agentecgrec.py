@@ -281,6 +281,7 @@ headers = {
     "Accept-Language": "pt-BR,pt;q=0.9",
     "Connection": "keep-alive",
 }
+url_base = "https://siscap.inpi.gov.br"
 url = f"https://siscap.inpi.gov.br/adm/pareceres/{divisao}/{numero}{codigo}.txt"
 #PASTA_DOCS = "docs"
 #os.makedirs(PASTA_DOCS, exist_ok=True)
@@ -288,10 +289,29 @@ url = f"https://siscap.inpi.gov.br/adm/pareceres/{divisao}/{numero}{codigo}.txt"
 #caminho_arquivo = os.path.join(PASTA_DOCS, nome_arquivo)
 response = None 
 try:
-    response = requests.get(url, headers=headers, verify=False, timeout=30, allow_redirects=True)
-    if response.status_code == 200:
-        texto = response.text  # 🔹 texto direto em memória sem ter feito download do arquivo
-        st.write(texto) 
+    session = requests.Session()
+    session.headers.update(headers)
+    session.get(url_base, verify=False, timeout=30)
+    response = session.get(
+        url_parecer,
+        verify=False,
+        timeout=30,
+        allow_redirects=True
+    )
+
+    st.write("Status:", response.status_code)
+    st.write("URL final:", response.url)
+
+    if response.status_code == 200 and "html" not in response.headers.get("Content-Type", "").lower():
+        st.text(response.text)
+    else:
+        st.error("Arquivo não retornado como TXT.")
+        st.code(response.text[:1000])
+
+##    response = requests.get(url, headers=headers, verify=False, timeout=30, allow_redirects=True)
+##    if response.status_code == 200:
+##        texto = response.text  # 🔹 texto direto em memória sem ter feito download do arquivo
+##        st.write(texto) 
 #        with open(caminho_arquivo, "wb") as f:
 #            f.write(response.content)
 #            st.success(f"Arquivo salvo localmente em: {caminho_arquivo}")
