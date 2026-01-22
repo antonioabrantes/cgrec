@@ -150,7 +150,7 @@ st.text_area(
     height=500
 )
 
-with st.expander("📜 Ver5 texto completo do OCR"):
+with st.expander("📜 Ver6 texto completo do OCR"):
     st.text_area(
         label="Texto integral",
         value=texto_txt,
@@ -177,7 +177,9 @@ qa_prompt = ChatPromptTemplate.from_messages(
 
 messages=[{"role":"user", "content":question}]
 chain = qa_prompt | llm | StrOutputParser()
-
+resumo = chain.invoke({
+    "question": texto_filtrado
+})
 
 st.subheader("🧠 Resumo gerado pela LLM")
 #st.write(response.content)
