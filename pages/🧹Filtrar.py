@@ -150,7 +150,7 @@ with st.expander("📜 Ver texto completo do OCR"):
     )
 
 MAX_CHARS = 12000  # seguro para Groq
-texto_filtrado = texto_filtrado[:MAX_CHARS]
+texto_filtrado = argumentacao[:MAX_CHARS]
 if not texto_filtrado.strip():
     st.error("Texto vazio após filtragem.")
     st.stop()
