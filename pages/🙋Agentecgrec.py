@@ -268,7 +268,7 @@ dt = datetime.strptime(data_indeferimento, "%Y-%m-%d")
 # formata no padrão brasileiro
 data_formatada = dt.strftime("%d/%m/%Y")
 frase = f"O indeferimento do pedido {numero} foi encontrado em {data_formatada}"
-st.write(frase)
+st.write(frase) 
 st.link_button(
    "📄 Parecer",
    f"https://siscap.inpi.gov.br/adm/pareceres/{divisao}/00_{numero}{codigo}.pdf"
