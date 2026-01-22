@@ -293,7 +293,7 @@ try:
     session.headers.update(headers)
     session.get(url_base, verify=False, timeout=30)
     response = session.get(
-        url_parecer,
+        url,
         verify=False,
         timeout=30,
         allow_redirects=True
@@ -301,9 +301,11 @@ try:
 
     st.write("Status:", response.status_code)
     st.write("URL final:", response.url)
+    st.write("Content-Type:", response.headers.get("Content-Type"))
 
     if response.status_code == 200 and "html" not in response.headers.get("Content-Type", "").lower():
         st.text(response.text)
+        st.success("TXT carregado com sucesso")
     else:
         st.error("Arquivo não retornado como TXT.")
         st.code(response.text[:1000])
