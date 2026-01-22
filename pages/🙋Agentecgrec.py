@@ -288,7 +288,7 @@ url = f"https://cientistaspatentes.com.br/apiphp/patents/query/?q={query}" # 102
 resposta = conectar_siscap(url)
 st.write(resposta)
 
-url = f"https://siscap.inpi.gov.br/adm/pareceres/{divisao}/{numero}{codigo}.txt" # não funciona
+#url = f"https://siscap.inpi.gov.br/adm/pareceres/{divisao}/{numero}{codigo}.txt" # não funciona
 return_json = False
 resposta = ''
 headers = {
