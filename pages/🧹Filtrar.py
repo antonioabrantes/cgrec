@@ -128,8 +128,6 @@ def extrair_argumentacao_siscap(texto):
 
 st.info("🔍 Processando OCR do TXT, aguarde...")
 
-pdf_bytes = uploaded_file.read()
-
 argumentacao = extrair_argumentacao(texto_txt)
 
 st.subheader("🧠 Argumentação do Requerente (extraída automaticamente)")
