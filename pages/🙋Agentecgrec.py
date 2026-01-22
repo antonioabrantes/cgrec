@@ -258,7 +258,7 @@ if "chat_ready" not in st.session_state:
 # url = https://cientistaspatentes.com.br/apiphp/patents/query/?q={"mysql_query":" * FROM arquivados where numero='102012005032' order by data desc"}
 query = '"' + "mysql_query" + '"' ":" + '"' + f" * FROM pedido where decisao='indeferimento' and numero='{numero}'" + '"'
 url = f"https://cientistaspatentes.com.br/apiphp/patents/query/?q={query}"
-json_data = conectar_siscap(url,return_json=True)
+json_data = conectar_siscap(url,return_json=True) # por exemplo 
 #json_data='{"patents": [{"numero":"PI0905487","prioridade":"BR","instancia":"2 exame","decisao":"indeferimento","prioritario":"0","cc1":"4","anulado":"0","codigo":"1340921","rpi":"2020-12-29","divisao":"dicel","etapa":"2"}]}'
 data = json.loads(json_data)
 codigo = data["patents"][0]["codigo"]
@@ -267,7 +267,7 @@ data_indeferimento = data["patents"][0]["rpi"]
 dt = datetime.strptime(data_indeferimento, "%Y-%m-%d")
 # formata no padrão brasileiro
 data_formatada = dt.strftime("%d/%m/%Y")
-frase = f"O indeferimento do pedido {numero} foi encontrado em {data_formatada}"
+frase = f"O indeferimento do pedido {numero} foi encontrado em {data_formatada} <a href='https://siscap.inpi.gov.br/pareceres/{divisao}/00_{numero}{codigo}.pdf' target='_blank'>📄</a>"
 st.write(frase)
 
 # url = https://cientistaspatentes.com.br/apiphp/patents/query/?q={"mysql_query":" * FROM despachos_pag where numero='102012005032' and tipo_peticao=214"}
