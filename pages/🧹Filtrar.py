@@ -15,7 +15,7 @@ from langchain_groq import ChatGroq
 from langchain_core.prompts import ChatPromptTemplate 
 from dotenv import load_dotenv
 from langchain_core.messages import SystemMessage, HumanMessage
-from langchain_core.runnables import RunnableParallel, RunablePassthrough
+from langchain_core.runnables import RunnableParallel, RunnablePassthrough
 from langchain_core.output_parsers import StrOutputParser
 
 load_dotenv() 
