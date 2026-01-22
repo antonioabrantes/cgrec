@@ -148,7 +148,7 @@ st.text_area(
     height=500
 )
 
-with st.expander("📜 Ver3 texto completo do OCR"):
+with st.expander("📜 Ver4 texto completo do OCR"):
     st.text_area(
         label="Texto integral",
         value=texto_txt,
