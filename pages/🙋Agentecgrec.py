@@ -281,48 +281,29 @@ headers = {
     "Accept-Language": "pt-BR,pt;q=0.9",
     "Connection": "keep-alive",
 }
-url_base = "https://siscap.inpi.gov.br"
+
 url = f"https://siscap.inpi.gov.br/adm/pareceres/{divisao}/{numero}{codigo}.txt"
+resposta = conectar_siscap(url)
+st.write(resposta)
+
 #PASTA_DOCS = "docs"
 #os.makedirs(PASTA_DOCS, exist_ok=True)
 #nome_arquivo = f"00_{numero}{codigo}.pdf"
 #caminho_arquivo = os.path.join(PASTA_DOCS, nome_arquivo)
-response = None 
-try:
-    session = requests.Session()
-    session.headers.update(headers)
-    session.get(url_base, verify=False, timeout=30)
-    st.write(url)
-    response = session.get(
-        url,
-        verify=False,
-        timeout=30,
-        allow_redirects=True
-    )
-
-    st.write("Status:", response.status_code)
-    st.write("URL final:", response.url)
-    st.write("Content-Type:", response.headers.get("Content-Type"))
-
-    if response.status_code == 200 and "html" not in response.headers.get("Content-Type", "").lower():
-        st.text(response.text)
-        st.success("TXT carregado com sucesso")
-    else:
-        st.error("Arquivo não retornado como TXT.")
-        st.code(response.text[:1000])
-
-##    response = requests.get(url, headers=headers, verify=False, timeout=30, allow_redirects=True)
-##    if response.status_code == 200:
-##        texto = response.text  # 🔹 texto direto em memória sem ter feito download do arquivo
-##        st.write(texto) 
+#response = None 
+#try:
+#    response = requests.get(url, headers=headers, verify=False, timeout=30, allow_redirects=True)
+#    if response.status_code == 200:
+#        texto = response.text  # 🔹 texto direto em memória sem ter feito download do arquivo
+#        st.write(texto) 
 #        with open(caminho_arquivo, "wb") as f:
 #            f.write(response.content)
 #            st.success(f"Arquivo salvo localmente em: {caminho_arquivo}")
 #            st.link_button("📄 Abrir parecer", caminho_arquivo)
 #    else:
 #        st.error("Não foi possível baixar o arquivo (status diferente de 200).")
-except Exception as e:
-    st.error(f"Erro ao baixar o arquivo {url}: {e}")
+#except Exception as e:
+#    st.error(f"Erro ao baixar o arquivo {url}: {e}")
 
 
 # url = https://cientistaspatentes.com.br/apiphp/patents/query/?q={"mysql_query":" * FROM despachos_pag where numero='102012005032' and tipo_peticao=214"}
