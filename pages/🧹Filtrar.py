@@ -13,7 +13,7 @@ import io, os
 import requests
 from langchain_groq import ChatGroq
 from dotenv import load_dotenv
-from langchain_core.messages import HumanMessage
+from langchain_core.messages import SystemMessage, HumanMessage
 
 load_dotenv() 
 groq_api_key = os.getenv("GROQ_API_KEY")
@@ -149,9 +149,15 @@ with st.expander("📜 Ver texto completo do OCR"):
         height=400
     )
 
+MAX_CHARS = 12000  # seguro para Groq
+texto_filtrado = texto_filtrado[:MAX_CHARS]
+if not texto_filtrado.strip():
+    st.error("Texto vazio após filtragem.")
+    st.stop()
 question = f"Resuma o seguinte texto de argumentação do requerente um pedido de marca: {argumentacao}"
 response = llm.invoke([
-    HumanMessage(content=question)
+    SystemMessage(content="Você é um assistente jurídico."),
+    HumanMessage(content=texto_filtrado)
 ])
 
 st.subheader("🧠 Resumo gerado pela LLM")
