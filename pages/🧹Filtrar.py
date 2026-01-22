@@ -19,11 +19,11 @@ from dotenv import load_dotenv
 load_dotenv() 
 groq_api_key = os.getenv("GROQ_API_KEY")
 
-#llm = ChatGroq(model="openai/gpt-oss-20b",temperature=0.2, max_tokens=1024)
-llm = ChatGroq(
-    model="llama3-8b-8192",
-    api_key=groq_api_key
-)
+llm = ChatGroq(model="openai/gpt-oss-20b",temperature=0.2, max_tokens=1024)
+#llm = ChatGroq(
+#    model="llama3-8b-8192",
+#    api_key=groq_api_key
+#)
 
 def conectar_siscap(url,return_json=False):
     headers = {
@@ -161,7 +161,7 @@ if not texto_filtrado.strip():
     
 question = f"Resuma o seguinte texto de argumentação do requerente um pedido de marca: {argumentacao}"
 messages=[{"role":"user", "content":question}]
-response = llm.invoke(question)
+#response = llm.invoke(question)
 
 
 st.subheader("🧠 Resumo gerado pela LLM")
