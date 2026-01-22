@@ -279,13 +279,16 @@ PASTA_DOCS = "docs"
 os.makedirs(PASTA_DOCS, exist_ok=True)
 nome_arquivo = f"00_{numero}{codigo}.pdf"
 caminho_arquivo = os.path.join(PASTA_DOCS, nome_arquivo)
+headers = {
+    "User-Agent": "Mozilla/5.0"
+}
 try:
-    resposta = requests.get(url, timeout=20)
-    if resposta.status_code == 200:
+    response = requests.get(url, headers=headers, verify=False, timeout=30)
+    if response.status_code == 200:
         with open(caminho_arquivo, "wb") as f:
-            f.write(resposta.content)
-        st.success(f"Arquivo salvo em: {caminho_arquivo}")
-        st.link_button("📄 Abrir parecer", caminho_arquivo)
+            f.write(response.content)
+            st.success(f"Arquivo salvo localmente em: {caminho_arquivo}")
+            st.link_button("📄 Abrir parecer", caminho_arquivo)
     else:
         st.error("Não foi possível baixar o arquivo (status diferente de 200).")
 except Exception as e:
