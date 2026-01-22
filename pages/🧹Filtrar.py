@@ -18,13 +18,12 @@ from dotenv import load_dotenv
 
 load_dotenv() 
 groq_api_key = os.getenv("GROQ_API_KEY")
-st.write(groq_api_key )
-#os.environ("GROQ_API_KEY") = groq_api_key
-llm = ChatGroq(model="openai/gpt-oss-20b",temperature=0.2, max_tokens=1024)
-#llm = ChatGroq(
-#    model="llama3-70b-8192",
-#    api_key=groq_api_key
-#)
+
+#llm = ChatGroq(model="openai/gpt-oss-20b",temperature=0.2, max_tokens=1024)
+llm = ChatGroq(
+    model="llama3-8b-8192",
+    api_key=groq_api_key
+)
 
 def conectar_siscap(url,return_json=False):
     headers = {
