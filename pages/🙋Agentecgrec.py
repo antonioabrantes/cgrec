@@ -288,6 +288,7 @@ url = f"https://cientistaspatentes.com.br/apiphp/patents/query/?q={query}" # 102
 resposta = conectar_siscap(url)
 st.write(resposta)
 
+return_json = True
 resposta = ''
 headers = {
     "Accept": "application/json",
