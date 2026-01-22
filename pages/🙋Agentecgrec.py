@@ -284,7 +284,7 @@ url = f"https://siscap.inpi.gov.br/adm/pareceres/{divisao}/{numero}{codigo}.txt"
 #caminho_arquivo = os.path.join(PASTA_DOCS, nome_arquivo)
 response = None 
 try:
-    response = requests.get(url, headers=headers, verify=False, timeout=30)
+    response = requests.get(url, headers=headers, verify=False, timeout=30, allow_redirects=True)
     if response.status_code == 200:
         texto = response.text  # 🔹 texto direto em memória sem ter feito download do arquivo
         st.write(texto) 
