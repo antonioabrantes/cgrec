@@ -146,7 +146,7 @@ st.text_area(
     height=500
 )
 
-with st.expander("📜 Ver texto completo do OCR"):
+with st.expander("📜 Ver2 texto completo do OCR"):
     st.text_area(
         label="Texto integral",
         value=texto_txt,
@@ -161,13 +161,11 @@ if not texto_filtrado.strip():
     
 question = f"Resuma o seguinte texto de argumentação do requerente um pedido de marca: {argumentacao}"
 messages=[{"role":"user", "content":question}]
-#response = llm.invoke([
-#    SystemMessage(content="Você é um assistente jurídico."),
-#    HumanMessage(content=texto_filtrado)
-#])
+response = llm.invoke(messages)
+
 
 st.subheader("🧠 Resumo gerado pela LLM")
-#st.write(response.content)
+st.write(response.content)
 
 uploaded_file = st.file_uploader("Faça upload do PDF da petição", type=["pdf"])
 
