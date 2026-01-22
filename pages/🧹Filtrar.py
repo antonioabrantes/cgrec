@@ -152,7 +152,7 @@ question f"Resuma o seguinte texto de argumentação do requerente um pedido de 
 messages = [{"role":"user", "content": question}}
 response = llm.invoke(messages)
 
-st.write("Resumo retornado pela LLM")
+st.subheader("🧠 Resumo gerado pela LLM")
 st.write(response.content)
 
 uploaded_file = st.file_uploader("Faça upload do PDF da petição", type=["pdf"])
