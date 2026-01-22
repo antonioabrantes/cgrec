@@ -276,17 +276,17 @@ st.link_button(
 
 url = f"https://siscap.inpi.gov.br/adm/pareceres/{divisao}/00_{numero}{codigo}.pdf"
 PASTA_DOCS = "docs"
-os.makedirs(PASTA_DOCS, exist_ok=True)
+#os.makedirs(PASTA_DOCS, exist_ok=True)
 nome_arquivo = f"00_{numero}{codigo}.pdf"
-caminho_arquivo = os.path.join(PASTA_DOCS, nome_arquivo)
+#caminho_arquivo = os.path.join(PASTA_DOCS, nome_arquivo)
 headers = {
     "User-Agent": "Mozilla/5.0"
 }
 try:
     response = requests.get(url, headers=headers, verify=False, timeout=30)
     if response.status_code == 200:
-        with open(caminho_arquivo, "wb") as f:
-            f.write(response.content)
+#        with open(caminho_arquivo, "wb") as f:
+#            f.write(response.content)
             st.success(f"Arquivo salvo localmente em: {caminho_arquivo}")
             st.link_button("📄 Abrir parecer", caminho_arquivo)
     else:
