@@ -170,7 +170,7 @@ st.text_area(
     height=500
 )
 
-with st.expander("📜 Ver6 texto completo do OCR"):
+with st.expander("📜 Ver7 texto completo do OCR"):
     st.text_area(
         label="Texto integral",
         value=texto_txt,
@@ -185,6 +185,11 @@ if not texto_filtrado.strip():
 
 system_block = "Você é um assistente adninistrativo, sua tarefa é fazer o resumo de uma petição administrativa"
 question = f"Resuma o seguinte texto de argumentação do requerente um pedido de marca: {argumentacao}"
+result = chain.invoke({
+    "context": "",
+    "question": query,
+    "chat_history": ""
+})
 #qa_prompt = ChatPromptTemplate.from_messages(
 #    [
 #        # Define o papel de sistema com as instruções base
