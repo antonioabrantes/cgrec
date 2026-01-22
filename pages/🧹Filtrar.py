@@ -187,7 +187,7 @@ system_block = "Você é um assistente adninistrativo, sua tarefa é fazer o res
 question = f"Resuma o seguinte texto de argumentação do requerente um pedido de marca: {argumentacao}"
 result = chain.invoke({
     "context": "",
-    "question": query,
+    "question": question,
     "chat_history": ""
 })
 #qa_prompt = ChatPromptTemplate.from_messages(
