@@ -271,7 +271,7 @@ frase = f"O indeferimento do pedido {numero} foi encontrado em {data_formatada}"
 st.write(frase)
 st.link_button(
    "📄 Parecer",
-   f"https://siscap.inpi.gov.br/pareceres/{divisao}/00_{numero}{codigo}.pdf"
+   f"https://siscap.inpi.gov.br/adm/pareceres/{divisao}/00_{numero}{codigo}.pdf"
 )
 
 # url = https://cientistaspatentes.com.br/apiphp/patents/query/?q={"mysql_query":" * FROM despachos_pag where numero='102012005032' and tipo_peticao=214"}
