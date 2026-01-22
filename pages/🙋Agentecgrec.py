@@ -316,8 +316,8 @@ try:
 #            f.write(response.content)
 #            st.success(f"Arquivo salvo localmente em: {caminho_arquivo}")
 #            st.link_button("📄 Abrir parecer", caminho_arquivo)
-    else:
-        st.error("Não foi possível baixar o arquivo (status diferente de 200).")
+#    else:
+#        st.error("Não foi possível baixar o arquivo (status diferente de 200).")
 except Exception as e:
     st.error(f"Erro ao baixar o arquivo {url}: {e}")
 
