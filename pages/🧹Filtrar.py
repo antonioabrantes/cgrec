@@ -67,6 +67,8 @@ def extrair_argumentacao(texto):
     else:
         return "⚠️ Não foi possível identificar automaticamente a seção de argumentação."
 
+st.write('Lendo https://cientistaspatentes.com.br/plos/peticao.txt')
+
 if uploaded_file:
     st.info("🔍 Processando OCR do PDF, aguarde...")
 
