@@ -288,6 +288,24 @@ url = f"https://cientistaspatentes.com.br/apiphp/patents/query/?q={query}" # 102
 resposta = conectar_siscap(url)
 st.write(resposta)
 
+resposta = ''
+headers = {
+    "Accept": "application/json",
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+}
+response = requests.get(url,headers=headers,verify=False)
+if response.status_code == 200:
+    if return_json:
+        data = response.json()
+        json_data = json.dumps(data, indent=4)
+        resposta = json_data
+    else:
+        resposta = response.text
+else:
+    resposta = f"Erro: {response.status_code}"
+st.write(resposta)
+
+
 #PASTA_DOCS = "docs"
 #os.makedirs(PASTA_DOCS, exist_ok=True)
 #nome_arquivo = f"00_{numero}{codigo}.pdf"
