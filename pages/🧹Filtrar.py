@@ -10,12 +10,33 @@ import re
 import PyPDF2
 #from PIL import Image
 import io, os
+import requests
+
+def conectar_siscap(url,return_json=False):
+    headers = {
+        "Accept": "application/json",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+    }
+    response = requests.get(url,headers=headers,verify=False)
+    if response.status_code == 200:
+        if return_json:
+            data = response.json()
+            json_data = json.dumps(data, indent=4)
+            return(json_data)
+        else:
+            return response.text
+    else:
+        return(f"Erro: {response.status_code}")
 
 st.set_page_config(page_title="OCR de Petição INPI", layout="wide")
 
 st.title("📄 OCR e Extração da Argumentação do Requerente")
 
 st.write('Lendo https://cientistaspatentes.com.br/plos/peticao.txt')
+
+resposta = conectar_siscap(url)
+
+st.write(resposta)
 
 uploaded_file = st.file_uploader("Faça upload do PDF da petição", type=["pdf"])
 
