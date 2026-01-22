@@ -13,6 +13,7 @@ import io, os
 import requests
 from langchain_groq import ChatGroq
 from langchain_core.prompts import ChatPromptTemplate 
+from langchain_openai import ChatOpenAI
 from dotenv import load_dotenv
 from langchain_core.messages import SystemMessage, HumanMessage
 from langchain_core.runnables import RunnableParallel, RunnablePassthrough
@@ -20,14 +21,32 @@ from langchain_core.output_parsers import StrOutputParser
 
 load_dotenv() 
 groq_api_key = os.getenv("GROQ_API_KEY")
+openai_api_key = os.getenv("OPENAI_API_KEY")
+
+llm = ChatOpenAI(openai_api_key=openai_api_key,
+                 temperature=0.0,
+                 max_tokens=4000,
+                 model="gpt-4o-mini"
+                 )
+
+# Define your system instruction
+system_instruction = """ 
+Você é um assistente virtual que busca decisões recursais cadastradas. Faça um resumo das decisões encontradas em poucos parágrafos. 
+"""
+
+# Define your template with the system instruction
+template = (
+    f"{system_instruction} "
+    "Pergunta recebida {question}"
+    "Contexto: {context}. "
+)
+
+prompt = PromptTemplate(input_variables=['context', 'question'], template=template)
+chain = prompt | llm
 
 #llm = ChatGroq(model="openai/gpt-oss-20b",temperature=0.2, max_tokens=1024)
-llm = ChatGroq(
-    model="llama3-8b-8192",
-    api_key=groq_api_key,
-    temperature=0.2,
-    max_tokens=1024
-)
+#llm = ChatGroq(model="llama3-8b-8192",api_key=groq_api_key,temperature=0.2,max_tokens=1024)
+
 
 def conectar_siscap(url,return_json=False):
     headers = {
@@ -165,21 +184,21 @@ if not texto_filtrado.strip():
 
 system_block = "Você é um assistente adninistrativo, sua tarefa é fazer o resumo de uma petição administrativa"
 question = f"Resuma o seguinte texto de argumentação do requerente um pedido de marca: {argumentacao}"
-qa_prompt = ChatPromptTemplate.from_messages(
-    [
-        # Define o papel de sistema com as instruções base
-        SystemMessage(content = system_block),
-       
-        # Define a estrutura da mensagem humana com pergunta e contexto
-        ("human", "Tarefa: {question}\n\nResponda de forma sucinta, técnica e didática.")
-    ]
-)
+#qa_prompt = ChatPromptTemplate.from_messages(
+#    [
+#        # Define o papel de sistema com as instruções base
+#        SystemMessage(content = system_block),
+#       
+#        # Define a estrutura da mensagem humana com pergunta e contexto
+#        ("human", "Tarefa: {question}\n\nResponda de forma sucinta, técnica e didática.")
+#    ]
+#)
 
-messages=[{"role":"user", "content":question}]
-chain = qa_prompt | llm | StrOutputParser()
-resumo = chain.invoke({
-    "question": texto_filtrado
-})
+#messages=[{"role":"user", "content":question}]
+#chain = qa_prompt | llm | StrOutputParser()
+#resumo = chain.invoke({
+#    "question": texto_filtrado
+#})
 
 st.subheader("🧠 Resumo gerado pela LLM")
 #st.write(response.content)
