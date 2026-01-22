@@ -148,7 +148,7 @@ with st.expander("📜 Ver texto completo do OCR"):
         height=400
     )
 
-question f"Resuma o seguinte texto de argumentação do requenente um pedido de marca: {argumentacao}"
+question f"Resuma o seguinte texto de argumentação do requerente um pedido de marca: {argumentacao}"
 messages = [{"role":"user", "content": question}}
 response = llm.invoke(messages)
 
