@@ -176,7 +176,7 @@ qa_prompt = ChatPromptTemplate.from_messages(
 )
 
 messages=[{"role":"user", "content":question}]
-
+chain = qa_prompt | llm | StrOutputParser()
 
 
 st.subheader("🧠 Resumo gerado pela LLM")
