@@ -161,7 +161,7 @@ if not texto_filtrado.strip():
     
 question = f"Resuma o seguinte texto de argumentação do requerente um pedido de marca: {argumentacao}"
 messages=[{"role":"user", "content":question}]
-response = llm.invoke(messages)
+response = llm.invoke(question)
 
 
 st.subheader("🧠 Resumo gerado pela LLM")
