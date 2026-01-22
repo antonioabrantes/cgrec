@@ -282,7 +282,8 @@ headers = {
     "Connection": "keep-alive",
 }
 
-url = f"https://siscap.inpi.gov.br/adm/pareceres/{divisao}/{numero}{codigo}.txt"
+#url = f"https://siscap.inpi.gov.br/adm/pareceres/{divisao}/{numero}{codigo}.txt"
+url = f"https://cientistaspatentes.com.br/apiphp/patents/query/?q={query}" # 102012005032
 resposta = conectar_siscap(url)
 st.write(resposta)
 
