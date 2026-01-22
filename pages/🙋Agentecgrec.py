@@ -296,8 +296,7 @@ try:
         st.error("Não foi possível baixar o arquivo (status diferente de 200).")
 except Exception as e:
     st.error(f"Erro ao baixar o arquivo: {e}")
-    st.write(response.status_code)
-    st.write(response.text[:500])
+
 
 # url = https://cientistaspatentes.com.br/apiphp/patents/query/?q={"mysql_query":" * FROM despachos_pag where numero='102012005032' and tipo_peticao=214"}
 query = '"' + "mysql_query" + '"' ":" + '"' + f" * FROM despachos_pag where tipo_peticao=214 and numero='{numero}'" + '"'
