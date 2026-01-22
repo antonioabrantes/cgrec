@@ -12,9 +12,9 @@ import PyPDF2
 import io, os
 import requests
 from langchain_groq import ChatGroq
-#from langchain_core.prompts import ChatPromptTemplate 
+from langchain_core.prompts import ChatPromptTemplate 
 from dotenv import load_dotenv
-#from langchain_core.messages import SystemMessage, HumanMessage
+from langchain_core.messages import SystemMessage, HumanMessage
 
 load_dotenv() 
 groq_api_key = os.getenv("GROQ_API_KEY")
