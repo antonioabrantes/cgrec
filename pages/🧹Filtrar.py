@@ -32,7 +32,10 @@ st.set_page_config(page_title="OCR de Petição INPI", layout="wide")
 
 st.title("📄 OCR e Extração da Argumentação do Requerente")
 
-st.write('Lendo https://cientistaspatentes.com.br/plos/peticao.txt')
+
+url = 'https://cientistaspatentes.com.br/plos/peticao.txt'
+
+st.write(f"Lendo {url}")
 
 resposta = conectar_siscap(url)
 
