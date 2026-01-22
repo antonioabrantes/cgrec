@@ -176,13 +176,11 @@ qa_prompt = ChatPromptTemplate.from_messages(
 )
 
 messages=[{"role":"user", "content":question}]
-response = llm.invoke(
-    f"{system_block}\n\nResuma o seguinte texto:\n\n{texto_filtrado}"
-)
+
 
 
 st.subheader("🧠 Resumo gerado pela LLM")
-st.write(response.content)
+#st.write(response.content)
 
 uploaded_file = st.file_uploader("Faça upload do PDF da petição", type=["pdf"])
 
