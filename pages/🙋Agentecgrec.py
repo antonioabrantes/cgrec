@@ -292,6 +292,7 @@ try:
     session = requests.Session()
     session.headers.update(headers)
     session.get(url_base, verify=False, timeout=30)
+    st.write(url)
     response = session.get(
         url,
         verify=False,
