@@ -149,7 +149,7 @@ with st.expander("📜 Ver texto completo do OCR"):
     )
 
 question f"Resuma o seguinte texto de argumentação do requerente um pedido de marca: {argumentacao}"
-messages = [{"role":"user", "content": question}}
+messages = [{"role":"user", "content": question}]
 response = llm.invoke(messages)
 
 st.subheader("🧠 Resumo gerado pela LLM")
