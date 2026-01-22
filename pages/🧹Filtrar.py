@@ -160,10 +160,10 @@ if not texto_filtrado.strip():
     st.stop()
     
 question = f"Resuma o seguinte texto de argumentação do requerente um pedido de marca: {argumentacao}"
-response = llm.invoke([
-    SystemMessage(content="Você é um assistente jurídico."),
-    HumanMessage(content=texto_filtrado)
-])
+#response = llm.invoke([
+#    SystemMessage(content="Você é um assistente jurídico."),
+#    HumanMessage(content=texto_filtrado)
+#])
 
 st.subheader("🧠 Resumo gerado pela LLM")
 st.write(response.content)
