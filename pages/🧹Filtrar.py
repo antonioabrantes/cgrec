@@ -161,7 +161,7 @@ if not texto_filtrado.strip():
     st.error("Texto vazio após filtragem.")
     st.stop()
 
-system_blcok = "Você é um assistente adninistrativo, sua tarefa é fazer o resumo de uma petição administrativa"
+system_block = "Você é um assistente adninistrativo, sua tarefa é fazer o resumo de uma petição administrativa"
 question = f"Resuma o seguinte texto de argumentação do requerente um pedido de marca: {argumentacao}"
 qa_prompt = ChatPromptTemplate.from_messages(
     [
