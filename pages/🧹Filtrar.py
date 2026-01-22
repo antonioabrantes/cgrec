@@ -18,7 +18,10 @@ from langchain_core.messages import SystemMessage, HumanMessage
 load_dotenv() 
 groq_api_key = os.getenv("GROQ_API_KEY")
 #llm = ChatGroq(model="openai/gpt-oss-20b")
-llm = ChatGroq(model="llama3-70b-8192")
+llm = ChatGroq(
+    model="llama3-70b-8192",
+    api_key=groq_api_key
+)
 
 
 def conectar_siscap(url,return_json=False):
