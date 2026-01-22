@@ -160,8 +160,18 @@ texto_filtrado = argumentacao[:MAX_CHARS]
 if not texto_filtrado.strip():
     st.error("Texto vazio após filtragem.")
     st.stop()
-    
+
 question = f"Resuma o seguinte texto de argumentação do requerente um pedido de marca: {argumentacao}"
+qa_prompt = ChatPromptTemplate.from_messages(
+    [
+        # Define o papel de sistema com as instruções base
+        SystemMessage(content = system_block),
+       
+        # Define a estrutura da mensagem humana com pergunta e contexto
+        ("human", "Tarefa: {question}\n\nResponda de forma sucinta, técnica e didática.")
+    ]
+)
+
 messages=[{"role":"user", "content":question}]
 #response = llm.invoke(question)
 
