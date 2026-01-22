@@ -11,15 +11,15 @@ import PyPDF2
 #from PIL import Image
 import io, os
 import requests
-#from langchain_groq import ChatGroq
+from langchain_groq import ChatGroq
 #from langchain_core.prompts import ChatPromptTemplate 
 from dotenv import load_dotenv
 #from langchain_core.messages import SystemMessage, HumanMessage
 
-#load_dotenv() 
-#groq_api_key = os.getenv("GROQ_API_KEY")
+load_dotenv() 
+groq_api_key = os.getenv("GROQ_API_KEY")
 #os.environ("GROQ_API_KEY") = groq_api_key
-#llm = ChatGroq(model="openai/gpt-oss-20b",temperature=0.2, max_tokens=1024)
+llm = ChatGroq(model="openai/gpt-oss-20b",temperature=0.2, max_tokens=1024)
 #llm = ChatGroq(
 #    model="llama3-70b-8192",
 #    api_key=groq_api_key
